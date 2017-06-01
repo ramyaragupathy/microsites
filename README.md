@@ -1,8 +1,8 @@
-# MissingMaps Partner Pages
+# MissingMaps Microsites
 
-This repo contains the code for MissingMaps country pages. Each page is a unique view of how MissingMaps  contributions in different countries.
+This repo contains the code for MissingMaps Microsites. Each page is a unique view of how MissingMaps  contributions in different countries.
 
-### Creating a new Country Page
+### Creating a new Microsite Page
 
 1. Create new `country.md` file in the `country` folder. Rename according to the country and how you want the URL to look. For example, `my-new-country.md` will have the url `missingmaps.org/countries/new-country`. Use dashes `-` instead of underscores.
 
