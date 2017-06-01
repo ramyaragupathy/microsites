@@ -1,0 +1,64 @@
+# Prose settings
+
+prose:
+  ignore:
+    - /app/_data
+    - /app/_includes
+    - /app/_layouts
+    - /app/assets
+    - /app/humans.txt
+    - /app/index.html
+    - /app/robots.txt
+    - /404.html
+
+    # Block _prose and _config.
+    - /_prose.yml
+    - /_config.yml
+    - /_config-dev.yml
+
+    # Development stuff
+    - /.csscomb.json
+    - /.eslintrc
+    - /.gitattributes
+    - /.gitignore
+    - /.travis-s3sample.yml
+    - /.build-scripts
+    - /Gemfile
+    - /Gemfile.lock
+    - /gulpfile.js
+    - /LISCENSE
+    - /package.json
+    - /README.md
+
+  rooturl: app
+
+  metadata:
+    "app/_country":
+      - name: "layout"
+        field:
+          element: "hidden"
+          placeholder: "country"
+      - name: "lang"
+        field:
+          element: "hidden"
+          placeholder: "en"
+      - name: "permalink"
+        field:
+          element: "text"
+          placeholder: "/country-example/"
+          label: "permalink"
+      - name: "id"
+        field:
+          element: "text"
+          placeholder: "country-example"
+          label: "id"
+      - name: "name"
+        field:
+          element: "text"
+          placeholder: "name"
+          label: "country name"
+      - name: "flag filename"
+        field:
+          element: "text"
+          value: "MMlogo-Outlined.svg"
+          label: "flag"
