@@ -4,7 +4,7 @@ This repo contains the code for MissingMaps country pages. Each page is a unique
 
 ### Creating a new Country Page
 
-1. Create new `country.md` file in the `_partner` folder. Rename according to the country and how you want the URL to look. For example, `my-new-partner.md` will have the url `missingmaps.org/partners/new-country`. Use dashes `-` instead of underscores.
+1. Create new `country.md` file in the `country` folder. Rename according to the country and how you want the URL to look. For example, `my-new-country.md` will have the url `missingmaps.org/countries/new-country`. Use dashes `-` instead of underscores.
 
 2. All country page data is contained within the yml frontmatter. Copy and paste the `country-example.md` file. Edit all variables with new partner information. This repo has been set up with Prose.io to make this easier. [You can edit the yml frontmatter there as well](http://prose.io/#MissingMaps/partners/). See Updating Partner Information below for details on each variable.
 
