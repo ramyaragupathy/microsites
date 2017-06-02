@@ -1,10 +1,16 @@
 <div class = "Primary_Container">
   <div class = "Primary-logo">
     <div class = "Primary-logo-container">
-    {% if page.logo != null %}
-    <img src= "{{ site.domain }}{{ site.path_prefix }}/assets/graphics/content/logos/{{ page.logo }}"></img>
-    {% endif %}
-    <p>#{{ page.name }}</p>
+      {% if page.flag != null %}
+      <img src="{{ site.baseurl }}{{ site.path_prefix }}/assets/graphics/flags/4x3/{{page.flag}}">
+      {% endif %}
+      <div>
+        {% if page.name != 'all' %}
+          <p>{{ page.name }}</p>
+        {% else %}
+          <p>Microsites</p>
+        {% endif %}
+      </div>
     </div>
   </div>
   <div class = "Primary-stats">

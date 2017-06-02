@@ -2,8 +2,13 @@
  ------------------- Add Primary Stats -------------------
  -------------------------------------------------------*/
 
-function getPrimaryStats (primaryhash) {
-  const url = `http://osmstats.redcross.org/hashtags/${primaryhash}/users`;
+function getPrimaryStats (name) {
+  /*
+  // should the below 'group by' on the front end or should I add a single
+  // country route in the api, which would be simple
+  const url = 'http://osmstats.redcross.org/${name}/hashtags'
+  */
+  const url = `http://localhost:8080//${name}/hashtags`;
   $.getJSON(url, function (hashtagData) {
     const usersCount = Object.keys(hashtagData).length;
     var editsCount = 0;
