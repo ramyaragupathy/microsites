@@ -1,26 +1,17 @@
 /* -------------------------------------------------------
  ------------------- Add Primary Stats -------------------
  -------------------------------------------------------*/
-
-function getPrimaryStats (name) {
+function getPrimaryStats () {
   /*
-  // should the below 'group by' on the front end or should I add a single
-  // country route in the api, which would be simple
   const url = 'http://osmstats.redcross.org/${name}/hashtags'
   */
-  const url = `http://localhost:8080//${name}/hashtags`;
-  $.getJSON(url, function (hashtagData) {
-    const usersCount = Object.keys(hashtagData).length;
-    var editsCount = 0;
-    var buildingCount = 0;
-    var roadCount = 0;
+  const url = `http://localhost:3000/${PT.name}`;
+  $.getJSON(url, function (countryData) {
 
-    for (var i = 0; i < usersCount; i++) {
-      editsCount = editsCount + hashtagData[i].edits;
-      buildingCount = buildingCount + hashtagData[i].buildings;
-      roadCount = roadCount + hashtagData[i].roads;
-    }
-    roadCount = Math.round(roadCount);
+    const usersCount = Math.round(countryData[0].contributors);
+    const editsCount = Math.round(countryData[0].all_edits);
+    const buildingCount = Math.round(countryData[0].building_count_add);
+    const roadCount = Math.round(countryData[0].road_count_add);
 
     $('#stats-roadCount').html(roadCount.toLocaleString());
     $('#stats-buildingCount').html(buildingCount.toLocaleString());
