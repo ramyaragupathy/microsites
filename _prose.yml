@@ -47,11 +47,11 @@ prose:
           element: "text"
           placeholder: "/microsite-example/"
           label: "permalink"
-      - name: "id"
+      - name: "name"
         field:
           element: "select"
-          placeholder: "select a country"
-          help: "select the country name from the drop down"
+          placeholder: ""
+          label: "select a country"
           options:
            - name: 'Afghanistan'
              value: 'Afghanistan'
@@ -413,12 +413,6 @@ prose:
              value: 'Zambia'
            - name: 'Zimbabwe'
              value: 'Zimbabwe'
-
-      - name: "name"
-        field:
-          element: "text"
-          placeholder: "name"
-          label: "country name"
       - name: "flag-filename"
         field:
           element: "text"
