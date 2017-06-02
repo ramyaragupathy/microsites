@@ -45,19 +45,19 @@ prose:
       - name: "permalink"
         field:
           element: "text"
-          placeholder: "/country-example/"
+          placeholder: "/microsite-example/"
           label: "permalink"
       - name: "id"
         field:
           element: "text"
-          placeholder: "country-example"
+          placeholder: "microsite-example"
           label: "id"
       - name: "name"
         field:
           element: "text"
           placeholder: "name"
           label: "country name"
-      - name: "flag filename"
+      - name: "flag-filename"
         field:
           element: "text"
           value: "MMlogo-Outlined.svg"

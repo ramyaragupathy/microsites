@@ -1,5 +1,5 @@
 # Site settings
-title: mm-microsites
+title: mm-microsite
 safe:           false
 source:         app
 exclude:
@@ -13,10 +13,10 @@ highlighter: false
 domain:         http://www.missingmaps.org
 path_prefix:    /microsites
 
-default_partner: all
+default_microsite: all
 
 collections:
-  partner:
+  country:
     output: true
     permalink: /:path/
     lang: en

@@ -1,10 +1,10 @@
 ---
 layout: country
 lang: en
-permalink: /country/
+permalink: /country-example/
 
-id: country
-name: country
+id: country-example
+name: country-example
 flag: country-flag.svg
 
 tm-projects:
