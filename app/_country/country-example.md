@@ -2,8 +2,6 @@
 layout: country
 lang: en
 permalink: /country-example/
-
-id: country-example
 name: country-example
 flag: country-flag.svg
 
