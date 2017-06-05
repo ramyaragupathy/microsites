@@ -2,9 +2,9 @@
  ------------------- Add Primary Stats -------------------
  -------------------------------------------------------*/
 function getPrimaryStats (name) {
-  /*
-  const url = 'http://osmstats.redcross.org/${name}/hashtags'
-  */
+
+  // const url = 'http://osmstats.redcross.org/${name}/hashtags'
+
   const url = `http://localhost:3000/${name}`;
   $.getJSON(url, function (countryData) {
 
@@ -238,7 +238,7 @@ function eventsFunctionality () {
 function setupGraphs () {
   function removeExistingGraphs () {
     const totalGraph = document.querySelector('#Team-User-Total-Graph svg');
-    const bldngGraph = document.querySelector('#-User-Bldng-Graph svg');
+    const bldngGraph = document.querySelector('#Team-User-Bldng-Graph svg');
     const roadsGraph = document.querySelector('#Team-User-Roads-Graph svg');
     totalGraph.parentNode.removeChild(totalGraph);
     bldngGraph.parentNode.removeChild(bldngGraph);
@@ -247,6 +247,7 @@ function setupGraphs () {
   const moreBtn = $('.btn.invert-btn-grn.teams-btn');
   const teamLabel = $('.Team-Graph-Title .left');
   const teamUserLabel = $('.Team-User-Graph-Title .left');
+
   // Sets Users button to Selected, loads Users graphs, hides
   // "Show More Teams" button
   $('#Select-Users-Graph').click(function () {
@@ -254,13 +255,10 @@ function setupGraphs () {
     $('#Select-Users-Graph').addClass('Selected');
     teamLabel.text('Users');
     teamUserLabel.text('Users');
-    moreBtn.animate({opacity: 0}, 500, function () {
-      moreBtn.css('display', 'none');
-    });
     // Remove existing graphs
     removeExistingGraphs();
     // Gets main hashtag on each partner page via team.html
-    getUserActivityStats(PT.mainHashtag);
+    getUserActivityStats(PT.name);
   });
 
   // Sets Teams button to Selected, loads Teams graphs, reveals
@@ -270,13 +268,15 @@ function setupGraphs () {
     $('#Select-Teams-Graph').addClass('Selected');
     teamLabel.text('Teams');
     teamUserLabel.text('Teams');
-    if (PT.subHashtags.length > 10) {
-      moreBtn.css('display', 'inline').animate({opacity: 1}, 500);
-    }
+    // if (PT.subHashtags.length > 10) {
+    //   moreBtn.css('display', 'inline').animate({opacity: 1}, 500);
+    // }
     // Remove existing graphs
     removeExistingGraphs();
     // Gets hashtag array on each partner page via team.html
     getGroupActivityStats(PT.name);
+
+    showMoreContributions();
   });
 }
 
@@ -309,14 +309,27 @@ function getUserActivityStats (country) {
       return {name: generateUserUrl(userData[user].name, userData[user].user_number), value: roadsEdits};
     }).sort((a, b) => b.value - a.value);
 
-    console.log(totalSum)
-    console.log(bldngSum)
-    console.log(roadsSum)
-
     // Spawn a chart function with listening events for each of the metrics
     var c1 = new Barchart(totalSum, '#Team-User-Total-Graph');
     var c2 = new Barchart(bldngSum, '#Team-User-Bldng-Graph');
     var c3 = new Barchart(roadsSum, '#Team-User-Roads-Graph');
+
+    function showMoreContributions(contributions) {
+      const moreBtn = $('.btn.invert-btn-grn.teams-btn');
+      if (contributions.length > 10) {
+        moreBtn.css('display', 'inline').animate({opacity: 1}, 500);
+      } else {
+        moreBtn.css('display', 'inline').animate({opacity: 0}, 500);
+      }
+    }
+
+    const moreBtn = $('.btn.invert-btn-grn.teams-btn');
+    if (totalSum.length > 10) {
+      moreBtn.css('display', 'inline').animate({opacity: 1}, 500);
+    } else {
+      moreBtn.css('display', 'inline').animate({opacity: 0}, 500);
+    }
+
 
     // On window resize, run window resize function on each chart
     d3.select(window).on('resize', function () {
@@ -352,6 +365,11 @@ function getGroupActivityStats (country) {
         4) sort the hashtags from largest to smallest 'sum' value
       */
 
+      // TODO: make decision regarding team/user graphs
+      // One solution:
+      // put all edits, all buildings, all road in one object, check to see
+      // if any of them have nada in them. if they do, do not add them to graph?3
+
       const totalSum = hashtagData.reduce(function (acc, ht) {
         if (!$.isEmptyObject(ht)) {
           const sum = Math.round(Number(ht.all_edits));
@@ -369,7 +387,6 @@ function getGroupActivityStats (country) {
         return acc;
       }, []).sort((a, b) => b.value - a.value);
 
-
       const roadsSum = hashtagData.reduce(function (acc, ht) {
         if (!$.isEmptyObject(ht)) {
           const sum = Math.round(Number(ht.road_km_add)) +
@@ -383,6 +400,14 @@ function getGroupActivityStats (country) {
       var c1 = new Barchart(totalSum, '#Team-User-Total-Graph');
       var c2 = new Barchart(bldngSum, '#Team-User-Bldng-Graph');
       var c3 = new Barchart(roadsSum, '#Team-User-Roads-Graph');
+
+      const moreBtn = $('.btn.invert-btn-grn.teams-btn');
+      if (totalSum.length > 10) {
+        moreBtn.css('display', 'inline').animate({opacity: 1}, 500);
+      } else {
+        moreBtn.css('display', 'inline').animate({opacity: 0}, 500);
+      }
+
 
       // On window resize, run window resize function on each chart
       d3.select(window).on('resize', function () {
@@ -500,14 +525,14 @@ function Barchart (data, targetElement) {
   };
 }
 
-function checkHashtags (hashtags) {
-  if (hashtags.length < 2) {
-    console.warn('WARNING >> There are not enough secondary hashtags listed ' +
-                 'in order to represent differences in contribution level ' +
-                 'between partners. The partner graphs will not be displayed.');
-    $('.Team-User-Container').css('display', 'none');
-  }
-}
+// function checkHashtags (hashtags) {
+//   if (hashtags.length < 2) {
+//     console.warn('WARNING >> There are not enough secondary hashtags listed ' +
+//                  'in order to represent differences in contribution level ' +
+//                  'between partners. The partner graphs will not be displayed.');
+//     $('.Team-User-Container').css('display', 'none');
+//   }
+// }
 
 /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
  ---------------------------------------------------------
@@ -521,14 +546,11 @@ const mbBasemapUrl = 'https://api.mapbox.com/v4/mapbox.light/{z}/{x}/{y}.png';
 getPrimaryStats(PT.name);
 // Populates initial groups graph via Missing Maps API
 getGroupActivityStats(PT.name);
-getUserActivityStats(PT.name)
 // Populate project carousel via HOTOSM Tasking Manager API
 // getProjects(PT.hotProjects);
-// // Adds event functionality (hide and show)
-// eventsFunctionality();
-// // Check to see if there are hashtags to view
+
+// Check to see if there are hashtags to view
 // checkHashtags(PT.subHashtags);
 // // Sets up switcher/ loader for group and user graphs
-setupGraphs();
 
-// Populate the Flickr carousel
+setupGraphs();
