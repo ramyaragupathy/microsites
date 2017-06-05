@@ -46,7 +46,8 @@ gulp.task('compass', function () {
 gulp.task('compress:main', function () {
   // main.min.js
   var task = gulp.src([
-    'app/assets/scripts/*.js'
+    'app/assets/scripts/*.js',
+    '!app/assets/scripts/buildCountryPages.js'
   ])
   .pipe(babel({
     presets: ['es2015']

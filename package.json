@@ -52,7 +52,7 @@
     "gulp-uglifyjs": "~0.6.0",
     "js-yaml": "^3.2.6",
     "lodash": "^3.5.0",
+    "request-promise": "^4.2.1",
     "run-sequence": "~1.0.2"
-  },
-  "dependencies": {}
+  }
 }

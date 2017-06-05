@@ -314,15 +314,6 @@ function getUserActivityStats (country) {
     var c2 = new Barchart(bldngSum, '#Team-User-Bldng-Graph');
     var c3 = new Barchart(roadsSum, '#Team-User-Roads-Graph');
 
-    function showMoreContributions(contributions) {
-      const moreBtn = $('.btn.invert-btn-grn.teams-btn');
-      if (contributions.length > 10) {
-        moreBtn.css('display', 'inline').animate({opacity: 1}, 500);
-      } else {
-        moreBtn.css('display', 'inline').animate({opacity: 0}, 500);
-      }
-    }
-
     const moreBtn = $('.btn.invert-btn-grn.teams-btn');
     if (totalSum.length > 10) {
       moreBtn.css('display', 'inline').animate({opacity: 1}, 500);
