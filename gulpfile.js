@@ -69,7 +69,8 @@ gulp.task('compress:main', function () {
 gulp.task('compress:vendor', function () {
   // vendor.min.js
   var task = gulp.src([
-    'app/assets/scripts/vendor/*.js'
+    'app/assets/scripts/vendor/*.js',
+    '!app/assets/scripts/vendor/buildCountryPages.js'
   ])
   .pipe(plumber());
 

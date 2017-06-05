@@ -51,8 +51,11 @@
     "gulp-plumber": "~0.6.6",
     "gulp-uglifyjs": "~0.6.0",
     "js-yaml": "^3.2.6",
-    "lodash": "^3.5.0",
+    "lodash": "^3.10.1",
     "request-promise": "^4.2.1",
-    "run-sequence": "~1.0.2"
+    "run-sequence": "~1.0.2",
+    "turf": "^3.0.14",
+    "turf-merge": "^1.0.2",
+    "world-atlas": "^1.1.4"
   }
 }
