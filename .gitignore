@@ -16,3 +16,6 @@ app/assets/scripts/config/local.js
 #Foundation additions
 .sass-cache
 config
+
+#
+designGoals.md

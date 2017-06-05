@@ -5,26 +5,62 @@ var tasks = JSON.parse(fs.readFileSync(
   '../../../../../helpers/osm-data-parse/tasking-mgr-projects/output/output_20170605-122008.geojson'
 ));
 var _ = require('lodash')
+var turf = require('turf')
+
+ /* -------------------------------------------------------
+  ----------- Get List centroids for open Tasks -----------
+  -------------------------------------------------------*/
+
+// list of unique tasks
+var tasksList = _.uniq(tasks.features.map((d) => {return d.properties.task}));
+
+/*
+  To get the list of centroids for open tasks:
+    1) create list of tasks apart of larger tasking manager task as
+       'taskGeometries'
+    2) get list of taskGeometries tasks' states, which tell whether or not the
+       task is completed
+    3) using the power of indexof() find out if the states included are
+       either 'invalidated' or 'open'. this suggests tasks are still being
+       worked on
+    4) if either of those states are present for task at hand,
+       get the centroid of those taskGeometries and push it to taskCentroids
+       list
+*/
+
+var taskCentroids = []
+tasksList.forEach((d) => {
+  var taskGeometries = tasks.features.filter((f) => {
+    if(f.properties.task === d) {return turf.polygon(f.geometry.coordinates[0])}
+  })
+
+  // see if status any of the task 'state' values suggest they are not conpleted
+  var taskStates = _.uniq(taskGeometries.map((s) => {return s.properties.state}))
+
+  // return back index # if 0 or 1 exists in list.
+  // this uses indexOf()'s behavior to return a -1 if the parameter is not in list
+  var taskStates = [taskStates.indexOf(0),taskStates.indexOf(1)].filter((num) => {
+    if(num > -1) {return num};
+  })
+
+  // if anything was returned in list, get centroid and of taskGeometries and
+  // pass along to taskCentroids
+  if(taskStates.length > 0) {
+    var taskCentroid = turf.centroid(turf.featureCollection(taskGeometries))
+    taskCentroid.properties = d
+    taskCentroids.push(taskCentroid)
+  }
+})
+
 /* -------------------------------------------------------
- ----------- Get List of Country Names from api ---------
+ ------------ Add tasks to correct countries -------------
  -------------------------------------------------------*/
+
+ /*
+ */
 
 // const options = {uri:'http://osmstats.redcross.org/countries',json:true}
 const options = {uri:'http://localhost:3000/countries',json: true}
-
-// get unique tasks
-var tasksList = _.uniq(tasks.features.map((d) => {return d.properties.task}))
-// create list of 'subFeature' collections for each task #.
-// effectively creating list of tasks, where each el is equivalent to all task features
-var groupedTasks = []
-for(i=0;i<tasksList.length;i++){
-  console.log(tasks)
-  // taskGeometries = tasks.features.reduce((f) => {
-  //   if(f.properties.task === tasksList[i]) {return f}
-  // })
-  // groupedTasks.push(taskGeometries)
-}
-
 
 /*
   With forEach, the following steps make country files for each country

@@ -538,7 +538,7 @@ getPrimaryStats(PT.name);
 // Populates initial groups graph via Missing Maps API
 getGroupActivityStats(PT.name);
 // Populate project carousel via HOTOSM Tasking Manager API
-// getProjects(PT.hotProjects);
+getProjects(PT.hotProjects);
 
 // Check to see if there are hashtags to view
 // checkHashtags(PT.subHashtags);
