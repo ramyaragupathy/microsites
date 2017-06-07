@@ -11,8 +11,6 @@ var turf = require('turf')
   ----------- Get List centroids for open Tasks -----------
   -------------------------------------------------------*/
 
-// list of unique tasks
-var tasksList = _.uniq(tasks.features.map((d) => {return d.properties.task}));
 
 /*
   To get the list of centroids for open tasks:
@@ -28,48 +26,42 @@ var tasksList = _.uniq(tasks.features.map((d) => {return d.properties.task}));
        list
 */
 
+// list of unique tasks
+var tasksList = _.uniq(tasks.features.map((d) => {return d.properties.task}));
 var taskCentroids = []
+
 tasksList.forEach((d) => {
   var taskGeometries = tasks.features.filter((f) => {
     if(f.properties.task === d) {return turf.polygon(f.geometry.coordinates[0])}
   })
-
-  // see if status any of the task 'state' values suggest they are not conpleted
   var taskStates = _.uniq(taskGeometries.map((s) => {return s.properties.state}))
-
-  // return back index # if 0 or 1 exists in list.
-  // this uses indexOf()'s behavior to return a -1 if the parameter is not in list
-  var taskStates = [taskStates.indexOf(0),taskStates.indexOf(1)].filter((num) => {
+  taskStates = [taskStates.indexOf(0),taskStates.indexOf(1)].filter((num) => {
     if(num > -1) {return num};
   })
-
-  // if anything was returned in list, get centroid and of taskGeometries and
-  // pass along to taskCentroids
   if(taskStates.length > 0) {
     var taskCentroid = turf.centroid(turf.featureCollection(taskGeometries))
     taskCentroid.properties = d
     taskCentroids.push(taskCentroid)
   }
 })
+taskCentroids = turf.featureCollection(taskCentroids)
 
 /* -------------------------------------------------------
- ------------ Add tasks to correct countries -------------
+ ------------ Add tasks to correct countries ------------
  -------------------------------------------------------*/
-
- /*
- */
-
-// const options = {uri:'http://osmstats.redcross.org/countries',json:true}
-const options = {uri:'http://localhost:3000/countries',json: true}
 
 /*
   With forEach, the following steps make country files for each country
     1) make a file {country}.md with writeFileSync
     2) append each line of metadata as defined in the country-example.md file
 */
-rp(options)
-.then(function(results){
-  results.forEach((country) => {
+
+// const options = {uri:'http://osmstats.redcross.org/countries',json:true}
+const countryOptions = {uri:'http://localhost:3000/countries',json: true}
+
+rp(countryOptions)
+.then(function(countryResults){
+  countryResults.forEach((country) => {
     // generate api call to boundaries
     const geojsonOptions = {
       uri:'https://raw.githubusercontent.com/AshKyd/geojson-regions/master/countries/10m/' + country[1] + '.geojson',
@@ -77,10 +69,12 @@ rp(options)
     }
     rp(geojsonOptions)
     .then(function(geojsonResults) {
-      console.log(geojsonResults)
+      const country = turf.featureCollection(geojsonResults)
+      const tasksWithinCountry = turf.within(taskCentroids,country)
+      console.log(tasksWithinCountry)
     })
     .catch(function(error) {
-      console.log('an error')
+      console.log(error)
     })
     // const countryFile = '../../_country/' + country[0] + '.md'
     // fs.writeFileSync(countryFile, '---')
