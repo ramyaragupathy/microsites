@@ -1,6 +1,7 @@
 ---
 layout: country
 permalink: /Nigeria/
+id: nga
 name: Nigeria
 lang: en
 flag: ng.svg
@@ -12,5 +13,5 @@ tm-projects:
     desc: 'eHealth Africa is providing data-driven solutions to support health intervention thereby ensuring the underserved communities are reached in Nigeria. Mapping the features such as buildings, roads, point of interest will ensure that various health intervention programmes are well managed, decisions makers, as well as humanitarian organisations, make better decisions.'
   - id: 2861
     desc: 'eHealth Africa is working at mapping Nigeria. These maps are used for various projects which are to tackle and provide simplified health solutions. The maps are used to track the vaccination teams, delivery of vaccines, Internally displaced people coordination, distance matrix and plan new vaccination campaigns. As we move on to surveillance stage in our fight against Polio, more data are still needed to consolidate on our success against the virus.'
-    
+
 ---

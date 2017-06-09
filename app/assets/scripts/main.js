@@ -1,18 +1,17 @@
+
 /* -------------------------------------------------------
  ------------------- Add Primary Stats -------------------
  -------------------------------------------------------*/
-function getPrimaryStats (name) {
 
-  // const url = 'http://osmstats.redcross.org/${name}/hashtags'
+function getPrimaryStats (countryId) {
 
-  const url = `http://localhost:3000/${name}`;
+  const url = `http://osmstats.redcross.org/countries/${countryId}`;
   $.getJSON(url, function (countryData) {
-
     // round value for select stats, then add them to page
-    const usersCount = Math.round(countryData[0].contributors);
-    const editsCount = Math.round(countryData[0].all_edits);
-    const buildingCount = Math.round(countryData[0].building_count_add);
-    const roadCount = Math.round(countryData[0].road_count_add);
+    const usersCount = Math.round(countryData.contributors);
+    const editsCount = Math.round(countryData.all_edits);
+    const buildingCount = Math.round(countryData.building_count_add);
+    const roadCount = Math.round(countryData.road_count_add);
 
     $('#stats-roadCount').html(roadCount.toLocaleString());
     $('#stats-buildingCount').html(buildingCount.toLocaleString());
@@ -244,12 +243,9 @@ function addMap (projectId) {
   // schedule that they do not want the world to see.
 //
 
-function buildEventCards(calID) {
-  const gcalURL = 'https://www.google.com/calendar/ical/' + calID + '/public/basic.ics';
-  $.getJSON(gcalURL,function(err,data){
-    console.log(data)
-  })
-}
+// function buildEventCards(calID) {
+//   })
+// }
 
 /* -------------------------------------------------------
  ------------------ Add Activity Graphs ------------------
@@ -278,7 +274,7 @@ function setupGraphs () {
     // Remove existing graphs
     removeExistingGraphs();
     // Gets main hashtag on each partner page via team.html
-    getUserActivityStats(PT.name);
+    getUserActivityStats(PT.id);
   });
 
   // Sets Teams button to Selected, loads Teams graphs, reveals
@@ -294,7 +290,7 @@ function setupGraphs () {
     // Remove existing graphs
     removeExistingGraphs();
     // Gets hashtag array on each partner page via team.html
-    getGroupActivityStats(PT.name);
+    getGroupActivityStats(PT.id);
 
     showMoreContributions();
   });
@@ -306,10 +302,9 @@ function generateUserUrl (userName, userId) {
   return `<a xlink:href="${userUrl}" target="_blank" style="text-decoration:none">${userName}</a>`;
 }
 
-function getUserActivityStats (country) {
-  // Connect hashtags to /{country}/users Missing Maps API endpoint
-  // const url = 'http://osmstats.redcross.org/{country}/' + users;
-  const url = `http://localhost:3000/${country}/users`
+function getUserActivityStats (countryId) {
+
+  const url = `http://osmstats.redcross.org/countries/${countryId}/users`
   $.getJSON(url, function (userData) {
 
     const totalSum = Object.keys(userData).map(function (user) {
@@ -358,10 +353,9 @@ function generateHashtagUrl (hashtag) {
 }
 
 // populate 'teams' graphs, which show activity per hashtag
-function getGroupActivityStats (country) {
+function getGroupActivityStats (countryId) {
 
-  // const url = 'http://osmstats.redcross.org/group-summaries/' + hashtagsString;
-  const url = `http://localhost:3000/${country}/hashtags`
+  const url = `http://osmstats.redcross.org/countries/${countryId}/hashtags`
 
   $.getJSON(url, function (hashtagData) {
 
@@ -554,9 +548,9 @@ const mbToken = 'pk.eyJ1IjoiZGV2c2VlZCIsImEiOiJnUi1mbkVvIn0.018aLhX0Mb0tdtaT2QNe
 const mbBasemapUrl = 'https://api.mapbox.com/v4/mapbox.light/{z}/{x}/{y}.png';
 
 // Populate the primary stats in hero via Missing Maps API
-getPrimaryStats(PT.name);
+getPrimaryStats(PT.id);
 // Populates initial groups graph via Missing Maps API
-getGroupActivityStats(PT.name);
+getGroupActivityStats(PT.id);
 // Populate project carousel via HOTOSM Tasking Manager API
 getProjects(PT.hotProjects);
 
