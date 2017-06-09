@@ -530,15 +530,6 @@ function Barchart (data, targetElement) {
   };
 }
 
-// function checkHashtags (hashtags) {
-//   if (hashtags.length < 2) {
-//     console.warn('WARNING >> There are not enough secondary hashtags listed ' +
-//                  'in order to represent differences in contribution level ' +
-//                  'between partners. The partner graphs will not be displayed.');
-//     $('.Team-User-Container').css('display', 'none');
-//   }
-// }
-
 /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
  ---------------------------------------------------------
  --------------------- Setup Project ---------------------

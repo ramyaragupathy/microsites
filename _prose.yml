@@ -47,6 +47,11 @@ prose:
           element: "text"
           placeholder: "/microsite-example/"
           label: "permalink"
+      - name: "id"
+        field:
+          element: "text"
+          placeholder: ""
+          label: 'the country id corresponding with the country of interest'
       - name: "name"
         field:
           element: "select"
@@ -418,3 +423,9 @@ prose:
           element: "text"
           value: "MMlogo-Outlined.svg"
           label: "flag"
+      - name: "calendar"
+        field:
+          element: "text"
+          placeholder: "enter the calendar id"
+          help: "for help retrieving calendar id, see calendar section the microsites README"
+          label: 'the country id corresponding with the country of interest'
