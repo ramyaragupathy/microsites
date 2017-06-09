@@ -234,14 +234,12 @@ function eventsFunctionality () {
  -------------------- Add Events Cards -------------------
  -------------------------------------------------------*/
 function generateEvents(calendarId) {
-  var monthNames = ["January", "February", "March", "April", "May", "June",
-  "July", "August", "September", "October", "November", "December"]
   const url = "https://mm-microsites-proxy-staging.herokuapp.com/" + calendarId + "/events"
   $.getJSON(url, function(eventData) {
-    $(".event-sub-container").removeClass("hidden")
     Object.keys(eventData).map((key,val) => {
       const title = eventData[key].name;
-      const singupLink = eventData[key].description.match(/(https?:\/\/[^\s]+)/g)[0]
+      // const singupLink = eventData[key].description.match(/(https?:\/\/[^\s]+)/g)[0]
+      const singupLink = "#"
       const desc = eventData[key].description.replace(/(https?:\/\/[^\s]+)/,"")
       const location = eventData[key].location;
       const date = moment(eventData[key].time[0]).format("MMMM Do")
@@ -257,21 +255,27 @@ function generateEvents(calendarId) {
         '<img class="event-images" src="/assets/graphics/flags/4x3/' + PT.flag + '" width="24"/>',
         '<h3 class="event-header">' + title + '</h3>',
         '<a class="btn btn-grn" href=' + singupLink + ' target="">SIGN UP</a>',
+        '</div>',
         '</div>'
       ].join('')
       const eventMainDetails = [
         '<div class="event-maindetails clearfix">',
-          '<div class="event-details-left">',
-            '<div class="textbox" style="padding-top:8px">',
-            '<p>' + '<b>Date:</b> ' + date + '</p>',
-            '<p>' + '<b>Time:</b> ' + time + '</p>',
-            '<p>' + '<b>About:</b> ' + desc + '</p>',
-            '</div>',
-          '</div>',
+        '<div class="textbox" style="padding-top:8px">',
+        '<p>' + '<b>Date:</b> ' + date + '</p>',
+        '<p>' + '<b>Time:</b> ' + time + '</p>',
+        '<p>' + '<b>About:</b> ' + desc + '</p>',
+        '</div>',
         '</div>'
       ].join('')
-      $(".event-sub-container").append([eventTopSection,eventMainDetails].join(''))
-      console.log(time)
+      const eventsHTML = [
+        '<div class="column">',
+		    '<div class="event-sub-container">',
+        eventTopSection,
+        eventMainDetails,
+        '</div>',
+        '</div>'
+      ].join('')
+      $("#event-cards").append(eventsHTML)
     })
   })
 
