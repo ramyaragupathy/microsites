@@ -5,7 +5,7 @@ id: nga
 name: Nigeria
 lang: en
 flag: ng.svg
-
+calendar: developmentseed.org_nir3vff8ar4ej3c2ccag2hdr58@group.calendar.google.com
 tm-projects:
   - id: 2768
     desc: 'The scope of the polio outbreak response (OBR) for detected wild polio virus type 1 (WPV1) in Borno State has been expanded and different strategies employed to reach eligible children in Nigeria. The immunization campaign which commenced on 17 September, 2016 is targeting 31,540,054 children in 18 states across northern Nigeria.'
