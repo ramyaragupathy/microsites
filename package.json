@@ -19,8 +19,9 @@
     "postinstall": "[ -f _config-dev.yml ] || echo 'domain: http://localhost:3000\npath_prefix:' > _config-dev.yml",
     "serve": "gulp serve",
     "build": "gulp",
+    "build:stage": "gulp stage",
     "lint": "semistandard app/assets/scripts/**/*.js",
-    "test": "echo NO TESTS YET",
+    "test": "npm run lint",
     "install": "bundle install --path bundle/cache"
   },
   "browserify": {
@@ -56,6 +57,7 @@
     "proxy-middleware": "^0.15.0",
     "request-promise": "^4.2.1",
     "run-sequence": "~1.0.2",
+    "semistandard": "^11.0.0",
     "turf": "^3.0.14",
     "turf-merge": "^1.0.2",
     "url": "^0.11.0",

@@ -1,0 +1,22 @@
+env:
+  global:
+  - STAGING_BRANCH=dev
+  - PRODUCTION_BRANCH=master
+
+before_install:
+    - chmod +x ./.build_scripts/build.sh
+
+script:
+  - npm test
+  - ./.build_scripts/build.sh
+
+deploy:
+  - provider: s3
+    access_key_id: ${ACCESS_KEY_ID}
+    secure_access_key: ${SECURE_ACCESS_KEY}
+    bucket: mm-microsites-staging
+    local_dir: './_site/'
+    skip_cleanup: true
+    on:
+      branch: ${STAGING_BRANCH}
+
