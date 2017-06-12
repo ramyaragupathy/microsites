@@ -6,11 +6,13 @@ var tasks = JSON.parse(fs.readFileSync(
 ));
 var _ = require('lodash')
 var turf = require('turf')
+var dissolve = require('@turf/dissolve');
+var helpers = require('@turf/helpers');
+var crg = require('country-reverse-geocoding').country_reverse_geocoding();
 
- /* -------------------------------------------------------
+  /*-------------------------------------------------------
   ----------- Get List centroids for open Tasks -----------
   -------------------------------------------------------*/
-
 
 /*
   To get the list of centroids for open tasks:
@@ -27,63 +29,60 @@ var turf = require('turf')
 */
 
 // list of unique tasks
-var tasksList = _.uniq(tasks.features.map((d) => {return d.properties.task}));
-var taskCentroids = []
-
-tasksList.forEach((d) => {
-  var taskGeometries = tasks.features.filter((f) => {
-    if(f.properties.task === d) {return turf.polygon(f.geometry.coordinates[0])}
-  })
-  var taskStates = _.uniq(taskGeometries.map((s) => {return s.properties.state}))
-  taskStates = [taskStates.indexOf(0),taskStates.indexOf(1)].filter((num) => {
-    if(num > -1) {return num};
-  })
-  if(taskStates.length > 0) {
-    var taskCentroid = turf.centroid(turf.featureCollection(taskGeometries))
-    taskCentroid.properties = d
-    taskCentroids.push(taskCentroid)
+var tasksList = _.uniq(tasks.features.map((d) => { return d.properties.task; }));
+Promise.map(tasksList, (task) => {
+  var taskGeometries = turf.featureCollection(
+    tasks.features.filter((feature) => {
+      if (feature.properties.task === task) {
+        return turf.polygon(
+          feature.geometry.coordinates[0],
+          {task: feature.properties.task}
+        );
+      }
+    })
+  );
+  var taskStates = _.uniq(taskGeometries.features.map((s) => { return s.properties.state; }));
+  taskStates = taskStates.filter((num) => {
+    if (num > -1) { return num; }
+  });
+  if (taskStates.length > 0) {
+    const centroid = turf.centroid(taskGeometries);
+    return centroid.geometry.coordinates;
   }
 })
-taskCentroids = turf.featureCollection(taskCentroids)
-
-/* -------------------------------------------------------
- ------------ Add tasks to correct countries ------------
- -------------------------------------------------------*/
-
-/*
-  With forEach, the following steps make country files for each country
-    1) make a file {country}.md with writeFileSync
-    2) append each line of metadata as defined in the country-example.md file
-*/
-
-// const options = {uri:'http://osmstats.redcross.org/countries',json:true}
-const countryOptions = {uri:'http://localhost:3000/countries',json: true}
-
-rp(countryOptions)
-.then(function(countryResults){
-  countryResults.forEach((country) => {
-    // generate api call to boundaries
-    const geojsonOptions = {
-      uri:'https://raw.githubusercontent.com/AshKyd/geojson-regions/master/countries/10m/' + country[1] + '.geojson',
-      json:true
+.then((taskCentroids) => {
+  Promise.map(taskCentroids, (centroid) => {
+    if (centroid !== undefined) {
+      return crg.get_country(centroid[1], centroid[0]);
     }
-    rp(geojsonOptions)
-    .then(function(geojsonResults) {
-      const country = turf.featureCollection(geojsonResults)
-      const tasksWithinCountry = turf.within(taskCentroids,country)
-      console.log(tasksWithinCountry)
-    })
-    .catch(function(error) {
-      console.log(error)
-    })
-    // const countryFile = '../../_country/' + country[0] + '.md'
-    // fs.writeFileSync(countryFile, '---')
-    // fs.appendFileSync(countryFile, '\n')
-    // fs.appendFileSync(countryFile, 'layout: country \n')
-    // fs.appendFileSync(countryFile, 'lang: en \n')
-    // fs.appendFileSync(countryFile, 'permalink: /' + country + '/ \n')
-    // fs.appendFileSync(countryFile, 'name: ' + country + '\n')
-    // fs.appendFileSync(countryFile, 'tm-projects: \n')
-    // fs.appendFileSync(countryFile, '---')
   })
-})
+  .then((country) => {
+    console.log(country);
+  });
+});
+// taskCentroids = turf.featureCollection(taskCentroids);
+// console.log(taskCentroids);
+//
+// taskCentroids.forEach((task) => {
+//
+// });
+//     rp(geojsonOptions)
+//     .then(function(geojsonResults) {
+//       const country = turf.featureCollection(geojsonResults)
+//       const tasksWithinCountry = turf.within(taskCentroids,country)
+//       console.log(tasksWithinCountry)
+//     })
+//     .catch(function(error) {
+//       console.log(error)
+//     })
+//     // const countryFile = '../../_country/' + country[0] + '.md'
+//     // fs.writeFileSync(countryFile, '---')
+//     // fs.appendFileSync(countryFile, '\n')
+//     // fs.appendFileSync(countryFile, 'layout: country \n')
+//     // fs.appendFileSync(countryFile, 'lang: en \n')
+//     // fs.appendFileSync(countryFile, 'permalink: /' + country + '/ \n')
+//     // fs.appendFileSync(countryFile, 'name: ' + country + '\n')
+//     // fs.appendFileSync(countryFile, 'tm-projects: \n')
+//     // fs.appendFileSync(countryFile, '---')
+//   })
+// })
