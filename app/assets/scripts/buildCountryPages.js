@@ -1,36 +1,27 @@
-var rp = require('request-promise');
-var fs = require('fs')
-var Promise = require('bluebird')
+// var rp = require('request-promise');
+var fs = require('fs');
+var Promise = require('bluebird');
 var tasks = JSON.parse(fs.readFileSync(
   '../../../../../helpers/osm-data-parse/tasking-mgr-projects/output/output_20170605-122008.geojson'
 ));
-var _ = require('lodash')
-var turf = require('turf')
-var dissolve = require('@turf/dissolve');
-var helpers = require('@turf/helpers');
+var _ = require('lodash');
+var turf = require('turf');
 var crg = require('country-reverse-geocoding').country_reverse_geocoding();
 
-  /*-------------------------------------------------------
-  ----------- Get List centroids for open Tasks -----------
-  -------------------------------------------------------*/
-
 /*
-  To get the list of centroids for open tasks:
-    1) create list of tasks apart of larger tasking manager task as
-       'taskGeometries'
-    2) get list of taskGeometries tasks' states, which tell whether or not the
-       task is completed
-    3) using the power of indexof() find out if the states included are
-       either 'invalidated' or 'open'. this suggests tasks are still being
-       worked on
-    4) if either of those states are present for task at hand,
-       get the centroid of those taskGeometries and push it to taskCentroids
-       list
-*/
+ *  To get the list of centroids for open tasks:
+ *    1) generate list of all unique tasks
+ *    2) generate centroids for tasks with 'state' indicating they're 'in progress'
+ *    3) reverse geocode those tasks to get countries
+ *    4) group tasks by country
+ *    5) ammend country page for each with tasks
+ */
 
-// list of unique tasks
+// Step 1
 var tasksList = _.uniq(tasks.features.map((d) => { return d.properties.task; }));
+// Step 2
 Promise.map(tasksList, (task) => {
+
   var taskGeometries = turf.featureCollection(
     tasks.features.filter((feature) => {
       if (feature.properties.task === task) {
@@ -41,23 +32,43 @@ Promise.map(tasksList, (task) => {
       }
     })
   );
+  const taskNum = taskGeometries.features[0].properties.task;
   var taskStates = _.uniq(taskGeometries.features.map((s) => { return s.properties.state; }));
   taskStates = taskStates.filter((num) => {
     if (num > -1) { return num; }
   });
   if (taskStates.length > 0) {
-    const centroid = turf.centroid(taskGeometries);
-    return centroid.geometry.coordinates;
+    return turf.feature(
+      turf.centroid(taskGeometries),
+      { task: taskNum }
+    );
   }
 })
+// Step 3
 .then((taskCentroids) => {
   Promise.map(taskCentroids, (centroid) => {
     if (centroid !== undefined) {
-      return crg.get_country(centroid[1], centroid[0]);
+      const coordinates = centroid.geometry.geometry.coordinates;
+      const taskNum = centroid.properties.task;
+      let country = crg.get_country(coordinates[1], coordinates[0]);
+      country = Object.assign({ task: taskNum }, country);
+      return country;
     }
   })
-  .then((country) => {
-    console.log(country);
+  .then((countries) => {
+    const groupedCountries = _.groupBy(countries, (country) => {
+      if (country !== undefined) {
+        return country.code;
+      }
+    });
+    return _.forEach(groupedCountries, (groupedCountry) => {
+      if (groupedCountry !== undefined) {
+        return groupedCountry;
+      }
+    });
+  })
+  .then((groupedCountries) => {
+    console.log(groupedCountries);
   });
 });
 // taskCentroids = turf.featureCollection(taskCentroids);
