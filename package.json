@@ -63,5 +63,12 @@
     "turf-merge": "^1.0.2",
     "url": "^0.11.0",
     "world-atlas": "^1.1.4"
+  },
+  "dependencies": {
+    "@turf/dissolve": "^4.4.0",
+    "@turf/helpers": "^4.4.0",
+    "country-reverse-geocoding": "^0.2.2",
+    "lodash": "^4.17.4",
+    "lodash.omitby": "^4.6.0"
   }
 }

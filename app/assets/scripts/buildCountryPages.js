@@ -5,7 +5,6 @@ var tasks = JSON.parse(fs.readFileSync(
   '../../../../../helpers/osm-data-parse/tasking-mgr-projects/output/output_20170605-122008.geojson'
 ));
 var _ = require('lodash');
-var omitBy = require('lodash.omitby');
 var turf = require('turf');
 var crg = require('country-reverse-geocoding').country_reverse_geocoding();
 
@@ -16,8 +15,33 @@ var crg = require('country-reverse-geocoding').country_reverse_geocoding();
  *    3) reverse geocode those tasks to get countries
  *    4) group tasks by country
  *    5) check reverse geocoded code against osm-stats code
- *    6) ammend country page for each with tasks
+ *    6) generate pages for all country without tasks
+ *    7) generate country page for each with tasks
  */
+
+function genCountryPage (countryPageInfo) {
+  fs.writeFileSync(countryPageInfo[0], '---');
+  fs.appendFileSync(countryPageInfo[0], '\n');
+  fs.appendFileSync(countryPageInfo[0], 'layout: country \n');
+  fs.appendFileSync(countryPageInfo[0], 'permalink: /' + countryPageInfo[1] + '/ \n');
+  fs.appendFileSync(countryPageInfo[0], 'code: ' + countryPageInfo[2] + '\n');
+  fs.appendFileSync(countryPageInfo[0], 'name: ' + countryPageInfo[1] + '\n');
+  fs.appendFileSync(countryPageInfo[0], 'lang: en \n');
+  fs.appendFileSync(countryPageInfo[0], 'flag: ' + countryPageInfo[3] + '\n');
+  fs.appendFileSync(countryPageInfo[0], 'tm-projects: \n');
+  if (countryPageInfo[4]) {
+    countryPageInfo[4].map((task) => {
+      const taskNum = task.task;
+      fs.appendFileSync(countryPageInfo[0], ' - id: ' + taskNum + '\n');
+      console.log('tasks.hotosm.org/project/' + taskNum + '.json');
+      // rp('tasks.hotosm.org/project/' + taskNum + '.json')
+      // .then((project) => {
+      //   const desc = project.properties.description;
+      //   fs.appendFileSync(countryFile, 'desc: ' + desc);
+      // });
+    });
+  }
+}
 
 // Step 1
 var tasksList = _.uniq(tasks.features.map((d) => { return d.properties.task; }));
@@ -91,24 +115,22 @@ Promise.map(tasksList, (task) => {
       }
     });
     // Step 6
+    // Promise.map(validCodes, (validCode) => {
+    //
+    // })
+    // .then()
+    // Step 7
     Promise.map(groupedTasksFin, (finTaskGroup) => {
-      const countryFile = '../../_country/' + Object.keys(finTaskGroup);
+      const countryFile = '../../_country/' + Object.keys(finTaskGroup) + '.md';
       const countryName = finTaskGroup[Object.keys(finTaskGroup)][0].name;
-      fs.writeFileSync(countryFile, '---');
-      fs.appendFileSync(countryFile, '\n');
-      fs.appendFileSync(countryFile, 'layout: country \n');
-      fs.appendFileSync(countryFile, 'permalink: /' + countryName + '/ \n');
-      fs.appendFileSync(countryFile, 'name: ' + countryName + '\n');
-      fs.appendFileSync(countryFile, 'lang: en \n');
-      fs.appendFileSync(countryFile, 'tm-projects: \n');
-      finTaskGroup[Object.keys(finTaskGroup)].map((task) => {
-        const taskNum = task.task;
-        fs.appendFileSync(countryFile, ' - id: ' + taskNum + '\n');
-        rp('tasks.hotosm.org/project/' + taskNum + '.json')
-        .then((project) => {
-          const desc = project.properties.description;
-          fs.appendFileSync(countryFile, 'desc: ' + desc);
-        });
+      const countryCode = finTaskGroup[Object.keys(finTaskGroup)][0].code;
+      const countryFlag = countryCode.slice(0, 2).toLowerCase() + '.svg';
+      genCountryPage([countryFile, countryName, countryCode, countryFlag]);
+      return countryName;
+    })
+    .then((countryNames) => {
+      countryNames.forEach((countryName) => {
+        console.log('Generated microsite page for ' + countryName + '...');
       });
     });
   });
