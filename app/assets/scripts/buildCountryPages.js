@@ -5,6 +5,7 @@ var tasks = JSON.parse(fs.readFileSync(
   '../../../../../helpers/osm-data-parse/tasking-mgr-projects/output/output_20170605-122008.geojson'
 ));
 var _ = require('lodash');
+var omitBy = require('lodash.omitby');
 var turf = require('turf');
 var crg = require('country-reverse-geocoding').country_reverse_geocoding();
 
@@ -21,7 +22,6 @@ var crg = require('country-reverse-geocoding').country_reverse_geocoding();
 var tasksList = _.uniq(tasks.features.map((d) => { return d.properties.task; }));
 // Step 2
 Promise.map(tasksList, (task) => {
-
   var taskGeometries = turf.featureCollection(
     tasks.features.filter((feature) => {
       if (feature.properties.task === task) {
@@ -56,44 +56,52 @@ Promise.map(tasksList, (task) => {
     }
   })
   .then((countries) => {
-    const groupedCountries = _.groupBy(countries, (country) => {
-      if (country !== undefined) {
-        return country.code;
+    countries = _.filter(countries, (country) => {
+      if (country !== null || Object.keys(country) !== null) {
+        return country;
       }
     });
-    return _.forEach(groupedCountries, (groupedCountry) => {
-      if (groupedCountry !== undefined) {
-        return groupedCountry;
-      }
+    return _.groupBy(countries, (country) => {
+      return country.code;
     });
   })
-  .then((groupedCountries) => {
-    console.log(groupedCountries);
+  .then((groupedTasks) => {
+    let validCountries = JSON.parse(
+      fs.readFileSync('./countries.json')
+    );
+    validCountries = _.filter(validCountries.countries, (validCountry) => {
+      if (!validCountry.code.match('USA-')) {
+        return validCountry.code;
+      }
+    });
+    const validCodes = [];
+    _.forEach(validCountries, (validCountry) => {
+      let validCode = _.pick(validCountry, 'code');
+      validCodes.push(validCode.code);
+    });
+    // omitBy groupedCountries' keys not being in validCodes
+    const groupedTasksFin = [];
+    Object.keys(groupedTasks).map((k, v) => {
+      if (_.includes(validCodes, k)) {
+        const taskGroup = {};
+        taskGroup[k] = groupedTasks[k];
+        groupedTasksFin.push(taskGroup);
+      }
+    });
   });
+  // Promise.map(groupedCountries, (groupedCountry) => {
+  //   console.log(groupedCountry)
+  //   // if(_.includes(validCode, groupedCountry)) {
+  //   //
+  //   // }
+  // })
+  // const countryFile = '../../_country/' + country[0] + '.md'
+  // fs.writeFileSync(countryFile, '---')
+  // fs.appendFileSync(countryFile, '\n')
+  // fs.appendFileSync(countryFile, 'layout: country \n')
+  // fs.appendFileSync(countryFile, 'lang: en \n')
+  // fs.appendFileSync(countryFile, 'permalink: /' + country + '/ \n')
+  // fs.appendFileSync(countryFile, 'name: ' + country + '\n')
+  // fs.appendFileSync(countryFile, 'tm-projects: \n')
+  // fs.appendFileSync(countryFile, '---')
 });
-// taskCentroids = turf.featureCollection(taskCentroids);
-// console.log(taskCentroids);
-//
-// taskCentroids.forEach((task) => {
-//
-// });
-//     rp(geojsonOptions)
-//     .then(function(geojsonResults) {
-//       const country = turf.featureCollection(geojsonResults)
-//       const tasksWithinCountry = turf.within(taskCentroids,country)
-//       console.log(tasksWithinCountry)
-//     })
-//     .catch(function(error) {
-//       console.log(error)
-//     })
-//     // const countryFile = '../../_country/' + country[0] + '.md'
-//     // fs.writeFileSync(countryFile, '---')
-//     // fs.appendFileSync(countryFile, '\n')
-//     // fs.appendFileSync(countryFile, 'layout: country \n')
-//     // fs.appendFileSync(countryFile, 'lang: en \n')
-//     // fs.appendFileSync(countryFile, 'permalink: /' + country + '/ \n')
-//     // fs.appendFileSync(countryFile, 'name: ' + country + '\n')
-//     // fs.appendFileSync(countryFile, 'tm-projects: \n')
-//     // fs.appendFileSync(countryFile, '---')
-//   })
-// })
