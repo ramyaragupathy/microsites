@@ -7,6 +7,7 @@ var tasks = JSON.parse(fs.readFileSync(
 var _ = require('lodash');
 var turf = require('turf');
 var crg = require('country-reverse-geocoding').country_reverse_geocoding();
+var md = require('node-markdown').Markdown;
 
 /*
  *  To get the list of centroids for open tasks:
@@ -20,25 +21,41 @@ var crg = require('country-reverse-geocoding').country_reverse_geocoding();
  */
 
 function genCountryPage (countryPageInfo) {
-  fs.writeFileSync(countryPageInfo[0], '---');
-  fs.appendFileSync(countryPageInfo[0], '\n');
-  fs.appendFileSync(countryPageInfo[0], 'layout: country \n');
-  fs.appendFileSync(countryPageInfo[0], 'permalink: /' + countryPageInfo[1] + '/ \n');
-  fs.appendFileSync(countryPageInfo[0], 'code: ' + countryPageInfo[2] + '\n');
-  fs.appendFileSync(countryPageInfo[0], 'name: ' + countryPageInfo[1] + '\n');
-  fs.appendFileSync(countryPageInfo[0], 'lang: en \n');
-  fs.appendFileSync(countryPageInfo[0], 'flag: ' + countryPageInfo[3] + '\n');
-  fs.appendFileSync(countryPageInfo[0], 'tm-projects: \n');
-  if (countryPageInfo[4]) {
+  // 4th element holds list of task, so if it
+  if (!(countryPageInfo[4])) {
+    fs.writeFileSync(countryPageInfo[0], '---');
+    fs.appendFileSync(countryPageInfo[0], '\n');
+    fs.appendFileSync(countryPageInfo[0], 'layout: country \n');
+    fs.appendFileSync(countryPageInfo[0], 'permalink: /' + countryPageInfo[1] + '/ \n');
+    fs.appendFileSync(countryPageInfo[0], 'code: ' + countryPageInfo[2] + '\n');
+    fs.appendFileSync(countryPageInfo[0], 'name: ' + countryPageInfo[1] + '\n');
+    fs.appendFileSync(countryPageInfo[0], 'lang: en \n');
+    fs.appendFileSync(countryPageInfo[0], 'flag: ' + countryPageInfo[3] + '\n');
+    fs.appendFileSync(countryPageInfo[0], 'tm-projects: \n');
+  } else {
     countryPageInfo[4].map((task) => {
+      console.log(task);
       const taskNum = task.task;
-      fs.appendFileSync(countryPageInfo[0], ' - id: ' + taskNum + '\n');
-      console.log('tasks.hotosm.org/project/' + taskNum + '.json');
-      // rp('tasks.hotosm.org/project/' + taskNum + '.json')
-      // .then((project) => {
-      //   const desc = project.properties.description;
-      //   fs.appendFileSync(countryFile, 'desc: ' + desc);
-      // });
+      const promiseIterable = [
+        rp('http://tasks.hotosm.org/project/' + taskNum + '.json'),
+        countryPageInfo[0],
+        taskNum
+      ];
+      Promise.all(promiseIterable)
+      .then((result) => {
+        let desc = md(
+          JSON.parse(result[0]).properties.description,
+          true,
+          'p'
+        ).match(/<p>(.*?)<\/p>/g).map((p) => {
+          if (!(p.match(/The Missing Maps project aims to map/))) {
+            return p.replace(/<\/?p>/g, '');
+          }
+        });
+        console.log(desc);
+        fs.appendFileSync(result[1], ' - id: ' + result[2] + '\n');
+        fs.appendFileSync(result[1], '   desc: ' + desc.join('\n') + '\n');
+      });
     });
   }
 }
@@ -115,17 +132,31 @@ Promise.map(tasksList, (task) => {
       }
     });
     // Step 6
-    // Promise.map(validCodes, (validCode) => {
-    //
-    // })
-    // .then()
+    Promise.map(validCountries, (validCountry) => {
+      const countryCode = validCountry.code;
+      const countryFile = '../../_country/' + countryCode + '.md';
+      const countryName = validCountry.name;
+      const countryFlag = countryCode.slice(0, 2).toLowerCase() + '.svg';
+      genCountryPage([
+        countryFile, countryName, countryCode, countryFlag
+      ]);
+      return countryName;
+    })
+    .then((countryNames) => {
+      countryNames.forEach((countryName) => {
+        console.log('Generated microsite page for ' + countryName + '...');
+      });
+    });
     // Step 7
     Promise.map(groupedTasksFin, (finTaskGroup) => {
       const countryFile = '../../_country/' + Object.keys(finTaskGroup) + '.md';
       const countryName = finTaskGroup[Object.keys(finTaskGroup)][0].name;
-      const countryCode = finTaskGroup[Object.keys(finTaskGroup)][0].code;
+      const countryCode = Object.keys(finTaskGroup)[0];
       const countryFlag = countryCode.slice(0, 2).toLowerCase() + '.svg';
-      genCountryPage([countryFile, countryName, countryCode, countryFlag]);
+      const countryTask = finTaskGroup[Object.keys(finTaskGroup)];
+      genCountryPage([
+        countryFile, countryName, countryCode, countryFlag, countryTask
+      ]);
       return countryName;
     })
     .then((countryNames) => {
