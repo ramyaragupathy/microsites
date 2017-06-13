@@ -1,4 +1,4 @@
-// var rp = require('request-promise');
+var rp = require('request-promise');
 var fs = require('fs');
 var Promise = require('bluebird');
 var tasks = JSON.parse(fs.readFileSync(
@@ -15,7 +15,8 @@ var crg = require('country-reverse-geocoding').country_reverse_geocoding();
  *    2) generate centroids for tasks with 'state' indicating they're 'in progress'
  *    3) reverse geocode those tasks to get countries
  *    4) group tasks by country
- *    5) ammend country page for each with tasks
+ *    5) check reverse geocoded code against osm-stats code
+ *    6) ammend country page for each with tasks
  */
 
 // Step 1
@@ -55,6 +56,7 @@ Promise.map(tasksList, (task) => {
       return country;
     }
   })
+  // Step 4
   .then((countries) => {
     countries = _.filter(countries, (country) => {
       if (country !== null || Object.keys(country) !== null) {
@@ -65,6 +67,7 @@ Promise.map(tasksList, (task) => {
       return country.code;
     });
   })
+  // Step 5
   .then((groupedTasks) => {
     let validCountries = JSON.parse(
       fs.readFileSync('./countries.json')
@@ -79,7 +82,6 @@ Promise.map(tasksList, (task) => {
       let validCode = _.pick(validCountry, 'code');
       validCodes.push(validCode.code);
     });
-    // omitBy groupedCountries' keys not being in validCodes
     const groupedTasksFin = [];
     Object.keys(groupedTasks).map((k, v) => {
       if (_.includes(validCodes, k)) {
@@ -88,20 +90,26 @@ Promise.map(tasksList, (task) => {
         groupedTasksFin.push(taskGroup);
       }
     });
+    // Step 6
+    Promise.map(groupedTasksFin, (finTaskGroup) => {
+      const countryFile = '../../_country/' + Object.keys(finTaskGroup);
+      const countryName = finTaskGroup[Object.keys(finTaskGroup)][0].name;
+      fs.writeFileSync(countryFile, '---');
+      fs.appendFileSync(countryFile, '\n');
+      fs.appendFileSync(countryFile, 'layout: country \n');
+      fs.appendFileSync(countryFile, 'permalink: /' + countryName + '/ \n');
+      fs.appendFileSync(countryFile, 'name: ' + countryName + '\n');
+      fs.appendFileSync(countryFile, 'lang: en \n');
+      fs.appendFileSync(countryFile, 'tm-projects: \n');
+      finTaskGroup[Object.keys(finTaskGroup)].map((task) => {
+        const taskNum = task.task;
+        fs.appendFileSync(countryFile, ' - id: ' + taskNum + '\n');
+        rp('tasks.hotosm.org/project/' + taskNum + '.json')
+        .then((project) => {
+          const desc = project.properties.description;
+          fs.appendFileSync(countryFile, 'desc: ' + desc);
+        });
+      });
+    });
   });
-  // Promise.map(groupedCountries, (groupedCountry) => {
-  //   console.log(groupedCountry)
-  //   // if(_.includes(validCode, groupedCountry)) {
-  //   //
-  //   // }
-  // })
-  // const countryFile = '../../_country/' + country[0] + '.md'
-  // fs.writeFileSync(countryFile, '---')
-  // fs.appendFileSync(countryFile, '\n')
-  // fs.appendFileSync(countryFile, 'layout: country \n')
-  // fs.appendFileSync(countryFile, 'lang: en \n')
-  // fs.appendFileSync(countryFile, 'permalink: /' + country + '/ \n')
-  // fs.appendFileSync(countryFile, 'name: ' + country + '\n')
-  // fs.appendFileSync(countryFile, 'tm-projects: \n')
-  // fs.appendFileSync(countryFile, '---')
 });
