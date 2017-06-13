@@ -38,6 +38,7 @@
     "browser-sync": "~2.1.1",
     "chai": "^1.10.0",
     "colors": "^1.0.3",
+    "country-reverse-geocoding": "^0.2.2",
     "eslint": "^3.19.0",
     "eslint-config-semistandard": "^11.0.0",
     "eslint-config-standard": "^10.2.1",
@@ -46,6 +47,7 @@
     "eslint-plugin-standard": "^3.0.1",
     "glob": "^4.3.5",
     "glob-all": "^3.0.1",
+    "google-auth-library": "^0.10.0",
     "gulp": "^3.8.11",
     "gulp-babel": "^6.1.2",
     "gulp-clean": "~0.3.1",
@@ -55,6 +57,7 @@
     "gulp-uglifyjs": "~0.6.0",
     "js-yaml": "^3.2.6",
     "lodash": "^3.10.1",
+    "node-markdown": "^0.1.1",
     "proxy-middleware": "^0.15.0",
     "request-promise": "^4.2.1",
     "run-sequence": "~1.0.2",
@@ -67,7 +70,7 @@
   "dependencies": {
     "@turf/dissolve": "^4.4.0",
     "@turf/helpers": "^4.4.0",
-    "country-reverse-geocoding": "^0.2.2",
+    "googleapis": "^19.0.0",
     "lodash": "^4.17.4",
     "lodash.omitby": "^4.6.0"
   }
