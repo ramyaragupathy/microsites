@@ -150,7 +150,7 @@ gulp.task('serve', ['build'], function () {
   });
 
   gulp.watch('app/assets/styles/**/*.scss', function () {
-    runSequence('compass');
+    runSequence('sass');
   });
 
   gulp.watch(['./app/assets/scripts/**/*.js', '!./app/assets/scripts/vendor/**/*'], function () {
@@ -193,42 +193,3 @@ function browserReload () {
     browserSync.reload();
   }
 }
-
-///////////////////////////////////////////////////////////////////////////////
-//--------------------------- Humans task -----------------------------------//
-//---------------------------------------------------------------------------//
-gulp.task('get-humans', function(){
-
-  var getHumans = function(callback){
-    var options = {
-      url: 'https://api.github.com/repos/MissingMaps/missingmaps.github.io/contributors',
-      headers: {
-        'User-Agent': 'request'
-      }
-    };
-
-    request(options, function (err, res) {
-      var humans = JSON.parse(res.body).map(function(human){
-        return {login: human.login, html_url: human.html_url, contributions: human.contributions}
-      });
-      humans.sort(function(a,b){
-        return b.contributions - a.contributions;
-      })
-      callback(humans);
-    });
-  }
-
-  getHumans(function(humans){
-    fs.readFile('./docs/humans-tmpl.txt', 'utf8', function (err, doc) {
-      if (err) throw err;
-      //Do your processing, MD5, send a satellite to the moon, etc.
-      for (i = 0; i < humans.length; i++) {
-        doc = doc + '\nContributor: '+humans[i].login + '\nGithub: '+humans[i].html_url +'\n';
-      }
-      fs.writeFile('./app/humans.txt', doc, function(err) {
-        if (err) throw err;
-        console.log('complete');
-      });
-    });
-  });
-});
