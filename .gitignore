@@ -17,7 +17,7 @@ app/assets/scripts/config/local.js
 .sass-cache
 config
 
-#
+# build scripts
 app/assets/scripts/countries.json
 app/assets/scripts/client_secret*
 app/assets/scripts/googleAuth.js

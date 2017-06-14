@@ -1,0 +1,10 @@
+---
+layout: country
+lang: en
+permalink: /China/
+id: chn
+name: China
+flag: ch.svg
+calendar: 
+tm-projects: 
+---
