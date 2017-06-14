@@ -4,7 +4,7 @@ lang: en
 permalink: /Suriname/
 id: sur
 name: Suriname
-flag: su.svg
+flag: sr.svg
 calendar: 
 tm-projects: 
 ---

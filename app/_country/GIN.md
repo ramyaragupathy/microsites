@@ -4,7 +4,7 @@ lang: en
 permalink: /Guinea/
 id: gin
 name: Guinea
-flag: gi.svg
+flag: gn.svg
 calendar: 
 tm-projects: 
   - id: 1735

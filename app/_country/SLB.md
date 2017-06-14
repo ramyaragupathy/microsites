@@ -4,7 +4,7 @@ lang: en
 permalink: /Solomon Islands/
 id: slb
 name: Solomon Islands
-flag: sl.svg
+flag: sb.svg
 calendar: 
 tm-projects: 
 ---

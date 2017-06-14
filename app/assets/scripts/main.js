@@ -86,9 +86,9 @@ function makePlaceholderProject (projectId, projectOrder) {
   $(`#HOT-Title-${projectId} p`).css('width', '100%');
 
   // Generate issue information for Github tracker
-  const ghIssueTitle = `HOT Tasking Manager endpoint failure in ${PT.mainHashtag} partner page`;
+  const ghIssueTitle = `HOT Tasking Manager endpoint failure in ${PT.name} country page`;
   const ghIssueBody = `Project ${projectId} is no longer indexed in the HOT
- Tasking Manager, so it should be removed from the ${PT.mainHashtag} partner
+ Tasking Manager, so it should be removed from the ${PT.name} partner
  page variable settings.`;
 
   // Add explanatory error text
@@ -233,56 +233,55 @@ function eventsFunctionality () {
 /* -------------------------------------------------------
  -------------------- Add Events Cards -------------------
  -------------------------------------------------------*/
-function generateEvents(calendarId) {
-  const url = "https://mm-microsites-proxy-staging.herokuapp.com/" + calendarId + "/events"
-  $.getJSON(url, function(eventData) {
-    Object.keys(eventData).map((key,val) => {
-      const title = eventData[key].name;
-      // const singupLink = eventData[key].description.match(/(https?:\/\/[^\s]+)/g)[0]
-      const singupLink = "#"
-      const desc = eventData[key].description.replace(/(https?:\/\/[^\s]+)/,"")
-      const location = eventData[key].location;
-      const date = moment(eventData[key].time[0]).format("MMMM Do")
-      console.log(date)
-      const time = eventData[key].time.map((d) => {
-        const date = new Date(d)
-        return moment(date).format("h:mma")
-      }).join(' - ')
+function generateEvents (calendarId) {
+  if (calendarId.match(/google/)) {
+    const url = "https://mm-microsites-proxy-staging.herokuapp.com/" + calendarId + "/events";
+    $.getJSON(url, (eventData) => {
+      Object.keys(eventData).map((key, val) => {
+        const title = eventData[key].name;
+        // const singupLink = eventData[key].description.match(/(https?:\/\/[^\s]+)/g)[0]
+        const singupLink = '#'
+        const desc = eventData[key].description.replace(/(https?:\/\/[^\s]+)/, '');
+        const location = eventData[key].location;
+        const date = moment(eventData[key].time[0]).format("MMMM Do");
+        console.log(date);
+        const time = eventData[key].time.map((d) => {
+          const date = new Date(d);
+          return moment(date).format('h:mma')
+        }).join(' - ');
 
-      const eventTopSection = [
-        '<div class="event-top-section clearfix">',
-        '<div class="sub-head">',
-        '<img class="event-images" src="/assets/graphics/flags/4x3/' + PT.flag + '" width="24"/>',
-        '<h3 class="event-header">' + title + '</h3>',
-        '<a class="btn btn-grn" href=' + singupLink + ' target="">SIGN UP</a>',
-        '</div>',
-        '</div>'
-      ].join('')
-      const eventMainDetails = [
-        '<div class="event-maindetails clearfix">',
-        '<div class="textbox" style="padding-top:8px">',
-        '<p>' + '<b>Date:</b> ' + date + '</p>',
-        '<p>' + '<b>Time:</b> ' + time + '</p>',
-        '<p>' + '<b>About:</b> ' + desc + '</p>',
-        '</div>',
-        '</div>'
-      ].join('')
-      const eventsHTML = [
-        '<div class="column">',
-		    '<div class="event-sub-container">',
-        eventTopSection,
-        eventMainDetails,
-        '</div>',
-        '</div>'
-      ].join('')
-      $("#event-cards").append(eventsHTML)
-    })
-  })
-
+        const eventTopSection = [
+          '<div class="event-top-section clearfix">',
+          '<div class="sub-head">',
+          '<img class="event-images" src="/assets/graphics/flags/4x3/' + PT.flag + '" width="24"/>',
+          '<h3 class="event-header">' + title + '</h3>',
+          '<a class="btn btn-grn" href=' + singupLink + ' target="">SIGN UP</a>',
+          '</div>',
+          '</div>'
+        ].join('');
+        const eventMainDetails = [
+          '<div class="event-maindetails clearfix">',
+          '<div class="textbox" style="padding-top:8px">',
+          '<p>' + '<b>Date:</b> ' + date + '</p>',
+          '<p>' + '<b>Time:</b> ' + time + '</p>',
+          '<p>' + '<b>location:</b> ' + location + '</p>',
+          '<p>' + '<b>About:</b> ' + desc + '</p>',
+          '</div>',
+          '</div>'
+        ].join('');
+        const eventsHTML = [
+          '<div class="column">',
+          '<div class="event-sub-container">',
+          eventTopSection,
+          eventMainDetails,
+          '</div>',
+          '</div>'
+        ].join('');
+        $('#event-cards').append(eventsHTML);
+      });
+    });
+  }
 }
-
-
-
 
 /* -------------------------------------------------------
  ------------------ Add Activity Graphs ------------------
@@ -449,8 +448,6 @@ function getGroupActivityStats (countryId) {
       } else {
         moreBtn.css('display', 'inline').animate({opacity: 0}, 500);
       }
-
-
       // On window resize, run window resize function on each chart
       d3.select(window).on('resize', function () {
         c1.resize();
@@ -583,9 +580,5 @@ getGroupActivityStats(PT.id);
 getProjects(PT.hotProjects);
 // Populate events section with upcoming events
 generateEvents(PT.calendar);
-
-// Check to see if there are hashtags to view
-// checkHashtags(PT.subHashtags);
-// // Sets up switcher/ loader for group and user graphs
-
+// setupGraphs
 setupGraphs();

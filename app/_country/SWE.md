@@ -4,7 +4,7 @@ lang: en
 permalink: /Sweden/
 id: swe
 name: Sweden
-flag: sw.svg
+flag: se.svg
 calendar: 
 tm-projects: 
 ---

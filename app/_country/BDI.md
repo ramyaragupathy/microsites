@@ -4,7 +4,7 @@ lang: en
 permalink: /Burundi/
 id: bdi
 name: Burundi
-flag: bd.svg
+flag: bi.svg
 calendar: 
 tm-projects: 
 ---

@@ -4,7 +4,7 @@ lang: en
 permalink: /Israel/
 id: isr
 name: Israel
-flag: is.svg
+flag: il.svg
 calendar: 
 tm-projects: 
 ---

@@ -4,7 +4,7 @@ lang: en
 permalink: /Guinea Bissau/
 id: gnb
 name: Guinea Bissau
-flag: gn.svg
+flag: gw.svg
 calendar: 
 tm-projects: 
 ---

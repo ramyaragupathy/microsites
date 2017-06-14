@@ -4,7 +4,7 @@ lang: en
 permalink: /Belize/
 id: blz
 name: Belize
-flag: bl.svg
+flag: bz.svg
 calendar: 
 tm-projects: 
   - id: 1595

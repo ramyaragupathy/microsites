@@ -4,7 +4,7 @@ lang: en
 permalink: /Falkland Islands/
 id: flk
 name: Falkland Islands
-flag: fl.svg
+flag: fk.svg
 calendar: 
 tm-projects: 
 ---

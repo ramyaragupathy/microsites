@@ -4,7 +4,7 @@ lang: en
 permalink: /Chile/
 id: chl
 name: Chile
-flag: ch.svg
+flag: cl.svg
 calendar: 
 tm-projects: 
 ---

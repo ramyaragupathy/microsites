@@ -1,10 +1,10 @@
 ---
 layout: country
 lang: en
-permalink: /Austria/
-id: aut
-name: Austria
-flag: at.svg
+permalink: /Malawi/
+id: mwi
+name: Malawi
+flag: mw.svg
 calendar: 
 tm-projects: 
 ---

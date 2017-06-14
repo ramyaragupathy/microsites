@@ -4,7 +4,7 @@ lang: en
 permalink: /Brunei/
 id: brn
 name: Brunei
-flag: br.svg
+flag: bn.svg
 calendar: 
 tm-projects: 
 ---

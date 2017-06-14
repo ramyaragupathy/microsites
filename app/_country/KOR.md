@@ -4,7 +4,7 @@ lang: en
 permalink: /South Korea/
 id: kor
 name: South Korea
-flag: ko.svg
+flag: kr.svg
 calendar: 
 tm-projects: 
 ---

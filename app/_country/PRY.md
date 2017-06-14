@@ -4,7 +4,7 @@ lang: en
 permalink: /Paraguay/
 id: pry
 name: Paraguay
-flag: pr.svg
+flag: py.svg
 calendar: 
 tm-projects: 
 ---

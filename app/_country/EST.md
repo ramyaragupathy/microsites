@@ -4,7 +4,7 @@ lang: en
 permalink: /Estonia/
 id: est
 name: Estonia
-flag: es.svg
+flag: ee.svg
 calendar: 
 tm-projects: 
 ---

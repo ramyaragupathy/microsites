@@ -4,7 +4,7 @@ lang: en
 permalink: /French Guiana/
 id: guf
 name: French Guiana
-flag: gu.svg
+flag: gf.svg
 calendar: 
 tm-projects: 
 ---

@@ -4,7 +4,7 @@ lang: en
 permalink: /Kosovo/
 id: kos
 name: Kosovo
-flag: ko.svg
+flag: undefined.svg
 calendar: 
 tm-projects: 
 ---

@@ -4,7 +4,7 @@ lang: en
 permalink: /Madagascar/
 id: mdg
 name: Madagascar
-flag: md.svg
+flag: mg.svg
 calendar: 
 tm-projects: 
   - id: 2316

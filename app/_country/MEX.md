@@ -4,7 +4,7 @@ lang: en
 permalink: /Mexico/
 id: mex
 name: Mexico
-flag: me.svg
+flag: mx.svg
 calendar: 
 tm-projects: 
   - id: 1594

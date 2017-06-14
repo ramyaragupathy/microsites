@@ -4,7 +4,7 @@ lang: en
 permalink: /Portugal/
 id: prt
 name: Portugal
-flag: pr.svg
+flag: pt.svg
 calendar: 
 tm-projects: 
 ---

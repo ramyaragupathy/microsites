@@ -4,7 +4,7 @@ lang: en
 permalink: /Bangladesh/
 id: bgd
 name: Bangladesh
-flag: bg.svg
+flag: bd.svg
 calendar: 
 tm-projects: 
 ---

@@ -4,7 +4,7 @@ lang: en
 permalink: /Guyana/
 id: guy
 name: Guyana
-flag: gu.svg
+flag: gy.svg
 calendar: 
 tm-projects: 
 ---

@@ -4,7 +4,7 @@ lang: en
 permalink: /Benin/
 id: ben
 name: Benin
-flag: be.svg
+flag: bj.svg
 calendar: 
 tm-projects: 
   - id: 1152

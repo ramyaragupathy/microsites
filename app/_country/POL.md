@@ -4,7 +4,7 @@ lang: en
 permalink: /Poland/
 id: pol
 name: Poland
-flag: po.svg
+flag: pl.svg
 calendar: 
 tm-projects: 
 ---

@@ -4,7 +4,7 @@ lang: en
 permalink: /Slovakia/
 id: svk
 name: Slovakia
-flag: sv.svg
+flag: sk.svg
 calendar: 
 tm-projects: 
 ---

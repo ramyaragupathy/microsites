@@ -4,7 +4,7 @@ lang: en
 permalink: /Greenland/
 id: grl
 name: Greenland
-flag: gr.svg
+flag: gl.svg
 calendar: 
 tm-projects: 
 ---

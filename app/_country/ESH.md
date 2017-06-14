@@ -4,7 +4,7 @@ lang: en
 permalink: /Western Sahara/
 id: esh
 name: Western Sahara
-flag: es.svg
+flag: eh.svg
 calendar: 
 tm-projects: 
 ---

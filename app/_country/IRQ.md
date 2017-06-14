@@ -4,7 +4,7 @@ lang: en
 permalink: /Iraq/
 id: irq
 name: Iraq
-flag: ir.svg
+flag: iq.svg
 calendar: 
 tm-projects: 
   - id: 1808

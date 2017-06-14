@@ -4,7 +4,7 @@ lang: en
 permalink: /United Arab Emirates/
 id: are
 name: United Arab Emirates
-flag: ar.svg
+flag: ae.svg
 calendar: 
 tm-projects: 
 ---

@@ -4,7 +4,7 @@ lang: en
 permalink: /French Southern and Antarctic Lands/
 id: atf
 name: French Southern and Antarctic Lands
-flag: at.svg
+flag: tf.svg
 calendar: 
 tm-projects: 
 ---

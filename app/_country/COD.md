@@ -4,7 +4,7 @@ lang: en
 permalink: /Democratic Republic of the Congo/
 id: cod
 name: Democratic Republic of the Congo
-flag: co.svg
+flag: cd.svg
 calendar: 
 tm-projects: 
   - id: 2054

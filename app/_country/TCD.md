@@ -4,7 +4,7 @@ lang: en
 permalink: /Chad/
 id: tcd
 name: Chad
-flag: tc.svg
+flag: td.svg
 calendar: 
 tm-projects: 
   - id: 2308

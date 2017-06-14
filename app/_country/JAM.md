@@ -4,7 +4,7 @@ lang: en
 permalink: /Jamaica/
 id: jam
 name: Jamaica
-flag: ja.svg
+flag: jm.svg
 calendar: 
 tm-projects: 
   - id: 2391

@@ -4,7 +4,7 @@ lang: en
 permalink: /Turkey/
 id: tur
 name: Turkey
-flag: tu.svg
+flag: tr.svg
 calendar: 
 tm-projects: 
 ---

@@ -4,7 +4,7 @@ lang: en
 permalink: /North Korea/
 id: prk
 name: North Korea
-flag: pr.svg
+flag: kp.svg
 calendar: 
 tm-projects: 
 ---

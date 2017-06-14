@@ -4,7 +4,7 @@ lang: en
 permalink: /China/
 id: chn
 name: China
-flag: ch.svg
+flag: cn.svg
 calendar: 
 tm-projects: 
 ---

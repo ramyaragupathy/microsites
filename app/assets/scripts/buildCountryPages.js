@@ -6,6 +6,7 @@ var Promise = require('bluebird');
 var tasks = JSON.parse(fs.readFileSync(
   '../../../../../helpers/osm-data-parse/tasking-mgr-projects/output/output_20170605-122008.geojson'
 ));
+var countries = require('i18n-iso-countries')
 var _ = require('lodash');
 var turf = require('turf');
 var crg = require('country-reverse-geocoding').country_reverse_geocoding();
@@ -26,7 +27,11 @@ function genCountryPage (countryPageInfo) {
   const countryName = countryPageInfo.name;
   const countryCode = countryPageInfo.code;
   const countryPage = '../../_country/' + countryCode + '.md';
-  const countryFlag = countryCode.substr(0, 2).toLowerCase();
+  const alpha2 = countries.alpha3ToAlpha2(countryPageInfo.code);
+  let countryFlag;
+  if (alpha2 !== undefined) {
+    countryFlag = alpha2.toLowerCase();
+  }
   let countryPageMetaData = [
     '---',
     'layout: country',

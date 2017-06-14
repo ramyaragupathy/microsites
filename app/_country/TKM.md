@@ -4,7 +4,7 @@ lang: en
 permalink: /Turkmenistan/
 id: tkm
 name: Turkmenistan
-flag: tk.svg
+flag: tm.svg
 calendar: 
 tm-projects: 
 ---

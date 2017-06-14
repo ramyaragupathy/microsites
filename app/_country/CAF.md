@@ -4,7 +4,7 @@ lang: en
 permalink: /Central African Republic/
 id: caf
 name: Central African Republic
-flag: ca.svg
+flag: cf.svg
 calendar: 
 tm-projects: 
   - id: 811

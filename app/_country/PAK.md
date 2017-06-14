@@ -4,7 +4,7 @@ lang: en
 permalink: /Pakistan/
 id: pak
 name: Pakistan
-flag: pa.svg
+flag: pk.svg
 calendar: 
 tm-projects: 
   - id: 2117

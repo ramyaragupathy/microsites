@@ -4,7 +4,7 @@ lang: en
 permalink: /Bosnia and Herzegovina/
 id: bih
 name: Bosnia and Herzegovina
-flag: bi.svg
+flag: ba.svg
 calendar: 
 tm-projects: 
 ---

@@ -4,7 +4,7 @@ lang: en
 permalink: /South Sudan/
 id: sds
 name: South Sudan
-flag: sd.svg
+flag: undefined.svg
 calendar: 
 tm-projects: 
   - id: 2398

@@ -4,7 +4,7 @@ lang: en
 permalink: /Libya/
 id: lby
 name: Libya
-flag: lb.svg
+flag: ly.svg
 calendar: 
 tm-projects: 
 ---

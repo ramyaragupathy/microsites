@@ -4,7 +4,7 @@ lang: en
 permalink: /Ireland/
 id: irl
 name: Ireland
-flag: ir.svg
+flag: ie.svg
 calendar: 
 tm-projects: 
 ---

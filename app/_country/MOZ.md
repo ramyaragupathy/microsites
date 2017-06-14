@@ -4,7 +4,7 @@ lang: en
 permalink: /Mozambique/
 id: moz
 name: Mozambique
-flag: mo.svg
+flag: mz.svg
 calendar: 
 tm-projects: 
   - id: 2454

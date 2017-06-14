@@ -4,7 +4,7 @@ lang: en
 permalink: /Liberia/
 id: lbr
 name: Liberia
-flag: lb.svg
+flag: lr.svg
 calendar: 
 tm-projects: 
 ---

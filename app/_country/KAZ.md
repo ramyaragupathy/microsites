@@ -4,7 +4,7 @@ lang: en
 permalink: /Kazakhstan/
 id: kaz
 name: Kazakhstan
-flag: ka.svg
+flag: kz.svg
 calendar: 
 tm-projects: 
 ---

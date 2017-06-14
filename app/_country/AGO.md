@@ -4,7 +4,7 @@ lang: en
 permalink: /Angola/
 id: ago
 name: Angola
-flag: ag.svg
+flag: ao.svg
 calendar: 
 tm-projects: 
 ---

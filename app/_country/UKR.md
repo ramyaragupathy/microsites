@@ -4,7 +4,7 @@ lang: en
 permalink: /Ukraine/
 id: ukr
 name: Ukraine
-flag: uk.svg
+flag: ua.svg
 calendar: 
 tm-projects: 
 ---

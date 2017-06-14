@@ -4,7 +4,7 @@ lang: en
 permalink: /Slovenia/
 id: svn
 name: Slovenia
-flag: sv.svg
+flag: si.svg
 calendar: 
 tm-projects: 
 ---

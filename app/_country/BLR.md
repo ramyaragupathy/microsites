@@ -4,7 +4,7 @@ lang: en
 permalink: /Belarus/
 id: blr
 name: Belarus
-flag: bl.svg
+flag: by.svg
 calendar: 
 tm-projects: 
 ---

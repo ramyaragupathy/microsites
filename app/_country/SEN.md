@@ -4,7 +4,7 @@ lang: en
 permalink: /Senegal/
 id: sen
 name: Senegal
-flag: se.svg
+flag: sn.svg
 calendar: 
 tm-projects: 
 ---
