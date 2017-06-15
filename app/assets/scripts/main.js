@@ -45,7 +45,6 @@ function getProjects (projects) {
       const url = `http://tasks.hotosm.org/project/${project}.json`;
       $.getJSON(url, function (projectData) {
         if (projectData.geometry) {
-          console.log('ohhyeah')
           makeProject(projectData, i + 2);
         }
       })
@@ -265,7 +264,6 @@ function generateEvents (calendarId) {
         const desc = eventData[key].description.replace(/(https?:\/\/[^\s]+)/, '');
         const location = eventData[key].location;
         const date = moment(eventData[key].time[0]).format("MMMM Do");
-        console.log(date);
         const time = eventData[key].time.map((d) => {
           const date = new Date(d);
           return moment(date).format('h:mma')
