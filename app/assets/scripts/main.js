@@ -45,10 +45,15 @@ function getProjects (projects) {
   projects.forEach(function (project, i) {
     const url = `http://tasks.hotosm.org/project/${project}.json`;
     $.getJSON(url, function (projectData) {
-      makeProject(projectData, i + 2);
+      if (projectData.geometry) {
+        console.log('ohhyeah')
+        makeProject(projectData, i + 2);
+      } else {
+        makePlaceholderProject(project, i + 2);
+      }
     })
     .fail(function (err) {
-      console.warn(`WARNING >> Project #${project} could not be accessed at ${url}.\n` +
+      console.warn(`WARNING >> Project #${project.id} could not be accessed at ${url}.\n` +
                    'The server returned the following message object:', err);
       makePlaceholderProject(project, i + 2);
     });
@@ -75,7 +80,7 @@ function makeProject (project, projectOrder) {
 // that a project cannot be retrieved from the HOT Tasking Manager API
 function makePlaceholderProject (projectId, projectOrder) {
   // Adds error title
-  $(`ul li:nth-child(${projectOrder}) .HOT-Title p`)
+  $(`#Project-${projectId} .HOT-Title p`)
     .html(`<i class="ico icon collecticon-sign-danger"></i>
 <b>HOT Project #${projectId} Not Active/Not Found in HOT Tasking Manager</b>`);
 
@@ -92,16 +97,16 @@ function makePlaceholderProject (projectId, projectOrder) {
   // Add explanatory error text
   const errorHtml = `Uh oh, it looks like <a href="http://tasks.hotosm.org/project/${projectId}"
  target="_blank">Project #${projectId}</a> has been removed from the HOT Tasking Manager.
- <a href="https://github.com/MissingMaps/partners/issues/new?title=${ghIssueTitle}
- &body=${ghIssueBody}" target="_blank">Click here</a> to report an issue or
+ <a href="https://github.com/MissingMaps/partners/issues/new?title=${ghIssueTitle}&body=${ghIssueBody}" target="_blank">Click here</a> to report an issue or
  <a href="http://tasks.hotosm.org/" target="_blank">here</a>
  to search for more projects.`;
 
-  $(`ul li:nth-child(${projectOrder}) .HOT-Description p`).html(errorHtml);
+  $(`#Project-${projectId}_clone .HOT-Description p`).html(errorHtml);
 
   // Remove loading spinners and add placeholder background
-  $(`ul li:nth-child(${projectOrder}) .HOT-Map`).empty().addClass('placeholder');
-  $(`ul li:nth-child(${projectOrder}) .HOT-Progress `).css('display', 'none');
+  $(`#Project-${projectId} .HOT-Map`).empty().addClass('placeholder');
+  $(`#Project-${projectId} .HOT-Progress `).css('display', 'none');
+  $(`#Project-${projectId} .HOT-Description`).css('display', 'none');
 }
 
 /* -------------------------------------------------------

@@ -126,6 +126,9 @@ h1 {
     vertical-align: middle;
     content: ' ';
   };
+  img {
+    margin-top: 10px;
+  }
   @media screen and (max-width: 700px) {
     margin-right: auto;
     margin-left: auto;
@@ -270,6 +273,12 @@ h1 {
       width: 100%;
       margin-left: 6px;
     }
+  }
+  .Projects-Container-Leftside {
+    @media screen and (min-width: $MaxWidth) {
+      margin-top: 15px;
+    }
+
   }
 }
 
@@ -427,6 +436,7 @@ h1 {
 }
 
 .GetInvolved {
+  border-left: 1px solid #dbdbda;
   display: none;
   h3 {
     width: 60%;
