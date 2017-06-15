@@ -37,27 +37,27 @@ function getProjects (projects) {
   $('.flex-next').prependTo('.HOT-Nav-Projects');
   $('.flex-control-nav').prependTo('.HOT-Nav-Projects');
   $('.flex-prev').prependTo('.HOT-Nav-Projects');
-
-  if (projects.length === 1) {
-    $('.flex-next').css('display', 'none');
-  }
-
-  projects.forEach(function (project, i) {
-    const url = `http://tasks.hotosm.org/project/${project}.json`;
-    $.getJSON(url, function (projectData) {
-      if (projectData.geometry) {
-        console.log('ohhyeah')
-        makeProject(projectData, i + 2);
-      } else {
+  if (projects.length > 0) {
+    if (projects.length === 1) {
+      $('.flex-next').css('display', 'none');
+    }
+    projects.forEach(function (project, i) {
+      const url = `http://tasks.hotosm.org/project/${project}.json`;
+      $.getJSON(url, function (projectData) {
+        if (projectData.geometry) {
+          console.log('ohhyeah')
+          makeProject(projectData, i + 2);
+        }
+      })
+      .fail(function (err) {
+        console.warn(`WARNING >> Project #${project.id} could not be accessed at ${url}.\n` +
+                     'The server returned the following message object:', err);
         makePlaceholderProject(project, i + 2);
-      }
-    })
-    .fail(function (err) {
-      console.warn(`WARNING >> Project #${project.id} could not be accessed at ${url}.\n` +
-                   'The server returned the following message object:', err);
-      makePlaceholderProject(project, i + 2);
+      });
     });
-  });
+  } else {
+    makeNoTasksPlaceholder();
+  }
 }
 
 // Update cards with necessary project details
@@ -107,6 +107,24 @@ function makePlaceholderProject (projectId, projectOrder) {
   $(`#Project-${projectId} .HOT-Map`).empty().addClass('placeholder');
   $(`#Project-${projectId} .HOT-Progress `).css('display', 'none');
   $(`#Project-${projectId} .HOT-Description`).css('display', 'none');
+}
+// Adds placeholder if no projects found in page metadata
+function makeNoTasksPlaceholder() {
+  let noTasksHTML = [
+    '<li style="list-style: none" id = Project-NONE>',
+    '<div class = "HOT-Container">',
+    '<div class = "HOT-Map placeholder">',
+    '</div>',
+    '<div class = "HOT-Details">',
+    '<div class = "HOT-Title" id = "HOT-Title-NONE">',
+    '<h2><b>There currently are no tasks for this country.</b></h2>',
+    '</div>',
+    '<p><b></b></p><a href="http://tasks.hotosm.org/" class="btn btn-blue" id="TM-Contribute-Btn">FIND OTHER TASKS</a></p>',
+    '</div>',
+    '</div>',
+    '</li>'
+  ];
+  $('.Projects-Container-Leftside').append(noTasksHTML.join(''));
 }
 
 /* -------------------------------------------------------
@@ -375,7 +393,6 @@ function getUserActivityStats (countryId) {
       moreBtn.css('display', 'inline').animate({opacity: 0}, 500);
     }
 
-
     // On window resize, run window resize function on each chart
     d3.select(window).on('resize', function () {
       c1.resize();
@@ -576,6 +593,7 @@ getPrimaryStats(PT.id);
 getGroupActivityStats(PT.id);
 // Populate project carousel via HOTOSM Tasking Manager API
 getProjects(PT.hotProjects);
+// makePlaceholderProject(PT.hotProjects)
 // Populate events section with upcoming events
 generateEvents(PT.calendar);
 // setupGraphs
