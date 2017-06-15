@@ -6,5 +6,6 @@ id: pri
 name: Puerto Rico
 flag: pr.svg
 calendar: 
+updates: 
 tm-projects: 
 ---

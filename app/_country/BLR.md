@@ -6,5 +6,6 @@ id: blr
 name: Belarus
 flag: by.svg
 calendar: 
+updates: 
 tm-projects: 
 ---

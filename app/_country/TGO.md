@@ -6,5 +6,6 @@ id: tgo
 name: Togo
 flag: tg.svg
 calendar: 
+updates: 
 tm-projects: 
 ---

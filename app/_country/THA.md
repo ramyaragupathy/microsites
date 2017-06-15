@@ -6,5 +6,6 @@ id: tha
 name: Thailand
 flag: th.svg
 calendar: 
+updates: 
 tm-projects: 
 ---

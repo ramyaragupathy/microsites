@@ -6,5 +6,6 @@ id: pse
 name: West Bank
 flag: ps.svg
 calendar: 
+updates: 
 tm-projects: 
 ---

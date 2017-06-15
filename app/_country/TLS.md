@@ -6,5 +6,6 @@ id: tls
 name: East Timor
 flag: tl.svg
 calendar: 
+updates: 
 tm-projects: 
 ---

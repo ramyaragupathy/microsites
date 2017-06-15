@@ -6,5 +6,6 @@ id: gnb
 name: Guinea Bissau
 flag: gw.svg
 calendar: 
+updates: 
 tm-projects: 
 ---

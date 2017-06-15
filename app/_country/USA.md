@@ -6,5 +6,6 @@ id: usa
 name: United States of America
 flag: us.svg
 calendar: 
+updates: 
 tm-projects: 
 ---

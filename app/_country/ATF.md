@@ -6,5 +6,6 @@ id: atf
 name: French Southern and Antarctic Lands
 flag: tf.svg
 calendar: 
+updates: 
 tm-projects: 
 ---

@@ -6,5 +6,6 @@ id: lso
 name: Lesotho
 flag: ls.svg
 calendar: 
+updates: 
 tm-projects: 
 ---

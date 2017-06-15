@@ -6,5 +6,6 @@ id: kwt
 name: Kuwait
 flag: kw.svg
 calendar: 
+updates: 
 tm-projects: 
 ---

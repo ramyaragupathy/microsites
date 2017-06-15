@@ -6,5 +6,6 @@ id: guf
 name: French Guiana
 flag: gf.svg
 calendar: 
+updates: 
 tm-projects: 
 ---

@@ -6,5 +6,6 @@ id: khm
 name: Cambodia
 flag: kh.svg
 calendar: 
+updates: 
 tm-projects: 
 ---

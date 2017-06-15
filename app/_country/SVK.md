@@ -6,5 +6,6 @@ id: svk
 name: Slovakia
 flag: sk.svg
 calendar: 
+updates: 
 tm-projects: 
 ---

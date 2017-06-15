@@ -6,5 +6,6 @@ id: kaz
 name: Kazakhstan
 flag: kz.svg
 calendar: 
+updates: 
 tm-projects: 
 ---

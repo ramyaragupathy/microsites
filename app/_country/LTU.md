@@ -6,5 +6,6 @@ id: ltu
 name: Lithuania
 flag: lt.svg
 calendar: 
+updates: 
 tm-projects: 
 ---

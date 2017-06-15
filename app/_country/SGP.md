@@ -6,5 +6,6 @@ id: sgp
 name: Singapore
 flag: sg.svg
 calendar: 
+updates: 
 tm-projects: 
 ---

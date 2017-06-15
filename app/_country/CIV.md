@@ -6,5 +6,6 @@ id: civ
 name: Ivory Coast
 flag: ci.svg
 calendar: 
+updates: 
 tm-projects: 
 ---

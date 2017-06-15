@@ -6,5 +6,6 @@ id: svn
 name: Slovenia
 flag: si.svg
 calendar: 
+updates: 
 tm-projects: 
 ---

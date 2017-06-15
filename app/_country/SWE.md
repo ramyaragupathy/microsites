@@ -6,5 +6,6 @@ id: swe
 name: Sweden
 flag: se.svg
 calendar: 
+updates: 
 tm-projects: 
 ---

@@ -6,5 +6,6 @@ id: lva
 name: Latvia
 flag: lv.svg
 calendar: 
+updates: 
 tm-projects: 
 ---

@@ -6,5 +6,6 @@ id: chn
 name: China
 flag: cn.svg
 calendar: 
+updates: 
 tm-projects: 
 ---

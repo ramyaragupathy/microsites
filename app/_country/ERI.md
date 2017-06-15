@@ -6,5 +6,6 @@ id: eri
 name: Eritrea
 flag: er.svg
 calendar: 
+updates: 
 tm-projects: 
 ---

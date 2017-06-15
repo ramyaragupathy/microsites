@@ -6,5 +6,6 @@ id: est
 name: Estonia
 flag: ee.svg
 calendar: 
+updates: 
 tm-projects: 
 ---

@@ -6,5 +6,6 @@ id: ner
 name: Niger
 flag: ne.svg
 calendar: 
+updates: 
 tm-projects: 
 ---

@@ -6,5 +6,6 @@ id: deu
 name: Germany
 flag: de.svg
 calendar: 
+updates: 
 tm-projects: 
 ---

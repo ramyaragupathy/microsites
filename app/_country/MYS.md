@@ -6,5 +6,6 @@ id: mys
 name: Malaysia
 flag: my.svg
 calendar: 
+updates: 
 tm-projects: 
 ---

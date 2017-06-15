@@ -6,5 +6,6 @@ id: lux
 name: Luxembourg
 flag: lu.svg
 calendar: 
+updates: 
 tm-projects: 
 ---

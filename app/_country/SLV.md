@@ -6,5 +6,6 @@ id: slv
 name: El Salvador
 flag: sv.svg
 calendar: 
+updates: 
 tm-projects: 
 ---

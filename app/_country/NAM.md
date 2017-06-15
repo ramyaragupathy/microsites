@@ -6,5 +6,6 @@ id: nam
 name: Namibia
 flag: na.svg
 calendar: 
+updates: 
 tm-projects: 
 ---

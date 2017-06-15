@@ -6,5 +6,6 @@ id: uzb
 name: Uzbekistan
 flag: uz.svg
 calendar: 
+updates: 
 tm-projects: 
 ---

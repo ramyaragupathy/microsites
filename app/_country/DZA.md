@@ -6,5 +6,6 @@ id: dza
 name: Algeria
 flag: dz.svg
 calendar: 
+updates: 
 tm-projects: 
 ---

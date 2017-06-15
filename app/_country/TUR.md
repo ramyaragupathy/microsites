@@ -6,5 +6,6 @@ id: tur
 name: Turkey
 flag: tr.svg
 calendar: 
+updates: 
 tm-projects: 
 ---

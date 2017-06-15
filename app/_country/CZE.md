@@ -6,5 +6,6 @@ id: cze
 name: Czech Republic
 flag: cz.svg
 calendar: 
+updates: 
 tm-projects: 
 ---

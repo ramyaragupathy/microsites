@@ -6,5 +6,6 @@ id: prt
 name: Portugal
 flag: pt.svg
 calendar: 
+updates: 
 tm-projects: 
 ---

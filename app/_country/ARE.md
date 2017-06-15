@@ -6,5 +6,6 @@ id: are
 name: United Arab Emirates
 flag: ae.svg
 calendar: 
+updates: 
 tm-projects: 
 ---

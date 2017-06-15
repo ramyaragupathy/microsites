@@ -6,5 +6,6 @@ id: arm
 name: Armenia
 flag: am.svg
 calendar: 
+updates: 
 tm-projects: 
 ---

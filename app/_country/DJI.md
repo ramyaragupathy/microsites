@@ -6,5 +6,6 @@ id: dji
 name: Djibouti
 flag: dj.svg
 calendar: 
+updates: 
 tm-projects: 
 ---

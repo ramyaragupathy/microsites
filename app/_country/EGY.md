@@ -6,5 +6,6 @@ id: egy
 name: Egypt
 flag: eg.svg
 calendar: 
+updates: 
 tm-projects: 
 ---

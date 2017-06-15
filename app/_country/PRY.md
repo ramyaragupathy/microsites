@@ -6,5 +6,6 @@ id: pry
 name: Paraguay
 flag: py.svg
 calendar: 
+updates: 
 tm-projects: 
 ---

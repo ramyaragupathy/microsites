@@ -6,5 +6,6 @@ id: bhs
 name: The Bahamas
 flag: bs.svg
 calendar: 
+updates: 
 tm-projects: 
 ---

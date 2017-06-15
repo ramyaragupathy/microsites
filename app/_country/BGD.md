@@ -6,5 +6,6 @@ id: bgd
 name: Bangladesh
 flag: bd.svg
 calendar: 
+updates: 
 tm-projects: 
 ---

@@ -6,5 +6,6 @@ id: omn
 name: Oman
 flag: om.svg
 calendar: 
+updates: 
 tm-projects: 
 ---

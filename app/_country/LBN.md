@@ -6,5 +6,6 @@ id: lbn
 name: Lebanon
 flag: lb.svg
 calendar: 
+updates: 
 tm-projects: 
 ---

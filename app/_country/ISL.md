@@ -6,5 +6,6 @@ id: isl
 name: Iceland
 flag: is.svg
 calendar: 
+updates: 
 tm-projects: 
 ---

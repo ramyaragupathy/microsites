@@ -6,5 +6,6 @@ id: ago
 name: Angola
 flag: ao.svg
 calendar: 
+updates: 
 tm-projects: 
 ---

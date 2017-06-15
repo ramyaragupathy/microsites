@@ -6,5 +6,6 @@ id: ind
 name: India
 flag: in.svg
 calendar: 
+updates: 
 tm-projects: 
 ---

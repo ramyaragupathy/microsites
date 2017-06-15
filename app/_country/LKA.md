@@ -6,5 +6,6 @@ id: lka
 name: Sri Lanka
 flag: lk.svg
 calendar: 
+updates: 
 tm-projects: 
 ---

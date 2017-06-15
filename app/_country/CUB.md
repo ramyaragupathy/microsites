@@ -6,5 +6,6 @@ id: cub
 name: Cuba
 flag: cu.svg
 calendar: 
+updates: 
 tm-projects: 
 ---

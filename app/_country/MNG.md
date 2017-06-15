@@ -6,5 +6,6 @@ id: mng
 name: Mongolia
 flag: mn.svg
 calendar: 
+updates: 
 tm-projects: 
 ---

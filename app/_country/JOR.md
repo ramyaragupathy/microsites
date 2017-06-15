@@ -6,5 +6,6 @@ id: jor
 name: Jordan
 flag: jo.svg
 calendar: 
+updates: 
 tm-projects: 
 ---

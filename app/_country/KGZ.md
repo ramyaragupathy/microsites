@@ -6,5 +6,6 @@ id: kgz
 name: Kyrgyzstan
 flag: kg.svg
 calendar: 
+updates: 
 tm-projects: 
 ---

@@ -6,5 +6,6 @@ id: mwi
 name: Malawi
 flag: mw.svg
 calendar: 
+updates: 
 tm-projects: 
 ---

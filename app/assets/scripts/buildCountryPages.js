@@ -35,6 +35,7 @@ function genCountryPage (countryPageInfo) {
     'name: ' + countryName,
     'flag: ' + countryFlag + '.svg',
     'calendar: ',
+    'updates: ',
     'tm-projects: '
   ];
   if (countryPageInfo.desc) {

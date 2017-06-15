@@ -6,5 +6,6 @@ id: ukr
 name: Ukraine
 flag: ua.svg
 calendar: 
+updates: 
 tm-projects: 
 ---

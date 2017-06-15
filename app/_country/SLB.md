@@ -6,5 +6,6 @@ id: slb
 name: Solomon Islands
 flag: sb.svg
 calendar: 
+updates: 
 tm-projects: 
 ---

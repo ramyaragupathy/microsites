@@ -6,5 +6,6 @@ id: guy
 name: Guyana
 flag: gy.svg
 calendar: 
+updates: 
 tm-projects: 
 ---

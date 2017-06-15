@@ -6,5 +6,6 @@ id: hun
 name: Hungary
 flag: hu.svg
 calendar: 
+updates: 
 tm-projects: 
 ---

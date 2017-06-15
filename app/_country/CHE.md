@@ -6,5 +6,6 @@ id: che
 name: Switzerland
 flag: ch.svg
 calendar: 
+updates: 
 tm-projects: 
 ---

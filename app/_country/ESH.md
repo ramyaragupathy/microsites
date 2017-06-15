@@ -6,5 +6,6 @@ id: esh
 name: Western Sahara
 flag: eh.svg
 calendar: 
+updates: 
 tm-projects: 
 ---

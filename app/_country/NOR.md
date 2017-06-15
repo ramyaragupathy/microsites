@@ -6,5 +6,6 @@ id: nor
 name: Norway
 flag: no.svg
 calendar: 
+updates: 
 tm-projects: 
 ---

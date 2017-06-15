@@ -6,5 +6,6 @@ id: sur
 name: Suriname
 flag: sr.svg
 calendar: 
+updates: 
 tm-projects: 
 ---

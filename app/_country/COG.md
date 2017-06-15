@@ -6,5 +6,6 @@ id: cog
 name: Republic of the Congo
 flag: cg.svg
 calendar: 
+updates: 
 tm-projects: 
 ---

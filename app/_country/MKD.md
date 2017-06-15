@@ -6,5 +6,6 @@ id: mkd
 name: Macedonia
 flag: mk.svg
 calendar: 
+updates: 
 tm-projects: 
 ---

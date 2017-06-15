@@ -6,5 +6,6 @@ id: bdi
 name: Burundi
 flag: bi.svg
 calendar: 
+updates: 
 tm-projects: 
 ---

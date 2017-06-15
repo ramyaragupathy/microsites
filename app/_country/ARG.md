@@ -6,5 +6,6 @@ id: arg
 name: Argentina
 flag: ar.svg
 calendar: 
+updates: 
 tm-projects: 
 ---

@@ -6,5 +6,6 @@ id: prk
 name: North Korea
 flag: kp.svg
 calendar: 
+updates: 
 tm-projects: 
 ---

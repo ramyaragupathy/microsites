@@ -6,5 +6,6 @@ id: mda
 name: Moldova
 flag: md.svg
 calendar: 
+updates: 
 tm-projects: 
 ---

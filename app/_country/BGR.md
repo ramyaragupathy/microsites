@@ -6,5 +6,6 @@ id: bgr
 name: Bulgaria
 flag: bg.svg
 calendar: 
+updates: 
 tm-projects: 
 ---

@@ -6,5 +6,6 @@ id: sen
 name: Senegal
 flag: sn.svg
 calendar: 
+updates: 
 tm-projects: 
 ---

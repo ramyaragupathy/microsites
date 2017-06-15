@@ -6,5 +6,6 @@ id: chl
 name: Chile
 flag: cl.svg
 calendar: 
+updates: 
 tm-projects: 
 ---

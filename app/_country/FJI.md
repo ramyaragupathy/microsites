@@ -6,5 +6,6 @@ id: fji
 name: Fiji
 flag: fj.svg
 calendar: 
+updates: 
 tm-projects: 
 ---

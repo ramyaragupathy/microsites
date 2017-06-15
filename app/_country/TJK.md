@@ -6,5 +6,6 @@ id: tjk
 name: Tajikistan
 flag: tj.svg
 calendar: 
+updates: 
 tm-projects: 
 ---

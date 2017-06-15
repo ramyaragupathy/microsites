@@ -6,5 +6,6 @@ id: png
 name: Papua New Guinea
 flag: pg.svg
 calendar: 
+updates: 
 tm-projects: 
 ---

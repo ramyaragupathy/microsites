@@ -6,5 +6,6 @@ id: cyp
 name: Cyprus
 flag: cy.svg
 calendar: 
+updates: 
 tm-projects: 
 ---

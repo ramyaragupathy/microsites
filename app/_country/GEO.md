@@ -6,5 +6,6 @@ id: geo
 name: Georgia
 flag: ge.svg
 calendar: 
+updates: 
 tm-projects: 
 ---

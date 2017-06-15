@@ -6,5 +6,6 @@ id: gha
 name: Ghana
 flag: gh.svg
 calendar: 
+updates: 
 tm-projects: 
 ---

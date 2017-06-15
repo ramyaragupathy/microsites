@@ -6,5 +6,6 @@ id: hrv
 name: Croatia
 flag: hr.svg
 calendar: 
+updates: 
 tm-projects: 
 ---
