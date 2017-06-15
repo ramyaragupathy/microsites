@@ -59,16 +59,14 @@ function getProjects (projects) {
 function makeProject (project, projectOrder) {
   const props = project.properties;
   const projDone = Math.round(props.done + props.validated);
-
   // Updates Progress Bar
-  $(`ul li:nth-child(${projectOrder}) .HOT-Progress`).addClass('projWidth' + projectOrder);
+  $(`#Project-${project.id} .HOT-Progress`).addClass('projWidth' + projectOrder)
   $('.HOT-Progress').append(`<style>.projWidth${projectOrder}:before{ width: ${projDone}%;}</style>`);
 
   // Adds Project variables to the cards
-  $(`ul li:nth-child(${projectOrder}) .HOT-Title p`).html(`<b>${project.id} - ${props.name}</b>`);
-  $(`ul li:nth-child(${projectOrder}) .HOT-Progress`).html(`<p>${projDone}%</p>`);
-  $(`ul li:nth-child(${projectOrder}) .HOT-Map`).attr('id', 'Map-' + project.id);
-
+  $(`#Project-${project.id} .HOT-Title p`).html(`<b>${project.id} - ${props.name}</b>`);
+  $(`#Project-${project.id} .HOT-Progress`).html(`<p>${projDone}%</p>`);
+  $(`#Project-${project.id} .HOT-Map`).attr('id', `Map-${project.id}`);
   // Drop a map into the HOT-Map div
   addMap(project.id);
 }
@@ -406,54 +404,49 @@ function getGroupActivityStats (countryId) {
         4) sort the hashtags from largest to smallest 'sum' value
       */
 
-      // TODO: make decision regarding team/user graphs
-      // One solution:
-      // put all edits, all buildings, all road in one object, check to see
-      // if any of them have nada in them. if they do, do not add them to graph?3
-
-      const totalSum = hashtagData.reduce(function (acc, ht) {
-        if (!$.isEmptyObject(ht)) {
-          const sum = Math.round(Number(ht.all_edits));
-          acc.push({name: generateHashtagUrl(ht.hashtag), value: sum});
-        }
-        return acc;
-      }, []).sort((a, b) => b.value - a.value);
-
-      const bldngSum = hashtagData.reduce(function (acc, ht) {
-        if (!$.isEmptyObject(ht)) {
-          const sum = Math.round(Number(ht.building_count_add)) +
-                      Math.round(Number(ht.building_count_mod));
-          acc.push({name: generateHashtagUrl(ht.hashtag), value: sum});
-        }
-        return acc;
-      }, []).sort((a, b) => b.value - a.value);
-
-      const roadsSum = hashtagData.reduce(function (acc, ht) {
-        if (!$.isEmptyObject(ht)) {
-          const sum = Math.round(Number(ht.road_km_add)) +
-                      Math.round(Number(ht.road_km_add));
-          acc.push({name: generateHashtagUrl(ht.hashtag), value: sum});
-        }
-        return acc;
-      }, []).sort((a, b) => b.value - a.value);
-
-      // Spawn a chart function with listening events for each of the metrics
-      var c1 = new Barchart(totalSum, '#Team-User-Total-Graph');
-      var c2 = new Barchart(bldngSum, '#Team-User-Bldng-Graph');
-      var c3 = new Barchart(roadsSum, '#Team-User-Roads-Graph');
-
-      const moreBtn = $('.btn.invert-btn-grn.teams-btn');
-      if (totalSum.length > 10) {
-        moreBtn.css('display', 'inline').animate({opacity: 1}, 500);
-      } else {
-        moreBtn.css('display', 'inline').animate({opacity: 0}, 500);
+    const totalSum = hashtagData.reduce(function (acc, ht) {
+      if (!$.isEmptyObject(ht)) {
+        const sum = Math.round(Number(ht.all_edits));
+        acc.push({name: generateHashtagUrl(ht.hashtag), value: sum});
       }
-      // On window resize, run window resize function on each chart
-      d3.select(window).on('resize', function () {
-        c1.resize();
-        c2.resize();
-        c3.resize();
-      });
+      return acc;
+    }, []).sort((a, b) => b.value - a.value);
+
+    const bldngSum = hashtagData.reduce(function (acc, ht) {
+    if (!$.isEmptyObject(ht)) {
+      const sum = Math.round(Number(ht.building_count_add)) +
+      Math.round(Number(ht.building_count_mod));
+      acc.push({name: generateHashtagUrl(ht.hashtag), value: sum});
+    }
+      return acc;
+    }, []).sort((a, b) => b.value - a.value);
+
+    const roadsSum = hashtagData.reduce(function (acc, ht) {
+      if (!$.isEmptyObject(ht)) {
+        const sum = Math.round(Number(ht.road_km_add)) +
+                    Math.round(Number(ht.road_km_add));
+        acc.push({name: generateHashtagUrl(ht.hashtag), value: sum});
+      }
+      return acc;
+    }, []).sort((a, b) => b.value - a.value);
+
+    // Spawn a chart function with listening events for each of the metrics
+    var c1 = new Barchart(totalSum, '#Team-User-Total-Graph');
+    var c2 = new Barchart(bldngSum, '#Team-User-Bldng-Graph');
+    var c3 = new Barchart(roadsSum, '#Team-User-Roads-Graph');
+
+    const moreBtn = $('.btn.invert-btn-grn.teams-btn');
+    if (totalSum.length > 10) {
+      moreBtn.css('display', 'inline').animate({opacity: 1}, 500);
+    } else {
+      moreBtn.css('display', 'inline').animate({opacity: 0}, 500);
+    }
+    // On window resize, run window resize function on each chart
+    d3.select(window).on('resize', function () {
+      c1.resize();
+      c2.resize();
+      c3.resize();
+    });
   });
 }
 

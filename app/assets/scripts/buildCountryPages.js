@@ -12,17 +12,11 @@ var turf = require('turf');
 var crg = require('country-reverse-geocoding').country_reverse_geocoding();
 var md = require('node-markdown').Markdown;
 
-/*
- *  To get the list of centroids for open tasks:
- *    1) generate list of all unique tasks
- *    2) generate centroids for tasks with 'state' indicating they're 'in progress'
- *    3) reverse geocode those tasks to get countries
- *    4) group tasks by country
- *    5) check reverse geocoded code against osm-stats code
- *    6) generate pages for all country without tasks
- *    7) generate country page for each with tasks
- */
-
+ /* genCountryPage(countryPageInfo)
+  *   1) get parameters for generating page from countryPageInfo
+  *   2) if tasks are included in countryPageInfo, include the metadat
+  *   3) write this out to a file in _countyr/
+  */
 function genCountryPage (countryPageInfo) {
   const countryName = countryPageInfo.name;
   const countryCode = countryPageInfo.code;
@@ -83,7 +77,15 @@ function parseDesc (desc) {
   return desc;
 }
 
-// Step 1
+/*
+ *  To get the list of centroids for open tasks:
+ *    1) generate lists of all unique tasks & valid country objects
+ *    2) generate centroids for ongoing tasks
+ *    3) reverse geocode those tasks to get countries
+ *    4) group tasks by country
+ *    5) check reverse geocoded code against osm-stats code
+ *    6) generate pages
+ */
 var tasksList = _.uniq(tasks.features.map((d) => { return d.properties.task; }));
 var validCountries = JSON.parse(
   fs.readFileSync('./countries.json')
@@ -93,7 +95,6 @@ validCountries = _.filter(validCountries.countries, (validCountry) => {
     return validCountry.code;
   }
 });
-// Step 2
 Promise.map(tasksList, (task) => {
   var taskGeometries = turf.featureCollection(
     tasks.features.filter((feature) => {
@@ -127,7 +128,6 @@ Promise.map(tasksList, (task) => {
       return country;
     }
   })
-  // Step 4
   .then((countries) => {
     countries = _.filter(countries, (country) => {
       if (country !== null || Object.keys(country) !== null) {
@@ -138,7 +138,6 @@ Promise.map(tasksList, (task) => {
       return country.code;
     });
   })
-  // Step 5
   .then((groupedTasks) => {
     let validCodes = [];
     _.forEach(validCountries, (validCountry) => {
