@@ -7,6 +7,12 @@ name: Mali
 flag: ml.svg
 calendar: 
 updates: 
+  - title: 
+    author: 
+    date: 
+    content: 
+    link: 
+    linktext:
 tm-projects: 
   - id: 2215
     desc: Please have a look to the french version for additional informations

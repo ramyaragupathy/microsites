@@ -7,5 +7,11 @@ name: East Timor
 flag: tl.svg
 calendar: 
 updates: 
+  - title: 
+    author: 
+    date: 
+    content: 
+    link: 
+    linktext:
 tm-projects: 
 ---

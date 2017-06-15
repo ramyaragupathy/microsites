@@ -1,6 +1,7 @@
+{% for u in page.updates %}
+{% if u.title %}
 <div class = "Updates-Container">
   <h1>Updates</h1>
-  {% for u in page.updates %}
   <div class = "Updates-Content">
   <br/>
     <h2>{{ u.title }}</h2>
@@ -12,5 +13,7 @@
     <a href= "http://{{ u.link }}" class="btn btn-blue" id="TM-Contribute-Btn-{{ p.id }}">{{ u.linktext }}</a>
     {% endif %}
   </div>
-  {% endfor %}
 </div>
+{% endif %}
+{% else %}
+{% endfor %}

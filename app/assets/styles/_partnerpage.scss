@@ -760,8 +760,9 @@ h1 {
   margin-bottom: 4em;
   @include container;
   h1 {
+    border-bottom: 1px solid #dbdbda;
     width: 80%;
-    padding-bottom: 0;
+    padding-bottom: .5em;
     margin-left: 0;
     font-style: 'Raleway';
     text-align: left;
@@ -780,7 +781,6 @@ h1 {
       margin-left: 6px;
     }
     h2 {
-      border-top: 1px solid #dbdbda;
       padding-top: 1em;
     }
   }

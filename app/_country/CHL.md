@@ -7,5 +7,11 @@ name: Chile
 flag: cl.svg
 calendar: 
 updates: 
+  - title: 
+    author: 
+    date: 
+    content: 
+    link: 
+    linktext:
 tm-projects: 
 ---

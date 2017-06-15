@@ -7,5 +7,11 @@ name: Bhutan
 flag: bt.svg
 calendar: 
 updates: 
+  - title: 
+    author: 
+    date: 
+    content: 
+    link: 
+    linktext:
 tm-projects: 
 ---

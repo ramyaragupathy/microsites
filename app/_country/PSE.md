@@ -7,5 +7,11 @@ name: West Bank
 flag: ps.svg
 calendar: 
 updates: 
+  - title: 
+    author: 
+    date: 
+    content: 
+    link: 
+    linktext:
 tm-projects: 
 ---

@@ -5,7 +5,13 @@ permalink: /Laos/
 id: lao
 name: Laos
 flag: la.svg
-calendar:
-updates:
-tm-projects:
+calendar: 
+updates: 
+  - title: 
+    author: 
+    date: 
+    content: 
+    link: 
+    linktext:
+tm-projects: 
 ---

@@ -7,5 +7,11 @@ name: Tajikistan
 flag: tj.svg
 calendar: 
 updates: 
+  - title: 
+    author: 
+    date: 
+    content: 
+    link: 
+    linktext:
 tm-projects: 
 ---
