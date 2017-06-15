@@ -429,3 +429,7 @@ prose:
           placeholder: "enter the calendar id"
           help: "for help retrieving calendar id, see calendar section the microsites README"
           label: 'the country id corresponding with the country of interest'
+      - name: "updates"
+        field:
+          element: "Textarea"
+          placeholder: "add country updates here!"s

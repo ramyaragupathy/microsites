@@ -47,8 +47,7 @@ gulp.task('compass', function () {
 gulp.task('compress:main', function () {
   // main.min.js
   var task = gulp.src([
-    'app/assets/scripts/*.js',
-    '!app/assets/scripts/buildCountryPages.js'
+    'app/assets/scripts/main.js',
   ])
   .pipe(babel({
     presets: ['es2015']
@@ -71,7 +70,6 @@ gulp.task('compress:vendor', function () {
   // vendor.min.js
   var task = gulp.src([
     'app/assets/scripts/vendor/*.js',
-    '!app/assets/scripts/vendor/buildCountryPages.js'
   ])
   .pipe(plumber());
 
@@ -132,7 +130,7 @@ gulp.task('default', function (done) {
 
 gulp.task('serve', ['build'], function () {
   browserSync({
-    port: 8080,
+    port: 3000,
     server: {
       baseDir: ['.tmp', '_site']
     }

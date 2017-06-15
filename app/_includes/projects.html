@@ -21,7 +21,7 @@
                 <p></p>
               </div>
               <div class = "HOT-Description">
-                <p> {{ p.desc | truncatewords: 40}} <a href= "http://tasks.hotosm.org/project/{{ p.id }}"> read more.</a>
+                <p id='readMore'> {{ p.desc | truncatewords: 40}} <a href= "http://tasks.hotosm.org/project/{{ p.id }}"> read more.</a>
                 </p>
               </div>
             </div>
@@ -35,16 +35,12 @@
     </div>
   </div>
   <div class = "GetInvolved">
-      {% if page.hourslink == null %}
-        <p>Support Missing Maps</p>
-        <p class='benevity-link'><a href="http://donate.hotosm.org/" class="btn btn-blue">DONATE </a></p>
-      {% else %}
-        <p>Log your hours</p>
-        <p class='benevity-link'><a href="{{ page.hourslink }}" class="btn btn-blue">{{ page.hoursname }} </a></p>
-      {% endif %}
-
+      <p style="padding:0 10px">Interested about OSM in {{ page.name }}?</p>
+      <p class='benevity-link'><a href="https://wiki.openstreetmap.org/wiki/{{ page.name }}" class="btn btn-blue">Learn More</a></p>
+      <h3>Support Missing Maps</h3>
+      <p class='benevity-link'><a href="http://donate.hotosm.org/" class="btn btn-blue">DONATE </a></p>
       <h3>New to Mapping?</h3>
-      <img src = "{{ site.domain }}{{ site.path_prefix }}/assets/graphics/content/process/Learn-MapNow.svg" width = "120"></img>
+      <!-- <img src = "{{ site.domain }}{{ site.path_prefix }}/assets/graphics/content/process/Learn-MapNow.svg" width = "120"></img> -->
       <p><a href="http://www.missingmaps.org/contribute/" class="btn btn-blue">LEARN TO MAP </a></p>
   </div>
 </div>

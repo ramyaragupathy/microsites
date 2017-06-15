@@ -37,38 +37,40 @@ function getProjects (projects) {
   $('.flex-next').prependTo('.HOT-Nav-Projects');
   $('.flex-control-nav').prependTo('.HOT-Nav-Projects');
   $('.flex-prev').prependTo('.HOT-Nav-Projects');
-
-  if (projects.length === 1) {
-    $('.flex-next').css('display', 'none');
-  }
-
-  projects.forEach(function (project, i) {
-    const url = `http://tasks.hotosm.org/project/${project}.json`;
-    $.getJSON(url, function (projectData) {
-      makeProject(projectData, i + 2);
-    })
-    .fail(function (err) {
-      console.warn(`WARNING >> Project #${project} could not be accessed at ${url}.\n` +
-                   'The server returned the following message object:', err);
-      makePlaceholderProject(project, i + 2);
+  if (projects.length > 0) {
+    if (projects.length === 1) {
+      $('.flex-next').css('display', 'none');
+    }
+    projects.forEach(function (project, i) {
+      const url = `http://tasks.hotosm.org/project/${project}.json`;
+      $.getJSON(url, function (projectData) {
+        if (projectData.geometry) {
+          makeProject(projectData, i + 2);
+        }
+      })
+      .fail(function (err) {
+        console.warn(`WARNING >> Project #${project.id} could not be accessed at ${url}.\n` +
+                     'The server returned the following message object:', err);
+        makePlaceholderProject(project, i + 2);
+      });
     });
-  });
+  } else {
+    makeNoTasksPlaceholder();
+  }
 }
 
 // Update cards with necessary project details
 function makeProject (project, projectOrder) {
   const props = project.properties;
   const projDone = Math.round(props.done + props.validated);
-
   // Updates Progress Bar
-  $(`ul li:nth-child(${projectOrder}) .HOT-Progress`).addClass('projWidth' + projectOrder);
+  $(`#Project-${project.id} .HOT-Progress`).addClass('projWidth' + projectOrder)
   $('.HOT-Progress').append(`<style>.projWidth${projectOrder}:before{ width: ${projDone}%;}</style>`);
 
   // Adds Project variables to the cards
-  $(`ul li:nth-child(${projectOrder}) .HOT-Title p`).html(`<b>${project.id} - ${props.name}</b>`);
-  $(`ul li:nth-child(${projectOrder}) .HOT-Progress`).html(`<p>${projDone}%</p>`);
-  $(`ul li:nth-child(${projectOrder}) .HOT-Map`).attr('id', 'Map-' + project.id);
-
+  $(`#Project-${project.id} .HOT-Title p`).html(`<b>${project.id} - ${props.name}</b>`);
+  $(`#Project-${project.id} .HOT-Progress`).html(`<p>${projDone}%</p>`);
+  $(`#Project-${project.id} .HOT-Map`).attr('id', `Map-${project.id}`);
   // Drop a map into the HOT-Map div
   addMap(project.id);
 }
@@ -77,7 +79,7 @@ function makeProject (project, projectOrder) {
 // that a project cannot be retrieved from the HOT Tasking Manager API
 function makePlaceholderProject (projectId, projectOrder) {
   // Adds error title
-  $(`ul li:nth-child(${projectOrder}) .HOT-Title p`)
+  $(`#Project-${projectId} .HOT-Title p`)
     .html(`<i class="ico icon collecticon-sign-danger"></i>
 <b>HOT Project #${projectId} Not Active/Not Found in HOT Tasking Manager</b>`);
 
@@ -86,24 +88,42 @@ function makePlaceholderProject (projectId, projectOrder) {
   $(`#HOT-Title-${projectId} p`).css('width', '100%');
 
   // Generate issue information for Github tracker
-  const ghIssueTitle = `HOT Tasking Manager endpoint failure in ${PT.mainHashtag} partner page`;
+  const ghIssueTitle = `HOT Tasking Manager endpoint failure in ${PT.name} country page`;
   const ghIssueBody = `Project ${projectId} is no longer indexed in the HOT
- Tasking Manager, so it should be removed from the ${PT.mainHashtag} partner
+ Tasking Manager, so it should be removed from the ${PT.name} partner
  page variable settings.`;
 
   // Add explanatory error text
   const errorHtml = `Uh oh, it looks like <a href="http://tasks.hotosm.org/project/${projectId}"
  target="_blank">Project #${projectId}</a> has been removed from the HOT Tasking Manager.
- <a href="https://github.com/MissingMaps/partners/issues/new?title=${ghIssueTitle}
- &body=${ghIssueBody}" target="_blank">Click here</a> to report an issue or
+ <a href="https://github.com/MissingMaps/partners/issues/new?title=${ghIssueTitle}&body=${ghIssueBody}" target="_blank">Click here</a> to report an issue or
  <a href="http://tasks.hotosm.org/" target="_blank">here</a>
  to search for more projects.`;
 
-  $(`ul li:nth-child(${projectOrder}) .HOT-Description p`).html(errorHtml);
+  $(`#Project-${projectId}_clone .HOT-Description p`).html(errorHtml);
 
   // Remove loading spinners and add placeholder background
-  $(`ul li:nth-child(${projectOrder}) .HOT-Map`).empty().addClass('placeholder');
-  $(`ul li:nth-child(${projectOrder}) .HOT-Progress `).css('display', 'none');
+  $(`#Project-${projectId} .HOT-Map`).empty().addClass('placeholder');
+  $(`#Project-${projectId} .HOT-Progress `).css('display', 'none');
+  $(`#Project-${projectId} .HOT-Description`).css('display', 'none');
+}
+// Adds placeholder if no projects found in page metadata
+function makeNoTasksPlaceholder() {
+  let noTasksHTML = [
+    '<li style="list-style: none" id = Project-NONE>',
+    '<div class = "HOT-Container">',
+    '<div class = "HOT-Map placeholder">',
+    '</div>',
+    '<div class = "HOT-Details">',
+    '<div class = "HOT-Title" id = "HOT-Title-NONE">',
+    '<h2><b>There currently are no tasks for this country.</b></h2>',
+    '</div>',
+    '<p><b></b></p><a href="http://tasks.hotosm.org/" class="btn btn-blue" id="TM-Contribute-Btn">FIND OTHER TASKS</a></p>',
+    '</div>',
+    '</div>',
+    '</li>'
+  ];
+  $('.Projects-Container-Leftside').append(noTasksHTML.join(''));
 }
 
 /* -------------------------------------------------------
@@ -233,56 +253,54 @@ function eventsFunctionality () {
 /* -------------------------------------------------------
  -------------------- Add Events Cards -------------------
  -------------------------------------------------------*/
-function generateEvents(calendarId) {
-  const url = "https://mm-microsites-proxy-staging.herokuapp.com/" + calendarId + "/events"
-  $.getJSON(url, function(eventData) {
-    Object.keys(eventData).map((key,val) => {
-      const title = eventData[key].name;
-      // const singupLink = eventData[key].description.match(/(https?:\/\/[^\s]+)/g)[0]
-      const singupLink = "#"
-      const desc = eventData[key].description.replace(/(https?:\/\/[^\s]+)/,"")
-      const location = eventData[key].location;
-      const date = moment(eventData[key].time[0]).format("MMMM Do")
-      console.log(date)
-      const time = eventData[key].time.map((d) => {
-        const date = new Date(d)
-        return moment(date).format("h:mma")
-      }).join(' - ')
+function generateEvents (calendarId) {
+  if (calendarId.match(/google/)) {
+    const url = "https://mm-microsites-proxy-staging.herokuapp.com/" + calendarId + "/events";
+    $.getJSON(url, (eventData) => {
+      Object.keys(eventData).map((key, val) => {
+        const title = eventData[key].name;
+        // const singupLink = eventData[key].description.match(/(https?:\/\/[^\s]+)/g)[0]
+        const singupLink = '#'
+        const desc = eventData[key].description.replace(/(https?:\/\/[^\s]+)/, '');
+        const location = eventData[key].location;
+        const date = moment(eventData[key].time[0]).format("MMMM Do");
+        const time = eventData[key].time.map((d) => {
+          const date = new Date(d);
+          return moment(date).format('h:mma')
+        }).join(' - ');
 
-      const eventTopSection = [
-        '<div class="event-top-section clearfix">',
-        '<div class="sub-head">',
-        '<img class="event-images" src="/assets/graphics/flags/4x3/' + PT.flag + '" width="24"/>',
-        '<h3 class="event-header">' + title + '</h3>',
-        '<a class="btn btn-grn" href=' + singupLink + ' target="">SIGN UP</a>',
-        '</div>',
-        '</div>'
-      ].join('')
-      const eventMainDetails = [
-        '<div class="event-maindetails clearfix">',
-        '<div class="textbox" style="padding-top:8px">',
-        '<p>' + '<b>Date:</b> ' + date + '</p>',
-        '<p>' + '<b>Time:</b> ' + time + '</p>',
-        '<p>' + '<b>About:</b> ' + desc + '</p>',
-        '</div>',
-        '</div>'
-      ].join('')
-      const eventsHTML = [
-        '<div class="column">',
-		    '<div class="event-sub-container">',
-        eventTopSection,
-        eventMainDetails,
-        '</div>',
-        '</div>'
-      ].join('')
-      $("#event-cards").append(eventsHTML)
-    })
-  })
-
+        const eventTopSection = [
+          '<div class="event-top-section clearfix">',
+          '<div class="sub-head">',
+          '<img class="event-images" src="/assets/graphics/flags/4x3/' + PT.flag + '" width="24"/>',
+          '<h3 class="event-header">' + title + '</h3>',
+          '<a class="btn btn-grn" href=' + singupLink + ' target="">SIGN UP</a>',
+          '</div>',
+          '</div>'
+        ].join('');
+        const eventMainDetails = [
+          '<div class="event-maindetails clearfix">',
+          '<div class="textbox" style="padding-top:8px">',
+          '<p>' + '<b>Date:</b> ' + date + '</p>',
+          '<p>' + '<b>Time:</b> ' + time + '</p>',
+          '<p>' + '<b>location:</b> ' + location + '</p>',
+          '<p>' + '<b>About:</b> ' + desc + '</p>',
+          '</div>',
+          '</div>'
+        ].join('');
+        const eventsHTML = [
+          '<div class="column">',
+          '<div class="event-sub-container">',
+          eventTopSection,
+          eventMainDetails,
+          '</div>',
+          '</div>'
+        ].join('');
+        $('#event-cards').append(eventsHTML);
+      });
+    });
+  }
 }
-
-
-
 
 /* -------------------------------------------------------
  ------------------ Add Activity Graphs ------------------
@@ -373,7 +391,6 @@ function getUserActivityStats (countryId) {
       moreBtn.css('display', 'inline').animate({opacity: 0}, 500);
     }
 
-
     // On window resize, run window resize function on each chart
     d3.select(window).on('resize', function () {
       c1.resize();
@@ -407,56 +424,49 @@ function getGroupActivityStats (countryId) {
         4) sort the hashtags from largest to smallest 'sum' value
       */
 
-      // TODO: make decision regarding team/user graphs
-      // One solution:
-      // put all edits, all buildings, all road in one object, check to see
-      // if any of them have nada in them. if they do, do not add them to graph?3
-
-      const totalSum = hashtagData.reduce(function (acc, ht) {
-        if (!$.isEmptyObject(ht)) {
-          const sum = Math.round(Number(ht.all_edits));
-          acc.push({name: generateHashtagUrl(ht.hashtag), value: sum});
-        }
-        return acc;
-      }, []).sort((a, b) => b.value - a.value);
-
-      const bldngSum = hashtagData.reduce(function (acc, ht) {
-        if (!$.isEmptyObject(ht)) {
-          const sum = Math.round(Number(ht.building_count_add)) +
-                      Math.round(Number(ht.building_count_mod));
-          acc.push({name: generateHashtagUrl(ht.hashtag), value: sum});
-        }
-        return acc;
-      }, []).sort((a, b) => b.value - a.value);
-
-      const roadsSum = hashtagData.reduce(function (acc, ht) {
-        if (!$.isEmptyObject(ht)) {
-          const sum = Math.round(Number(ht.road_km_add)) +
-                      Math.round(Number(ht.road_km_add));
-          acc.push({name: generateHashtagUrl(ht.hashtag), value: sum});
-        }
-        return acc;
-      }, []).sort((a, b) => b.value - a.value);
-
-      // Spawn a chart function with listening events for each of the metrics
-      var c1 = new Barchart(totalSum, '#Team-User-Total-Graph');
-      var c2 = new Barchart(bldngSum, '#Team-User-Bldng-Graph');
-      var c3 = new Barchart(roadsSum, '#Team-User-Roads-Graph');
-
-      const moreBtn = $('.btn.invert-btn-grn.teams-btn');
-      if (totalSum.length > 10) {
-        moreBtn.css('display', 'inline').animate({opacity: 1}, 500);
-      } else {
-        moreBtn.css('display', 'inline').animate({opacity: 0}, 500);
+    const totalSum = hashtagData.reduce(function (acc, ht) {
+      if (!$.isEmptyObject(ht)) {
+        const sum = Math.round(Number(ht.all_edits));
+        acc.push({name: generateHashtagUrl(ht.hashtag), value: sum});
       }
+      return acc;
+    }, []).sort((a, b) => b.value - a.value);
 
+    const bldngSum = hashtagData.reduce(function (acc, ht) {
+    if (!$.isEmptyObject(ht)) {
+      const sum = Math.round(Number(ht.building_count_add)) +
+      Math.round(Number(ht.building_count_mod));
+      acc.push({name: generateHashtagUrl(ht.hashtag), value: sum});
+    }
+      return acc;
+    }, []).sort((a, b) => b.value - a.value);
 
-      // On window resize, run window resize function on each chart
-      d3.select(window).on('resize', function () {
-        c1.resize();
-        c2.resize();
-        c3.resize();
-      });
+    const roadsSum = hashtagData.reduce(function (acc, ht) {
+      if (!$.isEmptyObject(ht)) {
+        const sum = Math.round(Number(ht.road_km_add)) +
+                    Math.round(Number(ht.road_km_add));
+        acc.push({name: generateHashtagUrl(ht.hashtag), value: sum});
+      }
+      return acc;
+    }, []).sort((a, b) => b.value - a.value);
+
+    // Spawn a chart function with listening events for each of the metrics
+    var c1 = new Barchart(totalSum, '#Team-User-Total-Graph');
+    var c2 = new Barchart(bldngSum, '#Team-User-Bldng-Graph');
+    var c3 = new Barchart(roadsSum, '#Team-User-Roads-Graph');
+
+    const moreBtn = $('.btn.invert-btn-grn.teams-btn');
+    if (totalSum.length > 10) {
+      moreBtn.css('display', 'inline').animate({opacity: 1}, 500);
+    } else {
+      moreBtn.css('display', 'inline').animate({opacity: 0}, 500);
+    }
+    // On window resize, run window resize function on each chart
+    d3.select(window).on('resize', function () {
+      c1.resize();
+      c2.resize();
+      c3.resize();
+    });
   });
 }
 
@@ -581,11 +591,8 @@ getPrimaryStats(PT.id);
 getGroupActivityStats(PT.id);
 // Populate project carousel via HOTOSM Tasking Manager API
 getProjects(PT.hotProjects);
+// makePlaceholderProject(PT.hotProjects)
 // Populate events section with upcoming events
 generateEvents(PT.calendar);
-
-// Check to see if there are hashtags to view
-// checkHashtags(PT.subHashtags);
-// // Sets up switcher/ loader for group and user graphs
-
+// setupGraphs
 setupGraphs();
