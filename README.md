@@ -95,12 +95,9 @@ Will also run `bundle install` and auto generates each country's microsite
 
 ### Auto microsite build
 
-The auto microsite page build writes microsites to the `app > _country` folder
+.build_scripts/buildPages.js writes microsites to the `app > _country` folder. On each run, the script includes the recent tasks for each country. These tasks are gathered using [osm-data-parse](https://github.com/maxgrossman/osm-data-parse/).
 
-For country tasks, it uses a fork of [osm-data-parse](https://github.com/maxgrossman/osm-data-parse) to grab the most
-recent 'open' tasks from the [HOT tasking manager api](https://github.com/hotosm/osm-tasking-manager2/wiki/API) and reverse geocodes them to designate them to the correct country.
-
-Country names and codes match those used in osm-stats-api and sit in a `countries.json` file.
+To include recent tasks, run osm-data-parse's tasking-mgr-parse/parse.js script and save the geoJSON output as 'tasks.geojson' in the root of this repo.
 
 ### Getting started
 
