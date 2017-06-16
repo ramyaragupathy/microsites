@@ -21,7 +21,7 @@ var babel = require('gulp-babel');
 // renders the site. Once the rendering has finished the assets are copied.
 gulp.task('copy:assets', function (done) {
   return gulp.src('.tmp/assets/**')
-    .pipe(gulp.dest('_site/assets'));
+    .pipe(gulp.dest('_site/microsites/assets'));
 });
 
 /* ------------------------------------------------------------------------------
@@ -116,6 +116,12 @@ gulp.task('fonts', function () {
     .pipe(gulp.dest('.tmp/assets/styles/fonts'));
 });
 
+// Copies images
+gulp.task('images', function() {
+  return gulp.src('app/assets/graphics/**')
+    .pipe(gulp.dest('.tmp/assets/graphics'))
+});
+
 // Build the jekyll website.
 // Reload all the browsers.
 gulp.task('jekyll:rebuild', ['jekyll'], function () {
@@ -125,7 +131,7 @@ gulp.task('jekyll:rebuild', ['jekyll'], function () {
 // Main build task
 // Builds the site. Destination --> _site
 gulp.task('build', function (done) {
-  runSequence(['jekyll', 'compress:main', 'compress:vendor', 'sass', 'fonts'], ['copy:assets'], done);
+  runSequence(['jekyll', 'compress:main', 'compress:vendor', 'sass', 'images', 'fonts'], ['copy:assets'], done);
 });
 
 // Default task.
