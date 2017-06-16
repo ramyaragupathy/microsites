@@ -59,6 +59,7 @@
     "js-yaml": "^3.2.6",
     "lodash": "^3.10.1",
     "node-markdown": "^0.1.1",
+    "node-nominatim2": "^0.1.0",
     "proxy-middleware": "^0.15.0",
     "request-promise": "^4.2.1",
     "run-sequence": "~1.0.2",

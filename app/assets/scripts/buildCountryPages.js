@@ -6,11 +6,20 @@ var Promise = require('bluebird');
 var tasks = JSON.parse(fs.readFileSync(
   '../../../../../helpers/osm-data-parse/tasking-mgr-projects/output/output_20170605-122008.geojson'
 ));
-var countries = require('i18n-iso-countries')
+var countries = require('i18n-iso-countries');
+var Nominatim = require('node-nominatim2');
+var nominatimOptions = {
+  useragent: 'MyApp',
+  referer: 'https://github.com/xbgmsharp/node-nominatim2',
+  timeout: 1000
+};
+var nominatim = new Nominatim(nominatimOptions);
 var _ = require('lodash');
 var turf = require('turf');
 var crg = require('country-reverse-geocoding').country_reverse_geocoding();
 var md = require('node-markdown').Markdown;
+Promise.promisify(nominatim.search({q: 'lesotho'}))
+.then((results) => { console.log(results); })
 
  /* genCountryPage(countryPageInfo)
   *   1) get parameters for generating page from countryPageInfo
@@ -186,28 +195,30 @@ Promise.map(tasksList, (task) => {
           const task = valObj.task;
           return Promise.all([
             valObj,
-            rp('http://tasks.hotosm.org/project/' + task + '.json')
+            rp('http://tasks.hotosm.org/project/' + task + '.json'),
+            nominatimSearch({q: valObj.name})
           ]);
         })
         .then((responses) => {
-          responses.forEach((response) => {
-            const valObj = response[0];
-            let desc;
-            if (response[1]) {
-              desc = JSON.parse(response[1]).properties.short_description;
-              desc = parseDesc(desc);
-            } else {
-              desc = '';
-            }
-            valObj['desc'] = desc;
-            genCountryPage(valObj);
-          });
+          console.log(responses)
+          // responses.forEach((response) => {
+          //   const valObj = response[0];
+          //   let desc;
+          //   if (response[1]) {
+          //     desc = JSON.parse(response[1]).properties.short_description;
+          //     desc = parseDesc(desc);
+          //   } else {
+          //     desc = '';
+          //   }
+          //   valObj['desc'] = desc;
+          //   genCountryPage(valObj);
+          // });
         })
         .catch((error) => {
           console.log(error);
         });
       } else {
-        genCountryPage(validCountryVal);
+        // genCountryPage(validCountryVal);
       }
     });
   });
