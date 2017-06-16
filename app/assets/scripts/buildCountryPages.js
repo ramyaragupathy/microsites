@@ -7,13 +7,13 @@ var tasks = JSON.parse(fs.readFileSync(
   '../../../../../helpers/osm-data-parse/tasking-mgr-projects/output/output_20170605-122008.geojson'
 ));
 var countries = require('i18n-iso-countries');
-var Nominatim = require('node-nominatim2');
-var nominatimOptions = {
-  useragent: 'MyApp',
-  referer: 'https://github.com/xbgmsharp/node-nominatim2',
-  timeout: 4500
-};
-var nominatim = new Nominatim(nominatimOptions);
+// var Nominatim = require('node-nominatim2');
+// var nominatimOptions = {
+//  useragent: 'MyApp',
+//  referer: 'https://github.com/xbgmsharp/node-nominatim2',
+//  timeout: 4500
+// };
+// var nominatim = new Nominatim(nominatimOptions);
 var _ = require('lodash');
 var turf = require('turf');
 var crg = require('country-reverse-geocoding').country_reverse_geocoding();
@@ -95,17 +95,17 @@ function parseDesc (desc) {
   return desc;
 }
 
-function geocodeCountry (country) {
-  return new Promise((resolve, reject) => {
-    nominatim.search({q: country}, (err, resp, data) => {
-      if (err) {
-        reject(err);
-      } else {
-        resolve(data);
-      }
-    });
-  });
-}
+// function geocodeCountry (country) {
+//   return new Promise((resolve, reject) => {
+//     nominatim.search({q: country}, (err, resp, data) => {
+//       if (err) {
+//         reject(err);
+//       } else {
+//         resolve(data);
+//       }
+//     });
+//   });
+// }
 
 /*
  *  To get the list of centroids for open tasks:
@@ -209,8 +209,8 @@ Promise.map(tasksList, (task) => {
           const task = valObj.task;
           return Promise.all([
             valObj,
-            rp('http://tasks.hotosm.org/project/' + task + '.json'),
-            geocodeCountry(valObj.name)
+            rp('http://tasks.hotosm.org/project/' + task + '.json')
+            // geocodeCountry(valObj.name)
           ]);
         })
         .then((responses) => {
@@ -224,7 +224,8 @@ Promise.map(tasksList, (task) => {
               desc = '';
             }
             valObj['desc'] = desc;
-            valObj['osmID'] = response[2]
+            // console.log(response[2])
+            // valObj['osmID'] = response[2];
             genCountryPage(valObj);
           });
         })

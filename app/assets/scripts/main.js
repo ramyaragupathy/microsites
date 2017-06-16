@@ -259,8 +259,7 @@ function generateEvents (calendarId) {
     $.getJSON(url, (eventData) => {
       Object.keys(eventData).map((key, val) => {
         const title = eventData[key].name;
-        // const singupLink = eventData[key].description.match(/(https?:\/\/[^\s]+)/g)[0]
-        const singupLink = '#'
+        const singupLink = eventData[key].description.match(/(https?:\/\/[^\s]+)/g)[0]
         const desc = eventData[key].description.replace(/(https?:\/\/[^\s]+)/, '');
         const location = eventData[key].location;
         const date = moment(eventData[key].time[0]).format("MMMM Do");
