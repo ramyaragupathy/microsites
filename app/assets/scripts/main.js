@@ -65,12 +65,14 @@ function makeProject (project, projectOrder) {
   const projDone = Math.round(props.done + props.validated);
   // Updates Progress Bar
   $(`#Project-${project.id} .HOT-Progress`).addClass('projWidth' + projectOrder)
-  $('.HOT-Progress').append(`<style>.projWidth${projectOrder}:before{ width: ${projDone}%;}</style>`);
 
   // Adds Project variables to the cards
   $(`#Project-${project.id} .HOT-Title p`).html(`<b>${project.id} - ${props.name}</b>`);
   $(`#Project-${project.id} .HOT-Progress`).html(`<p>${projDone}%</p>`);
   $(`#Project-${project.id} .HOT-Map`).attr('id', `Map-${project.id}`);
+  $(`#Project-${project.id} .HOT-Progress`).append(`<style>.projWidth${projectOrder}:before{ width: ${projDone}%;}</style>`);
+
+
   // Drop a map into the HOT-Map div
   addMap(project.id);
 }
@@ -256,47 +258,49 @@ function eventsFunctionality () {
 function generateEvents (calendarId) {
   if (calendarId.match(/google/)) {
     const url = "https://mm-microsites-proxy-staging.herokuapp.com/" + calendarId + "/events";
+    const currentDate = new Date()
     $.getJSON(url, (eventData) => {
       Object.keys(eventData).map((key, val) => {
-        const title = eventData[key].name;
-        // const singupLink = eventData[key].description.match(/(https?:\/\/[^\s]+)/g)[0]
-        const singupLink = '#'
-        const desc = eventData[key].description.replace(/(https?:\/\/[^\s]+)/, '');
-        const location = eventData[key].location;
-        const date = moment(eventData[key].time[0]).format("MMMM Do");
-        const time = eventData[key].time.map((d) => {
-          const date = new Date(d);
-          return moment(date).format('h:mma')
-        }).join(' - ');
-
-        const eventTopSection = [
-          '<div class="event-top-section clearfix">',
-          '<div class="sub-head">',
-          '<img class="event-images" src="/assets/graphics/flags/4x3/' + PT.flag + '" width="24"/>',
-          '<h3 class="event-header">' + title + '</h3>',
-          '<a class="btn btn-grn" href=' + singupLink + ' target="">SIGN UP</a>',
-          '</div>',
-          '</div>'
-        ].join('');
-        const eventMainDetails = [
-          '<div class="event-maindetails clearfix">',
-          '<div class="textbox" style="padding-top:8px">',
-          '<p>' + '<b>Date:</b> ' + date + '</p>',
-          '<p>' + '<b>Time:</b> ' + time + '</p>',
-          '<p>' + '<b>location:</b> ' + location + '</p>',
-          '<p>' + '<b>About:</b> ' + desc + '</p>',
-          '</div>',
-          '</div>'
-        ].join('');
-        const eventsHTML = [
-          '<div class="column">',
-          '<div class="event-sub-container">',
-          eventTopSection,
-          eventMainDetails,
-          '</div>',
-          '</div>'
-        ].join('');
-        $('#event-cards').append(eventsHTML);
+        const eventTime = eventData[key].time[0]
+        if (moment(currentDate).isBefore(eventTime)) {
+          const title = eventData[key].name;
+          const singupLink = eventData[key].description.match(/(https?:\/\/[^\s]+)/g);
+          const desc = eventData[key].description.replace(/(https?:\/\/[^\s]+)/, '');
+          const location = eventData[key].location;
+          const date = moment(eventData[key].time[0]).format("MMMM Do");
+          const time = eventData[key].time.map((d) => {
+            const date = new Date(d);
+            return moment(date).format('h:mma');
+          }).join(' - ');
+          const eventTopSection = [
+            '<div class="event-top-section clearfix">',
+            '<div class="sub-head">',
+            '<img class="event-images" src="/assets/graphics/flags/4x3/' + PT.flag + '" width="24"/>',
+            '<h3 class="event-header">' + title + '</h3>',
+            '<a class="btn btn-grn" href=' + singupLink + ' target="">SIGN UP</a>',
+            '</div>',
+            '</div>'
+          ].join('');
+          const eventMainDetails = [
+            '<div class="event-maindetails clearfix">',
+            '<div class="textbox" style="padding-top:8px">',
+            '<p>' + '<b>Date:</b> ' + date + '</p>',
+            '<p>' + '<b>Time:</b> ' + time + '</p>',
+            '<p>' + '<b>location:</b> ' + location + '</p>',
+            '<p>' + '<b>About:</b> ' + desc + '</p>',
+            '</div>',
+            '</div>'
+          ].join('');
+          const eventsHTML = [
+            '<div class="column">',
+            '<div class="event-sub-container">',
+            eventTopSection,
+            eventMainDetails,
+            '</div>',
+            '</div>'
+          ].join('');
+          $('#event-cards').append(eventsHTML);
+        }
       });
     });
   }
@@ -591,7 +595,6 @@ getPrimaryStats(PT.id);
 getGroupActivityStats(PT.id);
 // Populate project carousel via HOTOSM Tasking Manager API
 getProjects(PT.hotProjects);
-// makePlaceholderProject(PT.hotProjects)
 // Populate events section with upcoming events
 generateEvents(PT.calendar);
 // setupGraphs

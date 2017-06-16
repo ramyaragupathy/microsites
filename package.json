@@ -16,6 +16,7 @@
   },
   "homepage": "",
   "scripts": {
+    "build-pages": "node .build_scripts/buildPages.js",
     "postinstall": "[ -f _config-dev.yml ] || echo 'domain: http://localhost:3000\npath_prefix:' > _config-dev.yml",
     "serve": "gulp serve",
     "build": "gulp",

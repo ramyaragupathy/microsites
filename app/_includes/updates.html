@@ -10,7 +10,7 @@
     <br/>
     <p>{{ u.content }}</p>
     {% if u.link %}
-    <a href= "http://{{ u.link }}" class="btn btn-blue" id="TM-Contribute-Btn-{{ p.id }}">{{ u.linktext }}</a>
+    <a href= "{{ u.link }}" class="btn btn-blue" id="TM-Contribute-Btn-{{ p.id }}">{{ u.linktext }}</a>
     {% endif %}
   </div>
 </div>

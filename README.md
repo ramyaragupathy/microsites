@@ -1,50 +1,49 @@
 # MissingMaps Microsites
 
-This repo contains the code for MissingMaps Microsites. Each page is a unique view of how MissingMaps  contributions in different countries.
+This repo contains the code for MissingMaps Microsites. Each page is a unique view of how MissingMaps contributes in different countries.
 
-### Creating a new Microsite Page
+## Managing Microsites
 
-1. Create new `country.md` file in the `country` folder. Rename according to the country and how you want the URL to look. For example, `my-new-country.md` will have the url `missingmaps.org/countries/new-country`. Use dashes `-` instead of underscores.
+### Updating a Microsite Page
 
-2. All country page data is contained within the yml frontmatter. Copy and paste the `country-example.md` file. Edit all variables with new partner information. This repo has been set up with Prose.io to make this easier. [You can edit the yml frontmatter there as well](http://prose.io/#MissingMaps/partners/). See Updating Partner Information below for details on each variable.
-
-3. Select Country Flag (SVG format) to to the `assets/graphics/content/logos` folder.
-
-4. Create a new country folder in the `_data` folder. Each folder name must match the name of the file within the `_country` folder.
-
-5. Create a `events.csv` file within each new `_data` folder. See Adding Events below for more details on the `events.csv` file.
-
-#### Updating Partner Information
-
-Partner information is located in `app > _country`. For updating, duplicate country_example and save the file as [_country.name_].md
-
-To update the page with the country related information, edit the following fields:
+Each country's microsite page sits within the `app > _country` folder. For more information on how these pages were generated see the *Development* section of this README. Each page's data are contained within their yml frontmatter. This repo has been set up with [Prose.io](http://prose.io/#MissingMaps/Microsites/) to make pages easier to edit.
 
 **Site Config**
 
 | Field         | Changes  |
-| ------------- |:-------------:|
-| permalink      | This will be the end of the URL the country page can be located at. Using  /[_country.name_]/ will make the link **missingmaps.com/country/_country.name_/**. |
-| id      | What will be used to match the country page to the events.csv. Needs to be the same as the folder containing this country's events. |
-| name      | Country name. Displayed on the main page under logo. |
-| logo      | Link to partner logo      |
+| ------------- |-------------|
+| permalink      | With the permalink, a page's full link reads `missingmaps.org/microsites/permalinks` |
+| name      | The country name is displayed on the microsite under the country flag. |
+| flag      | Link to country flag |
 
 **Community**
 
 | Field         | Changes  |
-| ------------- |:-------------:|
-| apikey | API key for the page. Page creators can get one for their accounts [here](https://www.flickr.com/services/api/misc.api_keys.html).   |
-| setId | Id for the photo album partner wants displayed on their page. For example the id for the album at  https://www.flickr.com/photos/126636925@N06/albums/72157665243501444 is **72157665243501444**. The album must be made public for the api call to work. |
+| ------------- |-------------|
+| calendar | Id for a public google calendar holding country related events. See the Integrating Google Calendar section for how to generate this id |
+| updates | This populates the page's updates section |
+
+```
+updates:
+  - title: update title
+    author: update name
+    date: MM/DD/YYYY
+    content: Body of the update...
+    link: http://externalLink.com
+    linktext: text to display on button linking to external site
+```
 
 **OSMStats**
 
 | Field         | Changes  |
-| ------------- |:-------------:|
-| primary-hashtag | The overall hashtag for the partner. Used to populate the primary stats at the top of the page. |
-| subhashtags | Subhashtags that create the 'team' section. Must be in the format set in the example partner.
+| ------------- |-------------|
+| id      | The country id is used to call osm-stats-api and build the activity and stats section in the header |
 
 **Country Projects**
-To display properly, this section must follow the format set in the example partner page of
+
+| Field         | Changes  |
+| ------------- |-------------|
+| tm-projects         |  HOT OSM tasks for a given country |
 
 ```
 tm-projects:
@@ -57,27 +56,26 @@ tm-projects:
 | Field         | Changes  |
 | ------------- |:-------------:|
 | id | The id for the HOT Task. For http://tasks.hotosm.org/project/1805, the id would be **1805**. |
-| desc | Description of the project. We recommend using the text from the [Tasking Manager](http://tasks.hotosm.org/). The site will limit how many characters are shown automatically. |
+| desc | Description of the project. We recommend using the text from the [Tasking Manager](http://tasks.hotosm.org/). |
 
-### Adding events
+### Integrate Google Calendar
 
-Events are stored in the `app/_data` folder. To add an event, edit the events.csv. You'll want to create a new folder that shares a name with the **country id**.
+#### Create a new calendar
 
-When updating the csv of events:
+1. login to Google Calendar using a Google account.
+2. Click the down arrow in the `My Calendars` section header and select `Create new calendar`.
+3. On the next page provide the calendar a name, description, and location.
+4. Most importantly check the box next to `Share this calendar with other` as well as the box next to the `Make this calendar public` section.
+5. Save the calendar and select `yes` on the popup informing you that the calendar is being made public
 
-- Use `yyyy-mm-dd` format for date. The year must be 4 digits (may need to adjust display settings in Microsoft Excel). Otherwise, 15 may be interpreted as 1915 instead of 2015.
+#### Get Calendar ID
 
-```
-new Date("9/15/15")
-Date 1915-09-15T04:00:00.000Z
-new Date("9/15/2015")
-Date 2015-09-15T04:00:00.000Z
-```
-- Fields can be left blank if data does not exist or is TBD
+Once a new public calendar is generated, or an existing calendar is made public follow these steps
 
-- Include the two letter country code to include the correct flag
-
-
+1. Hover over the calendar of interest and click the down arrow that appears to its right.
+2. In the new dialogue that appears, click `calendar settings`
+3. On the `calendar settings` page find the `Calendar ID` in the `Calendar Address` section.
+4. Add this id to calendar field of the intended page's yml frontmatter
 
 ## Development
 
@@ -92,7 +90,14 @@ After these basic requirements are met, run the following commands in the websit
 ```
 $ npm install
 ```
-Will also run `bundle install`
+Will also run `bundle install` and auto generates each country's microsite
+
+
+### Auto microsite build
+
+.build_scripts/buildPages.js writes microsites to the `app > _country` folder. On each run, the script includes the recent tasks for each country. These tasks are gathered using [osm-data-parse](https://github.com/maxgrossman/osm-data-parse/).
+
+To include recent tasks, run osm-data-parse's tasking-mgr-parse/parse.js script and save the geoJSON output as 'tasks.geojson' in the root of this repo.
 
 ### Getting started
 
@@ -101,7 +106,7 @@ $ gulp serve
 ```
 Compiles the compass files, javascripts, and launches the server making the site available at `http://localhost:3000/`
 The system will watch files and execute tasks whenever one of them changes.
-The site will automatically refresh since it is bundled with livereload.
+The site will automatically refresh since it is bundled with live reload.
 
 The `_config-dev.yml` file will be loaded alongside `_config.yml`.
 
