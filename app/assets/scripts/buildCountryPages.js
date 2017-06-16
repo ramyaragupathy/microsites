@@ -6,7 +6,14 @@ var Promise = require('bluebird');
 var tasks = JSON.parse(fs.readFileSync(
   '../../../../../helpers/osm-data-parse/tasking-mgr-projects/output/output_20170605-122008.geojson'
 ));
-var countries = require('i18n-iso-countries')
+var countries = require('i18n-iso-countries');
+var Nominatim = require('node-nominatim2');
+var nominatimOptions = {
+  useragent: 'MyApp',
+  referer: 'https://github.com/xbgmsharp/node-nominatim2',
+  timeout: 4500
+};
+var nominatim = new Nominatim(nominatimOptions);
 var _ = require('lodash');
 var turf = require('turf');
 var crg = require('country-reverse-geocoding').country_reverse_geocoding();
@@ -51,6 +58,10 @@ function genCountryPage (countryPageInfo) {
     ].join('\n');
     countryPageMetaData.push(tmProjects);
   }
+  if (countryPageInfo.osmID) {
+    // do the stuff
+    countryPageMetaData.push('stuff');
+  }
   countryPageMetaData.push('---');
   fs.writeFileSync(countryPage, countryPageMetaData.join('\n'));
 }
@@ -83,6 +94,18 @@ function parseDesc (desc) {
   }
   return desc;
 }
+
+// function geocodeCountry (country) {
+//   return new Promise((resolve, reject) => {
+//     nominatim.search({q: country}, (err, resp, data) => {
+//       if (err) {
+//         reject(err);
+//       } else {
+//         resolve(data);
+//       }
+//     });
+//   });
+// }
 
 /*
  *  To get the list of centroids for open tasks:
@@ -187,6 +210,7 @@ Promise.map(tasksList, (task) => {
           return Promise.all([
             valObj,
             rp('http://tasks.hotosm.org/project/' + task + '.json')
+            // geocodeCountry(valObj.name)
           ]);
         })
         .then((responses) => {
@@ -200,6 +224,8 @@ Promise.map(tasksList, (task) => {
               desc = '';
             }
             valObj['desc'] = desc;
+            // console.log(response[2])
+            // valObj['osmID'] = response[2];
             genCountryPage(valObj);
           });
         })
