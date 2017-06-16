@@ -1,17 +1,22 @@
 sudo: false
 
-language: node_js
-
-node_js:
-  - '4.8.3'
+language: ruby
+rvm:
+  - 2.3.1
 
 env:
   global:
+  - TRAVIS_NODE_VERSION="v7.1.0"
   - STAGING_BRANCH=dev
   - PRODUCTION_BRANCH=master
 
 before_install:
     - chmod +x ./.build_scripts/build.sh
+before_script:
+  - . $HOME/.nvm/nvm.sh
+  - nvm install $TRAVIS_NODE_VERSION
+  - nvm use $TRAVIS_NODE_VERSION
+  - npm install
 
 script:
   - npm test
@@ -26,4 +31,3 @@ deploy:
     skip_cleanup: true
     on:
       branch: ${STAGING_BRANCH}
-
