@@ -3,13 +3,13 @@
 var rp = require('request-promise');
 var fs = require('fs');
 var Promise = require('bluebird');
-var tasks = JSON.parse(fs.readFileSync('../tasks.geojson'));
+var tasks = JSON.parse(fs.readFileSync('tasks.geojson'));
 var countries = require('i18n-iso-countries');
 var _ = require('lodash');
 var turf = require('turf');
 var crg = require('country-reverse-geocoding').country_reverse_geocoding();
 var md = require('node-markdown').Markdown;
-var validCountries = JSON.parse(fs.readFileSync('../countries.json'));
+var validCountries = JSON.parse(fs.readFileSync('countries.json'));
 
  /* genCountryPage(countryPageInfo)
   *   1) get parameters for generating page from countryPageInfo
