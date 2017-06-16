@@ -11,15 +11,13 @@ var Nominatim = require('node-nominatim2');
 var nominatimOptions = {
   useragent: 'MyApp',
   referer: 'https://github.com/xbgmsharp/node-nominatim2',
-  timeout: 1000
+  timeout: 4500
 };
 var nominatim = new Nominatim(nominatimOptions);
 var _ = require('lodash');
 var turf = require('turf');
 var crg = require('country-reverse-geocoding').country_reverse_geocoding();
 var md = require('node-markdown').Markdown;
-Promise.promisify(nominatim.search({q: 'lesotho'}))
-.then((results) => { console.log(results); })
 
  /* genCountryPage(countryPageInfo)
   *   1) get parameters for generating page from countryPageInfo
@@ -60,6 +58,10 @@ function genCountryPage (countryPageInfo) {
     ].join('\n');
     countryPageMetaData.push(tmProjects);
   }
+  if (countryPageInfo.osmID) {
+    // do the stuff
+    countryPageMetaData.push('stuff');
+  }
   countryPageMetaData.push('---');
   fs.writeFileSync(countryPage, countryPageMetaData.join('\n'));
 }
@@ -91,6 +93,18 @@ function parseDesc (desc) {
     desc = '';
   }
   return desc;
+}
+
+function geocodeCountry (country) {
+  return new Promise((resolve, reject) => {
+    nominatim.search({q: country}, (err, resp, data) => {
+      if (err) {
+        reject(err);
+      } else {
+        resolve(data);
+      }
+    });
+  });
 }
 
 /*
@@ -196,23 +210,23 @@ Promise.map(tasksList, (task) => {
           return Promise.all([
             valObj,
             rp('http://tasks.hotosm.org/project/' + task + '.json'),
-            nominatimSearch({q: valObj.name})
+            geocodeCountry(valObj.name)
           ]);
         })
         .then((responses) => {
-          console.log(responses)
-          // responses.forEach((response) => {
-          //   const valObj = response[0];
-          //   let desc;
-          //   if (response[1]) {
-          //     desc = JSON.parse(response[1]).properties.short_description;
-          //     desc = parseDesc(desc);
-          //   } else {
-          //     desc = '';
-          //   }
-          //   valObj['desc'] = desc;
-          //   genCountryPage(valObj);
-          // });
+          responses.forEach((response) => {
+            const valObj = response[0];
+            let desc;
+            if (response[1]) {
+              desc = JSON.parse(response[1]).properties.short_description;
+              desc = parseDesc(desc);
+            } else {
+              desc = '';
+            }
+            valObj['desc'] = desc;
+            valObj['osmID'] = response[2]
+            genCountryPage(valObj);
+          });
         })
         .catch((error) => {
           console.log(error);

@@ -28,33 +28,33 @@ gulp.task('copy:assets', function (done) {
    --------------------------- Assets tasks -------------------------------------
    ----------------------------------------------------------------------------*/
 
-   var sassInput = 'app/assets/styles/*.scss';
-   var sassOptions = {
-     includePaths: ['node_modules/foundation-sites/scss','node_modules/font-awesome/scss','.tmp/assets/styles' ],
-     errLogToConsole: true,
-     outputStyle: 'expanded'
-   };
-   var autoprefixerOptions = {
-     browsers: ['last 2 versions', 'ie >= 9', 'and_chr >= 2.3']
-   };
+ var sassInput = 'app/assets/styles/*.scss';
+ var sassOptions = {
+   includePaths: ['node_modules/foundation-sites/scss','node_modules/font-awesome/scss','.tmp/assets/styles' ],
+   errLogToConsole: true,
+   outputStyle: 'expanded'
+ };
+ var autoprefixerOptions = {
+   browsers: ['last 2 versions', 'ie >= 9', 'and_chr >= 2.3']
+ };
 
-   gulp.task('sass', function() {
-     console.log('building sass');
-     return gulp.src(sassInput)
-       .pipe(plumber())
-       .pipe(sourcemaps.init())
-       .pipe(sass(sassOptions).on('error', sass.logError))
-       .pipe(autoprefixer(autoprefixerOptions))
-       // .pipe(autoprefixer())
-       .pipe(sourcemaps.write('.'))
-       .pipe(browserSync.reload({stream:true}))
-       .pipe(gulp.dest('.tmp/assets/styles'));
-   });
+ gulp.task('sass', function() {
+  console.log('building sass');
+   return gulp.src(sassInput)
+     .pipe(plumber())
+     .pipe(sourcemaps.init())
+     .pipe(sass(sassOptions).on('error', sass.logError))
+     .pipe(autoprefixer(autoprefixerOptions))
+      // .pipe(autoprefixer())
+     .pipe(sourcemaps.write('.'))
+     .pipe(browserSync.reload({stream:true}))
+     .pipe(gulp.dest('.tmp/assets/styles'));
+});
 
 gulp.task('compress:main', function () {
   // main.min.js
   var task = gulp.src([
-    'app/assets/scripts/main.js',
+    'app/assets/scripts/main.js'
   ])
   .pipe(babel({
     presets: ['es2015']
@@ -69,17 +69,15 @@ gulp.task('compress:main', function () {
       mangle: false
     }));
   }
-
   return task.pipe(gulp.dest('.tmp/assets/scripts'));
 });
 
 gulp.task('compress:vendor', function () {
   // vendor.min.js
   var task = gulp.src([
-    'app/assets/scripts/vendor/*.js',
+    'app/assets/scripts/vendor/*.js'
   ])
   .pipe(plumber());
-
   if (environment === 'development') {
     task = task.pipe(concat('vendor.min.js'));
   } else {
