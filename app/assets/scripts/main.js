@@ -65,19 +65,13 @@ function makeProject (project, projectOrder) {
   const projDone = Math.round(props.done + props.validated);
   // Updates Progress Bar
   $(`#Project-${project.id} .HOT-Progress`).addClass('projWidth' + projectOrder)
-  $('.HOT-Progress').append(`<style>.projWidth${projectOrder}:before{ width: ${projDone}%;}</style>`);
 
   // Adds Project variables to the cards
   $(`#Project-${project.id} .HOT-Title p`).html(`<b>${project.id} - ${props.name}</b>`);
   $(`#Project-${project.id} .HOT-Progress`).html(`<p>${projDone}%</p>`);
   $(`#Project-${project.id} .HOT-Map`).attr('id', `Map-${project.id}`);
+  $(`#Project-${project.id} .HOT-Progress`).append(`<style>.projWidth${projectOrder}:before{ width: ${projDone}%;}</style>`);
 
-  console.log($('.HOT-Progress').append(`<style>.projWidth${projectOrder}:before{ width: ${projDone}%;}</style>`))
-
-  // Adds Project variables to the cards
-  console.log($(`#Project-${project.id} .HOT-Title p`).html(`<b>${project.id} - ${props.name}</b>`))
-  console.log($(`#Project-${project.id} .HOT-Progress`).html(`<p>${projDone}%</p>`))
-  console.log($(`#Project-${project.id} .HOT-Map`).attr('id', `Map-${project.id}`))
 
   // Drop a map into the HOT-Map div
   addMap(project.id);
@@ -601,7 +595,6 @@ getPrimaryStats(PT.id);
 getGroupActivityStats(PT.id);
 // Populate project carousel via HOTOSM Tasking Manager API
 getProjects(PT.hotProjects);
-makePlaceholderProject(PT.hotProjects)
 // Populate events section with upcoming events
 generateEvents(PT.calendar);
 // setupGraphs
