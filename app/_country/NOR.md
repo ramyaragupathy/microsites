@@ -5,13 +5,13 @@ permalink: /Norway/
 id: nor
 name: Norway
 flag: no.svg
-calendar:
-updates:
-  - title:
-    author:
-    date:
-    content:
-    link:
+calendar: 
+updates: 
+  - title: 
+    author: 
+    date: 
+    content: 
+    link: 
     linktext:
-tm-projects:
+tm-projects: 
 ---

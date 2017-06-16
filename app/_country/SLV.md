@@ -14,4 +14,6 @@ updates:
     link: 
     linktext:
 tm-projects: 
+  - id: 1603
+    desc: Map buildings for a resilience project
 ---

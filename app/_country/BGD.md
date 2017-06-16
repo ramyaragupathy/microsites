@@ -14,4 +14,6 @@ updates:
     link: 
     linktext:
 tm-projects: 
+  - id: 1816
+    desc: Due to recurrent flood in the Saheber Alga Union in Bangladesh, knowing the area and so having reliable OSM datas will  incredibly help in organizing help. 
 ---

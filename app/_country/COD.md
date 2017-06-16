@@ -14,6 +14,6 @@ updates:
     link: 
     linktext:
 tm-projects: 
-  - id: 2054
-    desc: Just needs validating MSF teams are fighting an epidemic of yellow fever in Kinshasa, DRC. This involves two major activities. One is a massive vaccination of 3 health zones (Byiela, Kikimi and Kingasani), including multiple vaccination sites, access planning, monitoring and mapping.  The second activity is the fumigation / destruction of mosquito larvae and eggs (as mosquitos spread the disease). This involves a strong spatial element because fumigation needs to take place within 100m of each confirmed yellow fever case. Mapping will go a long way to facilitate all of this work.
+  - id: 2299
+    desc: Validators, please validate residential areas and road networks! MSF teams, in collaboration with the Congolese Ministry of Health, provide care for thousands of people in Masisi General Hospital and other health centres in the area, including the provision of HIV care. MSF also organises mobile clinics, which respond to the needs of people affected by violence, insecurity and poor access to healthcare, some of whom have have been forced to flee their homes. Mapping this area will help MSF to identify vulnerable populations, plan and manage medical interventions and provide better care for those displaced by violence. Satellite imagery for this project is kindly provided by Digital Globe through their +Vivid service.
 ---

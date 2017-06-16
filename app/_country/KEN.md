@@ -14,6 +14,6 @@ updates:
     link: 
     linktext:
 tm-projects: 
-  - id: 2480
-    desc: Advanced contributors only. imagery interpretation difficult The inhabitants of Ngao continually experience safe and clean water access issues for both human and animal use. This mapping project will help the Water and Habitat team from the ICRC work on the extension of the already existing pipeline and the construction of cattle troughs at strategic positions.
+  - id: 2483
+    desc: Les habitants de Ngao connaissent continuellement des problèmes d'accès à l'eau potable tant pour les humanis que pour les animaux, pendant les saisons sèches mais aussi (en raison des inondations) pendant la saison des pluies. Ce projet de cartographie aidera l'équipe Eau et Habitat du CICR à travailler à l'extension du pipeline existant et à la construction d'abreuvoirs à des positions stratégiques. 
 ---

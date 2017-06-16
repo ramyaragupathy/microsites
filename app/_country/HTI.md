@@ -14,6 +14,6 @@ updates:
     link: 
     linktext:
 tm-projects: 
-  - id: 2477
-    desc: Part of Concern/Esri Ireland mapathon, please only map as part of that event Concern Worldwide is working with communities in Port au Prince to make sustainable improvements in poverty levels and mitigate against risks of conflict and disasters.  This collaborative project aims to enhance and provide more useful details to the maps available for Concern Worldwide and partners to reach areas most in need of assistance and to produce open source visualizations of the urban and rural environments that communities live and work in. The Aerial imagery is provided by Bing and Mapbox Imagery
+  - id: 2422
+    desc: NOTE. Not for beginners. Due to the amount already mapped here, this is unsuitable for mapping in iD. Please only map in JOSM. The American Red Cross is supporting the Haitian Red Cross to expand their community based disaster response and health efforts into new communities in the northern metropolitan Port au Prince area. The communities outlined are at significant exposure to seasonal and acute flooding risks and they lack access to basic health services, disaster preparedness plans and disaster response plans.
 ---

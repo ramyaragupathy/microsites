@@ -14,6 +14,6 @@ updates:
     link: 
     linktext:
 tm-projects: 
-  - id: 2125
+  - id: 2242
     desc: This is part of a long term consortium Disaster Risk Reduction program with the World Bank, Humanitarian OpenStreetMap Team (HOT), Ardhi University, Tanzania Red Cross Society, Danish Red Cross, Red Cross Red Crescent Climate Centre, University of Dar es Salaam, and Tanzania Commission for Science and Technology (COSTECH). Please trace all buildings and roads.
 ---
