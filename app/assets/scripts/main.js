@@ -32,7 +32,7 @@ function getProjects (projects) {
     directionNav: true,
     slideshowSpeed: 6000000,
     prevText: '',
-    nextText: '<i class="ico icon collecticon-chevron-right"></i>'
+    nextText: '<i class="fa fa-caret-right" aria-hidden="true"></i>'
   });
   $('.flex-next').prependTo('.HOT-Nav-Projects');
   $('.flex-control-nav').prependTo('.HOT-Nav-Projects');
@@ -82,7 +82,7 @@ function makeProject (project, projectOrder) {
 function makePlaceholderProject (projectId, projectOrder) {
   // Adds error title
   $(`#Project-${projectId} .HOT-Title p`)
-    .html(`<i class="ico icon collecticon-sign-danger"></i>
+    .html(`<i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
 <b>HOT Project #${projectId} Not Active/Not Found in HOT Tasking Manager</b>`);
 
   // Hides Tasking Manager Contribute button
@@ -196,6 +196,13 @@ function addMap (projectId) {
 }
 
 /* -------------------------------------------------------
+ -------------------- Hide Updates  ----------------------
+ -------------------------------------------------------*/
+
+//
+
+
+/* -------------------------------------------------------
  ----------- Add Functionality to Events List  -----------
  -------------------------------------------------------*/
 
@@ -255,54 +262,63 @@ function eventsFunctionality () {
 /* -------------------------------------------------------
  -------------------- Add Events Cards -------------------
  -------------------------------------------------------*/
+
 function generateEvents (calendarId) {
   if (calendarId.match(/google/)) {
     const url = "https://mm-microsites-proxy-staging.herokuapp.com/" + calendarId + "/events";
     const currentDate = new Date()
     $.getJSON(url, (eventData) => {
-      Object.keys(eventData).map((key, val) => {
-        const eventTime = eventData[key].time[0]
-        if (moment(currentDate).isBefore(eventTime)) {
-          const title = eventData[key].name;
-          const singupLink = eventData[key].description.match(/(https?:\/\/[^\s]+)/g);
-          const desc = eventData[key].description.replace(/(https?:\/\/[^\s]+)/, '');
-          const location = eventData[key].location;
-          const date = moment(eventData[key].time[0]).format("MMMM Do");
-          const time = eventData[key].time.map((d) => {
-            const date = new Date(d);
-            return moment(date).format('h:mma');
-          }).join(' - ');
-          const eventTopSection = [
-            '<div class="event-top-section clearfix">',
-            '<div class="sub-head">',
-            '<img class="event-images" src="/assets/graphics/flags/4x3/' + PT.flag + '" width="24"/>',
-            '<h3 class="event-header">' + title + '</h3>',
-            '<a class="btn btn-grn" href=' + singupLink + ' target="">SIGN UP</a>',
-            '</div>',
-            '</div>'
-          ].join('');
-          const eventMainDetails = [
-            '<div class="event-maindetails clearfix">',
-            '<div class="textbox" style="padding-top:8px">',
-            '<p>' + '<b>Date:</b> ' + date + '</p>',
-            '<p>' + '<b>Time:</b> ' + time + '</p>',
-            '<p>' + '<b>location:</b> ' + location + '</p>',
-            '<p>' + '<b>About:</b> ' + desc + '</p>',
-            '</div>',
-            '</div>'
-          ].join('');
-          const eventsHTML = [
-            '<div class="column">',
-            '<div class="event-sub-container">',
-            eventTopSection,
-            eventMainDetails,
-            '</div>',
-            '</div>'
-          ].join('');
-          $('#event-cards').append(eventsHTML);
-        }
-      });
+      if (eventData.length === 0) {
+        $('.events-null').css('display', 'block');
+        $('.events-panel').css('display', 'none');
+      } else {
+        Object.keys(eventData).map((key, val) => {
+          const eventTime = eventData[key].time[0]
+          if (moment(currentDate).isBefore(eventTime)) {
+            const title = eventData[key].name;
+            const singupLink = eventData[key].description.match(/(https?:\/\/[^\s]+)/g);
+            const desc = eventData[key].description.replace(/(https?:\/\/[^\s]+)/, '');
+            const location = eventData[key].location;
+            const date = moment(eventData[key].time[0]).format("MMMM Do");
+            const time = eventData[key].time.map((d) => {
+              const date = new Date(d);
+              return moment(date).format('h:mma');
+            }).join(' - ');
+            const eventTopSection = [
+              '<div class="event-top-section clearfix">',
+              '<div class="sub-head">',
+              '<img class="event-images" src="/assets/graphics/flags/4x3/' + PT.flag + '" width="24"/>',
+              '<h3 class="event-header">' + title + '</h3>',
+              '<a class="btn btn-grn" href=' + singupLink + ' target="">SIGN UP</a>',
+              '</div>',
+              '</div>'
+            ].join('');
+            const eventMainDetails = [
+              '<div class="event-maindetails clearfix">',
+              '<div class="textbox" style="padding-top:8px">',
+              '<p>' + '<b>Date:</b> ' + date + '</p>',
+              '<p>' + '<b>Time:</b> ' + time + '</p>',
+              '<p>' + '<b>location:</b> ' + location + '</p>',
+              '<p>' + '<b>About:</b> ' + desc + '</p>',
+              '</div>',
+              '</div>'
+            ].join('');
+            const eventsHTML = [
+              '<div class="column">',
+              '<div class="event-sub-container">',
+              eventTopSection,
+              eventMainDetails,
+              '</div>',
+              '</div>'
+            ].join('');
+            $('#event-cards').append(eventsHTML);
+          }
+        });
+      }
     });
+  } else {
+    $('.events-null').css('display', 'block');
+    $('.events-panel').css('display', 'none');
   }
 }
 
@@ -356,8 +372,8 @@ function setupGraphs () {
 }
 
 // Returns svg link to Missing Maps user endpoint
-function generateUserUrl (userName, userId) {
-  const userUrl = 'http://www.missingmaps.org/users/#/' + userId;
+function generateUserUrl (userName) {
+  const userUrl = 'http://www.missingmaps.org/users/#/' + userName.replace(/\s+/g, '-').toLowerCase();
   return `<a xlink:href="${userUrl}" target="_blank" style="text-decoration:none">${userName}</a>`;
 }
 
@@ -368,19 +384,19 @@ function getUserActivityStats (countryId) {
 
     const totalSum = Object.keys(userData).map(function (user) {
       const totalEdits = Math.round(Number(userData[user].all_edits));
-      return {name: generateUserUrl(userData[user].name, userData[user].user_number), value: totalEdits};
+      return {name: generateUserUrl(userData[user].name), value: totalEdits};
     }).sort((a, b) => b.value - a.value);
 
     // For each user, sum the total building edits
     const bldngSum = Object.keys(userData).map(function (user) {
       const bldngEdits = Math.round(Number(userData[user].building_count_add));
-      return {name: generateUserUrl(userData[user].name, userData[user].user_number), value: bldngEdits};
+      return {name: generateUserUrl(userData[user].name), value: bldngEdits};
     }).sort((a, b) => b.value - a.value);
 
     // For each user, sum the total road kilometers edited
     const roadsSum = Object.keys(userData).map(function (user) {
       const roadsEdits = Math.round(Number(userData[user].road_km_add));
-      return {name: generateUserUrl(userData[user].name, userData[user].user_number), value: roadsEdits};
+      return {name: generateUserUrl(userData[user].name), value: roadsEdits};
     }).sort((a, b) => b.value - a.value);
 
     // Spawn a chart function with listening events for each of the metrics
