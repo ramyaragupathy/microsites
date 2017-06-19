@@ -12,7 +12,7 @@ Each country's microsite page sits within the `app > _country` folder. For more 
 
 | Field         | Changes  |
 | ------------- |-------------|
-| permalink      | With the permalink, a page's full link reads `missingmaps.org/microsites/permalinks` |
+| permalink      | With the permalink, a page's full link reads `missingmaps.org/microsites/permalink` |
 | name      | The country name is displayed on the microsite under the country flag. |
 | flag      | Link to country flag |
 
@@ -33,11 +33,13 @@ updates:
     linktext: text to display on button linking to external site
 ```
 
+If you do not want to include a button to an external resource in an update, leave the link & linktext fields blank.
+
 **OSMStats**
 
 | Field         | Changes  |
 | ------------- |-------------|
-| id      | The country id is used to call osm-stats-api and build the activity and stats section in the header |
+| id      | The country id is used to call osm-stats-api. This builds the activity and stats section in a microsite header |
 
 **Country Projects**
 
@@ -60,22 +62,77 @@ tm-projects:
 
 ### Integrate Google Calendar
 
+A Microsite's events section is populated with events held within a public google calendar. Below are instructions for managing these events through Google Calendar.
+
+If a you want to house microsite events in an existing google calendar, ignore steps 1-3 in the **Create a new Calendar** section below and instead do the following.
+
+1. Open up Google Calendar and navigate directly to the calendar's settings by clicking the right arrow that appears when hovering over the calendar, then select the `Calendar settings` option in the menu that appears.
+2. On the following page select the `Share this Calendar` tab.
+3. Proceed to step 4 in the `Create a new Calendar` section.
+
 #### Create a new calendar
 
-1. login to Google Calendar using a Google account.
-2. Click the down arrow in the `My Calendars` section header and select `Create new calendar`.
-3. On the next page provide the calendar a name, description, and location.
-4. Most importantly check the box next to `Share this calendar with other` as well as the box next to the `Make this calendar public` section.
-5. Save the calendar and select `yes` on the popup informing you that the calendar is being made public
+1. Login to Google Calendar using a Google account.
+2. Once in Google Calendar, click the down arrow in the `My Calendars` section header and select `Create new calendar`.
+3. On the next page provide the calendar a name, as well as a description and location (these last two are optional).
+4. Most importantly, check the check-box next to `Share this calendar with others` and the check-box next to the `Make this calendar public` section. These presets make the calendar public and available to the microsite. Without them, bridging sites and Google Calendar won't work.
+5. Save the calendar and select `yes` on the pop-up informing you that the calendar is being made public.
 
-#### Get Calendar ID
+
+#### Retrieve a Calendar ID
 
 Once a new public calendar is generated, or an existing calendar is made public follow these steps
 
-1. Hover over the calendar of interest and click the down arrow that appears to its right.
-2. In the new dialogue that appears, click `calendar settings`
-3. On the `calendar settings` page find the `Calendar ID` in the `Calendar Address` section.
-4. Add this id to calendar field of the intended page's yml frontmatter
+1. Navigate to the `Calendar Settings` (see step 1 in the instructions above **Create a new calendar**)
+2. On the `calendar settings` page, find the `Calendar ID` in the `Calendar Address` section.
+3. Add this id to calendar field of the intended page's yml frontmatter
+
+After step three the yml frontmatter should include the following...
+
+```markdown
+...
+  flag: ng.svg
+  calendar: you.calendar.code@group.calendar.google.com
+  updates:
+    // some updates
+```
+
+#### Add Events to a microsite calendar
+
+1. On the main Google Calendar, click the `create` button
+2. Provide a name in the input text section where it reads `Untitled Event`
+3. Below, add a time and date for the event
+4. In the `where` section type the location of the event.
+5. Importantly, in the `calendar` section, select your public calendar from the drop-down
+6. In the description describe the event as well as a link for people to sign up
+
+...for example, the following would be an appropriate description
+
+```
+Join members of OSM Liberia for field mapping in Gbarnga City.
+www.link.to.sign.up.com/
+```
+
+### Include Facebook Events
+
+Facebook events can be included in calendars by either manually adding them as events within the public calendar, or following one of the following methods for bridging Facebook events with Google Calendar.
+
+#### Make Google Calendar Account a secondary email on Facebook
+
+Share the email address attached to the Google account managing the microsite's google calendar to relevant Facebook users. These users add this email address as a 'secondary email' on Facebook via the following steps:
+
+1. Login to Facebook and click the down arrow at the top right of the page. Then in the drop-down that appears click `settings`
+2. Click the `contact` section on the next page followed by selecting `add a new email or mobile number`.
+3. In the popup that appears input the email address managing the public google calendar
+4. Next, a message will be sent to the google calendar manager and the owner of that account can approve adding the email to the Facebook account
+
+With the Google Calendar account added, Facebook users should follow the following steps to share events to the microsite.
+
+1. On the Facebook event's page, click the button with three dots, like `...`
+2. In the drop-down that appears click `Export Event`, followed by selecting the `Send to email` option and correct calendar email address in the popup that appears.
+3. Finally, click Export
+
+Step 3 will send an email to the microsite calendar manager who can then add the event to the microsite calendar.
 
 ## Development
 
@@ -90,14 +147,20 @@ After these basic requirements are met, run the following commands in the websit
 ```
 $ npm install
 ```
-Will also run `bundle install` and auto generates each country's microsite
-
+Will also run `bundle install`
 
 ### Auto microsite build
 
 .build_scripts/buildPages.js writes microsites to the `app > _country` folder. On each run, the script includes the recent tasks for each country. These tasks are gathered using [osm-data-parse](https://github.com/maxgrossman/osm-data-parse/).
 
-To include recent tasks, run osm-data-parse's tasking-mgr-parse/parse.js script and save the geoJSON output as 'tasks.geojson' in the root of this repo.
+To include recent tasks, run osm-data-parse's tasking-mgr-parse/parse.js script and save the geoJSON output as 'tasks.geojson' in the root of the microsites repo.
+
+Once the tasks.geojson is generatedd, run the following command
+
+```
+$ npm run build-pages
+
+```
 
 ### Getting started
 
@@ -116,7 +179,7 @@ Clean the compiled site. I.e. the `_site` folder
 $ gulp clean
 ```
 
-Compile the compass files, javascripts, and builds the jekyll site using `_config-dev.yml`.
+Compile the sass files, javascripts, and builds the jekyll site using `_config-dev.yml`.
 Use this instead of ```gulp serve``` if you don't want to watch.
 ```
 $ gulp
