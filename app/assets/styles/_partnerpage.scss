@@ -472,7 +472,7 @@ h1 {
 /*----------------------------------------------*/
 /* EVENTS */
 /*----------------------------------------------*/
-#Events {
+.Events {
   background-color: desaturate(lighten($mmTeal, 40), 30);
 }
 
@@ -764,16 +764,28 @@ h1 {
 /*----------------------------------------------*/
 
 .Updates {
+  @include container;
   h1 {
-    border-bottom: 1px solid #dbdbda;
-    width: 80%;
     padding-bottom: .5em;
     margin-left: 0;
     font-style: 'Raleway';
-    text-align: left;
+    width: 80%;
     @media screen and (min-width: $MaxWidth) {
       width: 100%;
       margin-left: 6px;
+    }
+  }
+  #updates-h1 {
+    border-bottom: 1px solid #dbdbda;
+    text-align: left;
+  }
+  #updates-null-h1 {
+    text-align: center;
+  }
+  .updates-null {
+    p, img, a {
+      margin: 0.5em 0;
+      text-align: center;
     }
   }
 }
