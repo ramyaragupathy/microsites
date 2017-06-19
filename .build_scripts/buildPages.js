@@ -19,6 +19,7 @@ var validCountries = JSON.parse(fs.readFileSync('countries.json'));
 function genCountryPage (countryPageInfo) {
   const countryName = countryPageInfo.name;
   const countryCode = countryPageInfo.code;
+  const countryLink = countryPageInfo.link || 'https://openstreetmap.org';
   const countryPage = '../app/_country/' + countryCode + '.md';
   const alpha2 = countries.alpha3ToAlpha2(countryPageInfo.code);
   let countryFlag;
@@ -40,6 +41,7 @@ function genCountryPage (countryPageInfo) {
     '    author: ',
     '    date: ',
     '    content: ',
+    '    osmLink: ' + countryLink,
     '    link: ',
     '    linktext:',
     'tm-projects: '
