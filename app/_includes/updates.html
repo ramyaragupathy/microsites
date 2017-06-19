@@ -1,7 +1,11 @@
+{% if page.updates %}
+<h1 id="updates-h1">Updates</h1>
+{% else %}
+<h1 id="updates-null-h1">Updates</h1>
+{% endif %}
 {% for u in page.updates %}
 {% if u.title %}
 <div class = "Updates-Container">
-  <h1>Updates</h1>
   <div class = "Updates-Content">
   <br/>
     <h2>{{ u.title }}</h2>
@@ -17,3 +21,16 @@
 {% endif %}
 {% else %}
 {% endfor %}
+<div class = "updates-null">
+  <br/>
+  <p>There are no updates at this time for {{ page.name }}</p>
+  <p>If there is something you think we should know, get in touch.</p>
+  <div>
+    <div>
+      <img src = "{{ site.domain }}{{ site.path_prefix }}/assets/graphics/content/process/helper.svg" width = "150"></img>
+    </div>
+    <div>
+      <a href="mailto:{{ page.contact }}" class="btn btn-blue">Contact Microsite Lead</a>
+    </div>
+  </div>
+</div>

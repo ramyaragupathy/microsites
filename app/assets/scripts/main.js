@@ -205,10 +205,7 @@ function eventsFunctionality () {
   var firstTwoOpen = false;
   var allOpen = false;
 
-  if (eventsCount === 0) {
-    $('.events-null').css('display', 'block');
-  }
-  if (eventsCount < 3) {
+  if (eventsCount <= 3) {
     $('.events-btn').css('display', 'none');
   }
 
@@ -303,6 +300,20 @@ function generateEvents (calendarId) {
         }
       });
     });
+  } else {
+    $('.events-null').css('display', 'block');
+    $('.events-panel').css('display', 'none');
+  }
+  eventsFunctionality()
+}
+
+/* -------------------------------------------------------
+ --------------------- Include Updates   -----------------
+ -------------------------------------------------------*/
+
+function showUpdates (updates) {
+  if (updates.length > 0) {
+    $('.updates-null').css('display', 'none');
   }
 }
 
@@ -595,6 +606,9 @@ getPrimaryStats(PT.id);
 getGroupActivityStats(PT.id);
 // Populate project carousel via HOTOSM Tasking Manager API
 getProjects(PT.hotProjects);
+
+showUpdates(PT.updates)
+
 // Populate events section with upcoming events
 generateEvents(PT.calendar);
 // setupGraphs

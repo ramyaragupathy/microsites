@@ -472,7 +472,7 @@ h1 {
 /*----------------------------------------------*/
 /* EVENTS */
 /*----------------------------------------------*/
-#Events {
+.Events {
   background-color: desaturate(lighten($mmTeal, 40), 30);
 }
 
@@ -762,30 +762,38 @@ h1 {
 /*----------------------------------------------*/
 /* Updates */
 /*----------------------------------------------*/
-// .Updates-Container {
-//   padding: 30px 0 0 0;
-//   width: 100%;
-//   .Updates-Content {
-//
-//     text-align: left;
-//   }
-// }
-.Updates-Container {
-  margin-top: 1em;
-  margin-bottom: 4em;
+
+.Updates {
   @include container;
   h1 {
-    border-bottom: 1px solid #dbdbda;
-    width: 80%;
     padding-bottom: .5em;
     margin-left: 0;
     font-style: 'Raleway';
-    text-align: left;
+    width: 80%;
     @media screen and (min-width: $MaxWidth) {
       width: 100%;
       margin-left: 6px;
     }
   }
+  #updates-h1 {
+    border-bottom: 1px solid #dbdbda;
+    text-align: left;
+  }
+  #updates-null-h1 {
+    text-align: center;
+  }
+  .updates-null {
+    p, img, a {
+      margin: 0.5em 0;
+      text-align: center;
+    }
+  }
+}
+
+.Updates-Container {
+  margin-top: 1em;
+  margin-bottom: 4em;
+  @include container;
   .Updates-Content {
     width: 80%;
     margin-right: auto;
