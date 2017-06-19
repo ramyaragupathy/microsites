@@ -32,7 +32,7 @@ function getProjects (projects) {
     directionNav: true,
     slideshowSpeed: 6000000,
     prevText: '',
-    nextText: '<i class="ico icon collecticon-chevron-right"></i>'
+    nextText: '<i class="fa fa-caret-right" aria-hidden="true"></i>'
   });
   $('.flex-next').prependTo('.HOT-Nav-Projects');
   $('.flex-control-nav').prependTo('.HOT-Nav-Projects');
