@@ -1,7 +1,7 @@
+<h1>Updates</h1>
 {% for u in page.updates %}
 {% if u.title %}
 <div class = "Updates-Container">
-  <h1>Updates</h1>
   <div class = "Updates-Content">
   <br/>
     <h2>{{ u.title }}</h2>
@@ -15,5 +15,11 @@
   </div>
 </div>
 {% endif %}
-{% else %}
 {% endfor %}
+<div class = "updates-null">
+	<p>There currently are no updates. If there's somemthing particular to this country that you'd like to share reach out to us. We'll add it to the site!</p>
+	<p>
+  <img src = "{{ site.domain }}{{ site.path_prefix }}/assets/graphics/content/process/helper.svg" width = "200"></img>
+  <a href="mailto:{{ page.contact }}" class="btn btn-blue">Contact  Lead</a>
+  </p>
+</div>

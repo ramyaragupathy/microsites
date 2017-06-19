@@ -32,6 +32,7 @@ function genCountryPage (countryPageInfo) {
     'permalink: /' + countryName + '/',
     'id: ' + countryCode.toLowerCase(),
     'name: ' + countryName,
+    'contact: ' 
     'flag: ' + countryFlag + '.svg',
     'calendar: ',
     'updates: ',
