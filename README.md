@@ -177,8 +177,8 @@ The `_config-dev.yml` file will be loaded alongside `_config.yml`.
 Clean the compiled site. I.e. the `_site` folder
 ```
 $ gulp clean
-```
 
+```
 Compile the sass files, javascripts, and builds the jekyll site using `_config-dev.yml`.
 Use this instead of ```gulp serve``` if you don't want to watch.
 ```
