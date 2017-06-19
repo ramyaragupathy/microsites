@@ -82,7 +82,7 @@ function makeProject (project, projectOrder) {
 function makePlaceholderProject (projectId, projectOrder) {
   // Adds error title
   $(`#Project-${projectId} .HOT-Title p`)
-    .html(`<i class="ico icon collecticon-sign-danger"></i>
+    .html(`<i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
 <b>HOT Project #${projectId} Not Active/Not Found in HOT Tasking Manager</b>`);
 
   // Hides Tasking Manager Contribute button
