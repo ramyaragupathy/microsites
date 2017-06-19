@@ -101,7 +101,7 @@ function parseDesc (desc) {
  */
 var tasksList = _.uniq(tasks.features.map((d) => { return d.properties.task; }));
 
-validCountries = _.filter(validCountries.countries, (validCountry) => {
+validCountries = _.filter(validCountries, (validCountry) => {
   if (!validCountry.code.match('USA-')) {
     return validCountry.code;
   }
@@ -131,86 +131,89 @@ Promise.map(tasksList, (task) => {
   }
 })
 .then((taskCentroids) => {
-    Promise.map(taskCentroids, (centroid) => {
-      if (centroid !== undefined) {
-        const coordinates = centroid.geometry.geometry.coordinates;
-        const taskNum = centroid.properties.task;
-        let country = crg.get_country(coordinates[1], coordinates[0]);
-        country = Object.assign({ task: taskNum }, country);
+  Promise.map(taskCentroids, (centroid) => {
+    if (centroid !== undefined) {
+      const coordinates = centroid.geometry.geometry.coordinates;
+      const taskNum = centroid.properties.task;
+      let country = crg.get_country(coordinates[1], coordinates[0]);
+      country = Object.assign({ task: taskNum }, country);
+      return country;
+    }
+  }).then((countries) => {
+    countries = _.filter(countries, (country) => {
+      if (country !== null || Object.keys(country) !== null) {
         return country;
       }
-    }).then((countries) => {
-      countries = _.filter(countries, (country) => {
-        if (country !== null || Object.keys(country) !== null) {
-          return country;
-        }
-      });
-      return _.groupBy(countries, (country) => {
-        return country.code;
-      });
-    }).then((groupedTasks) => {
-      let validCodes = [];
-      _.forEach(validCountries, (validCountry) => {
-        let validCode = _.pick(validCountry, 'code');
-        validCodes.push(validCode.code);
-        const newValCountry = {};
+    });
+    return _.groupBy(countries, (country) => {
+      return country.code;
+    });
+  }).then((groupedTasks) => {
+    let validCodes = [];
+    _.forEach(validCountries, (validCountry) => {
+      let validCode = _.pick(validCountry, 'code');
+      validCodes.push(validCode.code);
+      const newValCountry = {};
+      const newValCountryKey = validCountry.code;
+      newValCountry[newValCountryKey] = validCountry.name;
+      return newValCountryKey;
+    });
+    Object.keys(groupedTasks).map((k, v) => {
+      if (_.includes(validCodes, k)) {
+        const matchIndex = validCodes.indexOf(k);
+        const newValCode = {};
+        const newValCodeKey = k;
+        newValCode[newValCodeKey] = groupedTasks[k];
+        validCountries[matchIndex] = newValCode;
+      }
+    });
+    validCountries = _.map(validCountries, (validCountry) => {
+      let newValCountry = {};
+      console.log(validCountry)
+      if (Object.keys(validCountry).length > 1) {
         const newValCountryKey = validCountry.code;
-        newValCountry[newValCountryKey] = validCountry.name;
-        return newValCountryKey;
-      });
-      Object.keys(groupedTasks).map((k, v) => {
-        if (_.includes(validCodes, k)) {
-          const matchIndex = validCodes.indexOf(k);
-          const newValCode = {};
-          const newValCodeKey = k;
-          newValCode[newValCodeKey] = groupedTasks[k];
-          validCountries[matchIndex] = newValCode;
-        }
-      });
-      validCountries = _.map(validCountries, (validCountry) => {
-        let newValCountry = {};
-        if (Object.keys(validCountry).length > 1) {
-          const newValCountryKey = validCountry.code;
-          const newValCountryObj = {};
-          newValCountryObj['code'] = validCountry.code;
-          newValCountryObj['name'] = validCountry.name;
-          newValCountry[newValCountryKey] = newValCountryObj;
-          validCountry = newValCountry;
-        }
-        return validCountry;
-      });
-      return validCountries;
-    }).then((validCountries) => {
-      validCountries = _.map(validCountries, (validCountry) => {
-        const validCountryVal = validCountry[Object.keys(validCountry)];
-        console.log(validCountryVal);
-        if (Array.isArray(validCountryVal)) {
-          Promise.map(validCountryVal, (valObj) => {
-            const task = valObj.task;
-            return Promise.all([
-              valObj,
-              rp('http://tasks.hotosm.org/project/' + task + '.json')
-            ]);
-          }).then((responses) => {
-            responses.forEach((response) => {
-              const valObj = response[0];
-              const taskResponse = response[1];
-              let desc;
-              if (response[1]) {
-                desc = JSON.parse(taskResponse).properties.short_description;
-                desc = parseDesc(desc);
-              } else {
-                desc = '';
-              }
-              valObj['desc'] = desc;
-              genCountryPage(valObj);
-            });
-          }).catch((error) => {
-            console.log(error);
+        const newValCountryObj = {};
+        newValCountryObj['code'] = validCountry.code;
+        newValCountryObj['name'] = validCountry.name;
+        newValCountry[newValCountryKey] = newValCountryObj;
+        validCountry = newValCountry;
+        console.log(validCountry);
+      }
+      return validCountry;
+    });
+    return validCountries;
+  }).then((validCountries) => {
+    validCountries = _.map(validCountries, (validCountry) => {
+      const validCountryVal = validCountry[Object.keys(validCountry)];
+      console.log(validCountryVal);
+      if (Array.isArray(validCountryVal)) {
+        Promise.map(validCountryVal, (valObj) => {
+          const task = valObj.task;
+          return Promise.all([
+            valObj,
+            rp('http://tasks.hotosm.org/project/' + task + '.json')
+          ]);
+        }).then((responses) => {
+          responses.forEach((response) => {
+            const valObj = response[0];
+            const taskResponse = response[1];
+            let desc;
+            if (response[1]) {
+              desc = JSON.parse(taskResponse).properties.short_description;
+              desc = parseDesc(desc);
+            } else {
+              desc = '';
+            }
+            valObj['desc'] = desc;
+            console.log('dude')
+            // genCountryPage(valObj);
           });
-        } else {
-          genCountryPage(validCountryVal);
-        }
-      });
+        }).catch((error) => {
+          console.log(error);
+        });
+      } else {
+        // genCountryPage(validCountryVal);
+      }
     });
   });
+});
