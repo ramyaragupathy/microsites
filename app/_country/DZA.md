@@ -4,6 +4,7 @@ lang: en
 permalink: /Algeria/
 id: dza
 name: Algeria
+contact: 
 flag: dz.svg
 calendar: 
 updates: 
@@ -11,6 +12,7 @@ updates:
     author: 
     date: 
     content: 
+    osmLink: https://openstreetmap.org/relation/192756
     link: 
     linktext:
 tm-projects: 

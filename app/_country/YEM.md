@@ -4,6 +4,7 @@ lang: en
 permalink: /Yemen/
 id: yem
 name: Yemen
+contact: 
 flag: ye.svg
 calendar: 
 updates: 
@@ -11,6 +12,7 @@ updates:
     author: 
     date: 
     content: 
+    osmLink: https://openstreetmap.org/relation/305092
     link: 
     linktext:
 tm-projects: 

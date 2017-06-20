@@ -4,6 +4,7 @@ lang: en
 permalink: /Belarus/
 id: blr
 name: Belarus
+contact: 
 flag: by.svg
 calendar: 
 updates: 
@@ -11,6 +12,7 @@ updates:
     author: 
     date: 
     content: 
+    osmLink: https://openstreetmap.org/relation/59065
     link: 
     linktext:
 tm-projects: 

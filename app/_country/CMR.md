@@ -4,6 +4,7 @@ lang: en
 permalink: /Cameroon/
 id: cmr
 name: Cameroon
+contact: 
 flag: cm.svg
 calendar: 
 updates: 
@@ -11,6 +12,7 @@ updates:
     author: 
     date: 
     content: 
+    osmLink: https://openstreetmap.org/relation/192830
     link: 
     linktext:
 tm-projects: 

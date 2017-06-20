@@ -4,6 +4,7 @@ lang: en
 permalink: /Afghanistan/
 id: afg
 name: Afghanistan
+contact: 
 flag: af.svg
 calendar: 
 updates: 
@@ -11,6 +12,7 @@ updates:
     author: 
     date: 
     content: 
+    osmLink: https://openstreetmap.org/relation/303427
     link: 
     linktext:
 tm-projects: 

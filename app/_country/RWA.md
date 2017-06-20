@@ -4,6 +4,7 @@ lang: en
 permalink: /Rwanda/
 id: rwa
 name: Rwanda
+contact: 
 flag: rw.svg
 calendar: 
 updates: 
@@ -11,6 +12,7 @@ updates:
     author: 
     date: 
     content: 
+    osmLink: https://openstreetmap.org/relation/171496
     link: 
     linktext:
 tm-projects: 

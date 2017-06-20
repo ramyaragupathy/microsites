@@ -4,6 +4,7 @@ lang: en
 permalink: /India/
 id: ind
 name: India
+contact: 
 flag: in.svg
 calendar: 
 updates: 
@@ -11,6 +12,7 @@ updates:
     author: 
     date: 
     content: 
+    osmLink: https://openstreetmap.org/relation/304716
     link: 
     linktext:
 tm-projects: 

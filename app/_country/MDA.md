@@ -4,6 +4,7 @@ lang: en
 permalink: /Moldova/
 id: mda
 name: Moldova
+contact: 
 flag: md.svg
 calendar: 
 updates: 
@@ -11,6 +12,7 @@ updates:
     author: 
     date: 
     content: 
+    osmLink: https://openstreetmap.org/relation/58974
     link: 
     linktext:
 tm-projects: 

@@ -4,6 +4,7 @@ lang: en
 permalink: /Malaysia/
 id: mys
 name: Malaysia
+contact: 
 flag: my.svg
 calendar: 
 updates: 
@@ -11,6 +12,7 @@ updates:
     author: 
     date: 
     content: 
+    osmLink: https://openstreetmap.org/relation/2108121
     link: 
     linktext:
 tm-projects: 

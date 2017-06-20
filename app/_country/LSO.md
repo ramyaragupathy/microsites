@@ -4,6 +4,7 @@ lang: en
 permalink: /Lesotho/
 id: lso
 name: Lesotho
+contact: 
 flag: ls.svg
 calendar: 
 updates: 
@@ -11,6 +12,7 @@ updates:
     author: 
     date: 
     content: 
+    osmLink: https://openstreetmap.org/relation/2093234
     link: 
     linktext:
 tm-projects: 

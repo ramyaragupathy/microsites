@@ -4,6 +4,7 @@ lang: en
 permalink: /Mali/
 id: mli
 name: Mali
+contact: 
 flag: ml.svg
 calendar: 
 updates: 
@@ -11,6 +12,7 @@ updates:
     author: 
     date: 
     content: 
+    osmLink: https://openstreetmap.org/relation/192785
     link: 
     linktext:
 tm-projects: 

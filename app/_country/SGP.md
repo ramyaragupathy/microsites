@@ -4,6 +4,7 @@ lang: en
 permalink: /Singapore/
 id: sgp
 name: Singapore
+contact: 
 flag: sg.svg
 calendar: 
 updates: 
@@ -11,6 +12,7 @@ updates:
     author: 
     date: 
     content: 
+    osmLink: https://openstreetmap.org/relation/536780
     link: 
     linktext:
 tm-projects: 

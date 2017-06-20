@@ -4,6 +4,7 @@ lang: en
 permalink: /Ethiopia/
 id: eth
 name: Ethiopia
+contact: 
 flag: et.svg
 calendar: 
 updates: 
@@ -11,6 +12,7 @@ updates:
     author: 
     date: 
     content: 
+    osmLink: https://openstreetmap.org/relation/192800
     link: 
     linktext:
 tm-projects: 

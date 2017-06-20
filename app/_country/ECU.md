@@ -4,6 +4,7 @@ lang: en
 permalink: /Ecuador/
 id: ecu
 name: Ecuador
+contact: 
 flag: ec.svg
 calendar: 
 updates: 
@@ -11,6 +12,7 @@ updates:
     author: 
     date: 
     content: 
+    osmLink: https://openstreetmap.org/relation/108089
     link: 
     linktext:
 tm-projects: 

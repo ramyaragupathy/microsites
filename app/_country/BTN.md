@@ -4,6 +4,7 @@ lang: en
 permalink: /Bhutan/
 id: btn
 name: Bhutan
+contact: 
 flag: bt.svg
 calendar: 
 updates: 
@@ -11,6 +12,7 @@ updates:
     author: 
     date: 
     content: 
+    osmLink: https://openstreetmap.org/relation/184629
     link: 
     linktext:
 tm-projects: 

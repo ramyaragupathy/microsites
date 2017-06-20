@@ -4,6 +4,7 @@ lang: en
 permalink: /Burkina Faso/
 id: bfa
 name: Burkina Faso
+contact: 
 flag: bf.svg
 calendar: 
 updates: 
@@ -11,6 +12,7 @@ updates:
     author: 
     date: 
     content: 
+    osmLink: https://openstreetmap.org/relation/192783
     link: 
     linktext:
 tm-projects: 

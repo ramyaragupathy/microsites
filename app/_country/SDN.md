@@ -4,6 +4,7 @@ lang: en
 permalink: /Sudan/
 id: sdn
 name: Sudan
+contact: 
 flag: sd.svg
 calendar: 
 updates: 
@@ -11,6 +12,7 @@ updates:
     author: 
     date: 
     content: 
+    osmLink: https://openstreetmap.org/relation/192789
     link: 
     linktext:
 tm-projects: 

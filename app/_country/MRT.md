@@ -4,6 +4,7 @@ lang: en
 permalink: /Mauritania/
 id: mrt
 name: Mauritania
+contact: 
 flag: mr.svg
 calendar: 
 updates: 
@@ -11,6 +12,7 @@ updates:
     author: 
     date: 
     content: 
+    osmLink: https://openstreetmap.org/relation/192763
     link: 
     linktext:
 tm-projects: 

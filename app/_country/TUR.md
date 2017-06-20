@@ -4,6 +4,7 @@ lang: en
 permalink: /Turkey/
 id: tur
 name: Turkey
+contact: 
 flag: tr.svg
 calendar: 
 updates: 
@@ -11,6 +12,7 @@ updates:
     author: 
     date: 
     content: 
+    osmLink: https://openstreetmap.org/relation/174737
     link: 
     linktext:
 tm-projects: 

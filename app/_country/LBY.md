@@ -4,6 +4,7 @@ lang: en
 permalink: /Libya/
 id: lby
 name: Libya
+contact: 
 flag: ly.svg
 calendar: 
 updates: 
@@ -11,6 +12,7 @@ updates:
     author: 
     date: 
     content: 
+    osmLink: https://openstreetmap.org/relation/192758
     link: 
     linktext:
 tm-projects: 

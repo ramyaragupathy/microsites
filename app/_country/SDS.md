@@ -4,6 +4,7 @@ lang: en
 permalink: /South Sudan/
 id: sds
 name: South Sudan
+contact: 
 flag: undefined.svg
 calendar: 
 updates: 
@@ -11,9 +12,42 @@ updates:
     author: 
     date: 
     content: 
+    osmLink: https://openstreetmap.org
     link: 
     linktext:
 tm-projects: 
+  - id: 729
+    desc: Priority changed to high as an MSF team is planning to do an exploratory mission to this area in the coming weeks and is relying on the map data from this task These trace maps will be used in the coming weeks by MSF to conduct emergency mortality / nutrition assessments in parts of South Sudan where there has been recent conflict and harvest failure, in order to plan a medical response. Without these maps, teams do not know what size of population to expect, where to find them, or even how accessible they are. For more information on the Missing Maps, visit www.missingmaps.org.
+  - id: 853
+    desc: MSF is currently assessing populations that have been displaced from their homes and livelihoods due to the devastating civil conflict that erupted in December 2013. MSF is planning to fly in medical teams by helicopter to assess displaced populations in Mankien, Nimni and Koch for illnesses and malnutrition, with a view to setting up a medical intervention. In order to do this they need to know beforehand where the populations are and how to access them by foot. This mapping initiative is crucial to helping our teams plan their movements and ensure we reach as many people as possible in the small amount of time we have on the ground.
+  - id: 856
+    desc: MSF is currently assessing populations that have been displaced from their homes and livelihoods due to the devastating civil conflict that erupted in December 2013. MSF is planning to fly in medical teams by helicopter to assess displaced populations in Mankien, Nimni and Koch for illnesses and malnutrition, with a view to setting up a medical intervention. In order to do this they need to know beforehand where the populations are and how to access them by foot. This mapping initiative is crucial to helping our teams plan their movements and ensure we reach as many people as possible in the small amount of time we have on the ground.
+  - id: 923
+    desc: MSF is currently assessing populations that have been displaced from their homes and livelihoods due to the devastating civil conflict that erupted in December 2013. MSF is planning to fly in medical teams by helicopter to assess displaced populations in Mayendit for illnesses and malnutrition, with a view to setting up a medical intervention. In order to do this they need to know beforehand where the populations are and how to access them by foot. This mapping initiative is crucial to helping our teams plan their movements and ensure we reach as many people as possible in the small amount of time we have on the ground, as well as allowing us to estimate the population size by using the building counts that you make possible.
+  - id: 938
+    desc: MSF is currently assessing populations that have been displaced from their homes and livelihoods due to the devastating civil conflict that erupted in December 2013. MSF is planning to fly in medical teams by helicopter to assess displaced populations in the Mayendit area for illnesses and malnutrition, with a view to setting up a medical intervention. In order to do this they need to know beforehand where the populations are and how to access them by foot. This mapping initiative is crucial to helping our teams plan their movements and ensure we reach as many people as possible in the small amount of time we have on the ground, as well as allowing us to estimate the population size by using the building counts that you make possible.
+  - id: 993
+    desc: 
+  - id: 1121
+    desc: Large numbers of people have fled violence in Blue Nile State and many thousands have ended up in Doro Refugee Camp. Maps will help NGOs working in the camps improve surveillance for diseases of outbreak potential. By mapping down to the detail of camp structures, medical and logistics teams can estimate population sizes and provide optimum water, sanitation and health services.
+  - id: 1053
+    desc: South Sudan is one of the places prioritised by Missing Maps. So far, mapping in South Sudan has been conducted in response to Médecins Sans Frontières' requests for base mapping. The maps have been used by MSF to plan household surveys and rapid nutritional assessment, which both help provide vital information on the health of the population. This task is the second stage of the Missing Maps providing pre-emptive mapping for South Sudan as a whole, beginning with Unity State. The aim of the task is to map all buildings within the outlined residential areas, ready for future tasks which will then focus on local roads, tracks and paths. The next step is to expand this pre-emptive mapping to other states within South Sudan.
+  - id: 1483
+    desc: The MSF South Sudan emergency and medical teams are currently undertaking assessments in Mundri and other parts of Western Equatorial. These assessments are aimed at expanding current interventions and introducing nutrition programmes. These maps will assist the teams in planning their assessment approach and allow them to ensure that much-needed medical and nutrition services will reach the right people. They currently need to know the number of households in each of the villages included in this task. This project priority is set to high because the teams will be conducting their assessments imminently.
+  - id: 740
+    desc: Violence in Leer meant displacement of people to outlying areas and the map made will help MSF teams locate displaced populations. For more information on the Missing Maps, visit www.missingmaps.org.
+  - id: 854
+    desc: MSF is currently assessing populations that have been displaced from their homes and livelihoods due to the devastating civil conflict that erupted in December 2013. MSF is planning to fly in medical teams by helicopter to assess displaced populations in Mankien, Nimni and Koch for illnesses and malnutrition, with a view to setting up a medical intervention. In order to do this they need to know beforehand where the populations are and how to access them by foot. This mapping initiative is crucial to helping our teams plan their movements and ensure we reach as many people as possible in the small amount of time we have on the ground.
+  - id: 905
+    desc: MSF is currently assessing populations that have been displaced from their homes and livelihoods due to the devastating civil conflict that erupted in December 2013. MSF is planning to fly in medical teams by helicopter to assess displaced populations in Waat for illnesses and malnutrition, with a view to setting up a medical intervention. In order to do this they need to know beforehand where the populations are and how to access them by foot. This mapping initiative is crucial to helping our teams plan their movements and ensure we reach as many people as possible in the small amount of time we have on the ground.
+  - id: 1447
+    desc: 
+  - id: 2434
+    desc: Aweil, the capital of South Sudan’s Northern Bahr el Ghazal State, is home to tens of thousands of people, many of whom live on the city’s largely unmapped outskirts. Putting these settlements on the map is the first step to collecting crucial health and demographic data that will help MSF provide essential medical care to this underserved population. Mapping the Aweil region will allow MSF to conduct surveys to learn where patients live, where medical needs are most acute, and where seasonal peaks in illnesses like malaria and malnutrition are likely to occur.
+  - id: 2393
+    desc: Please note that this task was archived. It was accidentaly built on unfinished data from MapSwipe, therefore we had to create a new project, that you can find here. http.//tasks.hotosm.org/project/2398
+  - id: 2398
+    desc: MSF team have indicated a new priority area for data - 20 - 40 km radius from Aweil Town. Please prioritise mapping and validating in the red shaded area! Aweil, the capital of South Sudan’s Northern Bahr el Ghazal State, is home to tens of thousands of people, many of whom live on the city’s largely unmapped outskirts. Putting these settlements on the map is the first step to collecting crucial health and demographic data that will help MSF provide essential medical care to this underserved population. Mapping the Aweil region will allow MSF to conduct surveys to learn where patients live, where medical needs are most acute, and where seasonal peaks in illnesses like malaria and malnutrition are likely to occur.
   - id: 2442
     desc: Aweil, the capital of South Sudan’s Northern Bahr el Ghazal State, is home to tens of thousands of people, many of whom live on the city’s largely unmapped outskirts. Putting these settlements on the map is the first step to collecting crucial health and demographic data that will help MSF provide essential medical care to this underserved population. Mapping the Aweil region will allow MSF to conduct surveys to learn where patients live, where medical needs are most acute, and where seasonal peaks in illnesses like malaria and malnutrition are likely to occur.
 ---

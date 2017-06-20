@@ -4,6 +4,7 @@ lang: en
 permalink: /Switzerland/
 id: che
 name: Switzerland
+contact: 
 flag: ch.svg
 calendar: 
 updates: 
@@ -11,6 +12,7 @@ updates:
     author: 
     date: 
     content: 
+    osmLink: https://openstreetmap.org/relation/51701
     link: 
     linktext:
 tm-projects: 

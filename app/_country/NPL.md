@@ -4,6 +4,7 @@ lang: en
 permalink: /Nepal/
 id: npl
 name: Nepal
+contact: 
 flag: np.svg
 calendar: 
 updates: 
@@ -11,6 +12,7 @@ updates:
     author: 
     date: 
     content: 
+    osmLink: https://openstreetmap.org/relation/184633
     link: 
     linktext:
 tm-projects: 

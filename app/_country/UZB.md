@@ -4,6 +4,7 @@ lang: en
 permalink: /Uzbekistan/
 id: uzb
 name: Uzbekistan
+contact: 
 flag: uz.svg
 calendar: 
 updates: 
@@ -11,6 +12,7 @@ updates:
     author: 
     date: 
     content: 
+    osmLink: https://openstreetmap.org/relation/196240
     link: 
     linktext:
 tm-projects: 

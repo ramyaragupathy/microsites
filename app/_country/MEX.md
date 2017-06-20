@@ -4,6 +4,7 @@ lang: en
 permalink: /Mexico/
 id: mex
 name: Mexico
+contact: 
 flag: mx.svg
 calendar: 
 updates: 
@@ -11,6 +12,7 @@ updates:
     author: 
     date: 
     content: 
+    osmLink: https://openstreetmap.org/relation/114686
     link: 
     linktext:
 tm-projects: 

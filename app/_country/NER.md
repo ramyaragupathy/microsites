@@ -4,6 +4,7 @@ lang: en
 permalink: /Niger/
 id: ner
 name: Niger
+contact: 
 flag: ne.svg
 calendar: 
 updates: 
@@ -11,6 +12,7 @@ updates:
     author: 
     date: 
     content: 
+    osmLink: https://openstreetmap.org/relation/192786
     link: 
     linktext:
 tm-projects: 
