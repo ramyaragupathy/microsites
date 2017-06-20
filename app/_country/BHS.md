@@ -6,13 +6,13 @@ id: bhs
 name: The Bahamas
 contact: 
 flag: bs.svg
+osmLink: https://openstreetmap.org/relation/547469
 calendar: 
 updates: 
   - title: 
     author: 
     date: 
     content: 
-    osmLink: https://openstreetmap.org/relation/547469
     link: 
     linktext:
 tm-projects: 

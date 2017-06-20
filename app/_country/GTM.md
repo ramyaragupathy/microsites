@@ -6,13 +6,13 @@ id: gtm
 name: Guatemala
 contact: 
 flag: gt.svg
+osmLink: https://openstreetmap.org/relation/1521463
 calendar: 
 updates: 
   - title: 
     author: 
     date: 
     content: 
-    osmLink: https://openstreetmap.org/relation/1521463
     link: 
     linktext:
 tm-projects: 

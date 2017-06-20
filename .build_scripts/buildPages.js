@@ -59,7 +59,6 @@ function genCountryPage (countryPageInfo) {
     countryPageMetaData.push(tmProjects.join('\n'));
   }
   countryPageMetaData.push('---');
-  console.log(countryPageMetaData);
   fs.writeFileSync(countryPage, countryPageMetaData.join('\n'));
 }
 

@@ -6,13 +6,13 @@ id: fin
 name: Finland
 contact: 
 flag: fi.svg
+osmLink: https://openstreetmap.org/relation/54224
 calendar: 
 updates: 
   - title: 
     author: 
     date: 
     content: 
-    osmLink: https://openstreetmap.org/relation/54224
     link: 
     linktext:
 tm-projects: 

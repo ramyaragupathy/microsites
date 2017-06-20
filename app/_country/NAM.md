@@ -6,13 +6,13 @@ id: nam
 name: Namibia
 contact: 
 flag: na.svg
+osmLink: https://openstreetmap.org/relation/195266
 calendar: 
 updates: 
   - title: 
     author: 
     date: 
     content: 
-    osmLink: https://openstreetmap.org/relation/195266
     link: 
     linktext:
 tm-projects: 

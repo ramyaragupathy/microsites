@@ -6,13 +6,13 @@ id: brn
 name: Brunei
 contact: 
 flag: bn.svg
+osmLink: https://openstreetmap.org/relation/2103120
 calendar: 
 updates: 
   - title: 
     author: 
     date: 
     content: 
-    osmLink: https://openstreetmap.org/relation/2103120
     link: 
     linktext:
 tm-projects: 

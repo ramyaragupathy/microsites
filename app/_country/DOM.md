@@ -6,13 +6,13 @@ id: dom
 name: Dominican Republic
 contact: 
 flag: do.svg
+osmLink: https://openstreetmap.org/relation/307828
 calendar: 
 updates: 
   - title: 
     author: 
     date: 
     content: 
-    osmLink: https://openstreetmap.org/relation/307828
     link: 
     linktext:
 tm-projects: 

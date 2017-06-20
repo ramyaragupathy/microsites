@@ -6,13 +6,13 @@ id: esh
 name: Western Sahara
 contact: 
 flag: eh.svg
+osmLink: https://openstreetmap.org/relation/2559126
 calendar: 
 updates: 
   - title: 
     author: 
     date: 
     content: 
-    osmLink: https://openstreetmap.org/relation/2559126
     link: 
     linktext:
 tm-projects: 

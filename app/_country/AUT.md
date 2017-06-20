@@ -6,13 +6,13 @@ id: aut
 name: Austria
 contact: 
 flag: at.svg
+osmLink: https://openstreetmap.org/relation/16239
 calendar: 
 updates: 
   - title: 
     author: 
     date: 
     content: 
-    osmLink: https://openstreetmap.org/relation/16239
     link: 
     linktext:
 tm-projects: 

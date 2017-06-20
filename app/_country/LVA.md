@@ -6,13 +6,13 @@ id: lva
 name: Latvia
 contact: 
 flag: lv.svg
+osmLink: https://openstreetmap.org/relation/72594
 calendar: 
 updates: 
   - title: 
     author: 
     date: 
     content: 
-    osmLink: https://openstreetmap.org/relation/72594
     link: 
     linktext:
 tm-projects: 

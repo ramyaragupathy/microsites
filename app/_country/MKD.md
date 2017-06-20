@@ -6,13 +6,13 @@ id: mkd
 name: Macedonia
 contact: 
 flag: mk.svg
+osmLink: https://openstreetmap.org/relation/53293
 calendar: 
 updates: 
   - title: 
     author: 
     date: 
     content: 
-    osmLink: https://openstreetmap.org/relation/53293
     link: 
     linktext:
 tm-projects: 

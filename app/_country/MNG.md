@@ -6,13 +6,13 @@ id: mng
 name: Mongolia
 contact: 
 flag: mn.svg
+osmLink: https://openstreetmap.org/relation/161033
 calendar: 
 updates: 
   - title: 
     author: 
     date: 
     content: 
-    osmLink: https://openstreetmap.org/relation/161033
     link: 
     linktext:
 tm-projects: 

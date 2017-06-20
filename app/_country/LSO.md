@@ -6,13 +6,13 @@ id: lso
 name: Lesotho
 contact: 
 flag: ls.svg
+osmLink: https://openstreetmap.org/relation/2093234
 calendar: 
 updates: 
   - title: 
     author: 
     date: 
     content: 
-    osmLink: https://openstreetmap.org/relation/2093234
     link: 
     linktext:
 tm-projects: 

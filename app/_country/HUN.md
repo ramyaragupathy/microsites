@@ -6,13 +6,13 @@ id: hun
 name: Hungary
 contact: 
 flag: hu.svg
+osmLink: https://openstreetmap.org/relation/21335
 calendar: 
 updates: 
   - title: 
     author: 
     date: 
     content: 
-    osmLink: https://openstreetmap.org/relation/21335
     link: 
     linktext:
 tm-projects: 

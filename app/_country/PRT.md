@@ -6,13 +6,13 @@ id: prt
 name: Portugal
 contact: 
 flag: pt.svg
+osmLink: https://openstreetmap.org/relation/295480
 calendar: 
 updates: 
   - title: 
     author: 
     date: 
     content: 
-    osmLink: https://openstreetmap.org/relation/295480
     link: 
     linktext:
 tm-projects: 

@@ -6,13 +6,13 @@ id: srb
 name: Republic of Serbia
 contact: 
 flag: rs.svg
+osmLink: https://openstreetmap.org/relation/1741311
 calendar: 
 updates: 
   - title: 
     author: 
     date: 
     content: 
-    osmLink: https://openstreetmap.org/relation/1741311
     link: 
     linktext:
 tm-projects: 

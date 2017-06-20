@@ -6,13 +6,13 @@ id: bra
 name: Brazil
 contact: 
 flag: br.svg
+osmLink: https://openstreetmap.org/relation/59470
 calendar: 
 updates: 
   - title: 
     author: 
     date: 
     content: 
-    osmLink: https://openstreetmap.org/relation/59470
     link: 
     linktext:
 tm-projects: 

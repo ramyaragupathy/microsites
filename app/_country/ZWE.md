@@ -6,13 +6,13 @@ id: zwe
 name: Zimbabwe
 contact: 
 flag: zw.svg
+osmLink: https://openstreetmap.org/relation/195272
 calendar: 
 updates: 
   - title: 
     author: 
     date: 
     content: 
-    osmLink: https://openstreetmap.org/relation/195272
     link: 
     linktext:
 tm-projects: 

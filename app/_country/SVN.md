@@ -6,13 +6,13 @@ id: svn
 name: Slovenia
 contact: 
 flag: si.svg
+osmLink: https://openstreetmap.org/relation/218657
 calendar: 
 updates: 
   - title: 
     author: 
     date: 
     content: 
-    osmLink: https://openstreetmap.org/relation/218657
     link: 
     linktext:
 tm-projects: 

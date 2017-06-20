@@ -6,13 +6,13 @@ id: lby
 name: Libya
 contact: 
 flag: ly.svg
+osmLink: https://openstreetmap.org/relation/192758
 calendar: 
 updates: 
   - title: 
     author: 
     date: 
     content: 
-    osmLink: https://openstreetmap.org/relation/192758
     link: 
     linktext:
 tm-projects: 

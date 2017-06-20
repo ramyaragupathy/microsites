@@ -6,13 +6,13 @@ id: guy
 name: Guyana
 contact: 
 flag: gy.svg
+osmLink: https://openstreetmap.org/relation/287083
 calendar: 
 updates: 
   - title: 
     author: 
     date: 
     content: 
-    osmLink: https://openstreetmap.org/relation/287083
     link: 
     linktext:
 tm-projects: 

@@ -6,13 +6,13 @@ id: isl
 name: Iceland
 contact: 
 flag: is.svg
+osmLink: https://openstreetmap.org/relation/299133
 calendar: 
 updates: 
   - title: 
     author: 
     date: 
     content: 
-    osmLink: https://openstreetmap.org/relation/299133
     link: 
     linktext:
 tm-projects: 

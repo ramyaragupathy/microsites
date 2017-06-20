@@ -6,13 +6,13 @@ id: ukr
 name: Ukraine
 contact: 
 flag: ua.svg
+osmLink: https://openstreetmap.org/relation/60199
 calendar: 
 updates: 
   - title: 
     author: 
     date: 
     content: 
-    osmLink: https://openstreetmap.org/relation/60199
     link: 
     linktext:
 tm-projects: 

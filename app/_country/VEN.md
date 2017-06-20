@@ -6,13 +6,13 @@ id: ven
 name: Venezuela
 contact: 
 flag: ve.svg
+osmLink: https://openstreetmap.org/relation/272644
 calendar: 
 updates: 
   - title: 
     author: 
     date: 
     content: 
-    osmLink: https://openstreetmap.org/relation/272644
     link: 
     linktext:
 tm-projects: 

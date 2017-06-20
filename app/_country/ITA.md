@@ -6,13 +6,13 @@ id: ita
 name: Italy
 contact: 
 flag: it.svg
+osmLink: https://openstreetmap.org/relation/365331
 calendar: 
 updates: 
   - title: 
     author: 
     date: 
     content: 
-    osmLink: https://openstreetmap.org/relation/365331
     link: 
     linktext:
 tm-projects: 

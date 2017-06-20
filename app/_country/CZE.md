@@ -6,13 +6,13 @@ id: cze
 name: Czech Republic
 contact: 
 flag: cz.svg
+osmLink: https://openstreetmap.org/relation/51684
 calendar: 
 updates: 
   - title: 
     author: 
     date: 
     content: 
-    osmLink: https://openstreetmap.org/relation/51684
     link: 
     linktext:
 tm-projects: 

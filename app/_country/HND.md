@@ -6,13 +6,13 @@ id: hnd
 name: Honduras
 contact: 
 flag: hn.svg
+osmLink: https://openstreetmap.org/relation/287670
 calendar: 
 updates: 
   - title: 
     author: 
     date: 
     content: 
-    osmLink: https://openstreetmap.org/relation/287670
     link: 
     linktext:
 tm-projects: 

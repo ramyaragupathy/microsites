@@ -6,13 +6,13 @@ id: sds
 name: South Sudan
 contact: 
 flag: undefined.svg
+osmLink: https://openstreetmap.org
 calendar: 
 updates: 
   - title: 
     author: 
     date: 
     content: 
-    osmLink: https://openstreetmap.org
     link: 
     linktext:
 tm-projects: 

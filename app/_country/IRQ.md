@@ -6,13 +6,13 @@ id: irq
 name: Iraq
 contact: 
 flag: iq.svg
+osmLink: https://openstreetmap.org/relation/304934
 calendar: 
 updates: 
   - title: 
     author: 
     date: 
     content: 
-    osmLink: https://openstreetmap.org/relation/304934
     link: 
     linktext:
 tm-projects: 

@@ -6,13 +6,13 @@ id: tjk
 name: Tajikistan
 contact: 
 flag: tj.svg
+osmLink: https://openstreetmap.org/relation/214626
 calendar: 
 updates: 
   - title: 
     author: 
     date: 
     content: 
-    osmLink: https://openstreetmap.org/relation/214626
     link: 
     linktext:
 tm-projects: 

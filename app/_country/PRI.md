@@ -6,13 +6,13 @@ id: pri
 name: Puerto Rico
 contact: 
 flag: pr.svg
+osmLink: https://openstreetmap.org/relation/4422604
 calendar: 
 updates: 
   - title: 
     author: 
     date: 
     content: 
-    osmLink: https://openstreetmap.org/relation/4422604
     link: 
     linktext:
 tm-projects: 

@@ -6,13 +6,13 @@ id: alb
 name: Albania
 contact: 
 flag: al.svg
+osmLink: https://openstreetmap.org/relation/53292
 calendar: 
 updates: 
   - title: 
     author: 
     date: 
     content: 
-    osmLink: https://openstreetmap.org/relation/53292
     link: 
     linktext:
 tm-projects: 

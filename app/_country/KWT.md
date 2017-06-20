@@ -6,13 +6,13 @@ id: kwt
 name: Kuwait
 contact: 
 flag: kw.svg
+osmLink: https://openstreetmap.org/relation/305099
 calendar: 
 updates: 
   - title: 
     author: 
     date: 
     content: 
-    osmLink: https://openstreetmap.org/relation/305099
     link: 
     linktext:
 tm-projects: 

@@ -6,13 +6,13 @@ id: gbr
 name: United Kingdom
 contact: 
 flag: gb.svg
+osmLink: https://openstreetmap.org/relation/62149
 calendar: 
 updates: 
   - title: 
     author: 
     date: 
     content: 
-    osmLink: https://openstreetmap.org/relation/62149
     link: 
     linktext:
 tm-projects: 

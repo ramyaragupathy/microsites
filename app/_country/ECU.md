@@ -6,13 +6,13 @@ id: ecu
 name: Ecuador
 contact: 
 flag: ec.svg
+osmLink: https://openstreetmap.org/relation/108089
 calendar: 
 updates: 
   - title: 
     author: 
     date: 
     content: 
-    osmLink: https://openstreetmap.org/relation/108089
     link: 
     linktext:
 tm-projects: 

@@ -6,13 +6,13 @@ id: swz
 name: Swaziland
 contact: 
 flag: sz.svg
+osmLink: https://openstreetmap.org/relation/88210
 calendar: 
 updates: 
   - title: 
     author: 
     date: 
     content: 
-    osmLink: https://openstreetmap.org/relation/88210
     link: 
     linktext:
 tm-projects: 

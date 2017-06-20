@@ -6,13 +6,13 @@ id: gha
 name: Ghana
 contact: 
 flag: gh.svg
+osmLink: https://openstreetmap.org/relation/192781
 calendar: 
 updates: 
   - title: 
     author: 
     date: 
     content: 
-    osmLink: https://openstreetmap.org/relation/192781
     link: 
     linktext:
 tm-projects: 

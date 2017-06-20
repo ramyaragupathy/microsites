@@ -6,13 +6,13 @@ id: lbr
 name: Liberia
 contact: 
 flag: lr.svg
+osmLink: https://openstreetmap.org/relation/192780
 calendar: 
 updates: 
   - title: 
     author: 
     date: 
     content: 
-    osmLink: https://openstreetmap.org/relation/192780
     link: 
     linktext:
 tm-projects: 

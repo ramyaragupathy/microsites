@@ -6,13 +6,13 @@ id: eth
 name: Ethiopia
 contact: 
 flag: et.svg
+osmLink: https://openstreetmap.org/relation/192800
 calendar: 
 updates: 
   - title: 
     author: 
     date: 
     content: 
-    osmLink: https://openstreetmap.org/relation/192800
     link: 
     linktext:
 tm-projects: 

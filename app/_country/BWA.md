@@ -6,13 +6,13 @@ id: bwa
 name: Botswana
 contact: 
 flag: bw.svg
+osmLink: https://openstreetmap.org/relation/1889339
 calendar: 
 updates: 
   - title: 
     author: 
     date: 
     content: 
-    osmLink: https://openstreetmap.org/relation/1889339
     link: 
     linktext:
 tm-projects: 

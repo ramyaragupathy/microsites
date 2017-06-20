@@ -6,13 +6,13 @@ id: swe
 name: Sweden
 contact: 
 flag: se.svg
+osmLink: https://openstreetmap.org/relation/52822
 calendar: 
 updates: 
   - title: 
     author: 
     date: 
     content: 
-    osmLink: https://openstreetmap.org/relation/52822
     link: 
     linktext:
 tm-projects: 

@@ -6,13 +6,13 @@ id: tha
 name: Thailand
 contact: 
 flag: th.svg
+osmLink: https://openstreetmap.org/relation/2067731
 calendar: 
 updates: 
   - title: 
     author: 
     date: 
     content: 
-    osmLink: https://openstreetmap.org/relation/2067731
     link: 
     linktext:
 tm-projects: 

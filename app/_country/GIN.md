@@ -6,13 +6,13 @@ id: gin
 name: Guinea
 contact: 
 flag: gn.svg
+osmLink: https://openstreetmap.org/relation/192778
 calendar: 
 updates: 
   - title: 
     author: 
     date: 
     content: 
-    osmLink: https://openstreetmap.org/relation/192778
     link: 
     linktext:
 tm-projects: 

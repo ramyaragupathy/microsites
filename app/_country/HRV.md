@@ -6,13 +6,13 @@ id: hrv
 name: Croatia
 contact: 
 flag: hr.svg
+osmLink: https://openstreetmap.org/relation/214885
 calendar: 
 updates: 
   - title: 
     author: 
     date: 
     content: 
-    osmLink: https://openstreetmap.org/relation/214885
     link: 
     linktext:
 tm-projects: 

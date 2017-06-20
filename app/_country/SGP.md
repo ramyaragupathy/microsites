@@ -6,13 +6,13 @@ id: sgp
 name: Singapore
 contact: 
 flag: sg.svg
+osmLink: https://openstreetmap.org/relation/536780
 calendar: 
 updates: 
   - title: 
     author: 
     date: 
     content: 
-    osmLink: https://openstreetmap.org/relation/536780
     link: 
     linktext:
 tm-projects: 

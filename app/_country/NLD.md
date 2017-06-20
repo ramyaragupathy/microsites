@@ -6,13 +6,13 @@ id: nld
 name: Netherlands
 contact: 
 flag: nl.svg
+osmLink: https://openstreetmap.org/relation/2323309
 calendar: 
 updates: 
   - title: 
     author: 
     date: 
     content: 
-    osmLink: https://openstreetmap.org/relation/2323309
     link: 
     linktext:
 tm-projects: 

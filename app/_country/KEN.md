@@ -6,13 +6,13 @@ id: ken
 name: Kenya
 contact: 
 flag: ke.svg
+osmLink: https://openstreetmap.org/relation/192798
 calendar: 
 updates: 
   - title: 
     author: 
     date: 
     content: 
-    osmLink: https://openstreetmap.org/relation/192798
     link: 
     linktext:
 tm-projects: 

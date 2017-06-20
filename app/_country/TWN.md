@@ -6,13 +6,13 @@ id: twn
 name: Taiwan
 contact: 
 flag: tw.svg
+osmLink: https://openstreetmap.org/relation/449220
 calendar: 
 updates: 
   - title: 
     author: 
     date: 
     content: 
-    osmLink: https://openstreetmap.org/relation/449220
     link: 
     linktext:
 tm-projects: 

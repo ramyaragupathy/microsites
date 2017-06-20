@@ -6,13 +6,13 @@ id: mda
 name: Moldova
 contact: 
 flag: md.svg
+osmLink: https://openstreetmap.org/relation/58974
 calendar: 
 updates: 
   - title: 
     author: 
     date: 
     content: 
-    osmLink: https://openstreetmap.org/relation/58974
     link: 
     linktext:
 tm-projects: 

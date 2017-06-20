@@ -6,13 +6,13 @@ id: mli
 name: Mali
 contact: 
 flag: ml.svg
+osmLink: https://openstreetmap.org/relation/192785
 calendar: 
 updates: 
   - title: 
     author: 
     date: 
     content: 
-    osmLink: https://openstreetmap.org/relation/192785
     link: 
     linktext:
 tm-projects: 

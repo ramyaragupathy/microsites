@@ -6,13 +6,13 @@ id: atf
 name: French Southern and Antarctic Lands
 contact: 
 flag: tf.svg
+osmLink: https://openstreetmap.org/relation/2186658
 calendar: 
 updates: 
   - title: 
     author: 
     date: 
     content: 
-    osmLink: https://openstreetmap.org/relation/2186658
     link: 
     linktext:
 tm-projects: 

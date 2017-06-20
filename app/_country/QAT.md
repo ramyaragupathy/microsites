@@ -6,13 +6,13 @@ id: qat
 name: Qatar
 contact: 
 flag: qa.svg
+osmLink: https://openstreetmap.org/relation/305095
 calendar: 
 updates: 
   - title: 
     author: 
     date: 
     content: 
-    osmLink: https://openstreetmap.org/relation/305095
     link: 
     linktext:
 tm-projects: 
