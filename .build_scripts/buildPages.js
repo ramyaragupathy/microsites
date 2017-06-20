@@ -17,11 +17,12 @@ var validCountries = JSON.parse(fs.readFileSync('countries.json'));
   *   3) write this out to a file in /_country/
   */
 function genCountryPage (countryPageInfo) {
-  const countryName = countryPageInfo.name;
-  const countryCode = countryPageInfo.code;
-  const countryLink = countryPageInfo.osmLink || 'https://openstreetmap.org';
-  const countryPage = '../app/_country/' + countryCode + '.md';
-  const alpha2 = countries.alpha3ToAlpha2(countryPageInfo.code);
+  countryPageInfo = countryPageInfo[Object.keys(countryPageInfo)];
+  const countryName = countryPageInfo[0].name;
+  const countryCode = countryPageInfo[0].code;
+  const countryLink = countryPageInfo[0].osmLink || 'https://openstreetmap.org';
+  const countryPage = 'app/_country/' + countryCode + '.md';
+  const alpha2 = countries.alpha3ToAlpha2(countryPageInfo[0].code);
   let countryFlag;
   if (alpha2 !== undefined) {
     countryFlag = alpha2.toLowerCase();
@@ -46,20 +47,20 @@ function genCountryPage (countryPageInfo) {
     '    linktext:',
     'tm-projects: '
   ];
-  if (countryPageInfo.desc) {
-    const tmProjects = [
-      '  - id: ' + countryPageInfo.task,
-      '    desc: ' + countryPageInfo.desc
-    ].join('\n');
-    countryPageMetaData.push(tmProjects);
-  }
-  if (countryPageInfo.osmID) {
-    // do the stuff
-    countryPageMetaData.push('stuff');
+  let tmProjects = [];
+  if (countryPageInfo[0].task) {
+    countryPageInfo.forEach((infoObj) => {
+      const tmProject = [
+        '  - id: ' + infoObj.task,
+        '    desc: ' + infoObj.desc
+      ].join('\n');
+      tmProjects.push(tmProject);
+    });
+    countryPageMetaData.push(tmProjects.join('\n'));
   }
   countryPageMetaData.push('---');
   console.log(countryPageMetaData);
-  // fs.writeFileSync(countryPage, countryPageMetaData.join('\n'));
+  fs.writeFileSync(countryPage, countryPageMetaData.join('\n'));
 }
 
 /* parseDesc(desc)
@@ -186,7 +187,7 @@ Promise.map(tasksList, (task) => {
   })
   .then((validCountries) => {
     validCountries = _.map(validCountries, (validCountry) => {
-      const validCountryVal = validCountry[Object.keys(validCountry)];
+      let validCountryVal = validCountry[Object.keys(validCountry)];
       if (Array.isArray(validCountryVal)) {
         Promise.map(validCountryVal, (valObj) => {
           const task = valObj.task;
@@ -196,7 +197,7 @@ Promise.map(tasksList, (task) => {
           ]);
         }).then((responses) => {
           const osmLinks = JSON.parse(fs.readFileSync('countries.json'));
-          responses.forEach((response) => {
+          responses = responses.map((response) => {
             const valObj = response[0];
             let osmLink = osmLinks.filter((country) => {
               return country.code === valObj.code;
@@ -214,12 +215,19 @@ Promise.map(tasksList, (task) => {
               desc = '';
             }
             valObj['desc'] = desc;
-            genCountryPage(valObj);
+            return valObj;
           });
+          responses = _.groupBy(responses, (response) => {
+            return response.code;
+          });
+          genCountryPage(responses);
         }).catch((error) => {
           console.log(error);
         });
       } else {
+        validCountryVal = _.groupBy([validCountryVal], (val) => {
+          return val.code;
+        });
         genCountryPage(validCountryVal);
       }
     });
