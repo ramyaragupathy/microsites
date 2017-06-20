@@ -14,12 +14,12 @@ var validCountries = JSON.parse(fs.readFileSync('countries.json'));
  /* genCountryPage(countryPageInfo)
   *   1) get parameters for generating page from countryPageInfo
   *   2) if tasks are included in countryPageInfo, include the metadat
-  *   3) write this out to a file in _countyr/
+  *   3) write this out to a file in /_country/
   */
 function genCountryPage (countryPageInfo) {
   const countryName = countryPageInfo.name;
   const countryCode = countryPageInfo.code;
-  const countryLink = countryPageInfo.link || 'https://openstreetmap.org';
+  const countryLink = countryPageInfo.osmLink || 'https://openstreetmap.org';
   const countryPage = '../app/_country/' + countryCode + '.md';
   const alpha2 = countries.alpha3ToAlpha2(countryPageInfo.code);
   let countryFlag;
@@ -58,7 +58,8 @@ function genCountryPage (countryPageInfo) {
     countryPageMetaData.push('stuff');
   }
   countryPageMetaData.push('---');
-  fs.writeFileSync(countryPage, countryPageMetaData.join('\n'));
+  console.log(countryPageMetaData);
+  // fs.writeFileSync(countryPage, countryPageMetaData.join('\n'));
 }
 
 /* parseDesc(desc)
@@ -169,23 +170,23 @@ Promise.map(tasksList, (task) => {
     });
     validCountries = _.map(validCountries, (validCountry) => {
       let newValCountry = {};
-      console.log(validCountry)
       if (Object.keys(validCountry).length > 1) {
         const newValCountryKey = validCountry.code;
         const newValCountryObj = {};
         newValCountryObj['code'] = validCountry.code;
         newValCountryObj['name'] = validCountry.name;
+        newValCountryObj['osmLink'] = validCountry.link;
         newValCountry[newValCountryKey] = newValCountryObj;
         validCountry = newValCountry;
-        console.log(validCountry);
       }
+
       return validCountry;
     });
     return validCountries;
-  }).then((validCountries) => {
+  })
+  .then((validCountries) => {
     validCountries = _.map(validCountries, (validCountry) => {
       const validCountryVal = validCountry[Object.keys(validCountry)];
-      console.log(validCountryVal);
       if (Array.isArray(validCountryVal)) {
         Promise.map(validCountryVal, (valObj) => {
           const task = valObj.task;
@@ -194,8 +195,16 @@ Promise.map(tasksList, (task) => {
             rp('http://tasks.hotosm.org/project/' + task + '.json')
           ]);
         }).then((responses) => {
+          const osmLinks = JSON.parse(fs.readFileSync('countries.json'));
           responses.forEach((response) => {
             const valObj = response[0];
+            let osmLink = osmLinks.filter((country) => {
+              return country.code === valObj.code;
+            })[0].link;
+            if (osmLink === undefined) {
+              osmLink = 'https://openstreetmap.org';
+            }
+            valObj['osmLink'] = osmLink;
             const taskResponse = response[1];
             let desc;
             if (response[1]) {
@@ -205,14 +214,13 @@ Promise.map(tasksList, (task) => {
               desc = '';
             }
             valObj['desc'] = desc;
-            console.log('dude')
-            // genCountryPage(valObj);
+            genCountryPage(valObj);
           });
         }).catch((error) => {
           console.log(error);
         });
       } else {
-        // genCountryPage(validCountryVal);
+        genCountryPage(validCountryVal);
       }
     });
   });
