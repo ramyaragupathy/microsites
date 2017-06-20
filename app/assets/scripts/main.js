@@ -195,12 +195,6 @@ function addMap (projectId) {
   });
 }
 
-/* -------------------------------------------------------
- -------------------- Hide Updates  ----------------------
- -------------------------------------------------------*/
-
-//
-
 
 /* -------------------------------------------------------
  ----------- Add Functionality to Events List  -----------
@@ -318,16 +312,6 @@ function generateEvents (calendarId) {
     $('.events-panel').css('display', 'none');
   }
   eventsFunctionality()
-}
-
-/* -------------------------------------------------------
- --------------------- Include Updates   -----------------
- -------------------------------------------------------*/
-
-function showUpdates (updates) {
-  if (updates.length > 0) {
-    $('.updates-null').css('display', 'none');
-  }
 }
 
 /* -------------------------------------------------------
@@ -619,9 +603,6 @@ getPrimaryStats(PT.id);
 getGroupActivityStats(PT.id);
 // Populate project carousel via HOTOSM Tasking Manager API
 getProjects(PT.hotProjects);
-
-showUpdates(PT.updates)
-
 // Populate events section with upcoming events
 generateEvents(PT.calendar);
 // setupGraphs

@@ -6,13 +6,13 @@ id: rus
 name: Russia
 contact: 
 flag: ru.svg
+osmLink: https://openstreetmap.org/relation/60189
 calendar: 
 updates: 
   - title: 
     author: 
     date: 
     content: 
-    osmLink: https://openstreetmap.org/relation/60189
     link: 
     linktext:
 tm-projects: 

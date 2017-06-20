@@ -6,13 +6,13 @@ id: nga
 name: Nigeria
 contact: 
 flag: ng.svg
+osmLink: https://openstreetmap.org/relation/192787
 calendar: 
 updates: 
   - title: 
     author: 
     date: 
     content: 
-    osmLink: https://openstreetmap.org/relation/192787
     link: 
     linktext:
 tm-projects: 

@@ -6,13 +6,13 @@ id: cod
 name: Democratic Republic of the Congo
 contact: 
 flag: cd.svg
+osmLink: https://openstreetmap.org/relation/192795
 calendar: 
 updates: 
   - title: 
     author: 
     date: 
     content: 
-    osmLink: https://openstreetmap.org/relation/192795
     link: 
     linktext:
 tm-projects: 

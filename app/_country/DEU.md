@@ -6,13 +6,13 @@ id: deu
 name: Germany
 contact: 
 flag: de.svg
+osmLink: https://openstreetmap.org/relation/51477
 calendar: 
 updates: 
   - title: 
     author: 
     date: 
     content: 
-    osmLink: https://openstreetmap.org/relation/51477
     link: 
     linktext:
 tm-projects: 

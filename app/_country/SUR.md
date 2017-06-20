@@ -6,13 +6,13 @@ id: sur
 name: Suriname
 contact: 
 flag: sr.svg
+osmLink: https://openstreetmap.org/relation/287082
 calendar: 
 updates: 
   - title: 
     author: 
     date: 
     content: 
-    osmLink: https://openstreetmap.org/relation/287082
     link: 
     linktext:
 tm-projects: 

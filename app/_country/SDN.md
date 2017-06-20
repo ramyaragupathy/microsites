@@ -6,13 +6,13 @@ id: sdn
 name: Sudan
 contact: 
 flag: sd.svg
+osmLink: https://openstreetmap.org/relation/192789
 calendar: 
 updates: 
   - title: 
     author: 
     date: 
     content: 
-    osmLink: https://openstreetmap.org/relation/192789
     link: 
     linktext:
 tm-projects: 

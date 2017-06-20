@@ -6,13 +6,13 @@ id: pol
 name: Poland
 contact: 
 flag: pl.svg
+osmLink: https://openstreetmap.org/relation/49715
 calendar: 
 updates: 
   - title: 
     author: 
     date: 
     content: 
-    osmLink: https://openstreetmap.org/relation/49715
     link: 
     linktext:
 tm-projects: 

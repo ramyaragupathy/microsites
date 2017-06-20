@@ -6,13 +6,13 @@ id: sle
 name: Sierra Leone
 contact: 
 flag: sl.svg
+osmLink: https://openstreetmap.org/relation/192777
 calendar: 
 updates: 
   - title: 
     author: 
     date: 
     content: 
-    osmLink: https://openstreetmap.org/relation/192777
     link: 
     linktext:
 tm-projects: 

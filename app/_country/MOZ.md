@@ -6,13 +6,13 @@ id: moz
 name: Mozambique
 contact: 
 flag: mz.svg
+osmLink: https://openstreetmap.org/relation/195273
 calendar: 
 updates: 
   - title: 
     author: 
     date: 
     content: 
-    osmLink: https://openstreetmap.org/relation/195273
     link: 
     linktext:
 tm-projects: 

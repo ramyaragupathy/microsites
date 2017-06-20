@@ -6,13 +6,13 @@ id: grc
 name: Greece
 contact: 
 flag: gr.svg
+osmLink: https://openstreetmap.org/relation/192307
 calendar: 
 updates: 
   - title: 
     author: 
     date: 
     content: 
-    osmLink: https://openstreetmap.org/relation/192307
     link: 
     linktext:
 tm-projects: 

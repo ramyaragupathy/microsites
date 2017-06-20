@@ -6,13 +6,13 @@ id: dnk
 name: Denmark
 contact: 
 flag: dk.svg
+osmLink: https://openstreetmap.org/relation/50046
 calendar: 
 updates: 
   - title: 
     author: 
     date: 
     content: 
-    osmLink: https://openstreetmap.org/relation/50046
     link: 
     linktext:
 tm-projects: 

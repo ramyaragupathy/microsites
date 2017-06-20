@@ -6,13 +6,13 @@ id: uga
 name: Uganda
 contact: 
 flag: ug.svg
+osmLink: https://openstreetmap.org/relation/192796
 calendar: 
 updates: 
   - title: 
     author: 
     date: 
     content: 
-    osmLink: https://openstreetmap.org/relation/192796
     link: 
     linktext:
 tm-projects: 

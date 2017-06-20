@@ -6,13 +6,13 @@ id: pak
 name: Pakistan
 contact: 
 flag: pk.svg
+osmLink: https://openstreetmap.org/relation/307573
 calendar: 
 updates: 
   - title: 
     author: 
     date: 
     content: 
-    osmLink: https://openstreetmap.org/relation/307573
     link: 
     linktext:
 tm-projects: 

@@ -6,13 +6,13 @@ id: bfa
 name: Burkina Faso
 contact: 
 flag: bf.svg
+osmLink: https://openstreetmap.org/relation/192783
 calendar: 
 updates: 
   - title: 
     author: 
     date: 
     content: 
-    osmLink: https://openstreetmap.org/relation/192783
     link: 
     linktext:
 tm-projects: 

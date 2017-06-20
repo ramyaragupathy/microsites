@@ -6,13 +6,13 @@ id: lka
 name: Sri Lanka
 contact: 
 flag: lk.svg
+osmLink: https://openstreetmap.org/relation/536807
 calendar: 
 updates: 
   - title: 
     author: 
     date: 
     content: 
-    osmLink: https://openstreetmap.org/relation/536807
     link: 
     linktext:
 tm-projects: 

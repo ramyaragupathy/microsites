@@ -6,13 +6,13 @@ id: tgo
 name: Togo
 contact: 
 flag: tg.svg
+osmLink: https://openstreetmap.org/relation/192782
 calendar: 
 updates: 
   - title: 
     author: 
     date: 
     content: 
-    osmLink: https://openstreetmap.org/relation/192782
     link: 
     linktext:
 tm-projects: 

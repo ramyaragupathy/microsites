@@ -6,13 +6,13 @@ id: rwa
 name: Rwanda
 contact: 
 flag: rw.svg
+osmLink: https://openstreetmap.org/relation/171496
 calendar: 
 updates: 
   - title: 
     author: 
     date: 
     content: 
-    osmLink: https://openstreetmap.org/relation/171496
     link: 
     linktext:
 tm-projects: 

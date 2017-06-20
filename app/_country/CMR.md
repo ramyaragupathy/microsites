@@ -6,13 +6,13 @@ id: cmr
 name: Cameroon
 contact: 
 flag: cm.svg
+osmLink: https://openstreetmap.org/relation/192830
 calendar: 
 updates: 
   - title: 
     author: 
     date: 
     content: 
-    osmLink: https://openstreetmap.org/relation/192830
     link: 
     linktext:
 tm-projects: 

@@ -6,13 +6,13 @@ id: blz
 name: Belize
 contact: 
 flag: bz.svg
+osmLink: https://openstreetmap.org/relation/287827
 calendar: 
 updates: 
   - title: 
     author: 
     date: 
     content: 
-    osmLink: https://openstreetmap.org/relation/287827
     link: 
     linktext:
 tm-projects: 

@@ -6,13 +6,13 @@ id: nic
 name: Nicaragua
 contact: 
 flag: ni.svg
+osmLink: https://openstreetmap.org/relation/287666
 calendar: 
 updates: 
   - title: 
     author: 
     date: 
     content: 
-    osmLink: https://openstreetmap.org/relation/287666
     link: 
     linktext:
 tm-projects: 

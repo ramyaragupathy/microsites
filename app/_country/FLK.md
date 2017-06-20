@@ -6,13 +6,13 @@ id: flk
 name: Falkland Islands
 contact: 
 flag: fk.svg
+osmLink: https://openstreetmap.org/relation/2185374
 calendar: 
 updates: 
   - title: 
     author: 
     date: 
     content: 
-    osmLink: https://openstreetmap.org/relation/2185374
     link: 
     linktext:
 tm-projects: 

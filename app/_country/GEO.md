@@ -6,13 +6,13 @@ id: geo
 name: Georgia
 contact: 
 flag: ge.svg
+osmLink: https://openstreetmap.org/relation/28699
 calendar: 
 updates: 
   - title: 
     author: 
     date: 
     content: 
-    osmLink: https://openstreetmap.org/relation/28699
     link: 
     linktext:
 tm-projects: 

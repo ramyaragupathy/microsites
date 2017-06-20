@@ -6,13 +6,13 @@ id: sau
 name: Saudi Arabia
 contact: 
 flag: sa.svg
+osmLink: https://openstreetmap.org/relation/307584
 calendar: 
 updates: 
   - title: 
     author: 
     date: 
     content: 
-    osmLink: https://openstreetmap.org/relation/307584
     link: 
     linktext:
 tm-projects: 

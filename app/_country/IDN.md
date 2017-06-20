@@ -6,13 +6,13 @@ id: idn
 name: Indonesia
 contact: 
 flag: id.svg
+osmLink: https://openstreetmap.org/relation/304751
 calendar: 
 updates: 
   - title: 
     author: 
     date: 
     content: 
-    osmLink: https://openstreetmap.org/relation/304751
     link: 
     linktext:
 tm-projects: 

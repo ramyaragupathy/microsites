@@ -6,13 +6,13 @@ id: per
 name: Peru
 contact: 
 flag: pe.svg
+osmLink: https://openstreetmap.org/relation/288247
 calendar: 
 updates: 
   - title: 
     author: 
     date: 
     content: 
-    osmLink: https://openstreetmap.org/relation/288247
     link: 
     linktext:
 tm-projects: 

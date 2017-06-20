@@ -6,13 +6,13 @@ id: mrt
 name: Mauritania
 contact: 
 flag: mr.svg
+osmLink: https://openstreetmap.org/relation/192763
 calendar: 
 updates: 
   - title: 
     author: 
     date: 
     content: 
-    osmLink: https://openstreetmap.org/relation/192763
     link: 
     linktext:
 tm-projects: 

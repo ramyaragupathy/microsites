@@ -6,13 +6,13 @@ id: zmb
 name: Zambia
 contact: 
 flag: zm.svg
+osmLink: https://openstreetmap.org/relation/195271
 calendar: 
 updates: 
   - title: 
     author: 
     date: 
     content: 
-    osmLink: https://openstreetmap.org/relation/195271
     link: 
     linktext:
 tm-projects: 

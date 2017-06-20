@@ -6,13 +6,13 @@ id: kaz
 name: Kazakhstan
 contact: 
 flag: kz.svg
+osmLink: https://openstreetmap.org/relation/214665
 calendar: 
 updates: 
   - title: 
     author: 
     date: 
     content: 
-    osmLink: https://openstreetmap.org/relation/214665
     link: 
     linktext:
 tm-projects: 

@@ -6,13 +6,13 @@ id: mex
 name: Mexico
 contact: 
 flag: mx.svg
+osmLink: https://openstreetmap.org/relation/114686
 calendar: 
 updates: 
   - title: 
     author: 
     date: 
     content: 
-    osmLink: https://openstreetmap.org/relation/114686
     link: 
     linktext:
 tm-projects: 

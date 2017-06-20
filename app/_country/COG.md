@@ -6,13 +6,13 @@ id: cog
 name: Republic of the Congo
 contact: 
 flag: cg.svg
+osmLink: https://openstreetmap.org/relation/192794
 calendar: 
 updates: 
   - title: 
     author: 
     date: 
     content: 
-    osmLink: https://openstreetmap.org/relation/192794
     link: 
     linktext:
 tm-projects: 

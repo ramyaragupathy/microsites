@@ -6,13 +6,13 @@ id: jpn
 name: Japan
 contact: 
 flag: jp.svg
+osmLink: https://openstreetmap.org/relation/382313
 calendar: 
 updates: 
   - title: 
     author: 
     date: 
     content: 
-    osmLink: https://openstreetmap.org/relation/382313
     link: 
     linktext:
 tm-projects: 

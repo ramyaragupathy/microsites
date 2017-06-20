@@ -6,13 +6,13 @@ id: ben
 name: Benin
 contact: 
 flag: bj.svg
+osmLink: https://openstreetmap.org/relation/192784
 calendar: 
 updates: 
   - title: 
     author: 
     date: 
     content: 
-    osmLink: https://openstreetmap.org/relation/192784
     link: 
     linktext:
 tm-projects: 

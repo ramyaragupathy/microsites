@@ -6,13 +6,13 @@ id: chl
 name: Chile
 contact: 
 flag: cl.svg
+osmLink: https://openstreetmap.org/relation/167454
 calendar: 
 updates: 
   - title: 
     author: 
     date: 
     content: 
-    osmLink: https://openstreetmap.org/relation/167454
     link: 
     linktext:
 tm-projects: 

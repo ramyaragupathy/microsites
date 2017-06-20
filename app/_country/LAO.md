@@ -6,13 +6,13 @@ id: lao
 name: Laos
 contact: 
 flag: la.svg
+osmLink: https://openstreetmap.org/relation/49903
 calendar: 
 updates: 
   - title: 
     author: 
     date: 
     content: 
-    osmLink: https://openstreetmap.org/relation/49903
     link: 
     linktext:
 tm-projects: 

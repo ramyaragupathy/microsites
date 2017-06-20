@@ -6,13 +6,13 @@ id: tls
 name: East Timor
 contact: 
 flag: tl.svg
+osmLink: https://openstreetmap.org/relation/305142
 calendar: 
 updates: 
   - title: 
     author: 
     date: 
     content: 
-    osmLink: https://openstreetmap.org/relation/305142
     link: 
     linktext:
 tm-projects: 

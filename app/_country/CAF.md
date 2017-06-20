@@ -6,13 +6,13 @@ id: caf
 name: Central African Republic
 contact: 
 flag: cf.svg
+osmLink: https://openstreetmap.org/relation/192790
 calendar: 
 updates: 
   - title: 
     author: 
     date: 
     content: 
-    osmLink: https://openstreetmap.org/relation/192790
     link: 
     linktext:
 tm-projects: 

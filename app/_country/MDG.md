@@ -6,13 +6,13 @@ id: mdg
 name: Madagascar
 contact: 
 flag: mg.svg
+osmLink: https://openstreetmap.org/relation/447325
 calendar: 
 updates: 
   - title: 
     author: 
     date: 
     content: 
-    osmLink: https://openstreetmap.org/relation/447325
     link: 
     linktext:
 tm-projects: 

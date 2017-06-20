@@ -6,13 +6,13 @@ id: yem
 name: Yemen
 contact: 
 flag: ye.svg
+osmLink: https://openstreetmap.org/relation/305092
 calendar: 
 updates: 
   - title: 
     author: 
     date: 
     content: 
-    osmLink: https://openstreetmap.org/relation/305092
     link: 
     linktext:
 tm-projects: 

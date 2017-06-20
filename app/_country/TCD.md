@@ -6,13 +6,13 @@ id: tcd
 name: Chad
 contact: 
 flag: td.svg
+osmLink: https://openstreetmap.org/relation/2361304
 calendar: 
 updates: 
   - title: 
     author: 
     date: 
     content: 
-    osmLink: https://openstreetmap.org/relation/2361304
     link: 
     linktext:
 tm-projects: 

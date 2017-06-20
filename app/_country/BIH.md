@@ -6,13 +6,13 @@ id: bih
 name: Bosnia and Herzegovina
 contact: 
 flag: ba.svg
+osmLink: https://openstreetmap.org/relation/2528142
 calendar: 
 updates: 
   - title: 
     author: 
     date: 
     content: 
-    osmLink: https://openstreetmap.org/relation/2528142
     link: 
     linktext:
 tm-projects: 

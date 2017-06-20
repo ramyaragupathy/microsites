@@ -6,13 +6,13 @@ id: nor
 name: Norway
 contact: 
 flag: no.svg
+osmLink: https://openstreetmap.org/relation/2978650
 calendar: 
 updates: 
   - title: 
     author: 
     date: 
     content: 
-    osmLink: https://openstreetmap.org/relation/2978650
     link: 
     linktext:
 tm-projects: 

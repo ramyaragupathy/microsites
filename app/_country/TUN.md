@@ -6,13 +6,13 @@ id: tun
 name: Tunisia
 contact: 
 flag: tn.svg
+osmLink: https://openstreetmap.org/relation/192757
 calendar: 
 updates: 
   - title: 
     author: 
     date: 
     content: 
-    osmLink: https://openstreetmap.org/relation/192757
     link: 
     linktext:
 tm-projects: 

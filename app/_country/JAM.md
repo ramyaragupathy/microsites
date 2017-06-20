@@ -6,13 +6,13 @@ id: jam
 name: Jamaica
 contact: 
 flag: jm.svg
+osmLink: https://openstreetmap.org/relation/555017
 calendar: 
 updates: 
   - title: 
     author: 
     date: 
     content: 
-    osmLink: https://openstreetmap.org/relation/555017
     link: 
     linktext:
 tm-projects: 

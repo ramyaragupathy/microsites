@@ -6,13 +6,13 @@ id: isr
 name: Israel
 contact: 
 flag: il.svg
+osmLink: https://openstreetmap.org/relation/1473946
 calendar: 
 updates: 
   - title: 
     author: 
     date: 
     content: 
-    osmLink: https://openstreetmap.org/relation/1473946
     link: 
     linktext:
 tm-projects: 

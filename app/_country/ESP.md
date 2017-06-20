@@ -6,13 +6,13 @@ id: esp
 name: Spain
 contact: 
 flag: es.svg
+osmLink: https://openstreetmap.org/relation/1311341
 calendar: 
 updates: 
   - title: 
     author: 
     date: 
     content: 
-    osmLink: https://openstreetmap.org/relation/1311341
     link: 
     linktext:
 tm-projects: 

@@ -6,13 +6,13 @@ id: gnb
 name: Guinea Bissau
 contact: 
 flag: gw.svg
+osmLink: https://openstreetmap.org/relation/192776
 calendar: 
 updates: 
   - title: 
     author: 
     date: 
     content: 
-    osmLink: https://openstreetmap.org/relation/192776
     link: 
     linktext:
 tm-projects: 

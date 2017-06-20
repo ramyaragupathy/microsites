@@ -6,13 +6,13 @@ id: arm
 name: Armenia
 contact: 
 flag: am.svg
+osmLink: https://openstreetmap.org/relation/364066
 calendar: 
 updates: 
   - title: 
     author: 
     date: 
     content: 
-    osmLink: https://openstreetmap.org/relation/364066
     link: 
     linktext:
 tm-projects: 

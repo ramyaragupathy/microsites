@@ -6,13 +6,13 @@ id: mar
 name: Morocco
 contact: 
 flag: ma.svg
+osmLink: https://openstreetmap.org/relation/3630439
 calendar: 
 updates: 
   - title: 
     author: 
     date: 
     content: 
-    osmLink: https://openstreetmap.org/relation/3630439
     link: 
     linktext:
 tm-projects: 

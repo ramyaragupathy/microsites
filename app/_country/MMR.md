@@ -6,13 +6,13 @@ id: mmr
 name: Myanmar
 contact: 
 flag: mm.svg
+osmLink: https://openstreetmap.org/relation/50371
 calendar: 
 updates: 
   - title: 
     author: 
     date: 
     content: 
-    osmLink: https://openstreetmap.org/relation/50371
     link: 
     linktext:
 tm-projects: 

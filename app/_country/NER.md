@@ -6,13 +6,13 @@ id: ner
 name: Niger
 contact: 
 flag: ne.svg
+osmLink: https://openstreetmap.org/relation/192786
 calendar: 
 updates: 
   - title: 
     author: 
     date: 
     content: 
-    osmLink: https://openstreetmap.org/relation/192786
     link: 
     linktext:
 tm-projects: 

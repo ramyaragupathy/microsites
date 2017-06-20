@@ -6,13 +6,13 @@ id: hti
 name: Haiti
 contact: 
 flag: ht.svg
+osmLink: https://openstreetmap.org/relation/307829
 calendar: 
 updates: 
   - title: 
     author: 
     date: 
     content: 
-    osmLink: https://openstreetmap.org/relation/307829
     link: 
     linktext:
 tm-projects: 

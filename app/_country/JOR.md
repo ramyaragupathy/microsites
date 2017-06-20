@@ -6,13 +6,13 @@ id: jor
 name: Jordan
 contact: 
 flag: jo.svg
+osmLink: https://openstreetmap.org/relation/184818
 calendar: 
 updates: 
   - title: 
     author: 
     date: 
     content: 
-    osmLink: https://openstreetmap.org/relation/184818
     link: 
     linktext:
 tm-projects: 

@@ -6,13 +6,13 @@ id: tza
 name: United Republic of Tanzania
 contact: 
 flag: tz.svg
+osmLink: https://openstreetmap.org/relation/195270
 calendar: 
 updates: 
   - title: 
     author: 
     date: 
     content: 
-    osmLink: https://openstreetmap.org/relation/195270
     link: 
     linktext:
 tm-projects: 

@@ -6,13 +6,13 @@ id: zaf
 name: South Africa
 contact: 
 flag: za.svg
+osmLink: https://openstreetmap.org/relation/87565
 calendar: 
 updates: 
   - title: 
     author: 
     date: 
     content: 
-    osmLink: https://openstreetmap.org/relation/87565
     link: 
     linktext:
 tm-projects: 

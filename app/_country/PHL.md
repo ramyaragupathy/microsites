@@ -6,13 +6,13 @@ id: phl
 name: Philippines
 contact: 
 flag: ph.svg
+osmLink: https://openstreetmap.org/relation/443174
 calendar: 
 updates: 
   - title: 
     author: 
     date: 
     content: 
-    osmLink: https://openstreetmap.org/relation/443174
     link: 
     linktext:
 tm-projects: 

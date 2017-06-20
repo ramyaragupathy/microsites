@@ -6,13 +6,13 @@ id: eri
 name: Eritrea
 contact: 
 flag: er.svg
+osmLink: https://openstreetmap.org/relation/296961
 calendar: 
 updates: 
   - title: 
     author: 
     date: 
     content: 
-    osmLink: https://openstreetmap.org/relation/296961
     link: 
     linktext:
 tm-projects: 

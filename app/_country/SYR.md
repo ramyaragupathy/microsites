@@ -6,13 +6,13 @@ id: syr
 name: Syria
 contact: 
 flag: sy.svg
+osmLink: https://openstreetmap.org/relation/184840
 calendar: 
 updates: 
   - title: 
     author: 
     date: 
     content: 
-    osmLink: https://openstreetmap.org/relation/184840
     link: 
     linktext:
 tm-projects: 

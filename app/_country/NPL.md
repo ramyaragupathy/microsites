@@ -6,13 +6,13 @@ id: npl
 name: Nepal
 contact: 
 flag: np.svg
+osmLink: https://openstreetmap.org/relation/184633
 calendar: 
 updates: 
   - title: 
     author: 
     date: 
     content: 
-    osmLink: https://openstreetmap.org/relation/184633
     link: 
     linktext:
 tm-projects: 

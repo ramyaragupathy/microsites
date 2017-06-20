@@ -6,13 +6,13 @@ id: vnm
 name: Vietnam
 contact: 
 flag: vn.svg
+osmLink: https://openstreetmap.org/relation/49915
 calendar: 
 updates: 
   - title: 
     author: 
     date: 
     content: 
-    osmLink: https://openstreetmap.org/relation/49915
     link: 
     linktext:
 tm-projects: 
