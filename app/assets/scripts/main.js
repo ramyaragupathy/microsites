@@ -262,7 +262,7 @@ function eventsFunctionality () {
 
 function generateEvents (calendarId) {
   if (calendarId.match(/google/)) {
-    const url = "https://mm-microsites-proxy-staging.herokuapp.com/" + calendarId + "/events";
+    const url = 'http://osmstats.redcross.org/calendar/' + calendarId + "/events";
     const currentDate = new Date()
     $.getJSON(url, (eventData) => {
       if (eventData.length === 0) {
