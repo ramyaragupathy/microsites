@@ -21,7 +21,7 @@ var babel = require('gulp-babel');
 // renders the site. Once the rendering has finished the assets are copied.
 gulp.task('copy:assets', function (done) {
   return gulp.src('.tmp/assets/**')
-    .pipe(gulp.dest('_site/microsites/assets'));
+    .pipe(gulp.dest('_site/assets'));
 });
 
 /* ------------------------------------------------------------------------------
@@ -64,10 +64,7 @@ gulp.task('compress:main', function () {
   if (environment === 'development') {
     task = task.pipe(concat('main.min.js'));
   } else {
-    task = task.pipe(uglify('main.min.js', {
-      outSourceMap: true,
-      mangle: false
-    }));
+    task = task.pipe(uglify());
   }
   return task.pipe(gulp.dest('.tmp/assets/scripts'));
 });
@@ -81,10 +78,7 @@ gulp.task('compress:vendor', function () {
   if (environment === 'development') {
     task = task.pipe(concat('vendor.min.js'));
   } else {
-    task = task.pipe(uglify('vendor.min.js', {
-      outSourceMap: true,
-      mangle: false
-    }));
+    task = task.pipe(uglify());
   }
 
   return task.pipe(gulp.dest('.tmp/assets/scripts'));
@@ -143,7 +137,7 @@ gulp.task('serve', ['build'], function () {
   browserSync({
     port: 3000,
     server: {
-      baseDir: ['.tmp', '_site']
+      baseDir: ['_site']
     }
   });
 
