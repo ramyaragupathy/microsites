@@ -1,7 +1,7 @@
 ---
 layout: country
 lang: en
-permalink: /Bhutan/
+permalink: /microsites/Bhutan/
 id: btn
 name: Bhutan
 contact: 

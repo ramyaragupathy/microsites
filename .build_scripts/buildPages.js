@@ -31,7 +31,7 @@ function genCountryPage (countryPageInfo) {
     '---',
     'layout: country',
     'lang: en',
-    'permalink: /' + countryName + '/',
+    'permalink: /microsites/' + countryName + '/',
     'id: ' + countryCode.toLowerCase(),
     'name: ' + countryName,
     'contact: ',

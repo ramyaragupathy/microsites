@@ -1,7 +1,7 @@
 ---
 layout: country
 lang: en
-permalink: /Kosovo/
+permalink: /microsites/Kosovo/
 id: kos
 name: Kosovo
 contact: 

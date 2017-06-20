@@ -1,7 +1,7 @@
 ---
 layout: country
 lang: en
-permalink: /United Arab Emirates/
+permalink: /microsites/United Arab Emirates/
 id: are
 name: United Arab Emirates
 contact: 

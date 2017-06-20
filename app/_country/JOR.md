@@ -1,7 +1,7 @@
 ---
 layout: country
 lang: en
-permalink: /Jordan/
+permalink: /microsites/Jordan/
 id: jor
 name: Jordan
 contact: 

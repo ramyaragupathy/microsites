@@ -1,7 +1,7 @@
 ---
 layout: country
 lang: en
-permalink: /Mali/
+permalink: /microsites/Mali/
 id: mli
 name: Mali
 contact: 

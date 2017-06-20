@@ -1,7 +1,7 @@
 ---
 layout: country
 lang: en
-permalink: /Greenland/
+permalink: /microsites/Greenland/
 id: grl
 name: Greenland
 contact: 

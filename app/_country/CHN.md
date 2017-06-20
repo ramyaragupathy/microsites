@@ -1,7 +1,7 @@
 ---
 layout: country
 lang: en
-permalink: /China/
+permalink: /microsites/China/
 id: chn
 name: China
 contact: 

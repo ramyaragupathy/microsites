@@ -1,7 +1,7 @@
 ---
 layout: country
 lang: en
-permalink: /Japan/
+permalink: /microsites/Japan/
 id: jpn
 name: Japan
 contact: 

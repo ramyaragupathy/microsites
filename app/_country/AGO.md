@@ -1,7 +1,7 @@
 ---
 layout: country
 lang: en
-permalink: /Angola/
+permalink: /microsites/Angola/
 id: ago
 name: Angola
 contact: 

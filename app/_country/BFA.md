@@ -1,7 +1,7 @@
 ---
 layout: country
 lang: en
-permalink: /Burkina Faso/
+permalink: /microsites/Burkina Faso/
 id: bfa
 name: Burkina Faso
 contact: 

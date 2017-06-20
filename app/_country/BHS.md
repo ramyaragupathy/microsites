@@ -1,7 +1,7 @@
 ---
 layout: country
 lang: en
-permalink: /The Bahamas/
+permalink: /microsites/The Bahamas/
 id: bhs
 name: The Bahamas
 contact: 

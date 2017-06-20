@@ -1,7 +1,7 @@
 ---
 layout: country
 lang: en
-permalink: /Bosnia and Herzegovina/
+permalink: /microsites/Bosnia and Herzegovina/
 id: bih
 name: Bosnia and Herzegovina
 contact: 

@@ -1,7 +1,7 @@
 ---
 layout: country
 lang: en
-permalink: /Macedonia/
+permalink: /microsites/Macedonia/
 id: mkd
 name: Macedonia
 contact: 

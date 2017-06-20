@@ -1,7 +1,7 @@
 ---
 layout: country
 lang: en
-permalink: /Czech Republic/
+permalink: /microsites/Czech Republic/
 id: cze
 name: Czech Republic
 contact: 

@@ -1,7 +1,7 @@
 ---
 layout: country
 lang: en
-permalink: /Costa Rica/
+permalink: /microsites/Costa Rica/
 id: cri
 name: Costa Rica
 contact: 

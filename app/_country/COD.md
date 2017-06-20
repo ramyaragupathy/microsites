@@ -1,7 +1,7 @@
 ---
 layout: country
 lang: en
-permalink: /Democratic Republic of the Congo/
+permalink: /microsites/Democratic Republic of the Congo/
 id: cod
 name: Democratic Republic of the Congo
 contact: 

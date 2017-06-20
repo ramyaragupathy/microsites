@@ -1,7 +1,7 @@
 ---
 layout: country
 lang: en
-permalink: /Ecuador/
+permalink: /microsites/Ecuador/
 id: ecu
 name: Ecuador
 contact: 

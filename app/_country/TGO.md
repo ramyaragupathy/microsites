@@ -1,7 +1,7 @@
 ---
 layout: country
 lang: en
-permalink: /Togo/
+permalink: /microsites/Togo/
 id: tgo
 name: Togo
 contact: 

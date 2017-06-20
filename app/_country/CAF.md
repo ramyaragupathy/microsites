@@ -1,7 +1,7 @@
 ---
 layout: country
 lang: en
-permalink: /Central African Republic/
+permalink: /microsites/Central African Republic/
 id: caf
 name: Central African Republic
 contact: 

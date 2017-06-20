@@ -1,7 +1,7 @@
 ---
 layout: country
 lang: en
-permalink: /Haiti/
+permalink: /microsites/Haiti/
 id: hti
 name: Haiti
 contact: 

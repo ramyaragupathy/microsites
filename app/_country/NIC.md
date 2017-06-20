@@ -1,7 +1,7 @@
 ---
 layout: country
 lang: en
-permalink: /Nicaragua/
+permalink: /microsites/Nicaragua/
 id: nic
 name: Nicaragua
 contact: 

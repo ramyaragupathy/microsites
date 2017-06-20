@@ -1,7 +1,7 @@
 ---
 layout: country
 lang: en
-permalink: /Ethiopia/
+permalink: /microsites/Ethiopia/
 id: eth
 name: Ethiopia
 contact: 

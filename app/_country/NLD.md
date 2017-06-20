@@ -1,7 +1,7 @@
 ---
 layout: country
 lang: en
-permalink: /Netherlands/
+permalink: /microsites/Netherlands/
 id: nld
 name: Netherlands
 contact: 

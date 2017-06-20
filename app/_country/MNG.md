@@ -1,7 +1,7 @@
 ---
 layout: country
 lang: en
-permalink: /Mongolia/
+permalink: /microsites/Mongolia/
 id: mng
 name: Mongolia
 contact: 

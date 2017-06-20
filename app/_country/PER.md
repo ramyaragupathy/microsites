@@ -1,7 +1,7 @@
 ---
 layout: country
 lang: en
-permalink: /Peru/
+permalink: /microsites/Peru/
 id: per
 name: Peru
 contact: 

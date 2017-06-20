@@ -1,7 +1,7 @@
 ---
 layout: country
 lang: en
-permalink: /South Sudan/
+permalink: /microsites/South Sudan/
 id: sds
 name: South Sudan
 contact: 

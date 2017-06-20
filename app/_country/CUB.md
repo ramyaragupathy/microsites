@@ -1,7 +1,7 @@
 ---
 layout: country
 lang: en
-permalink: /Cuba/
+permalink: /microsites/Cuba/
 id: cub
 name: Cuba
 contact: 

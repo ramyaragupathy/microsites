@@ -1,7 +1,7 @@
 ---
 layout: country
 lang: en
-permalink: /Hungary/
+permalink: /microsites/Hungary/
 id: hun
 name: Hungary
 contact: 

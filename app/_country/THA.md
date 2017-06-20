@@ -1,7 +1,7 @@
 ---
 layout: country
 lang: en
-permalink: /Thailand/
+permalink: /microsites/Thailand/
 id: tha
 name: Thailand
 contact: 

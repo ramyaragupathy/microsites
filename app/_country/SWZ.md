@@ -1,7 +1,7 @@
 ---
 layout: country
 lang: en
-permalink: /Swaziland/
+permalink: /microsites/Swaziland/
 id: swz
 name: Swaziland
 contact: 

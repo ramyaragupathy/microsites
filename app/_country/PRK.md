@@ -1,7 +1,7 @@
 ---
 layout: country
 lang: en
-permalink: /North Korea/
+permalink: /microsites/North Korea/
 id: prk
 name: North Korea
 contact: 

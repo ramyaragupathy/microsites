@@ -1,7 +1,7 @@
 ---
 layout: country
 lang: en
-permalink: /United Republic of Tanzania/
+permalink: /microsites/United Republic of Tanzania/
 id: tza
 name: United Republic of Tanzania
 contact: 

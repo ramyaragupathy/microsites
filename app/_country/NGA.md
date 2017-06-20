@@ -1,7 +1,7 @@
 ---
 layout: country
 lang: en
-permalink: /Nigeria/
+permalink: /microsites/Nigeria/
 id: nga
 name: Nigeria
 contact: 

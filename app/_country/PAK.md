@@ -1,7 +1,7 @@
 ---
 layout: country
 lang: en
-permalink: /Pakistan/
+permalink: /microsites/Pakistan/
 id: pak
 name: Pakistan
 contact: 

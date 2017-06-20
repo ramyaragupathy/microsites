@@ -1,7 +1,7 @@
 ---
 layout: country
 lang: en
-permalink: /Estonia/
+permalink: /microsites/Estonia/
 id: est
 name: Estonia
 contact: 

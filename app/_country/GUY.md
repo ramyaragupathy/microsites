@@ -1,7 +1,7 @@
 ---
 layout: country
 lang: en
-permalink: /Guyana/
+permalink: /microsites/Guyana/
 id: guy
 name: Guyana
 contact: 

@@ -1,7 +1,7 @@
 ---
 layout: country
 lang: en
-permalink: /Cyprus/
+permalink: /microsites/Cyprus/
 id: cyp
 name: Cyprus
 contact: 

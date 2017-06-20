@@ -1,7 +1,7 @@
 ---
 layout: country
 lang: en
-permalink: /Namibia/
+permalink: /microsites/Namibia/
 id: nam
 name: Namibia
 contact: 

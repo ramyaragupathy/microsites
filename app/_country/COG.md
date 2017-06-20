@@ -1,7 +1,7 @@
 ---
 layout: country
 lang: en
-permalink: /Republic of the Congo/
+permalink: /microsites/Republic of the Congo/
 id: cog
 name: Republic of the Congo
 contact: 

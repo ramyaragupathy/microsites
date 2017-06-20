@@ -1,7 +1,7 @@
 ---
 layout: country
 lang: en
-permalink: /Western Sahara/
+permalink: /microsites/Western Sahara/
 id: esh
 name: Western Sahara
 contact: 

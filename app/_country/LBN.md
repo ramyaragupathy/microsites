@@ -1,7 +1,7 @@
 ---
 layout: country
 lang: en
-permalink: /Lebanon/
+permalink: /microsites/Lebanon/
 id: lbn
 name: Lebanon
 contact: 

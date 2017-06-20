@@ -1,7 +1,7 @@
 ---
 layout: country
 lang: en
-permalink: /Sudan/
+permalink: /microsites/Sudan/
 id: sdn
 name: Sudan
 contact: 

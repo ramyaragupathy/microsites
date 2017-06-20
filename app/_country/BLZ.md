@@ -1,7 +1,7 @@
 ---
 layout: country
 lang: en
-permalink: /Belize/
+permalink: /microsites/Belize/
 id: blz
 name: Belize
 contact: 

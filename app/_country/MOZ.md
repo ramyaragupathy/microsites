@@ -1,7 +1,7 @@
 ---
 layout: country
 lang: en
-permalink: /Mozambique/
+permalink: /microsites/Mozambique/
 id: moz
 name: Mozambique
 contact: 

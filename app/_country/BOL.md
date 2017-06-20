@@ -1,7 +1,7 @@
 ---
 layout: country
 lang: en
-permalink: /Bolivia/
+permalink: /microsites/Bolivia/
 id: bol
 name: Bolivia
 contact: 

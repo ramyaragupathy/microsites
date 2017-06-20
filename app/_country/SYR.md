@@ -1,7 +1,7 @@
 ---
 layout: country
 lang: en
-permalink: /Syria/
+permalink: /microsites/Syria/
 id: syr
 name: Syria
 contact: 

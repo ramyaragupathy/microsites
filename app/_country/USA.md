@@ -1,7 +1,7 @@
 ---
 layout: country
 lang: en
-permalink: /United States of America/
+permalink: /microsites/United States of America/
 id: usa
 name: United States of America
 contact: 

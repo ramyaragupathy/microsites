@@ -1,7 +1,7 @@
 ---
 layout: country
 lang: en
-permalink: /Zimbabwe/
+permalink: /microsites/Zimbabwe/
 id: zwe
 name: Zimbabwe
 contact: 

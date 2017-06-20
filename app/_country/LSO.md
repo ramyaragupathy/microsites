@@ -1,7 +1,7 @@
 ---
 layout: country
 lang: en
-permalink: /Lesotho/
+permalink: /microsites/Lesotho/
 id: lso
 name: Lesotho
 contact: 

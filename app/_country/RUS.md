@@ -1,7 +1,7 @@
 ---
 layout: country
 lang: en
-permalink: /Russia/
+permalink: /microsites/Russia/
 id: rus
 name: Russia
 contact: 
