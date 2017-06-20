@@ -21,7 +21,7 @@ function genCountryPage (countryPageInfo) {
   const countryName = countryPageInfo[0].name;
   const countryCode = countryPageInfo[0].code;
   const countryLink = countryPageInfo[0].osmLink || 'https://openstreetmap.org';
-  const countryPage = 'app/_country/' + countryCode + '.md';
+  const countryPage = './app/_country/' + countryCode + '.md';
   const alpha2 = countries.alpha3ToAlpha2(countryPageInfo[0].code);
   let countryFlag;
   if (alpha2 !== undefined) {
