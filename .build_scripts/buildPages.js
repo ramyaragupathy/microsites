@@ -36,13 +36,13 @@ function genCountryPage (countryPageInfo) {
     'name: ' + countryName,
     'contact: ',
     'flag: ' + countryFlag + '.svg',
+    'osmLink: ' + countryLink,
     'calendar: ',
     'updates: ',
     '  - title: ',
     '    author: ',
     '    date: ',
     '    content: ',
-    '    osmLink: ' + countryLink,
     '    link: ',
     '    linktext:',
     'tm-projects: '
@@ -59,7 +59,6 @@ function genCountryPage (countryPageInfo) {
     countryPageMetaData.push(tmProjects.join('\n'));
   }
   countryPageMetaData.push('---');
-  console.log(countryPageMetaData);
   fs.writeFileSync(countryPage, countryPageMetaData.join('\n'));
 }
 
