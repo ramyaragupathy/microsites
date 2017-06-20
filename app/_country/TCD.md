@@ -1,7 +1,7 @@
 ---
 layout: country
 lang: en
-permalink: /Chad/
+permalink: /microsites/Chad/
 id: tcd
 name: Chad
 contact: 

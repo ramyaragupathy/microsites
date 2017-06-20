@@ -1,7 +1,7 @@
 ---
 layout: country
 lang: en
-permalink: /Zambia/
+permalink: /microsites/Zambia/
 id: zmb
 name: Zambia
 contact: 

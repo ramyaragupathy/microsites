@@ -1,7 +1,7 @@
 ---
 layout: country
 lang: en
-permalink: /Montenegro/
+permalink: /microsites/Montenegro/
 id: mne
 name: Montenegro
 contact: 

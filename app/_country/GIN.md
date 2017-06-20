@@ -1,7 +1,7 @@
 ---
 layout: country
 lang: en
-permalink: /Guinea/
+permalink: /microsites/Guinea/
 id: gin
 name: Guinea
 contact: 

@@ -1,7 +1,7 @@
 ---
 layout: country
 lang: en
-permalink: /Switzerland/
+permalink: /microsites/Switzerland/
 id: che
 name: Switzerland
 contact: 

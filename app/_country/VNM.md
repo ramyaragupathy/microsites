@@ -1,7 +1,7 @@
 ---
 layout: country
 lang: en
-permalink: /Vietnam/
+permalink: /microsites/Vietnam/
 id: vnm
 name: Vietnam
 contact: 

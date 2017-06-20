@@ -1,7 +1,7 @@
 ---
 layout: country
 lang: en
-permalink: /South Africa/
+permalink: /microsites/South Africa/
 id: zaf
 name: South Africa
 contact: 

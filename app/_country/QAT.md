@@ -1,7 +1,7 @@
 ---
 layout: country
 lang: en
-permalink: /Qatar/
+permalink: /microsites/Qatar/
 id: qat
 name: Qatar
 contact: 

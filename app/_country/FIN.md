@@ -1,7 +1,7 @@
 ---
 layout: country
 lang: en
-permalink: /Finland/
+permalink: /microsites/Finland/
 id: fin
 name: Finland
 contact: 

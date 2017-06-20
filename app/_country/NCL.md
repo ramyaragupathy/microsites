@@ -1,7 +1,7 @@
 ---
 layout: country
 lang: en
-permalink: /New Caledonia/
+permalink: /microsites/New Caledonia/
 id: ncl
 name: New Caledonia
 contact: 

@@ -1,7 +1,7 @@
 ---
 layout: country
 lang: en
-permalink: /South Korea/
+permalink: /microsites/South Korea/
 id: kor
 name: South Korea
 contact: 

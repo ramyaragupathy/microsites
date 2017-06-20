@@ -1,7 +1,7 @@
 ---
 layout: country
 lang: en
-permalink: /Taiwan/
+permalink: /microsites/Taiwan/
 id: twn
 name: Taiwan
 contact: 

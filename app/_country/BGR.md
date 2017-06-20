@@ -1,7 +1,7 @@
 ---
 layout: country
 lang: en
-permalink: /Bulgaria/
+permalink: /microsites/Bulgaria/
 id: bgr
 name: Bulgaria
 contact: 

@@ -1,7 +1,7 @@
 ---
 layout: country
 lang: en
-permalink: /Egypt/
+permalink: /microsites/Egypt/
 id: egy
 name: Egypt
 contact: 

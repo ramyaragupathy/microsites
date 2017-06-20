@@ -1,7 +1,7 @@
 ---
 layout: country
 lang: en
-permalink: /Benin/
+permalink: /microsites/Benin/
 id: ben
 name: Benin
 contact: 

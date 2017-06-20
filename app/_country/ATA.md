@@ -1,7 +1,7 @@
 ---
 layout: country
 lang: en
-permalink: /Antarctica/
+permalink: /microsites/Antarctica/
 id: ata
 name: Antarctica
 contact: 

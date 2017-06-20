@@ -1,7 +1,7 @@
 ---
 layout: country
 lang: en
-permalink: /Philippines/
+permalink: /microsites/Philippines/
 id: phl
 name: Philippines
 contact: 

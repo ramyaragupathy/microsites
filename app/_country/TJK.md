@@ -1,7 +1,7 @@
 ---
 layout: country
 lang: en
-permalink: /Tajikistan/
+permalink: /microsites/Tajikistan/
 id: tjk
 name: Tajikistan
 contact: 

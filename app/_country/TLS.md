@@ -1,7 +1,7 @@
 ---
 layout: country
 lang: en
-permalink: /East Timor/
+permalink: /microsites/East Timor/
 id: tls
 name: East Timor
 contact: 

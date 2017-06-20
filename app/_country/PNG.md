@@ -1,7 +1,7 @@
 ---
 layout: country
 lang: en
-permalink: /Papua New Guinea/
+permalink: /microsites/Papua New Guinea/
 id: png
 name: Papua New Guinea
 contact: 

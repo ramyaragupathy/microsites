@@ -1,7 +1,7 @@
 ---
 layout: country
 lang: en
-permalink: /Indonesia/
+permalink: /microsites/Indonesia/
 id: idn
 name: Indonesia
 contact: 

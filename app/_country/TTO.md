@@ -1,7 +1,7 @@
 ---
 layout: country
 lang: en
-permalink: /Trinidad and Tobago/
+permalink: /microsites/Trinidad and Tobago/
 id: tto
 name: Trinidad and Tobago
 contact: 

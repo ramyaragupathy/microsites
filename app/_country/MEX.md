@@ -1,7 +1,7 @@
 ---
 layout: country
 lang: en
-permalink: /Mexico/
+permalink: /microsites/Mexico/
 id: mex
 name: Mexico
 contact: 

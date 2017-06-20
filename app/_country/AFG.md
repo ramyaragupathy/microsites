@@ -1,7 +1,7 @@
 ---
 layout: country
 lang: en
-permalink: /Afghanistan/
+permalink: /microsites/Afghanistan/
 id: afg
 name: Afghanistan
 contact: 

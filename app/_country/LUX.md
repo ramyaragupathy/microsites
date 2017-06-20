@@ -1,7 +1,7 @@
 ---
 layout: country
 lang: en
-permalink: /Luxembourg/
+permalink: /microsites/Luxembourg/
 id: lux
 name: Luxembourg
 contact: 

@@ -1,7 +1,7 @@
 ---
 layout: country
 lang: en
-permalink: /Greece/
+permalink: /microsites/Greece/
 id: grc
 name: Greece
 contact: 

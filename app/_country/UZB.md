@@ -1,7 +1,7 @@
 ---
 layout: country
 lang: en
-permalink: /Uzbekistan/
+permalink: /microsites/Uzbekistan/
 id: uzb
 name: Uzbekistan
 contact: 

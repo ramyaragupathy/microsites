@@ -1,7 +1,7 @@
 ---
 layout: country
 lang: en
-permalink: /Liberia/
+permalink: /microsites/Liberia/
 id: lbr
 name: Liberia
 contact: 

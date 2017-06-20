@@ -1,7 +1,7 @@
 ---
 layout: country
 lang: en
-permalink: /Ivory Coast/
+permalink: /microsites/Ivory Coast/
 id: civ
 name: Ivory Coast
 contact: 

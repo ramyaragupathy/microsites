@@ -1,7 +1,7 @@
 ---
 layout: country
 lang: en
-permalink: /Iraq/
+permalink: /microsites/Iraq/
 id: irq
 name: Iraq
 contact: 

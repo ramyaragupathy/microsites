@@ -1,7 +1,7 @@
 ---
 layout: country
 lang: en
-permalink: /New Zealand/
+permalink: /microsites/New Zealand/
 id: nzl
 name: New Zealand
 contact: 

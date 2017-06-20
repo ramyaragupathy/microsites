@@ -1,7 +1,7 @@
 ---
 layout: country
 lang: en
-permalink: /Brazil/
+permalink: /microsites/Brazil/
 id: bra
 name: Brazil
 contact: 

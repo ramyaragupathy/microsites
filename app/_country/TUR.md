@@ -1,7 +1,7 @@
 ---
 layout: country
 lang: en
-permalink: /Turkey/
+permalink: /microsites/Turkey/
 id: tur
 name: Turkey
 contact: 

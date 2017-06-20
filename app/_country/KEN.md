@@ -1,7 +1,7 @@
 ---
 layout: country
 lang: en
-permalink: /Kenya/
+permalink: /microsites/Kenya/
 id: ken
 name: Kenya
 contact: 

@@ -1,7 +1,7 @@
 ---
 layout: country
 lang: en
-permalink: /Slovakia/
+permalink: /microsites/Slovakia/
 id: svk
 name: Slovakia
 contact: 

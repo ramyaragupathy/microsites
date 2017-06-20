@@ -1,7 +1,7 @@
 ---
 layout: country
 lang: en
-permalink: /Kuwait/
+permalink: /microsites/Kuwait/
 id: kwt
 name: Kuwait
 contact: 

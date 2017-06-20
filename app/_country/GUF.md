@@ -1,7 +1,7 @@
 ---
 layout: country
 lang: en
-permalink: /French Guiana/
+permalink: /microsites/French Guiana/
 id: guf
 name: French Guiana
 contact: 

@@ -1,7 +1,7 @@
 ---
 layout: country
 lang: en
-permalink: /Jamaica/
+permalink: /microsites/Jamaica/
 id: jam
 name: Jamaica
 contact: 

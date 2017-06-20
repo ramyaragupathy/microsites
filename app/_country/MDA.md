@@ -1,7 +1,7 @@
 ---
 layout: country
 lang: en
-permalink: /Moldova/
+permalink: /microsites/Moldova/
 id: mda
 name: Moldova
 contact: 

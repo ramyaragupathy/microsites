@@ -1,7 +1,7 @@
 ---
 layout: country
 lang: en
-permalink: /Morocco/
+permalink: /microsites/Morocco/
 id: mar
 name: Morocco
 contact: 

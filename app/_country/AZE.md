@@ -1,7 +1,7 @@
 ---
 layout: country
 lang: en
-permalink: /Azerbaijan/
+permalink: /microsites/Azerbaijan/
 id: aze
 name: Azerbaijan
 contact: 

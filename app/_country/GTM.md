@@ -1,7 +1,7 @@
 ---
 layout: country
 lang: en
-permalink: /Guatemala/
+permalink: /microsites/Guatemala/
 id: gtm
 name: Guatemala
 contact: 

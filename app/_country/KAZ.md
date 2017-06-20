@@ -1,7 +1,7 @@
 ---
 layout: country
 lang: en
-permalink: /Kazakhstan/
+permalink: /microsites/Kazakhstan/
 id: kaz
 name: Kazakhstan
 contact: 

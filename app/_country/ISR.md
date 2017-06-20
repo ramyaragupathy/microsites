@@ -1,7 +1,7 @@
 ---
 layout: country
 lang: en
-permalink: /Israel/
+permalink: /microsites/Israel/
 id: isr
 name: Israel
 contact: 

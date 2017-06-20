@@ -1,7 +1,7 @@
 ---
 layout: country
 lang: en
-permalink: /Rwanda/
+permalink: /microsites/Rwanda/
 id: rwa
 name: Rwanda
 contact: 

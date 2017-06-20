@@ -1,7 +1,7 @@
 ---
 layout: country
 lang: en
-permalink: /Bermuda/
+permalink: /microsites/Bermuda/
 id: bmu
 name: Bermuda
 contact: 

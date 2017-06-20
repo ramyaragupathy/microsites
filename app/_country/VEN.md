@@ -1,7 +1,7 @@
 ---
 layout: country
 lang: en
-permalink: /Venezuela/
+permalink: /microsites/Venezuela/
 id: ven
 name: Venezuela
 contact: 

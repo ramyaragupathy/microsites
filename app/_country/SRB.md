@@ -1,7 +1,7 @@
 ---
 layout: country
 lang: en
-permalink: /Republic of Serbia/
+permalink: /microsites/Republic of Serbia/
 id: srb
 name: Republic of Serbia
 contact: 

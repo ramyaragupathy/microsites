@@ -1,7 +1,7 @@
 ---
 layout: country
 lang: en
-permalink: /Sierra Leone/
+permalink: /microsites/Sierra Leone/
 id: sle
 name: Sierra Leone
 contact: 

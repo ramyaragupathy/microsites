@@ -1,7 +1,7 @@
 ---
 layout: country
 lang: en
-permalink: /Sweden/
+permalink: /microsites/Sweden/
 id: swe
 name: Sweden
 contact: 

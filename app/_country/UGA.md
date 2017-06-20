@@ -1,7 +1,7 @@
 ---
 layout: country
 lang: en
-permalink: /Uganda/
+permalink: /microsites/Uganda/
 id: uga
 name: Uganda
 contact: 

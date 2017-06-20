@@ -1,7 +1,7 @@
 ---
 layout: country
 lang: en
-permalink: /Cameroon/
+permalink: /microsites/Cameroon/
 id: cmr
 name: Cameroon
 contact: 

@@ -1,7 +1,7 @@
 ---
 layout: country
 lang: en
-permalink: /Romania/
+permalink: /microsites/Romania/
 id: rou
 name: Romania
 contact: 

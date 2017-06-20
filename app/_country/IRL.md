@@ -1,7 +1,7 @@
 ---
 layout: country
 lang: en
-permalink: /Ireland/
+permalink: /microsites/Ireland/
 id: irl
 name: Ireland
 contact: 

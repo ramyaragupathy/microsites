@@ -1,7 +1,7 @@
 ---
 layout: country
 lang: en
-permalink: /Senegal/
+permalink: /microsites/Senegal/
 id: sen
 name: Senegal
 contact: 

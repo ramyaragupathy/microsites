@@ -1,7 +1,7 @@
 ---
 layout: country
 lang: en
-permalink: /Malaysia/
+permalink: /microsites/Malaysia/
 id: mys
 name: Malaysia
 contact: 

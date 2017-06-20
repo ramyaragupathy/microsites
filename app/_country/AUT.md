@@ -1,7 +1,7 @@
 ---
 layout: country
 lang: en
-permalink: /Austria/
+permalink: /microsites/Austria/
 id: aut
 name: Austria
 contact: 

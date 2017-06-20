@@ -1,7 +1,7 @@
 ---
 layout: country
 lang: en
-permalink: /Nepal/
+permalink: /microsites/Nepal/
 id: npl
 name: Nepal
 contact: 

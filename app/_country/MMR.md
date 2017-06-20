@@ -1,7 +1,7 @@
 ---
 layout: country
 lang: en
-permalink: /Myanmar/
+permalink: /microsites/Myanmar/
 id: mmr
 name: Myanmar
 contact: 

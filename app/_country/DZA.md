@@ -1,7 +1,7 @@
 ---
 layout: country
 lang: en
-permalink: /Algeria/
+permalink: /microsites/Algeria/
 id: dza
 name: Algeria
 contact: 

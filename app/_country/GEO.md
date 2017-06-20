@@ -1,7 +1,7 @@
 ---
 layout: country
 lang: en
-permalink: /Georgia/
+permalink: /microsites/Georgia/
 id: geo
 name: Georgia
 contact: 

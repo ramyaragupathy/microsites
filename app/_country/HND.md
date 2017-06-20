@@ -1,7 +1,7 @@
 ---
 layout: country
 lang: en
-permalink: /Honduras/
+permalink: /microsites/Honduras/
 id: hnd
 name: Honduras
 contact: 

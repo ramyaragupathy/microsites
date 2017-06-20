@@ -1,7 +1,7 @@
 ---
 layout: country
 lang: en
-permalink: /Botswana/
+permalink: /microsites/Botswana/
 id: bwa
 name: Botswana
 contact: 

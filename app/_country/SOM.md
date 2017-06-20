@@ -1,7 +1,7 @@
 ---
 layout: country
 lang: en
-permalink: /Somalia/
+permalink: /microsites/Somalia/
 id: som
 name: Somalia
 contact: 

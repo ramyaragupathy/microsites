@@ -1,7 +1,7 @@
 ---
 layout: country
 lang: en
-permalink: /El Salvador/
+permalink: /microsites/El Salvador/
 id: slv
 name: El Salvador
 contact: 

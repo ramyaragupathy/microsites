@@ -1,7 +1,7 @@
 ---
 layout: country
 lang: en
-permalink: /Latvia/
+permalink: /microsites/Latvia/
 id: lva
 name: Latvia
 contact: 

@@ -1,7 +1,7 @@
 ---
 layout: country
 lang: en
-permalink: /Madagascar/
+permalink: /microsites/Madagascar/
 id: mdg
 name: Madagascar
 contact: 
