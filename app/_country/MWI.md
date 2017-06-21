@@ -13,7 +13,7 @@ updates:
     date: 06/21/2017
     content: >-
       The American Red Cross made use of Missing Maps generated data while
-      helping Malawi's vaccination campaign.
+      helping with the recent measles vaccination campaign in Malawi
     link: 'https://twitter.com/emilyeros/status/874950344190681088'
     linktext: See more here
 tm-projects:
