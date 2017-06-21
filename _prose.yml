@@ -37,16 +37,7 @@ prose:
       - name: layout
         field:
           element: "hidden"
-      - name: permalink
-        field:
-          element: "hidden"
-      - name: id
-        field:
-          element: "hidden"
-      - flag:
-        field:
-          element: "hidden"
-      - name:
+          value: "country"
       - name: "contact"
         field:
           label: "Microsite Contact"
