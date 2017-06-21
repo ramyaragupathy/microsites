@@ -7,7 +7,7 @@ name: Malawi
 contact: 
 flag: mw.svg
 osmLink: https://openstreetmap.org/relation/195290
-calendar: 
+calendar: developmentseed.org_mc692emvp2h1s2f31kenbrh474@group.calendar.google.com 
 updates: 
   - title: 
     author: 

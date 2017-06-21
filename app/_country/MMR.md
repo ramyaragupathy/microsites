@@ -7,7 +7,7 @@ name: Myanmar
 contact: 
 flag: mm.svg
 osmLink: https://openstreetmap.org/relation/50371
-calendar: 
+calendar: developmentseed.org_s0ouode2046fv8ittqo4kuus74@group.calendar.google.com
 updates: 
   - title: 
     author: 
