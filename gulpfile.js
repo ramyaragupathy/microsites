@@ -64,7 +64,10 @@ gulp.task('compress:main', function () {
   if (environment === 'development') {
     task = task.pipe(concat('main.min.js'));
   } else {
-    task = task.pipe(uglify());
+    task = task.pipe(uglify('main.min.js', {
+      sourceMap: true,
+      mange: false
+    }));
   }
   return task.pipe(gulp.dest('.tmp/assets/scripts'));
 });
@@ -78,7 +81,10 @@ gulp.task('compress:vendor', function () {
   if (environment === 'development') {
     task = task.pipe(concat('vendor.min.js'));
   } else {
-    task = task.pipe(uglify());
+    task = task.pipe(uglify('vendor.min.js', {
+      sourceMap: true,
+      mange: false
+    }));
   }
 
   return task.pipe(gulp.dest('.tmp/assets/scripts'));

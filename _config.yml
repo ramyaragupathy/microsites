@@ -12,7 +12,7 @@ highlighter: false
 
 domain:         http://www.missingmaps.org
 
-default_microsite: /microsites
+default_microsite: microsites
 
 collections:
   country:
