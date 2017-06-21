@@ -1,0 +1,18 @@
+---
+layout: default
+---
+
+{% include header.html %}
+
+<script>
+  // creates PT object for each page. Including lang for future usec
+  var PT = { lang: '{{page.lang}}' };
+</script>
+
+<h1>{{ page.name }}</h1>
+
+<section class = "Countries clearfix" >
+  {% include countries.html %}
+</section>
+
+{% include footer.html %}

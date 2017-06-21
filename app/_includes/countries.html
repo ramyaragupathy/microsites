@@ -1,0 +1,16 @@
+
+<div class="Countries-Container">
+  <h1 class="countries-item">{{ page.name }}</h1>
+  <img src="{{ site.domain }}{{ site.path_prefix }}/assets/graphics/content/logos/mmOutline.svg"
+  class="countries-item"/>
+  <p class="countries-item">Type in the name of country to see how the MissingMaps community is contributing there!</p>
+  <div class="countries-item" id="countries">
+    <div id="countriesInput">
+      <input id="inputText" type="text" onkeyup="countriesFilter(this)" placeholder="Enter a Country Name"/>
+      <input id="inputSubmit" type="submit" value=""/>
+      <div id="countries-input-btn"></div>
+    </div>
+    <div id="countries-list">
+    <div/>
+  </div>
+</div>

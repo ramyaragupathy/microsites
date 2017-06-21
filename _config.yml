@@ -12,10 +12,14 @@ highlighter: false
 
 domain:         http://www.missingmaps.org
 
-default_microsite: all
+default_microsite: /microsites
 
 collections:
   country:
+    output: true
+    permalink: /:path/
+    lang: en
+  main:
     output: true
     permalink: /:path/
     lang: en
