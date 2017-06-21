@@ -4,19 +4,22 @@
  -------------------------------------------------------*/
 
 function getPrimaryStats (countryId) {
-
   const url = `http://osmstats.redcross.org/countries/${countryId}`;
   $.getJSON(url, function (countryData) {
-    // round value for select stats, then add them to page
-    const usersCount = Math.round(countryData.contributors);
-    const editsCount = Math.round(countryData.all_edits);
-    const buildingCount = Math.round(countryData.building_count_add);
-    const roadCount = Math.round(countryData.road_count_add);
+    if (countryData.all_edits !== null) {
+      // round value for select stats, then add them to page
+      const usersCount = Math.round(countryData.contributors);
+      const editsCount = Math.round(countryData.all_edits);
+      const buildingCount = Math.round(countryData.building_count_add);
+      const roadCount = Math.round(countryData.road_count_add);
 
-    $('#stats-roadCount').html(roadCount.toLocaleString());
-    $('#stats-buildingCount').html(buildingCount.toLocaleString());
-    $('#stats-usersCount').html(usersCount.toLocaleString());
-    $('#stats-editsCount').html(editsCount.toLocaleString());
+      $('#stats-roadCount').html(roadCount.toLocaleString());
+      $('#stats-buildingCount').html(buildingCount.toLocaleString());
+      $('#stats-usersCount').html(usersCount.toLocaleString());
+      $('#stats-editsCount').html(editsCount.toLocaleString());
+    } else {
+      $('.emphasizedNumber').css('display', 'none');
+    }
   });
 }
 
@@ -373,42 +376,43 @@ function getUserActivityStats (countryId) {
 
   const url = `http://osmstats.redcross.org/countries/${countryId}/users`
   $.getJSON(url, function (userData) {
+    if (userData.length !== 0) {
+      const totalSum = Object.keys(userData).map(function (user) {
+        const totalEdits = Math.round(Number(userData[user].all_edits));
+        return {name: generateUserUrl(userData[user].name), value: totalEdits};
+      }).sort((a, b) => b.value - a.value);
 
-    const totalSum = Object.keys(userData).map(function (user) {
-      const totalEdits = Math.round(Number(userData[user].all_edits));
-      return {name: generateUserUrl(userData[user].name), value: totalEdits};
-    }).sort((a, b) => b.value - a.value);
+      // For each user, sum the total building edits
+      const bldngSum = Object.keys(userData).map(function (user) {
+        const bldngEdits = Math.round(Number(userData[user].building_count_add));
+        return {name: generateUserUrl(userData[user].name), value: bldngEdits};
+      }).sort((a, b) => b.value - a.value);
 
-    // For each user, sum the total building edits
-    const bldngSum = Object.keys(userData).map(function (user) {
-      const bldngEdits = Math.round(Number(userData[user].building_count_add));
-      return {name: generateUserUrl(userData[user].name), value: bldngEdits};
-    }).sort((a, b) => b.value - a.value);
+      // For each user, sum the total road kilometers edited
+      const roadsSum = Object.keys(userData).map(function (user) {
+        const roadsEdits = Math.round(Number(userData[user].road_km_add));
+        return {name: generateUserUrl(userData[user].name), value: roadsEdits};
+      }).sort((a, b) => b.value - a.value);
 
-    // For each user, sum the total road kilometers edited
-    const roadsSum = Object.keys(userData).map(function (user) {
-      const roadsEdits = Math.round(Number(userData[user].road_km_add));
-      return {name: generateUserUrl(userData[user].name), value: roadsEdits};
-    }).sort((a, b) => b.value - a.value);
+      // Spawn a chart function with listening events for each of the metrics
+      var c1 = new Barchart(totalSum, '#Team-User-Total-Graph');
+      var c2 = new Barchart(bldngSum, '#Team-User-Bldng-Graph');
+      var c3 = new Barchart(roadsSum, '#Team-User-Roads-Graph');
 
-    // Spawn a chart function with listening events for each of the metrics
-    var c1 = new Barchart(totalSum, '#Team-User-Total-Graph');
-    var c2 = new Barchart(bldngSum, '#Team-User-Bldng-Graph');
-    var c3 = new Barchart(roadsSum, '#Team-User-Roads-Graph');
+      const moreBtn = $('.btn.invert-btn-grn.teams-btn');
+      if (totalSum.length > 10) {
+        moreBtn.css('display', 'inline').animate({opacity: 1}, 500);
+      } else {
+        moreBtn.css('display', 'inline').animate({opacity: 0}, 500);
+      }
 
-    const moreBtn = $('.btn.invert-btn-grn.teams-btn');
-    if (totalSum.length > 10) {
-      moreBtn.css('display', 'inline').animate({opacity: 1}, 500);
-    } else {
-      moreBtn.css('display', 'inline').animate({opacity: 0}, 500);
+      // On window resize, run window resize function on each chart
+      d3.select(window).on('resize', function () {
+        c1.resize();
+        c2.resize();
+        c3.resize();
+      });
     }
-
-    // On window resize, run window resize function on each chart
-    d3.select(window).on('resize', function () {
-      c1.resize();
-      c2.resize();
-      c3.resize();
-    });
   });
 }
 
@@ -422,9 +426,7 @@ function generateHashtagUrl (hashtag) {
 function getGroupActivityStats (countryId) {
 
   const url = `http://osmstats.redcross.org/countries/${countryId}/hashtags`
-
   $.getJSON(url, function (hashtagData) {
-
       /*
         For each hashtag, generate obj with link to hashtag's mm-leaderboards
         page and the statistic of interest
@@ -435,50 +437,57 @@ function getGroupActivityStats (countryId) {
         3) add to an acc list a) a link to hashtag on leaderboards and b) sum
         4) sort the hashtags from largest to smallest 'sum' value
       */
+    if (hashtagData.length !== 0) {
+      const totalSum = hashtagData.reduce(function (acc, ht) {
+        if (!$.isEmptyObject(ht)) {
+          const sum = Math.round(Number(ht.all_edits));
+          acc.push({name: generateHashtagUrl(ht.hashtag), value: sum});
+        }
+        return acc;
+      }, []).sort((a, b) => b.value - a.value);
 
-    const totalSum = hashtagData.reduce(function (acc, ht) {
+      const bldngSum = hashtagData.reduce(function (acc, ht) {
       if (!$.isEmptyObject(ht)) {
-        const sum = Math.round(Number(ht.all_edits));
+        const sum = Math.round(Number(ht.building_count_add)) +
+        Math.round(Number(ht.building_count_mod));
         acc.push({name: generateHashtagUrl(ht.hashtag), value: sum});
       }
-      return acc;
-    }, []).sort((a, b) => b.value - a.value);
+        return acc;
+      }, []).sort((a, b) => b.value - a.value);
 
-    const bldngSum = hashtagData.reduce(function (acc, ht) {
-    if (!$.isEmptyObject(ht)) {
-      const sum = Math.round(Number(ht.building_count_add)) +
-      Math.round(Number(ht.building_count_mod));
-      acc.push({name: generateHashtagUrl(ht.hashtag), value: sum});
-    }
-      return acc;
-    }, []).sort((a, b) => b.value - a.value);
+      const roadsSum = hashtagData.reduce(function (acc, ht) {
+        if (!$.isEmptyObject(ht)) {
+          const sum = Math.round(Number(ht.road_km_add)) +
+                      Math.round(Number(ht.road_km_add));
+          acc.push({name: generateHashtagUrl(ht.hashtag), value: sum});
+        }
+        return acc;
+      }, []).sort((a, b) => b.value - a.value);
 
-    const roadsSum = hashtagData.reduce(function (acc, ht) {
-      if (!$.isEmptyObject(ht)) {
-        const sum = Math.round(Number(ht.road_km_add)) +
-                    Math.round(Number(ht.road_km_add));
-        acc.push({name: generateHashtagUrl(ht.hashtag), value: sum});
+      // Spawn a chart function with listening events for each of the metrics
+      var c1 = new Barchart(totalSum, '#Team-User-Total-Graph');
+      var c2 = new Barchart(bldngSum, '#Team-User-Bldng-Graph');
+      var c3 = new Barchart(roadsSum, '#Team-User-Roads-Graph');
+
+      const moreBtn = $('.btn.invert-btn-grn.teams-btn');
+      if (totalSum.length > 10) {
+        moreBtn.css('display', 'inline').animate({opacity: 1}, 500);
+      } else {
+        moreBtn.css('display', 'inline').animate({opacity: 0}, 500);
       }
-      return acc;
-    }, []).sort((a, b) => b.value - a.value);
-
-    // Spawn a chart function with listening events for each of the metrics
-    var c1 = new Barchart(totalSum, '#Team-User-Total-Graph');
-    var c2 = new Barchart(bldngSum, '#Team-User-Bldng-Graph');
-    var c3 = new Barchart(roadsSum, '#Team-User-Roads-Graph');
-
-    const moreBtn = $('.btn.invert-btn-grn.teams-btn');
-    if (totalSum.length > 10) {
-      moreBtn.css('display', 'inline').animate({opacity: 1}, 500);
+      // On window resize, run window resize function on each chart
+      d3.select(window).on('resize', function () {
+        c1.resize();
+        c2.resize();
+        c3.resize();
+      });
     } else {
-      moreBtn.css('display', 'inline').animate({opacity: 0}, 500);
+      $('.Team-User-Nav').css('display','none');
+      $('.Team-User-Stats').css('display','none');
+      $('.teams-more').css('display','none');
+      $('.teams-none').css('display', 'block');
+      $('.Team-User-Container h1').css('text-align', 'center');
     }
-    // On window resize, run window resize function on each chart
-    d3.select(window).on('resize', function () {
-      c1.resize();
-      c2.resize();
-      c3.resize();
-    });
   });
 }
 
@@ -657,20 +666,6 @@ function countriesFilter (element) {
     })
   }
 }
-
-// $('#inputText').keydown(function(e) {
-//   const shownCountries = $('#countries-ul  > li').filter((li) => {
-//     const country = $('#countries-ul  > li a')[li];
-//     if (country.style.display !== 'none') {
-//       return $(country).text()
-//     }
-//   });
-//   if ( shownCountries.length === 1) {
-//     if (e.which === 40) {
-//       $('#inputText').val()
-//     }
-//   }
-// })
 
 /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
  ---------------------------------------------------------
