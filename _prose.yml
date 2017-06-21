@@ -421,19 +421,18 @@ prose:
       - name: "contact"
         field:
           element: "text"
-          label: 'Microsite contact's email'
+          placeholder: 'Contact for Microsite'
       - name: "flag"
         field:
           element: "text"
           value: "MMlogo-Outlined.svg"
           label: "flag"
+      - name: "osmLink"
+          element: "text"
+          placeholder: 'Link to country in OSM'
       - name: "calendar"
         field:
           element: "text"
           placeholder: "enter the calendar id"
           help: "for help retrieving calendar id, see calendar section the microsites README"
           label: 'the country id corresponding with the country of interest'
-      - omsLink:
-          element: "text"
-          label: "flag"
-          placeholder: Link to country in OSM
