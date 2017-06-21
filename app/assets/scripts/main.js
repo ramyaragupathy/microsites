@@ -589,6 +589,89 @@ function Barchart (data, targetElement) {
   };
 }
 
+/* -------------------------------------------------------
+ --------------------- Add Country List ------------------
+ -------------------------------------------------------*/
+
+function makeCountriesSelection () {
+  $('#countries-list').css('display', 'none');
+  const url = 'http://osmstats.redcross.org/countries'
+  $.getJSON(url, function(countriesList) {
+    let countries = [];
+    countriesList = countriesList.map((countryObj) => {
+      const country = countryObj.name;
+      countries.push(country);
+    });
+    countries = countries.sort();
+    countries = countries.map((country) => {
+      return [
+        '<li>',
+        '<div>',
+        '<a href=' + '"' + country + '/">',
+        '<div>',
+        country,
+        '</div>',
+        '</a>',
+        '</li>'
+      ].join('');
+    })
+    countries = countries.join('')
+    countries = [
+      '<ul id="countries-ul">',
+      countries,
+      '</ul>'
+    ].join('');
+    $('#countries-list').append(countries)
+  });
+}
+
+function countriesFilter (element) {
+  $ ('#countries-list').css('display', 'block');
+  let value = $(element).val().toLowerCase();
+  if (value.length === 0) {
+    $('#countries-list').css('display', 'none');
+  }
+  $('#countries-ul  > li').each((li) => {
+    const country = $('#countries-ul  > li')[li]
+    const countryText = $(country).text().toLowerCase();
+    if (countryText.match(value)) {
+      $(country).show()
+    } else {
+      $(country).hide()
+    }
+  });
+  const shownCountries = $('#countries-ul  > li').filter((li) => {
+    const country = $('#countries-ul  > li')[li];
+    if (country.style.display !== 'none') {
+      const countryText = $('#countries-ul  > li a')[li]
+      return $(countryText)
+    };
+  })
+  if(shownCountries.length === 1) {
+    const redirectLink = $(shownCountries[0])[0].childNodes[0].childNodes[0].href
+    console.log($('#inputSubmit'))
+    $("#inputSubmit").on('click', function (e) {
+      e.preventDefault();
+      console.log(redirectLink)
+      window.location = redirectLink
+    })
+  }
+}
+
+// $('#inputText').keydown(function(e) {
+//   const shownCountries = $('#countries-ul  > li').filter((li) => {
+//     const country = $('#countries-ul  > li a')[li];
+//     if (country.style.display !== 'none') {
+//       return $(country).text()
+//     }
+//   });
+//   if ( shownCountries.length === 1) {
+//     if (e.which === 40) {
+//       $('#inputText').val()
+//     }
+//   }
+// })
+
 /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
  ---------------------------------------------------------
  --------------------- Setup Project ---------------------
@@ -597,13 +680,17 @@ function Barchart (data, targetElement) {
 const mbToken = 'pk.eyJ1IjoiZGV2c2VlZCIsImEiOiJnUi1mbkVvIn0.018aLhX0Mb0tdtaT2QNe2Q';
 const mbBasemapUrl = 'https://api.mapbox.com/v4/mapbox.light/{z}/{x}/{y}.png';
 
-// Populate the primary stats in hero via Missing Maps API
-getPrimaryStats(PT.id);
-// Populate initial groups graph via Missing Maps API
-getGroupActivityStats(PT.id);
-// Populate project carousel via HOTOSM Tasking Manager API
-getProjects(PT.hotProjects);
-// Populate events section with upcoming events
-generateEvents(PT.calendar);
-// setupGraphs
-setupGraphs();
+if (PT.name === 'Microsites') {
+  makeCountriesSelection();
+} else {
+  // Populate the primary stats in hero via Missing Maps API
+  getPrimaryStats(PT.id);
+  // Populate initial groups graph via Missing Maps API
+  getGroupActivityStats(PT.id);
+  // Populate project carousel via HOTOSM Tasking Manager API
+  getProjects(PT.hotProjects);
+  // Populate events section with upcoming events
+  generateEvents(PT.calendar);
+  // setupGraphs
+  setupGraphs();
+}
