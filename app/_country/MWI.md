@@ -8,7 +8,7 @@ flag: mw.svg
 osmLink: 'https://openstreetmap.org/relation/195290'
 calendar: developmentseed.org_mc692emvp2h1s2f31kenbrh474@group.calendar.google.com
 updates:
-  - title: Missing Mpas powered measles campaign
+  - title: MissingMaps powered measles campaign
     author: Max Grossman
     date: 06/21/2017
     content: >-
