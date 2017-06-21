@@ -418,6 +418,10 @@ prose:
              value: 'Zambia'
            - name: 'Zimbabwe'
              value: 'Zimbabwe'
+      - name: "contact"
+        field:
+          element: "text"
+          label: 'Microsite contact's email
       - name: "flag"
         field:
           element: "text"
