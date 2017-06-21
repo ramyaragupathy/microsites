@@ -421,7 +421,7 @@ prose:
       - name: "contact"
         field:
           element: "text"
-          label: 'Microsite contact's email
+          label: 'Microsite contact's email'
       - name: "flag"
         field:
           element: "text"
