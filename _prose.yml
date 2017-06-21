@@ -428,6 +428,7 @@ prose:
           value: "MMlogo-Outlined.svg"
           label: "flag"
       - name: "osmLink"
+        field:
           element: "text"
           placeholder: 'Link to country in OSM'
       - name: "calendar"
