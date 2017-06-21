@@ -15,6 +15,5 @@ updates:
     content: null
     link: null
     linktext: null
-tm-projects: null
-published: true
+tm-projects:
 ---
