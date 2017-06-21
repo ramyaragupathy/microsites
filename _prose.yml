@@ -50,28 +50,3 @@ prose:
           placeholder: "enter the calendar id"
           help: "For help retrieving calendar id, see calendar section the microsites README"
           label: 'Event Calendar Id'
-      - name: "updates"
-        field:
-          element: 'text'
-          label: 'title'
-          placeholder: 'Update Title'
-        field:
-          element: 'text'
-          label:  'author'
-          placeholder: 'post author'
-        field:
-          element: 'text'
-          label: 'date'
-          placeholder: 'MM/DD/YYYY'
-        field:
-          element: 'Textarea'
-          label: 'content'
-          placeholder: 'Post content'
-        field:
-          element: 'text'
-          label: 'link'
-          placeholder: 'link.to.update'
-        field:
-          element: 'text'
-          label: 'linktext'
-          placeholder: 'text linked to link'
