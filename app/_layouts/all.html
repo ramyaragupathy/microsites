@@ -5,9 +5,10 @@ layout: default
   {% include header.html %}
 
   <script>
-    // creates PT object for each page. Including lang for future usec
+    // creates PT object for each page. Including lang for future use
     var PT = { lang: '{{page.lang}}' };
   </script>
+
 
   <h1>{{ page.name }}</h1>
 
@@ -16,3 +17,79 @@ layout: default
   </section>
 
   {% include footer.html %}
+  <script>
+  /* -------------------------------------------------------
+   --------------------- Add Country List ------------------
+   -------------------------------------------------------*/
+  function makeCountriesSelection () {
+    $('#countries-list').css('display', 'none');
+    const url = 'http://osmstats.redcross.org/countries'
+    $.getJSON(url, function(countriesList) {
+      let countries = [];
+      countriesList = countriesList.map((countryObj) => {
+        const country = countryObj.name;
+        countries.push(country);
+      });
+      countries = countries.sort();
+      countries = countries.map((country) => {
+        return [
+          '<li>',
+          '<div>',
+          '<a href=' + '"' + country + '/">',
+          '<div>',
+          country,
+          '</div>',
+          '</a>',
+          '</li>'
+        ].join('');
+      })
+      countries = countries.join('')
+      countries = [
+        '<ul id="countries-ul">',
+        countries,
+        '</ul>'
+      ].join('');
+      $('#countries-list').append(countries)
+    });
+  }
+  function countriesFilter (element) {
+    let redirectPage = function() {
+      let redirectLink = $(shownCountries[0])[0].childNodes[0].childNodes[0].href
+      $("#inputSubmit").on('click', function (e) {
+        e.preventDefault();
+        window.location = redirectLink;
+      })
+      // enter sends us to country page
+      if (window.event.keyCode == 13) {
+        window.location = redirectLink;
+      }
+    }
+    $ ('#countries-list').css('display', 'block');
+    let value = $(element).val().toLowerCase();
+    if (value.length === 0) {
+      $('#countries-list').css('display', 'none');
+    }
+    $('#countries-ul  > li').each((li) => {
+      const country = $('#countries-ul  > li')[li]
+      const countryText = $(country).text().toLowerCase();
+      if (countryText.match(value)) {
+        $(country).show()
+      } else {
+        $(country).hide()
+      }
+    });
+    let shownCountries = $('#countries-ul  > li').filter((li) => {
+      const country = $('#countries-ul  > li')[li];
+      if (country.style.display !== 'none') {
+        const countryText = $('#countries-ul  > li a')[li]
+        return $(countryText)
+      };
+    })
+    if(shownCountries.length === 1) {
+      console.log(shownCountries);
+      redirectPage()
+    }
+    console.log(shownCountries)
+  }
+  makeCountriesSelection()
+  </script>

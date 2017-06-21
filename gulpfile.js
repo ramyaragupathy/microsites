@@ -45,6 +45,7 @@ gulp.task('copy:assets', function (done) {
      .pipe(sourcemaps.init())
      .pipe(sass(sassOptions).on('error', sass.logError))
      .pipe(autoprefixer(autoprefixerOptions))
+      // .pipe(autoprefixer())
      .pipe(sourcemaps.write('.'))
      .pipe(browserSync.reload({stream:true}))
      .pipe(gulp.dest('.tmp/assets/styles'));
@@ -136,7 +137,7 @@ gulp.task('serve', ['build'], function () {
   browserSync({
     port: 3000,
     server: {
-      baseDir: ['.tmp', '_site']
+      baseDir: ['.tmp','_site']
     }
   });
 
