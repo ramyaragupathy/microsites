@@ -21,25 +21,12 @@ Each country's microsite page sits within the `app > _country` folder. For more 
 | Field         | Changes  |
 | ------------- |-------------|
 | calendar | Id for a public google calendar holding country related events. See the Integrating Google Calendar section for how to generate this id |
-| updates | This populates the page's updates section |
-
-```
-updates:
-  - title: update title
-    author: update name
-    date: MM/DD/YYYY
-    content: Body of the update...
-    link: http://externalLink.com
-    linktext: text to display on button linking to external site
-```
-
-If you do not want to include a button to an external resource in an update, leave the link & linktext fields blank.
 
 **OSMStats**
 
 | Field         | Changes  |
 | ------------- |-------------|
-| id      | The country id is used to call osm-stats-api. This builds the activity and stats section in a microsite header |
+| code      | The country code is used to call osm-stats-api. This builds the activity and stats section in a microsite header |
 
 **Country Projects**
 
@@ -59,6 +46,39 @@ tm-projects:
 | ------------- |:-------------:|
 | id | The id for the HOT Task. For http://tasks.hotosm.org/project/1805, the id would be **1805**. |
 | desc | Description of the project. We recommend using the text from the [Tasking Manager](http://tasks.hotosm.org/). |
+
+
+### Write Microsite Page updates
+
+Each microsite has an update section. For a given microsite, the updates section is populated with content from .md files in the `app > _updates` that share the pages' `code` tag.
+
+For example, Malawi's update section would include all files with `code: MWI`
+
+To generate a new update one of the follow set of steps:
+
+- Prose
+
+1. Navigate to the `_updates` folder in prose and create & name a new file.
+  - Note: The file name is customizable, but ensure the file path is consistent with `app/_updates/*.md`
+2. Write your content in [markdown syntax](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
+3. Click the metadata button on the left hand side and fill out the metadata accordingly
+4. Click save and commit the changes with a commit message
+
+- Manually
+
+1. Make a new file in the `app > _country` folder
+2. Mimic the yaml front matter in `update-example.md` file found in the project root  
+3. Write your update content
+4. Save and commmit it
+
+**Update Config**
+
+| Field      | Changes      |
+| ---------- |------------- |
+| code       | country code. In prose this is specified via a 'country' drop down |
+| title      | update title |
+| date-published | date update is published |
+| link       | external link relevant to post. Leave blank if not relevant |
 
 ### Integrate Google Calendar
 
