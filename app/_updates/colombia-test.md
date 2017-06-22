@@ -1,6 +1,6 @@
 ---
 lang: en
-published: true
+date-published: 06/22/2017
 code: COL
 author: Awesome Mapper
 link: missingmaps.org
