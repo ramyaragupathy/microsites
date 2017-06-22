@@ -53,7 +53,7 @@ function getProjects (projects) {
       })
       .fail(function (err) {
         console.warn(`WARNING >> Project #${project.id} could not be accessed at ${url}.\n` +
-                     'The server returned the following message object:', err);
+                       'The server returned the following message object:', err);
         makePlaceholderProject(project, i + 2);
       });
     });
@@ -258,6 +258,7 @@ function eventsFunctionality () {
 
 function generateEvents (calendarId) {
   if (calendarId.match(/google/)) {
+    $('#events-spinner').css('display','block');
     const url = 'http://osmstats.redcross.org/calendar/' + calendarId + "/events";
     const currentDate = new Date()
     $.getJSON(url, (eventData) => {
@@ -265,7 +266,7 @@ function generateEvents (calendarId) {
         $('.events-null').css('display', 'block');
         $('.events-panel').css('display', 'none');
       } else {
-        Object.keys(eventData).map((key, val) => {
+        Object.keys(eventData).reverse().map((key, val) => {
           const eventTime = eventData[key].time[0]
           if (moment(currentDate).isBefore(eventTime)) {
             const title = eventData[key].name;
@@ -305,6 +306,7 @@ function generateEvents (calendarId) {
               '</div>'
             ].join('');
             $('#event-cards').append(eventsHTML);
+            $('#events-spinner').css('display', 'none');
           }
         });
       }

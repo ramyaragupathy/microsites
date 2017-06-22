@@ -643,6 +643,9 @@ h1 {
 .events-panel {
   width: 100%;
   text-align: center;
+  #events-spinner {
+    display: none;
+  }
 }
 
 .event-top-section {
