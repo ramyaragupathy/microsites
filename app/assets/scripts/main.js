@@ -597,6 +597,14 @@ function Barchart (data, targetElement) {
   };
 }
 
+
+function showUpdatesPlaceholder() {
+  if ($(".Updates-Content").length === 0) {
+    $(".updates-null").css('display', 'block')
+    $("#updates-h1").css('text-align', 'center')
+  }
+}
+
 /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
  ---------------------------------------------------------
  --------------------- Setup Project ---------------------
@@ -607,6 +615,7 @@ const mbBasemapUrl = 'https://api.mapbox.com/v4/mapbox.light/{z}/{x}/{y}.png';
 
 if (PT.name !== 'Microsites') {
   console.log('no-microsites')
+  showUpdatesPlaceholder()
   // Populate the primary stats in hero via Missing Maps API
   getPrimaryStats(PT.code);
   // Populate initial groups graph via Missing Maps API
