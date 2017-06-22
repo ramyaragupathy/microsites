@@ -5,8 +5,23 @@ layout: default
 {% include header.html %}
 
 <script>
-  // creates PT object for each page. Including lang for future use
-  var PT = { lang: '{{page.lang}}' };
+  // creates PT object. Includes front matter used to build page
+  var PT = {
+    lang: '{{page.lang}}',
+    id: '{{page.id}}',
+    name: '{{page.name}}',
+    flag: '{{page.flag}}',
+    contact: '{{page.contact}}',
+    calendar: '{{page.calendar}}',
+    hotProjects: [
+      {% assign comma = false %}
+      {% for p in page.tm-projects %}
+      {% if comma %}, {% endif %}
+      '{{ p.id }}'{% assign comma = true %}
+      {% endfor %}
+    ]
+  };
+  PT.id = PT.id.replace('/microsites/','')
 </script>
 
 <h1>{{ page.name }}</h1>

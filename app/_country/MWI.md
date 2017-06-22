@@ -8,13 +8,11 @@ flag: mw.svg
 osmLink: 'https://openstreetmap.org/relation/195290'
 calendar: developmentseed.org_mc692emvp2h1s2f31kenbrh474@group.calendar.google.com
 updates:
-  - title: Missing Mpas powered measles campaign
+  - title: Missing Maps powered measles campaign
     author: Max Grossman
     date: 06/21/2017
-    content: >-
-      The American Red Cross made use of Missing Maps generated data while
-      helping Malawi's vaccination campaign.
-    link: 'https://twitter.com/emilyeros/status/874950344190681088'
+    content: The American Red Cross made use of Missing Maps generated data while helping Malawi's vaccination campaign.
+    link: https://twitter.com/emilyeros/status/874950344190681088
     linktext: See more here
 tm-projects:
   - id: 1467
@@ -59,8 +57,8 @@ tm-projects:
       and group of houses. MSF is conducting an important study that aims to
       gather critical information about the real and true percentage of people
       affected by HIV. We need to know as precisely as possible, within that
-      given population who has been tested for HIV, and who has started 
-      treatment, are currently under treatment, and are responding well to it. 
+      given population who has been tested for HIV, and who has started
+      treatment, are currently under treatment, and are responding well to it.
       This study will help the MSF and Ministry of Health teams in the field
       better measure the current, joint effort to fight HIV. It will help steer
       the MSF and Ministry of Health decision making process and should lead to

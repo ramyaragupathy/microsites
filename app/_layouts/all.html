@@ -5,8 +5,11 @@ layout: default
   {% include header.html %}
 
   <script>
-    // creates PT object for each page. Including lang for future use
-    var PT = { lang: '{{page.lang}}' };
+    // creates PT object. Includes front matter used to build page
+    var PT = { 
+      lang: '{{page.lang}}',
+      name: '{{page.name}}'
+    };
   </script>
 
 
