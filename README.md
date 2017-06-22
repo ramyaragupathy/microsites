@@ -39,7 +39,6 @@ tm-projects:
 | id | The id for the HOT Task. For http://tasks.hotosm.org/project/1805, the id would be **1805**. |
 | desc | Description of the project. We recommend using the text from the [Tasking Manager](http://tasks.hotosm.org/). |
 
-
 ### Write Microsite Page updates
 
 Each microsite has an update section. For a given microsite, the updates section is populated with content from .md files in the `app > _updates` that share the pages' `code` tag.
