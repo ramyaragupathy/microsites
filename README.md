@@ -11,7 +11,7 @@ The below sections describe how to manage microsites, updates, and event calenda
 Each country's microsite page sits within the `app > _country` folder. For more information on these pages' initail build, see the Development section. 
 
 
-**Microsite YAML frontmatter **
+**Microsite YAML frontmatter**
 
 | Field         | Changes  |
 | ------------- |-------------|
@@ -32,10 +32,10 @@ tm-projects:
   - id: ###2
     desc: "description of project 2"
 ```
-dasddf
+
+**tm-project lists**
 | Field         | Changes  |
-]
-| ------------- |:-------------:|
+| ------------- | ------------- |
 | id | The id for the HOT Task. For http://tasks.hotosm.org/project/1805, the id would be **1805**. |
 | desc | Description of the project. We recommend using the text from the [Tasking Manager](http://tasks.hotosm.org/). |
 
@@ -63,7 +63,7 @@ To generate a new update one of the following set of steps:
 3. Write your update content
 4. Save and commit it
 
-**Update Config**
+**Update YAML frontmatter**
 
 | Field      | Changes      |
 | ---------- |------------- |
@@ -76,11 +76,11 @@ To generate a new update one of the following set of steps:
 
 A Microsite's events section is populated with events held within a public google calendar. Below are instructions for managing these events through Google Calendar.
 
-If a you want to house microsite events in an existing google calendar, ignore steps 1-3 in the **Create a new Calendar** section below and instead do the following.
+If you want use an existing google calendar for a microsite's events, ignore steps 1-3 in the **Create a new Calendar** section below and instead do the following.
 
-1. Open up Google Calendar and navigate directly to the calendar's settings by clicking the right arrow that appears when hovering over the calendar, then select the `Calendar settings` option in the menu that appears.
+1. Open up Google Calendar and navigate directly to the calendar of interest's settings by clicking the right arrow that appears when hovering over the calendar, then select the `Calendar settings` option in the menu that appears.
 2. On the following page select the `Share this Calendar` tab.
-3. Proceed to step 4 in the `Create a new Calendar` section.
+3. Proceed to step 4 in the **Create a new Calendar** section.
 
 #### Create a new calendar
 
@@ -101,12 +101,10 @@ Once a new public calendar is generated, or an existing calendar is made public 
 
 After step three the YAML frontmatter should include the following...
 
-```markdown
+```
 ...
-  flag: ng.svg
-  calendar: you.calendar.code@group.calendar.google.com
-  updates:
-    // some updates
+  calendar: you.calendar.id@group.calendar.google.com
+...
 ```
 
 #### Add Events to a microsite calendar
@@ -118,7 +116,7 @@ After step three the YAML frontmatter should include the following...
 5. Importantly, in the `calendar` section, select your public calendar from the drop-down
 6. In the description describe the event as well as a link for people to sign up
 
-...for example, the following would be an appropriate description
+The following would be an appropriate description
 
 ```
 Join members of OSM Liberia for field mapping in Gbarnga City.
@@ -131,20 +129,21 @@ Facebook events can be included in calendars by either manually adding them as e
 
 #### Make Google Calendar Account a secondary email on Facebook
 
-Share the email address attached to the Google account managing the microsite's google calendar to relevant Facebook users. These users add this email address as a 'secondary email' on Facebook via the following steps:
+Thare the email address attached to the Google account managing the microsite's google calendar with relevant Facebook users. These users add this email address as a 'secondary email' on Facebook via the following steps:
 
 1. Login to Facebook and click the down arrow at the top right of the page. Then in the drop-down that appears click `settings`
 2. Click the `contact` section on the next page followed by selecting `add a new email or mobile number`.
-3. In the popup that appears input the email address managing the public google calendar
-4. Next, a message will be sent to the google calendar manager and the owner of that account can approve adding the email to the Facebook account
+3. In the popup that appears input the email address managing the public google calendar 
 
-With the Google Calendar account added, Facebook users should follow the following steps to share events to the microsite.
+After user has completed these steps, a message will be sent to the Google Calendar manager and the manager can approve adding the email to the Facebook account
+
+With the Google Calendar account added, Facebook users should follow the below steps to share events to the microsite.
 
 1. On the Facebook event's page, click the button with three dots, like `...`
-2. In the drop-down that appears click `Export Event`, followed by selecting the `Send to email` option and correct calendar email address in the popup that appears.
-3. Finally, click Export
+2. In the drop-down that appears click `Export Event`, followed by selecting the `Send to email` option. Then choose correct calendar email address in the popup that appears.
+3. Finally, click `Export`
 
-Step 3 will send an email to the microsite calendar manager who can then add the event to the microsite calendar.
+Step 3 will send an email to the Google Calendar manager who can then add the event to the microsite calendar.
 
 ## Development
 
@@ -161,9 +160,9 @@ $ npm install
 ```
 Will also run `bundle install`
 
-### Auto microsite build
+### Initial microsites build
 
-.build_scripts/buildPages.js writes microsites to the `app > _country` folder. On each run, the script includes the recent tasks for each country. These tasks are gathered using [osm-data-parse](https://github.com/maxgrossman/osm-data-parse/).
+'.build_scripts/buildInitialPages.js' writes microsites to the `app > _country` folder. On each run, the script includes the recent tasks for each country. These tasks are gathered using [osm-data-parse](https://github.com/maxgrossman/osm-data-parse/).
 
 To include recent tasks, run osm-data-parse's tasking-mgr-parse/parse.js script and save the geoJSON output as 'tasks.geojson' in the root of the microsites repo.
 
