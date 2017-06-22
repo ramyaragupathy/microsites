@@ -431,7 +431,7 @@ prose:
           label: Author
           element: "text"
           placeholder: 'Awesome Mapper'
-      - name: published
+      - name: date-published
         field:
           label: Date Published
           element: "text"
