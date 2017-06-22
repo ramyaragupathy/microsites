@@ -6,4 +6,4 @@ date-published: DD/MM/YYYY
 link: external.link.org
 ---
 
-POST CONTENT 
+POST CONTENT
