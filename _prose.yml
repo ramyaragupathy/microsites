@@ -431,6 +431,11 @@ prose:
           label: Author
           element: "text"
           placeholder: 'Awesome Mapper'
+      - name: title
+        field:
+          label: Title
+          element: "text"
+          placeholder: "Post Title"    
       - name: date-published
         field:
           label: Date Published
