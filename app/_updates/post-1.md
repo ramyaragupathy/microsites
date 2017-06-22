@@ -8,4 +8,6 @@ link: missingmaps.org
 linktext: vaccines
 ---
 
-Vaccinations matter
+#### Vaccinations matter
+
+> yes they do
