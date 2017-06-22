@@ -2,7 +2,7 @@
 layout: country
 lang: en
 permalink: /microsites/Botswana/
-id: bwa
+code: BWA
 name: Botswana
 contact: 
 flag: bw.svg

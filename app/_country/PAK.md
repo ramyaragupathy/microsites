@@ -2,7 +2,7 @@
 layout: country
 lang: en
 permalink: /microsites/Pakistan/
-id: pak
+code: PAK
 name: Pakistan
 contact: 
 flag: pk.svg

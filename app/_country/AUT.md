@@ -2,7 +2,7 @@
 layout: country
 lang: en
 permalink: /microsites/Austria/
-id: aut
+code: AUT
 name: Austria
 contact: 
 flag: at.svg

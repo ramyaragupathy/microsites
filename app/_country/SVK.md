@@ -2,7 +2,7 @@
 layout: country
 lang: en
 permalink: /microsites/Slovakia/
-id: svk
+code: SVK
 name: Slovakia
 contact: 
 flag: sk.svg

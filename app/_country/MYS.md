@@ -2,7 +2,7 @@
 layout: country
 lang: en
 permalink: /microsites/Malaysia/
-id: mys
+code: MYS
 name: Malaysia
 contact: 
 flag: my.svg

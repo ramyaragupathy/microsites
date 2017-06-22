@@ -2,7 +2,7 @@
 layout: country
 lang: en
 permalink: /microsites/Canada/
-id: can
+code: CAN
 name: Canada
 contact: 
 flag: ca.svg

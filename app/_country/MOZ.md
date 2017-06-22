@@ -2,7 +2,7 @@
 layout: country
 lang: en
 permalink: /microsites/Mozambique/
-id: moz
+code: MOZ
 name: Mozambique
 contact: 
 flag: mz.svg

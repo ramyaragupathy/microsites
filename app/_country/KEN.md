@@ -2,7 +2,7 @@
 layout: country
 lang: en
 permalink: /microsites/Kenya/
-id: ken
+code: KEN
 name: Kenya
 contact: 
 flag: ke.svg

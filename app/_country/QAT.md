@@ -2,7 +2,7 @@
 layout: country
 lang: en
 permalink: /microsites/Qatar/
-id: qat
+code: QAT
 name: Qatar
 contact: 
 flag: qa.svg

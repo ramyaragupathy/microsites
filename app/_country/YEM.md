@@ -2,7 +2,7 @@
 layout: country
 lang: en
 permalink: /microsites/Yemen/
-id: yem
+code: YEM
 name: Yemen
 contact: 
 flag: ye.svg

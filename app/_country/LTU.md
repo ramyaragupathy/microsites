@@ -2,7 +2,7 @@
 layout: country
 lang: en
 permalink: /microsites/Lithuania/
-id: ltu
+code: LTU
 name: Lithuania
 contact: 
 flag: lt.svg

@@ -2,7 +2,7 @@
 layout: country
 lang: en
 permalink: /microsites/South Africa/
-id: zaf
+code: ZAF
 name: South Africa
 contact: 
 flag: za.svg

@@ -2,7 +2,7 @@
 layout: country
 lang: en
 permalink: /microsites/Gabon/
-id: gab
+code: GAB
 name: Gabon
 contact: 
 flag: ga.svg

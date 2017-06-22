@@ -2,7 +2,7 @@
 layout: country
 lang: en
 permalink: /microsites/Trinidad and Tobago/
-id: tto
+code: TTO
 name: Trinidad and Tobago
 contact: 
 flag: tt.svg

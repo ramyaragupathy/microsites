@@ -2,7 +2,7 @@
 layout: country
 lang: en
 permalink: /microsites/Papua New Guinea/
-id: png
+code: PNG
 name: Papua New Guinea
 contact: 
 flag: pg.svg

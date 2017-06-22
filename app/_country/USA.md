@@ -2,7 +2,7 @@
 layout: country
 lang: en
 permalink: /microsites/United States of America/
-id: usa
+code: USA
 name: United States of America
 contact: 
 flag: us.svg

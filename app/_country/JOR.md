@@ -2,7 +2,7 @@
 layout: country
 lang: en
 permalink: /microsites/Jordan/
-id: jor
+code: JOR
 name: Jordan
 contact: 
 flag: jo.svg

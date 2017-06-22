@@ -2,7 +2,7 @@
 layout: country
 lang: en
 permalink: /microsites/Estonia/
-id: est
+code: EST
 name: Estonia
 contact: 
 flag: ee.svg

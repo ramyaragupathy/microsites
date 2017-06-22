@@ -2,7 +2,7 @@
 layout: country
 lang: en
 permalink: /microsites/Mali/
-id: mli
+code: MLI
 name: Mali
 contact: 
 flag: ml.svg

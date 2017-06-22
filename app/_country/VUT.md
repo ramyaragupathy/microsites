@@ -2,7 +2,7 @@
 layout: country
 lang: en
 permalink: /microsites/Vanuatu/
-id: vut
+code: VUT
 name: Vanuatu
 contact: 
 flag: vu.svg

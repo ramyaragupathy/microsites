@@ -2,7 +2,7 @@
 layout: country
 lang: en
 permalink: /microsites/France/
-id: fra
+code: FRA
 name: France
 contact: 
 flag: fr.svg

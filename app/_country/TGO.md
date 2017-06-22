@@ -2,7 +2,7 @@
 layout: country
 lang: en
 permalink: /microsites/Togo/
-id: tgo
+code: TGO
 name: Togo
 contact: 
 flag: tg.svg

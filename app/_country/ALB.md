@@ -2,7 +2,7 @@
 layout: country
 lang: en
 permalink: /microsites/Albania/
-id: alb
+code: ALB
 name: Albania
 contact: 
 flag: al.svg

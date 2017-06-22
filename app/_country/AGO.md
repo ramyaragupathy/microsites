@@ -2,7 +2,7 @@
 layout: country
 lang: en
 permalink: /microsites/Angola/
-id: ago
+code: AGO
 name: Angola
 contact: 
 flag: ao.svg

@@ -2,7 +2,7 @@
 layout: country
 lang: en
 permalink: /microsites/Brunei/
-id: brn
+code: BRN
 name: Brunei
 contact: 
 flag: bn.svg

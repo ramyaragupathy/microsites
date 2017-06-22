@@ -2,7 +2,7 @@
 layout: country
 lang: en
 permalink: /microsites/Tajikistan/
-id: tjk
+code: TJK
 name: Tajikistan
 contact: 
 flag: tj.svg

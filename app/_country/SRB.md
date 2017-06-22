@@ -2,7 +2,7 @@
 layout: country
 lang: en
 permalink: /microsites/Republic of Serbia/
-id: srb
+code: SRB
 name: Republic of Serbia
 contact: 
 flag: rs.svg

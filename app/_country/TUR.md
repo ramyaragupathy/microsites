@@ -2,7 +2,7 @@
 layout: country
 lang: en
 permalink: /microsites/Turkey/
-id: tur
+code: TUR
 name: Turkey
 contact: 
 flag: tr.svg

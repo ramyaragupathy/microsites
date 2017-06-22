@@ -2,7 +2,7 @@
 layout: country
 lang: en
 permalink: /microsites/Liberia/
-id: lbr
+code: LBR
 name: Liberia
 contact: 
 flag: lr.svg

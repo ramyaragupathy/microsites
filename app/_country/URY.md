@@ -2,7 +2,7 @@
 layout: country
 lang: en
 permalink: /microsites/Uruguay/
-id: ury
+code: URY
 name: Uruguay
 contact: 
 flag: uy.svg

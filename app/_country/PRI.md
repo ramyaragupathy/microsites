@@ -2,7 +2,7 @@
 layout: country
 lang: en
 permalink: /microsites/Puerto Rico/
-id: pri
+code: PRI
 name: Puerto Rico
 contact: 
 flag: pr.svg

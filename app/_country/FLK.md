@@ -2,7 +2,7 @@
 layout: country
 lang: en
 permalink: /microsites/Falkland Islands/
-id: flk
+code: FLK
 name: Falkland Islands
 contact: 
 flag: fk.svg

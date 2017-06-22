@@ -2,7 +2,7 @@
 layout: country
 lang: en
 permalink: /microsites/Sweden/
-id: swe
+code: SWE
 name: Sweden
 contact: 
 flag: se.svg

@@ -2,7 +2,7 @@
 layout: country
 lang: en
 permalink: /microsites/Venezuela/
-id: ven
+code: VEN
 name: Venezuela
 contact: 
 flag: ve.svg

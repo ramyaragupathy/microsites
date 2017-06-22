@@ -2,7 +2,7 @@
 layout: country
 lang: en
 permalink: /microsites/Oman/
-id: omn
+code: OMN
 name: Oman
 contact: 
 flag: om.svg

@@ -2,7 +2,7 @@
 layout: country
 lang: en
 permalink: /microsites/Taiwan/
-id: twn
+code: TWN
 name: Taiwan
 contact: 
 flag: tw.svg

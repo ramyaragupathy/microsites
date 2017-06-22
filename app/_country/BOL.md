@@ -2,7 +2,7 @@
 layout: country
 lang: en
 permalink: /microsites/Bolivia/
-id: bol
+code: BOL
 name: Bolivia
 contact: 
 flag: bo.svg

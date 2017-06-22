@@ -2,7 +2,7 @@
 layout: country
 lang: en
 permalink: /microsites/Cyprus/
-id: cyp
+code: CYP
 name: Cyprus
 contact: 
 flag: cy.svg

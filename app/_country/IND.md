@@ -2,7 +2,7 @@
 layout: country
 lang: en
 permalink: /microsites/India/
-id: ind
+code: IND
 name: India
 contact: 
 flag: in.svg

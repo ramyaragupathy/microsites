@@ -2,7 +2,7 @@
 layout: country
 lang: en
 permalink: /microsites/Morocco/
-id: mar
+code: MAR
 name: Morocco
 contact: 
 flag: ma.svg

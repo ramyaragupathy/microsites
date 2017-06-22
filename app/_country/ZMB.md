@@ -2,7 +2,7 @@
 layout: country
 lang: en
 permalink: /microsites/Zambia/
-id: zmb
+code: ZMB
 name: Zambia
 contact: 
 flag: zm.svg

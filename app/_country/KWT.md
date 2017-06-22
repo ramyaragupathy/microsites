@@ -2,7 +2,7 @@
 layout: country
 lang: en
 permalink: /microsites/Kuwait/
-id: kwt
+code: KWT
 name: Kuwait
 contact: 
 flag: kw.svg

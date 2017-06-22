@@ -2,7 +2,7 @@
 layout: country
 lang: en
 permalink: /microsites/Greece/
-id: grc
+code: GRC
 name: Greece
 contact: 
 flag: gr.svg

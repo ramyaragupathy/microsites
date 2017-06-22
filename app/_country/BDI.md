@@ -2,7 +2,7 @@
 layout: country
 lang: en
 permalink: /microsites/Burundi/
-id: bdi
+code: BDI
 name: Burundi
 contact: 
 flag: bi.svg

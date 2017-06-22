@@ -2,7 +2,7 @@
 layout: country
 lang: en
 permalink: /microsites/Moldova/
-id: mda
+code: MDA
 name: Moldova
 contact: 
 flag: md.svg

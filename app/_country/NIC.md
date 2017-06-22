@@ -2,7 +2,7 @@
 layout: country
 lang: en
 permalink: /microsites/Nicaragua/
-id: nic
+code: NIC
 name: Nicaragua
 contact: 
 flag: ni.svg

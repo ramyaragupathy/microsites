@@ -2,7 +2,7 @@
 layout: country
 lang: en
 permalink: /microsites/Panama/
-id: pan
+code: PAN
 name: Panama
 contact: 
 flag: pa.svg

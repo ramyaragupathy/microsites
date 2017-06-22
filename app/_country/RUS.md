@@ -2,7 +2,7 @@
 layout: country
 lang: en
 permalink: /microsites/Russia/
-id: rus
+code: RUS
 name: Russia
 contact: 
 flag: ru.svg

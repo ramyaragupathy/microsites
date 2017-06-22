@@ -2,7 +2,7 @@
 layout: country
 lang: en
 permalink: /microsites/Zimbabwe/
-id: zwe
+code: ZWE
 name: Zimbabwe
 contact: 
 flag: zw.svg

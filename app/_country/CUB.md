@@ -2,7 +2,7 @@
 layout: country
 lang: en
 permalink: /microsites/Cuba/
-id: cub
+code: CUB
 name: Cuba
 contact: 
 flag: cu.svg

@@ -2,7 +2,7 @@
 layout: country
 lang: en
 permalink: /microsites/Armenia/
-id: arm
+code: ARM
 name: Armenia
 contact: 
 flag: am.svg

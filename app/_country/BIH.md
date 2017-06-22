@@ -2,7 +2,7 @@
 layout: country
 lang: en
 permalink: /microsites/Bosnia and Herzegovina/
-id: bih
+code: BIH
 name: Bosnia and Herzegovina
 contact: 
 flag: ba.svg

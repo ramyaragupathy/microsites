@@ -2,7 +2,7 @@
 layout: country
 lang: en
 permalink: /microsites/Indonesia/
-id: idn
+code: IDN
 name: Indonesia
 contact: 
 flag: id.svg

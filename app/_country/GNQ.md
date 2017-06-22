@@ -2,7 +2,7 @@
 layout: country
 lang: en
 permalink: /microsites/Equatorial Guinea/
-id: gnq
+code: GNQ
 name: Equatorial Guinea
 contact: 
 flag: gq.svg

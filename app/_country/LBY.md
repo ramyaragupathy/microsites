@@ -2,7 +2,7 @@
 layout: country
 lang: en
 permalink: /microsites/Libya/
-id: lby
+code: LBY
 name: Libya
 contact: 
 flag: ly.svg

@@ -2,7 +2,7 @@
 layout: country
 lang: en
 permalink: /microsites/Germany/
-id: deu
+code: DEU
 name: Germany
 contact: 
 flag: de.svg

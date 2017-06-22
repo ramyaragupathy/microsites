@@ -2,7 +2,7 @@
 layout: country
 lang: en
 permalink: /microsites/East Timor/
-id: tls
+code: TLS
 name: East Timor
 contact: 
 flag: tl.svg

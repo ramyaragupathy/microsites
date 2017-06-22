@@ -2,7 +2,7 @@
 layout: country
 lang: en
 permalink: /microsites/Western Sahara/
-id: esh
+code: ESH
 name: Western Sahara
 contact: 
 flag: eh.svg

@@ -2,7 +2,7 @@
 layout: country
 lang: en
 permalink: /microsites/Peru/
-id: per
+code: PER
 name: Peru
 contact: 
 flag: pe.svg

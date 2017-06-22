@@ -2,7 +2,7 @@
 layout: country
 lang: en
 permalink: /microsites/Guyana/
-id: guy
+code: GUY
 name: Guyana
 contact: 
 flag: gy.svg

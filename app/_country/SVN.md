@@ -2,7 +2,7 @@
 layout: country
 lang: en
 permalink: /microsites/Slovenia/
-id: svn
+code: SVN
 name: Slovenia
 contact: 
 flag: si.svg

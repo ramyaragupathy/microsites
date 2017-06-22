@@ -2,7 +2,7 @@
 layout: country
 lang: en
 permalink: /microsites/Suriname/
-id: sur
+code: SUR
 name: Suriname
 contact: 
 flag: sr.svg

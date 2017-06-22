@@ -2,7 +2,7 @@
 layout: country
 lang: en
 permalink: /microsites/Guinea/
-id: gin
+code: GIN
 name: Guinea
 contact: 
 flag: gn.svg

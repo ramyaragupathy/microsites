@@ -2,7 +2,7 @@
 layout: country
 lang: en
 permalink: /microsites/Norway/
-id: nor
+code: NOR
 name: Norway
 contact: 
 flag: no.svg

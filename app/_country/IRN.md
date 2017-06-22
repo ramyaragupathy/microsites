@@ -2,7 +2,7 @@
 layout: country
 lang: en
 permalink: /microsites/Iran/
-id: irn
+code: IRN
 name: Iran
 contact: 
 flag: ir.svg

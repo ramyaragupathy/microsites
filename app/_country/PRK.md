@@ -2,7 +2,7 @@
 layout: country
 lang: en
 permalink: /microsites/North Korea/
-id: prk
+code: PRK
 name: North Korea
 contact: 
 flag: kp.svg

@@ -2,7 +2,7 @@
 layout: country
 lang: en
 permalink: /microsites/South Sudan/
-id: sds
+code: SDS
 name: South Sudan
 contact: 
 flag: undefined.svg

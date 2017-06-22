@@ -2,7 +2,7 @@
 layout: country
 lang: en
 permalink: /microsites/Fiji/
-id: fji
+code: FJI
 name: Fiji
 contact: 
 flag: fj.svg

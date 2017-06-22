@@ -2,7 +2,7 @@
 layout: country
 lang: en
 permalink: /microsites/Spain/
-id: esp
+code: ESP
 name: Spain
 contact: 
 flag: es.svg

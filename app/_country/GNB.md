@@ -2,7 +2,7 @@
 layout: country
 lang: en
 permalink: /microsites/Guinea Bissau/
-id: gnb
+code: GNB
 name: Guinea Bissau
 contact: 
 flag: gw.svg

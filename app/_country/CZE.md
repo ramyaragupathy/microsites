@@ -2,7 +2,7 @@
 layout: country
 lang: en
 permalink: /microsites/Czech Republic/
-id: cze
+code: CZE
 name: Czech Republic
 contact: 
 flag: cz.svg

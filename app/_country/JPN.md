@@ -2,7 +2,7 @@
 layout: country
 lang: en
 permalink: /microsites/Japan/
-id: jpn
+code: JPN
 name: Japan
 contact: 
 flag: jp.svg

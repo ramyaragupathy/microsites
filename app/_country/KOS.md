@@ -2,7 +2,7 @@
 layout: country
 lang: en
 permalink: /microsites/Kosovo/
-id: kos
+code: KOS
 name: Kosovo
 contact: 
 flag: undefined.svg

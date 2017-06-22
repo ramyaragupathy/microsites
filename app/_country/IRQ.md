@@ -2,7 +2,7 @@
 layout: country
 lang: en
 permalink: /microsites/Iraq/
-id: irq
+code: IRQ
 name: Iraq
 contact: 
 flag: iq.svg

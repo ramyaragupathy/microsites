@@ -2,7 +2,7 @@
 layout: country
 lang: en
 permalink: /microsites/El Salvador/
-id: slv
+code: SLV
 name: El Salvador
 contact: 
 flag: sv.svg

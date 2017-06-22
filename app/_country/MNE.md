@@ -2,7 +2,7 @@
 layout: country
 lang: en
 permalink: /microsites/Montenegro/
-id: mne
+code: MNE
 name: Montenegro
 contact: 
 flag: me.svg

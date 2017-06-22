@@ -2,7 +2,7 @@
 layout: country
 lang: en
 permalink: /microsites/Hungary/
-id: hun
+code: HUN
 name: Hungary
 contact: 
 flag: hu.svg

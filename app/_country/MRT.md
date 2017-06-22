@@ -2,7 +2,7 @@
 layout: country
 lang: en
 permalink: /microsites/Mauritania/
-id: mrt
+code: MRT
 name: Mauritania
 contact: 
 flag: mr.svg

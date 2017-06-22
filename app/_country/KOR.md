@@ -2,7 +2,7 @@
 layout: country
 lang: en
 permalink: /microsites/South Korea/
-id: kor
+code: KOR
 name: South Korea
 contact: 
 flag: kr.svg

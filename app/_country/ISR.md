@@ -2,7 +2,7 @@
 layout: country
 lang: en
 permalink: /microsites/Israel/
-id: isr
+code: ISR
 name: Israel
 contact: 
 flag: il.svg

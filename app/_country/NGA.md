@@ -2,7 +2,7 @@
 layout: country
 lang: en
 permalink: /microsites/Nigeria/
-id: nga
+code: NGA
 name: Nigeria
 contact: 
 flag: ng.svg

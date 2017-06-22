@@ -2,7 +2,7 @@
 layout: country
 lang: en
 permalink: /microsites/Brazil/
-id: bra
+code: BRA
 name: Brazil
 contact: 
 flag: br.svg

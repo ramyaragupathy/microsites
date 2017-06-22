@@ -2,7 +2,7 @@
 layout: country
 lang: en
 permalink: /microsites/Djibouti/
-id: dji
+code: DJI
 name: Djibouti
 contact: 
 flag: dj.svg

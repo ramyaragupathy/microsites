@@ -2,7 +2,7 @@
 layout: country
 lang: en
 permalink: /microsites/Solomon Islands/
-id: slb
+code: SLB
 name: Solomon Islands
 contact: 
 flag: sb.svg

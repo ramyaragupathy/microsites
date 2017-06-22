@@ -2,7 +2,7 @@
 layout: country
 lang: en
 permalink: /microsites/Costa Rica/
-id: cri
+code: CRI
 name: Costa Rica
 contact: 
 flag: cr.svg

@@ -2,7 +2,7 @@
 layout: country
 lang: en
 permalink: /microsites/Lebanon/
-id: lbn
+code: LBN
 name: Lebanon
 contact: 
 flag: lb.svg

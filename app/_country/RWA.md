@@ -2,7 +2,7 @@
 layout: country
 lang: en
 permalink: /microsites/Rwanda/
-id: rwa
+code: RWA
 name: Rwanda
 contact: 
 flag: rw.svg

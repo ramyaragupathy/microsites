@@ -2,7 +2,7 @@
 layout: country
 lang: en
 permalink: /microsites/United Republic of Tanzania/
-id: tza
+code: TZA
 name: United Republic of Tanzania
 contact: 
 flag: tz.svg

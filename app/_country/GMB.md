@@ -2,7 +2,7 @@
 layout: country
 lang: en
 permalink: /microsites/Gambia/
-id: gmb
+code: GMB
 name: Gambia
 contact: 
 flag: gm.svg

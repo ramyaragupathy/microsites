@@ -2,7 +2,7 @@
 layout: country
 lang: en
 permalink: /microsites/Denmark/
-id: dnk
+code: DNK
 name: Denmark
 contact: 
 flag: dk.svg

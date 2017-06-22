@@ -2,7 +2,7 @@
 layout: country
 lang: en
 permalink: /microsites/Sierra Leone/
-id: sle
+code: SLE
 name: Sierra Leone
 contact: 
 flag: sl.svg

@@ -2,7 +2,7 @@
 layout: country
 lang: en
 permalink: /microsites/Benin/
-id: ben
+code: BEN
 name: Benin
 contact: 
 flag: bj.svg

@@ -2,7 +2,7 @@
 layout: country
 lang: en
 permalink: /microsites/Dominican Republic/
-id: dom
+code: DOM
 name: Dominican Republic
 contact: 
 flag: do.svg

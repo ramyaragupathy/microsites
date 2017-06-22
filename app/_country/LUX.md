@@ -2,7 +2,7 @@
 layout: country
 lang: en
 permalink: /microsites/Luxembourg/
-id: lux
+code: LUX
 name: Luxembourg
 contact: 
 flag: lu.svg

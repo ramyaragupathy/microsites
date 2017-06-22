@@ -2,7 +2,7 @@
 layout: country
 lang: en
 permalink: /microsites/Egypt/
-id: egy
+code: EGY
 name: Egypt
 contact: 
 flag: eg.svg

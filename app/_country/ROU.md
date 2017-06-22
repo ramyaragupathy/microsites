@@ -2,7 +2,7 @@
 layout: country
 lang: en
 permalink: /microsites/Romania/
-id: rou
+code: ROU
 name: Romania
 contact: 
 flag: ro.svg

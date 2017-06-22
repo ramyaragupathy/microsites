@@ -2,7 +2,7 @@
 layout: country
 lang: en
 permalink: /microsites/Central African Republic/
-id: caf
+code: CAF
 name: Central African Republic
 contact: 
 flag: cf.svg

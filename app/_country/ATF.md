@@ -2,7 +2,7 @@
 layout: country
 lang: en
 permalink: /microsites/French Southern and Antarctic Lands/
-id: atf
+code: ATF
 name: French Southern and Antarctic Lands
 contact: 
 flag: tf.svg

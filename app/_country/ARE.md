@@ -2,7 +2,7 @@
 layout: country
 lang: en
 permalink: /microsites/United Arab Emirates/
-id: are
+code: ARE
 name: United Arab Emirates
 contact: 
 flag: ae.svg

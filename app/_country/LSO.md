@@ -2,7 +2,7 @@
 layout: country
 lang: en
 permalink: /microsites/Lesotho/
-id: lso
+code: LSO
 name: Lesotho
 contact: 
 flag: ls.svg

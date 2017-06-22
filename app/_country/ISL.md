@@ -2,7 +2,7 @@
 layout: country
 lang: en
 permalink: /microsites/Iceland/
-id: isl
+code: ISL
 name: Iceland
 contact: 
 flag: is.svg

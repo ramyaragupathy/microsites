@@ -2,7 +2,7 @@
 layout: country
 lang: en
 permalink: /microsites/Switzerland/
-id: che
+code: CHE
 name: Switzerland
 contact: 
 flag: ch.svg

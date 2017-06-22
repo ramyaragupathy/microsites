@@ -2,7 +2,7 @@
 layout: country
 lang: en
 permalink: /microsites/Netherlands/
-id: nld
+code: NLD
 name: Netherlands
 contact: 
 flag: nl.svg

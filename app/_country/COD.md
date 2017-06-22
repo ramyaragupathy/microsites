@@ -2,7 +2,7 @@
 layout: country
 lang: en
 permalink: /microsites/Democratic Republic of the Congo/
-id: cod
+code: COD
 name: Democratic Republic of the Congo
 contact: 
 flag: cd.svg

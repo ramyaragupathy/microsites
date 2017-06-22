@@ -2,7 +2,7 @@
 layout: country
 lang: en
 permalink: /microsites/Belgium/
-id: bel
+code: BEL
 name: Belgium
 contact: 
 flag: be.svg

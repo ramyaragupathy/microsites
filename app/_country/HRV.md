@@ -2,7 +2,7 @@
 layout: country
 lang: en
 permalink: /microsites/Croatia/
-id: hrv
+code: HRV
 name: Croatia
 contact: 
 flag: hr.svg

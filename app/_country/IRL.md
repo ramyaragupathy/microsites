@@ -2,7 +2,7 @@
 layout: country
 lang: en
 permalink: /microsites/Ireland/
-id: irl
+code: IRL
 name: Ireland
 contact: 
 flag: ie.svg

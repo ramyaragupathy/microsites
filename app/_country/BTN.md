@@ -2,7 +2,7 @@
 layout: country
 lang: en
 permalink: /microsites/Bhutan/
-id: btn
+code: BTN
 name: Bhutan
 contact: 
 flag: bt.svg

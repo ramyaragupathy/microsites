@@ -2,7 +2,7 @@
 layout: country
 lang: en
 permalink: /microsites/Australia/
-id: aus
+code: AUS
 name: Australia
 contact: 
 flag: au.svg

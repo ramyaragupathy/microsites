@@ -2,7 +2,7 @@
 layout: country
 lang: en
 permalink: /microsites/Sri Lanka/
-id: lka
+code: LKA
 name: Sri Lanka
 contact: 
 flag: lk.svg

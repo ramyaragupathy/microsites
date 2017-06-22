@@ -2,7 +2,7 @@
 layout: country
 lang: en
 permalink: /microsites/Philippines/
-id: phl
+code: PHL
 name: Philippines
 contact: 
 flag: ph.svg

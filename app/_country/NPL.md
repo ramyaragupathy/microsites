@@ -2,7 +2,7 @@
 layout: country
 lang: en
 permalink: /microsites/Nepal/
-id: npl
+code: NPL
 name: Nepal
 contact: 
 flag: np.svg

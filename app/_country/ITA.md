@@ -2,7 +2,7 @@
 layout: country
 lang: en
 permalink: /microsites/Italy/
-id: ita
+code: ITA
 name: Italy
 contact: 
 flag: it.svg

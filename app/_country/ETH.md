@@ -2,7 +2,7 @@
 layout: country
 lang: en
 permalink: /microsites/Ethiopia/
-id: eth
+code: ETH
 name: Ethiopia
 contact: 
 flag: et.svg

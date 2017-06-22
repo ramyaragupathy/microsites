@@ -2,7 +2,7 @@
 layout: country
 lang: en
 permalink: /microsites/Burkina Faso/
-id: bfa
+code: BFA
 name: Burkina Faso
 contact: 
 flag: bf.svg

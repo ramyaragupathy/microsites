@@ -2,7 +2,7 @@
 layout: country
 lang: en
 permalink: /microsites/Madagascar/
-id: mdg
+code: MDG
 name: Madagascar
 contact: 
 flag: mg.svg

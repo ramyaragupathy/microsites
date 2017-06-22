@@ -2,7 +2,7 @@
 layout: country
 lang: en
 permalink: /microsites/Kyrgyzstan/
-id: kgz
+code: KGZ
 name: Kyrgyzstan
 contact: 
 flag: kg.svg

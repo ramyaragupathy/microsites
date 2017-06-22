@@ -2,7 +2,7 @@
 layout: country
 lang: en
 permalink: /microsites/Ghana/
-id: gha
+code: GHA
 name: Ghana
 contact: 
 flag: gh.svg

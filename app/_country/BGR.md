@@ -2,7 +2,7 @@
 layout: country
 lang: en
 permalink: /microsites/Bulgaria/
-id: bgr
+code: BGR
 name: Bulgaria
 contact: 
 flag: bg.svg

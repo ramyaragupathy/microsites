@@ -2,7 +2,7 @@
 layout: country
 lang: en
 permalink: /microsites/Turkmenistan/
-id: tkm
+code: TKM
 name: Turkmenistan
 contact: 
 flag: tm.svg

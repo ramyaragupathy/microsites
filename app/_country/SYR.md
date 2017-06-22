@@ -2,7 +2,7 @@
 layout: country
 lang: en
 permalink: /microsites/Syria/
-id: syr
+code: SYR
 name: Syria
 contact: 
 flag: sy.svg

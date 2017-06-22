@@ -2,7 +2,7 @@
 layout: country
 lang: en
 permalink: /microsites/Guatemala/
-id: gtm
+code: GTM
 name: Guatemala
 contact: 
 flag: gt.svg

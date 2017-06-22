@@ -2,7 +2,7 @@
 layout: country
 lang: en
 permalink: /microsites/Bangladesh/
-id: bgd
+code: BGD
 name: Bangladesh
 contact:
 flag: bd.svg
@@ -41,7 +41,7 @@ tm-projects:
   - id: 833
     desc: Kamrangirchar is the biggest slum in Dhaka, located in a peninsula area of 3.68 km² with an estimated 400,000 inhabitants. The area is bordered by the Buriganga river. Every day the Buriganga receives large volumes of untreated effluent coming from the tanneries localized in the neighbouring area of Hazaribagh. In the Kamrangirchar slum, many workers are believed to be exposed to poor working conditions in an environment of harmful chemical pollution.  Hazaribagh also appears heavily contaminated and highly polluted, with poor working conditions comparable to Kamrangirchar. The environmental landscape appears heavily contaminated by waste. Both areas are almost completely unmapped and Missing Maps seeks to create base maps to enable local government, health services, individuals and NGOs operating in the area the means by which to better allocate resources and plan services. This mapping activity is not intended for political use or to put people working in local industry out of work. It is simply putting a vulnerable population on the map, so that they can receive necessary services. This task will be followed in late January by local mapping activities.
   - id: 1391
-    desc: This is a task for advanced mappers  It requires mapping in a dense urban area with large variation in building height and size. Mappers on this task should be comfortable (1) using JOSM, (2) switching between two different satellite imagery sources, and (3) tracing tall buildings using off-nadir imagery.  The American Red Cross is working with the Bangladesh Red Crescent to map several areas in Dhaka for a long term disaster risk reduction project.  Through the MapGive project, the Humanitarian Information Unit (HIU) of the U.S. Department of State is providing the OpenStreetMap community access to updated satellite imagery services to help assist with humanitarian mapping.
+    desc: This is a task for advanced mappers It requires mapping in a dense urban area with large variation in building height and size. Mappers on this task should be comfortable (1) using JOSM, (2) switching between two different satellite imagery sources, and (3) tracing tall buildings using off-nadir imagery.  The American Red Cross is working with the Bangladesh Red Crescent to map several areas in Dhaka for a long term disaster risk reduction project.  Through the MapGive project, the Humanitarian Information Unit (HIU) of the U.S. Department of State is providing the OpenStreetMap community access to updated satellite imagery services to help assist with humanitarian mapping.
   - id: 1816
     desc: Due to recurrent flood in the Saheber Alga Union in Bangladesh, knowing the area and so having reliable OSM datas will  incredibly help in organizing help.
 ---

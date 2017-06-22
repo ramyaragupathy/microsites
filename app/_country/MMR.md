@@ -2,12 +2,12 @@
 layout: country
 lang: en
 permalink: /microsites/Myanmar/
-id: mmr
+code: MMR
 name: Myanmar
 contact: 
 flag: mm.svg
 osmLink: https://openstreetmap.org/relation/50371
-calendar: developmentseed.org_s0ouode2046fv8ittqo4kuus74@group.calendar.google.com
+calendar: 
 updates: 
   - title: 
     author: 

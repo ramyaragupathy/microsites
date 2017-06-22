@@ -2,7 +2,7 @@
 layout: country
 lang: en
 permalink: /microsites/Ecuador/
-id: ecu
+code: ECU
 name: Ecuador
 contact: 
 flag: ec.svg

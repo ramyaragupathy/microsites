@@ -2,7 +2,7 @@
 layout: country
 lang: en
 permalink: /microsites/Haiti/
-id: hti
+code: HTI
 name: Haiti
 contact: 
 flag: ht.svg

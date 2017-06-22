@@ -2,7 +2,7 @@
 layout: country
 lang: en
 permalink: /microsites/Poland/
-id: pol
+code: POL
 name: Poland
 contact: 
 flag: pl.svg

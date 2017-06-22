@@ -2,7 +2,7 @@
 layout: country
 lang: en
 permalink: /microsites/Belize/
-id: blz
+code: BLZ
 name: Belize
 contact: 
 flag: bz.svg

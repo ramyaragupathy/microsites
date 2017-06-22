@@ -2,7 +2,7 @@
 layout: country
 lang: en
 permalink: /microsites/Singapore/
-id: sgp
+code: SGP
 name: Singapore
 contact: 
 flag: sg.svg

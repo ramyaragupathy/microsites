@@ -2,7 +2,7 @@
 layout: country
 lang: en
 permalink: /microsites/Greenland/
-id: grl
+code: GRL
 name: Greenland
 contact: 
 flag: gl.svg

@@ -2,7 +2,7 @@
 layout: country
 lang: en
 permalink: /microsites/Eritrea/
-id: eri
+code: ERI
 name: Eritrea
 contact: 
 flag: er.svg

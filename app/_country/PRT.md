@@ -2,7 +2,7 @@
 layout: country
 lang: en
 permalink: /microsites/Portugal/
-id: prt
+code: PRT
 name: Portugal
 contact: 
 flag: pt.svg

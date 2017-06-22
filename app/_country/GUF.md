@@ -2,7 +2,7 @@
 layout: country
 lang: en
 permalink: /microsites/French Guiana/
-id: guf
+code: GUF
 name: French Guiana
 contact: 
 flag: gf.svg

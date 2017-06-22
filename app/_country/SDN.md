@@ -2,7 +2,7 @@
 layout: country
 lang: en
 permalink: /microsites/Sudan/
-id: sdn
+code: SDN
 name: Sudan
 contact: 
 flag: sd.svg

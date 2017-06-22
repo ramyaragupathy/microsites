@@ -2,7 +2,7 @@
 layout: country
 lang: en
 permalink: /microsites/Senegal/
-id: sen
+code: SEN
 name: Senegal
 contact: 
 flag: sn.svg

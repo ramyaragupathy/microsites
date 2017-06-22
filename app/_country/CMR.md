@@ -2,7 +2,7 @@
 layout: country
 lang: en
 permalink: /microsites/Cameroon/
-id: cmr
+code: CMR
 name: Cameroon
 contact: 
 flag: cm.svg

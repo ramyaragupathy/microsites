@@ -2,7 +2,7 @@
 layout: country
 lang: en
 permalink: /microsites/Chile/
-id: chl
+code: CHL
 name: Chile
 contact: 
 flag: cl.svg

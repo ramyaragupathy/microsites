@@ -2,7 +2,7 @@
 layout: country
 lang: en
 permalink: /microsites/Honduras/
-id: hnd
+code: HND
 name: Honduras
 contact: 
 flag: hn.svg

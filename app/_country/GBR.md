@@ -2,7 +2,7 @@
 layout: country
 lang: en
 permalink: /microsites/United Kingdom/
-id: gbr
+code: GBR
 name: United Kingdom
 contact: 
 flag: gb.svg

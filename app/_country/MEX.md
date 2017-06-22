@@ -2,7 +2,7 @@
 layout: country
 lang: en
 permalink: /microsites/Mexico/
-id: mex
+code: MEX
 name: Mexico
 contact: 
 flag: mx.svg

@@ -2,7 +2,7 @@
 layout: country
 lang: en
 permalink: /microsites/Belarus/
-id: blr
+code: BLR
 name: Belarus
 contact: 
 flag: by.svg

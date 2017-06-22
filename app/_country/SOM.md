@@ -2,7 +2,7 @@
 layout: country
 lang: en
 permalink: /microsites/Somalia/
-id: som
+code: SOM
 name: Somalia
 contact: 
 flag: so.svg

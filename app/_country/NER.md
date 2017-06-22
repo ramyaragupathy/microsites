@@ -2,7 +2,7 @@
 layout: country
 lang: en
 permalink: /microsites/Niger/
-id: ner
+code: NER
 name: Niger
 contact: 
 flag: ne.svg

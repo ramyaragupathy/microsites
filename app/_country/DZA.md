@@ -2,7 +2,7 @@
 layout: country
 lang: en
 permalink: /microsites/Algeria/
-id: dza
+code: DZA
 name: Algeria
 contact: 
 flag: dz.svg

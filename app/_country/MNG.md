@@ -2,7 +2,7 @@
 layout: country
 lang: en
 permalink: /microsites/Mongolia/
-id: mng
+code: MNG
 name: Mongolia
 contact: 
 flag: mn.svg

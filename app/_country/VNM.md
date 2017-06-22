@@ -2,7 +2,7 @@
 layout: country
 lang: en
 permalink: /microsites/Vietnam/
-id: vnm
+code: VNM
 name: Vietnam
 contact: 
 flag: vn.svg

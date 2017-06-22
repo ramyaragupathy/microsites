@@ -2,7 +2,7 @@
 layout: country
 lang: en
 permalink: /microsites/Georgia/
-id: geo
+code: GEO
 name: Georgia
 contact: 
 flag: ge.svg

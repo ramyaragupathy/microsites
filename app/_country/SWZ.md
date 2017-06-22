@@ -2,7 +2,7 @@
 layout: country
 lang: en
 permalink: /microsites/Swaziland/
-id: swz
+code: SWZ
 name: Swaziland
 contact: 
 flag: sz.svg

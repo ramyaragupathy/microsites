@@ -2,7 +2,7 @@
 layout: country
 lang: en
 permalink: /microsites/Azerbaijan/
-id: aze
+code: AZE
 name: Azerbaijan
 contact: 
 flag: az.svg

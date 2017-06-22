@@ -2,7 +2,7 @@
 layout: country
 lang: en
 permalink: /microsites/Bermuda/
-id: bmu
+code: BMU
 name: Bermuda
 contact: 
 flag: bm.svg

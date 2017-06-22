@@ -2,7 +2,7 @@
 layout: country
 lang: en
 permalink: /microsites/New Zealand/
-id: nzl
+code: NZL
 name: New Zealand
 contact: 
 flag: nz.svg

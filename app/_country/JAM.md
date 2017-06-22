@@ -2,7 +2,7 @@
 layout: country
 lang: en
 permalink: /microsites/Jamaica/
-id: jam
+code: JAM
 name: Jamaica
 contact: 
 flag: jm.svg

@@ -2,7 +2,7 @@
 layout: country
 lang: en
 permalink: /microsites/Macedonia/
-id: mkd
+code: MKD
 name: Macedonia
 contact: 
 flag: mk.svg

@@ -2,7 +2,7 @@
 layout: country
 lang: en
 permalink: /microsites/Uganda/
-id: uga
+code: UGA
 name: Uganda
 contact: 
 flag: ug.svg

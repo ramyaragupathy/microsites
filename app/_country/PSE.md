@@ -2,7 +2,7 @@
 layout: country
 lang: en
 permalink: /microsites/West Bank/
-id: pse
+code: PSE
 name: West Bank
 contact: 
 flag: ps.svg

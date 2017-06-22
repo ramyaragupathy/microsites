@@ -2,7 +2,7 @@
 layout: country
 lang: en
 permalink: /microsites/Latvia/
-id: lva
+code: LVA
 name: Latvia
 contact: 
 flag: lv.svg

@@ -2,7 +2,7 @@
 layout: country
 lang: en
 permalink: /microsites/Thailand/
-id: tha
+code: THA
 name: Thailand
 contact: 
 flag: th.svg

@@ -2,7 +2,7 @@
 layout: country
 lang: en
 permalink: /microsites/Kazakhstan/
-id: kaz
+code: KAZ
 name: Kazakhstan
 contact: 
 flag: kz.svg

@@ -2,7 +2,7 @@
 layout: country
 lang: en
 permalink: /microsites/Argentina/
-id: arg
+code: ARG
 name: Argentina
 contact: 
 flag: ar.svg

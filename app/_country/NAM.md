@@ -2,7 +2,7 @@
 layout: country
 lang: en
 permalink: /microsites/Namibia/
-id: nam
+code: NAM
 name: Namibia
 contact: 
 flag: na.svg

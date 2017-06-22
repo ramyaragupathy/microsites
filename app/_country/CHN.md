@@ -2,7 +2,7 @@
 layout: country
 lang: en
 permalink: /microsites/China/
-id: chn
+code: CHN
 name: China
 contact: 
 flag: cn.svg

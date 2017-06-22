@@ -2,7 +2,7 @@
 layout: country
 lang: en
 permalink: /microsites/Cambodia/
-id: khm
+code: KHM
 name: Cambodia
 contact: 
 flag: kh.svg

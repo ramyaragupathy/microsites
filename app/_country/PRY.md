@@ -2,7 +2,7 @@
 layout: country
 lang: en
 permalink: /microsites/Paraguay/
-id: pry
+code: PRY
 name: Paraguay
 contact: 
 flag: py.svg
