@@ -4,36 +4,27 @@ This repo contains the code for MissingMaps Microsites. Each page is a unique vi
 
 ## Managing Microsites
 
+The below sections describe how to manage microsites, updates, and event calendars. The first tasks can be done using [Prose.io](http://prose.io/#MissingMaps/Microsites/). 
+
 ### Updating a Microsite Page
 
-Each country's microsite page sits within the `app > _country` folder. For more information on how these pages were generated see the *Development* section of this README. Each page's data are contained within their YAML frontmatter. This repo has been set up with [Prose.io](http://prose.io/#MissingMaps/Microsites/) to make pages easier to edit.
+Each country's microsite page sits within the `app > _country` folder. For more information on these pages' initail build, see the Development section. 
 
-**Site Config**
+
+**Microsite YAML frontmatter **
 
 | Field         | Changes  |
 | ------------- |-------------|
 | permalink      | With the permalink, a page's full link reads `missingmaps.org/microsites/permalink` |
 | name      | The country name is displayed on the microsite under the country flag. |
-| flag      | Link to country flag |
-
-**Community**
-
-| Field         | Changes  |
-| ------------- |-------------|
-| calendar | Id for a public google calendar holding country related events. See the Integrating Google Calendar section for how to generate this id |
-
-**OSMStats**
-
-| Field         | Changes  |
-| ------------- |-------------|
 | code      | The country code is used to call osm-stats-api. This builds the activity and stats section in a microsite header |
-
-**Country Projects**
-
-| Field         | Changes  |
-| ------------- |-------------|
+| contact   | email address for microsite manager. This is used so if someone wants to add info to micosite updates section, they have somemone to contact to do so |
+| flag      | Link to country flag |
+| osmLink   | link to country boundary in OSM |
+| calendar | id for a public google calendar holding country related events. See the Integrating Google Calendar section for how to generate this id |
 | tm-projects         |  HOT OSM tasks for a given country |
 
+i.e
 ```
 tm-projects:
   - id: ###1
@@ -41,8 +32,9 @@ tm-projects:
   - id: ###2
     desc: "description of project 2"
 ```
-
+dasddf
 | Field         | Changes  |
+]
 | ------------- |:-------------:|
 | id | The id for the HOT Task. For http://tasks.hotosm.org/project/1805, the id would be **1805**. |
 | desc | Description of the project. We recommend using the text from the [Tasking Manager](http://tasks.hotosm.org/). |
