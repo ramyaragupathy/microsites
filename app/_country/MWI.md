@@ -3,7 +3,7 @@ layout: country
 lang: en
 permalink: /microsites/Malawi/
 id: mwi
-country: MWI
+code: MWI
 name: Malawi
 flag: mw.svg
 osmLink: 'https://openstreetmap.org/relation/195290'

@@ -1,11 +1,12 @@
+<h1 id="updates-h1">Updates</h1>
 {% for update in site.updates %}
- {% if update.country == page.country %}
+ {% if update.code == page.code %}
  <div class = "Updates-Container">
  <div class = "Updates-Content">
  <br/>
    <h2>{{ update.title }}</h2>
    <p>{{ update.author }}</p>
-   <p>{{ update.date }}</p>
+   <p>{{ update.published }}</p>
    <br/>
    <p>{{ update | markdownify }}</p>
    {% if update.link %}
