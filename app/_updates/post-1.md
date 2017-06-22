@@ -2,10 +2,11 @@
 lang: en
 code: MWI
 title: Vaccine in Malawi
-date-published: Emily Eros
-published: 06/21/2017
+published: true
 link: missingmaps.org
 linktext: vaccines
+author: Emily Eros
+date-published: 06/21/2017
 ---
 
 #### Vaccinations matter
