@@ -2,18 +2,11 @@
 layout: country
 lang: en
 permalink: /microsites/Italy/
-id: ita
+code: ITA
 name: Italy
 contact: 
 flag: it.svg
 osmLink: https://openstreetmap.org/relation/365331
 calendar: 
-updates: 
-  - title: 
-    author: 
-    date: 
-    content: 
-    link: 
-    linktext:
 tm-projects: 
 ---

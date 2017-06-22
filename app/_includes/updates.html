@@ -1,24 +1,22 @@
-{% if page.updates[0].title %}
-  <h1 id="updates-h1">Updates</h1>
-    {% for u in page.updates %}
-    {% if u.title %}
-    <div class = "Updates-Container">
-      <div class = "Updates-Content">
-      <br/>
-        <h2>{{ u.title }}</h2>
-        <p>{{ u.author }}</p>
-        <p>{{ u.date }}</p>
-        <br/>
-        <p>{{ u.content }}</p>
-        {% if u.link %}
-        <a href= "{{ u.link }}" class="btn btn-blue" id="TM-Contribute-Btn-{{ p.id }}">{{ u.linktext }}</a>
-        {% endif %}
-      </div>
-    </div>
-    {% endif %}
-    {% endfor %}
-{% else %}
-<h1 id="updates-null-h1">Updates</h1>
+<h1 id="updates-h1">Updates</h1>
+{% for update in site.updates %}
+ {% if update.code == page.code %}
+ <div class = "Updates-Container">
+ <div class = "Updates-Content">
+ <br/>
+   <h1>{{ update.title }}</h1>
+   <p>{{ update.author }}</p>
+   <p>{{ update.published }}</p>
+   <br/>
+   <p>{{ update.content | markdownify }}</p>
+   <br/>
+   {% if update.link %}
+   <a href= "{{ update.link }}" class="btn btn-blue" id="TM-Contribute-Btn-{{ p.id }}">{{ update.linktext }}</a>
+   {% endif %}
+ </div>
+</div>
+ {% endif %}
+{% endfor %}
 <div class = "Updates-Container">
     <div class = "updates-null">
       <br/>
@@ -27,4 +25,3 @@
       <a href="mailto:{{ page.contact }}" class="btn btn-blue">Contact Microsite Lead</a>
   </div>
 </div>
-{% endif %}

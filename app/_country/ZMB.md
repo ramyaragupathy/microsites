@@ -2,19 +2,12 @@
 layout: country
 lang: en
 permalink: /microsites/Zambia/
-id: zmb
+code: ZMB
 name: Zambia
 contact: 
 flag: zm.svg
 osmLink: https://openstreetmap.org/relation/195271
 calendar: 
-updates: 
-  - title: 
-    author: 
-    date: 
-    content: 
-    link: 
-    linktext:
 tm-projects: 
   - id: 1472
     desc: Pweto has been partially mapped through another HOT project, but to conduct effective epidemiology, building level data is needed, and a lot of neighbourhoods in Pweto are lacking in this area. Please help us complete the tracing of buildings and residential roads, so that the data can be used by MSF teams when disease outbreaks occur.

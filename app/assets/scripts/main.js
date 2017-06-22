@@ -343,7 +343,7 @@ function setupGraphs () {
     // Remove existing graphs
     removeExistingGraphs();
     // Gets main hashtag on each partner page via team.html
-    getUserActivityStats(PT.id);
+    getUserActivityStats(PT.code);
   });
 
   // Sets Teams button to Selected, loads Teams graphs, reveals
@@ -359,7 +359,7 @@ function setupGraphs () {
     // Remove existing graphs
     removeExistingGraphs();
     // Gets hashtag array on each partner page via team.html
-    getGroupActivityStats(PT.id);
+    getGroupActivityStats(PT.code);
 
     showMoreContributions();
   });
@@ -597,6 +597,14 @@ function Barchart (data, targetElement) {
   };
 }
 
+
+function showUpdatesPlaceholder() {
+  if ($(".Updates-Content").length === 0) {
+    $(".updates-null").css('display', 'block')
+    $("#updates-h1").css('text-align', 'center')
+  }
+}
+
 /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
  ---------------------------------------------------------
  --------------------- Setup Project ---------------------
@@ -607,10 +615,11 @@ const mbBasemapUrl = 'https://api.mapbox.com/v4/mapbox.light/{z}/{x}/{y}.png';
 
 if (PT.name !== 'Microsites') {
   console.log('no-microsites')
+  showUpdatesPlaceholder()
   // Populate the primary stats in hero via Missing Maps API
-  getPrimaryStats(PT.id);
+  getPrimaryStats(PT.code);
   // Populate initial groups graph via Missing Maps API
-  getGroupActivityStats(PT.id);
+  getGroupActivityStats(PT.code);
   // Populate project carousel via HOTOSM Tasking Manager API
   getProjects(PT.hotProjects);
   // Populate events section with upcoming events

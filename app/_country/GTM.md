@@ -2,19 +2,12 @@
 layout: country
 lang: en
 permalink: /microsites/Guatemala/
-id: gtm
+code: GTM
 name: Guatemala
 contact: 
 flag: gt.svg
 osmLink: https://openstreetmap.org/relation/1521463
 calendar: 
-updates: 
-  - title: 
-    author: 
-    date: 
-    content: 
-    link: 
-    linktext:
 tm-projects: 
   - id: 2136
     desc: The purpose of this task is to map buildings. It's very easy and great for beginners!

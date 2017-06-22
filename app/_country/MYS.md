@@ -2,18 +2,11 @@
 layout: country
 lang: en
 permalink: /microsites/Malaysia/
-id: mys
+code: MYS
 name: Malaysia
 contact: 
 flag: my.svg
 osmLink: https://openstreetmap.org/relation/2108121
 calendar: 
-updates: 
-  - title: 
-    author: 
-    date: 
-    content: 
-    link: 
-    linktext:
 tm-projects: 
 ---

@@ -2,19 +2,12 @@
 layout: country
 lang: en
 permalink: /microsites/Nigeria/
-id: nga
+code: NGA
 name: Nigeria
 contact: 
 flag: ng.svg
 osmLink: https://openstreetmap.org/relation/192787
 calendar: 
-updates: 
-  - title: 
-    author: 
-    date: 
-    content: 
-    link: 
-    linktext:
 tm-projects: 
   - id: 1396
     desc: MSF teams working in northern Nigeria respond to a variety of different health needs. These include emergency response to disease outbreaks across the area. Accurate maps of the area will assist emergency teams with epidemiological analysis, disease surveillance and logistical planning.

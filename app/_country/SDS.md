@@ -2,19 +2,12 @@
 layout: country
 lang: en
 permalink: /microsites/South Sudan/
-id: sds
+code: SDS
 name: South Sudan
 contact: 
 flag: undefined.svg
 osmLink: https://openstreetmap.org
 calendar: 
-updates: 
-  - title: 
-    author: 
-    date: 
-    content: 
-    link: 
-    linktext:
 tm-projects: 
   - id: 729
     desc: Priority changed to high as an MSF team is planning to do an exploratory mission to this area in the coming weeks and is relying on the map data from this task These trace maps will be used in the coming weeks by MSF to conduct emergency mortality / nutrition assessments in parts of South Sudan where there has been recent conflict and harvest failure, in order to plan a medical response. Without these maps, teams do not know what size of population to expect, where to find them, or even how accessible they are. For more information on the Missing Maps, visit www.missingmaps.org.

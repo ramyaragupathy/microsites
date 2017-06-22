@@ -2,19 +2,12 @@
 layout: country
 lang: en
 permalink: /microsites/Democratic Republic of the Congo/
-id: cod
+code: COD
 name: Democratic Republic of the Congo
 contact: 
 flag: cd.svg
 osmLink: https://openstreetmap.org/relation/192795
 calendar: 
-updates: 
-  - title: 
-    author: 
-    date: 
-    content: 
-    link: 
-    linktext:
 tm-projects: 
   - id: 727
     desc: For more information on the Missing Maps, visit www.missingmaps.org.

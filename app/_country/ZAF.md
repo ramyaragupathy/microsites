@@ -2,19 +2,12 @@
 layout: country
 lang: en
 permalink: /microsites/South Africa/
-id: zaf
+code: ZAF
 name: South Africa
 contact: 
 flag: za.svg
 osmLink: https://openstreetmap.org/relation/87565
 calendar: 
-updates: 
-  - title: 
-    author: 
-    date: 
-    content: 
-    link: 
-    linktext:
 tm-projects: 
   - id: 1098
     desc: 

@@ -2,19 +2,12 @@
 layout: country
 lang: en
 permalink: /microsites/Haiti/
-id: hti
+code: HTI
 name: Haiti
 contact: 
 flag: ht.svg
 osmLink: https://openstreetmap.org/relation/307829
 calendar: 
-updates: 
-  - title: 
-    author: 
-    date: 
-    content: 
-    link: 
-    linktext:
 tm-projects: 
   - id: 879
     desc: The American Red Cross is supporting the Haitian Red Cross to expand their community based disaster response and health efforts into new communities in the northern metropolitan Port au Prince area. The communities outlined are at significant exposure to seasonal and acute flooding risks and they lack access to basic health services, disaster preparedness plans and disaster response plans. Haitian Red Cross plans to expand their local volunteer network into these communities in 2015; they will train community members in first aid, emergency response and evacuation, as well as link them to healthcare services. Updated maps will support Haitian Red Cross to identify safe emergency shelter sites as well as to prepare emergency evacuations routes that reflect population centers and road network capacity. Furthermore, updated maps will help Haitian Red Cross to identify particularly vulnerable families and plan ways to improve access to them.

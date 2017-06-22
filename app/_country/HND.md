@@ -2,19 +2,12 @@
 layout: country
 lang: en
 permalink: /microsites/Honduras/
-id: hnd
+code: HND
 name: Honduras
 contact: 
 flag: hn.svg
 osmLink: https://openstreetmap.org/relation/287670
 calendar: 
-updates: 
-  - title: 
-    author: 
-    date: 
-    content: 
-    link: 
-    linktext:
 tm-projects: 
   - id: 1607
     desc: 

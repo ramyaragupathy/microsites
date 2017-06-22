@@ -2,18 +2,11 @@
 layout: country
 lang: en
 permalink: /microsites/Montenegro/
-id: mne
+code: MNE
 name: Montenegro
 contact: 
 flag: me.svg
 osmLink: https://openstreetmap.org/relation/53296
 calendar: 
-updates: 
-  - title: 
-    author: 
-    date: 
-    content: 
-    link: 
-    linktext:
 tm-projects: 
 ---

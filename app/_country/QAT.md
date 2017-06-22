@@ -2,18 +2,11 @@
 layout: country
 lang: en
 permalink: /microsites/Qatar/
-id: qat
+code: QAT
 name: Qatar
 contact: 
 flag: qa.svg
 osmLink: https://openstreetmap.org/relation/305095
 calendar: 
-updates: 
-  - title: 
-    author: 
-    date: 
-    content: 
-    link: 
-    linktext:
 tm-projects: 
 ---

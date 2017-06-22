@@ -2,19 +2,12 @@
 layout: country
 lang: en
 permalink: /microsites/Jamaica/
-id: jam
+code: JAM
 name: Jamaica
 contact: 
 flag: jm.svg
 osmLink: https://openstreetmap.org/relation/555017
 calendar: 
-updates: 
-  - title: 
-    author: 
-    date: 
-    content: 
-    link: 
-    linktext:
 tm-projects: 
   - id: 1610
     desc: Red Cross and partners, including national and community response teams, will be trained on the tools to collect and use the data and maps to contribute to better informed and more holistic decision-making for disaster management.

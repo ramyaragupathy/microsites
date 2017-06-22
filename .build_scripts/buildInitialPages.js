@@ -32,19 +32,12 @@ function genCountryPage (countryPageInfo) {
     'layout: country',
     'lang: en',
     'permalink: /microsites/' + countryName + '/',
-    'id: ' + countryCode.toLowerCase(),
+    'code: ' + countryCode.toUpperCase(),
     'name: ' + countryName,
     'contact: ',
     'flag: ' + countryFlag + '.svg',
     'osmLink: ' + countryLink,
     'calendar: ',
-    'updates: ',
-    '  - title: ',
-    '    author: ',
-    '    date: ',
-    '    content: ',
-    '    link: ',
-    '    linktext:',
     'tm-projects: '
   ];
   let tmProjects = [];

@@ -2,19 +2,12 @@
 layout: country
 lang: en
 permalink: /microsites/Central African Republic/
-id: caf
+code: CAF
 name: Central African Republic
 contact: 
 flag: cf.svg
 osmLink: https://openstreetmap.org/relation/192790
 calendar: 
-updates: 
-  - title: 
-    author: 
-    date: 
-    content: 
-    link: 
-    linktext:
 tm-projects: 
   - id: 816
     desc: MSF has a team working to eliminate Human African Trypanosomiasis (HAT, or Sleeping Sickness) in 6 countries.  The disease has been nearly eliminated, but remains in hidden pockets where healthcare has been severely lacking, where it continues to cause avoidable suffering and death.  In order to find the last pockets of this awful disease, MSF teams travel all over the affected region, screening for cases of HAT, which is transmitted by tsetse flies near rivers.  To help the team find these pockets, we need to map the population (houses) and rivers.  Also of interest are "gallery forests", where there are significant patches of trees directly adjacent to rivers; these are prime tsetse fly habitat.  
