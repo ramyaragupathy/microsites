@@ -26,5 +26,4 @@ collections:
     lang: en
   updates:
     output: true
-    output_ext: .html
     permalink: /:path/
