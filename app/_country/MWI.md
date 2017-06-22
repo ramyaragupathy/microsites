@@ -3,26 +3,17 @@ layout: country
 lang: en
 permalink: /microsites/Malawi/
 id: mwi
+country: MWI
 name: Malawi
 flag: mw.svg
 osmLink: 'https://openstreetmap.org/relation/195290'
 calendar: developmentseed.org_mc692emvp2h1s2f31kenbrh474@group.calendar.google.com
 updates:
-<<<<<<< HEAD
   - title: Missing Maps powered measles campaign
     author: Max Grossman
     date: 06/21/2017
     content: The American Red Cross made use of Missing Maps generated data while helping Malawi's vaccination campaign.
     link: https://twitter.com/emilyeros/status/874950344190681088
-=======
-  - title: MissingMaps powered measles campaign
-    author: Max Grossman
-    date: 06/21/2017
-    content: >-
-      The American Red Cross made use of Missing Maps generated data while
-      helping with the recent measles vaccination campaign in Malawi
-    link: 'https://twitter.com/emilyeros/status/874950344190681088'
->>>>>>> 9b947b9a871383eaea3c07a3f41281cd02f00888
     linktext: See more here
 tm-projects:
   - id: 1467

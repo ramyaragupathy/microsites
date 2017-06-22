@@ -1,30 +1,17 @@
-{% if page.updates[0].title %}
-  <h1 id="updates-h1">Updates</h1>
-    {% for u in page.updates %}
-    {% if u.title %}
-    <div class = "Updates-Container">
-      <div class = "Updates-Content">
-      <br/>
-        <h2>{{ u.title }}</h2>
-        <p>{{ u.author }}</p>
-        <p>{{ u.date }}</p>
-        <br/>
-        <p>{{ u.content }}</p>
-        {% if u.link %}
-        <a href= "{{ u.link }}" class="btn btn-blue" id="TM-Contribute-Btn-{{ p.id }}">{{ u.linktext }}</a>
-        {% endif %}
-      </div>
-    </div>
-    {% endif %}
-    {% endfor %}
-{% else %}
-<h1 id="updates-null-h1">Updates</h1>
-<div class = "Updates-Container">
-    <div class = "updates-null">
-      <br/>
-      <img src = "{{ site.domain }}{{ site.path_prefix }}/assets/graphics/content/process/helper.svg" width = "150"></img>
-      <p>There are no updates at this time for {{ page.name }}. If you'd like to share some news, get in touch.</p>
-      <a href="mailto:{{ page.contact }}" class="btn btn-blue">Contact Microsite Lead</a>
-  </div>
+{% for update in site.updates %}
+ {% if update.country == page.country %}
+ <div class = "Updates-Container">
+ <div class = "Updates-Content">
+ <br/>
+   <h2>{{ update.title }}</h2>
+   <p>{{ update.author }}</p>
+   <p>{{ update.date }}</p>
+   <br/>
+   <p>{{ update | markdownify }}</p>
+   {% if update.link %}
+   <a href= "{{ update.link }}" class="btn btn-blue" id="TM-Contribute-Btn-{{ p.id }}">{{ update.linktext }}</a>
+   {% endif %}
+ </div>
 </div>
-{% endif %}
+ {% endif %}
+{% endfor %}
