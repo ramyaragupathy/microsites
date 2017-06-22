@@ -8,7 +8,9 @@
    <p>{{ update.author }}</p>
    <p>{{ update.published }}</p>
    <br/>
-   <p>{{ update | markdownify }}</p>
+   {% markdown %}
+   <p>{{ update }}</p>
+   {% endmarkdown %}
    {% if update.link %}
    <a href= "{{ update.link }}" class="btn btn-blue" id="TM-Contribute-Btn-{{ p.id }}">{{ update.linktext }}</a>
    {% endif %}
