@@ -435,7 +435,7 @@ prose:
         field:
           label: Date Published
           element: "text"
-          placeholder: DD/MM/YYYY
+          placeholder: "DD/MM/YYYY"
       - name: link
         field:
           label: External link
@@ -447,4 +447,4 @@ prose:
           label: Clickable Text
           element: "text"
           placeholder: 'i.e: See more here'
-          help: "Like links, if there is no external link for the update, leave blank."
+          help: "If there is no external link for the update leave this blank."
