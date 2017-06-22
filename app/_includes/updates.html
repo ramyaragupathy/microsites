@@ -6,12 +6,12 @@
  <br/>
    <h1>{{ update.title }}</h1>
    <p>{{ update.author }}</p>
-   <p>{{ update.date-published }}</p>
+   <p>{{ update.published }}</p>
    <br/>
    <p>{{ update.content | markdownify }}</p>
    <br/>
    {% if update.link %}
-   <a href= "{{ update.link }}" class="btn btn-blue" id="TM-Contribute-Btn-{{ p.id }}">{{ update.linktext }}</a>
+   <a href= "{{ update.link }}" class="btn btn-blue" id="TM-Contribute-Btn-{{ p.code }}">See More</a>
    {% endif %}
  </div>
 </div>
