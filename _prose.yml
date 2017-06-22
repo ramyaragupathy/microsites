@@ -60,6 +60,7 @@ prose:
           element: "hidden"
           value: "en"
       - name: code
+        field:
           element: "select"
           placeholder: Malawi
           label: "Country"
@@ -436,11 +437,13 @@ prose:
           element: "text"
           placeholder: DD/MM/YYYY
       - name: link
+        field:
           label: External link
           element: "text"
           placeholder: 'external.link.org'
           help: 'If you do not have an external link, leave this blank'
       - name: linktext
+        field:
           label: Clickable Text
           element: "text"
           placeholder: 'i.e: See more here'
