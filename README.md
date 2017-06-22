@@ -6,7 +6,7 @@ This repo contains the code for MissingMaps Microsites. Each page is a unique vi
 
 ### Updating a Microsite Page
 
-Each country's microsite page sits within the `app > _country` folder. For more information on how these pages were generated see the *Development* section of this README. Each page's data are contained within their yml frontmatter. This repo has been set up with [Prose.io](http://prose.io/#MissingMaps/Microsites/) to make pages easier to edit.
+Each country's microsite page sits within the `app > _country` folder. For more information on how these pages were generated see the *Development* section of this README. Each page's data are contained within their YAML frontmatter. This repo has been set up with [Prose.io](http://prose.io/#MissingMaps/Microsites/) to make pages easier to edit.
 
 **Site Config**
 
@@ -54,31 +54,31 @@ Each microsite has an update section. For a given microsite, the updates section
 
 For example, Malawi's update section would include all files with `code: MWI`
 
-To generate a new update one of the follow set of steps:
+To generate a new update one of the following set of steps:
 
-- Prose
+- Prose.io
 
 1. Navigate to the `_updates` folder in prose and create & name a new file.
-  - Note: The file name is customizable, but ensure the file path is consistent with `app/_updates/*.md`
+  - Note: While file name can be customized, ensure that the file path is consistent with `app/_updates/*.md`
 2. Write your content in [markdown syntax](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
-3. Click the metadata button on the left hand side and fill out the metadata accordingly
+3. Click the metadata button on the left-hand side and fill out the metadata accordingly
 4. Click save and commit the changes with a commit message
 
 - Manually
 
 1. Make a new file in the `app > _country` folder
-2. Mimic the yaml front matter in `update-example.md` file found in the project root  
+2. Mimic the YAML front matter in `update-example.md` file found in the project root  
 3. Write your update content
-4. Save and commmit it
+4. Save and commit it
 
 **Update Config**
 
 | Field      | Changes      |
 | ---------- |------------- |
-| code       | country code. In prose this is specified via a 'country' drop down |
+| code       | country code. In prose, this is specified via a 'country' drop down |
 | title      | update title |
 | date-published | date update is published |
-| link       | external link relevant to post. Leave blank if not relevant |
+| link       | external link relevant to post. leave blank if an external link does not exist |
 
 ### Integrate Google Calendar
 
@@ -105,9 +105,9 @@ Once a new public calendar is generated, or an existing calendar is made public 
 
 1. Navigate to the `Calendar Settings` (see step 1 in the instructions above **Create a new calendar**)
 2. On the `calendar settings` page, find the `Calendar ID` in the `Calendar Address` section.
-3. Add this id to calendar field of the intended page's yml frontmatter
+3. Add this id to calendar field of the intended page's YAML frontmatter
 
-After step three the yml frontmatter should include the following...
+After step three the YAML frontmatter should include the following...
 
 ```markdown
 ...
