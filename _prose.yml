@@ -442,9 +442,3 @@ prose:
           element: "text"
           placeholder: 'external.link.org'
           help: 'If you do not have an external link, leave this blank'
-      - name: linktext
-        field:
-          label: Clickable Text
-          element: "text"
-          placeholder: 'i.e: See more here'
-          help: "If there is no external link for the update leave this blank."
