@@ -8,13 +8,6 @@ contact:
 flag: bd.svg
 osmLink: https://openstreetmap.org/relation/184640
 calendar:
-updates:
-  - title:
-    author:
-    date:
-    content:
-    link:
-    linktext:
 tm-projects:
   - id: 831
     desc: Kamrangirchar is the biggest slum in Dhaka, located in a peninsula area of 3.68 km² with an estimated 400,000 inhabitants. The area is bordered by the Buriganga river. Every day the Buriganga receives large volumes of untreated effluent coming from the tanneries localized in the neighbouring area of Hazaribagh. In the Kamrangirchar slum, many workers are believed to be exposed to poor working conditions in an environment of harmful chemical pollution.  Hazaribagh also appears heavily contaminated and highly polluted, with poor working conditions comparable to Kamrangirchar. The environmental landscape appears heavily contaminated by waste. Both areas are almost completely unmapped and Missing Maps seeks to create base maps to enable local government, health services, individuals and NGOs operating in the area the means by which to better allocate resources and plan services. This mapping activity is not intended for political use or to put people working in local industry out of work. It is simply putting a vulnerable population on the map, so that they can receive necessary services. This task will be followed in late January by local mapping activities.

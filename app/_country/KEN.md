@@ -8,13 +8,6 @@ contact:
 flag: ke.svg
 osmLink: https://openstreetmap.org/relation/192798
 calendar: 
-updates: 
-  - title: 
-    author: 
-    date: 
-    content: 
-    link: 
-    linktext:
 tm-projects: 
   - id: 1234
     desc: The Machakos branch of the Kenya Red Cross tracks road traffic incidents. As part of improving the reporting and making the data more accessible they plan to move the tracking process online. The map for the area needs to be filled in so that they can accurately place reported incidents.

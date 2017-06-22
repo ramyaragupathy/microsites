@@ -38,13 +38,6 @@ function genCountryPage (countryPageInfo) {
     'flag: ' + countryFlag + '.svg',
     'osmLink: ' + countryLink,
     'calendar: ',
-    'updates: ',
-    '  - title: ',
-    '    author: ',
-    '    date: ',
-    '    content: ',
-    '    link: ',
-    '    linktext:',
     'tm-projects: '
   ];
   let tmProjects = [];

@@ -8,13 +8,6 @@ contact:
 flag: ph.svg
 osmLink: https://openstreetmap.org/relation/443174
 calendar: 
-updates: 
-  - title: 
-    author: 
-    date: 
-    content: 
-    link: 
-    linktext:
 tm-projects: 
   - id: 720
     desc: One year from the anniversary of Typhoon Haiyan, the American Red Cross and the Philippine Red Cross need better maps to plan and implement reconstruction programs for those affected. Despite over 1,600 mappers making over 4.7 million edits to OSM, many roads, fields, damaged homes, and other critical infrastructure remain unmapped in OpenStreetMap. In fact, many of the more remote communities covered by the reconstruction program are complete blank spots. This complicates efforts to repair or rebuild homes for the badly affected, provide them proper water and sanitation services and provide goods or skills for long-term economic success.

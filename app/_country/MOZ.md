@@ -8,13 +8,6 @@ contact:
 flag: mz.svg
 osmLink: https://openstreetmap.org/relation/195273
 calendar: 
-updates: 
-  - title: 
-    author: 
-    date: 
-    content: 
-    link: 
-    linktext:
 tm-projects: 
   - id: 1342
     desc: Médecins Sans Frontières is preparing several programme interventions in the city of Nsanje in Malawi, in particular against HIV and tuberculosis. Mapping the road network and residential area will be useful for MSF's team to plan their intervention. This task is appropriate for new mappers

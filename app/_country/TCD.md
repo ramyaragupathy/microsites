@@ -8,13 +8,6 @@ contact:
 flag: td.svg
 osmLink: https://openstreetmap.org/relation/2361304
 calendar: 
-updates: 
-  - title: 
-    author: 
-    date: 
-    content: 
-    link: 
-    linktext:
 tm-projects: 
   - id: 925
     desc: MSF's principal medical activity in the district of Moissala in southern Chad is to provide preventative and curative care for malarial infection for pregnant women and children under 5. In 2015 MSF is planning a pilot activity of indoor residual spraying (IRS) in the eastern zone of Moissala to further increase the prevention of Malaria for families who are isolated on the other side of the Bahr-Sara River, far from the referral hospital.  The logistics team in Moissala is working hard on a detailed map of the 133 villages in the zone in order to plan for the month-long spraying campaign with the help of local volunteers. Mapping the area will greatly help the team effectively plan their movements between villages and ensure they are able to reach all households and further decrease the transmission of this deadly disease for the population.

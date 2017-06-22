@@ -8,13 +8,6 @@ contact:
 flag: id.svg
 osmLink: https://openstreetmap.org/relation/304751
 calendar: 
-updates: 
-  - title: 
-    author: 
-    date: 
-    content: 
-    link: 
-    linktext:
 tm-projects: 
   - id: 412
     desc: Author. HOT, AIFDR, UNOCHA, BNPB The eruption of the Sinabung volcano, in North-Sumatra, Indonesia, caused the death of 11 persons around Sukameriah village. This job is to produce a detailed map of the area. Update. Mt. Sinabung erupts again since Sunday Oct 5th 2014, and the peak of eruption is happened Oct 8th 2014. The task is done but its need to be validated.

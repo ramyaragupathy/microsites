@@ -8,13 +8,6 @@ contact:
 flag: zw.svg
 osmLink: https://openstreetmap.org/relation/195272
 calendar: 
-updates: 
-  - title: 
-    author: 
-    date: 
-    content: 
-    link: 
-    linktext:
 tm-projects: 
   - id: 766
     desc: These maps will be used to as part of an ongoing urban resilience project by the American Red Cross that focuses on disaster and disease prevention and mitigation. The American Red Cross will be doing on the ground mapping in partnership with the local Red Cross and volunteers to ground truth and add local data. For more information on the Missing Maps, visit www.missingmaps.org.

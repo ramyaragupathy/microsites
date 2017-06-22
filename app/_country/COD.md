@@ -8,13 +8,6 @@ contact:
 flag: cd.svg
 osmLink: https://openstreetmap.org/relation/192795
 calendar: 
-updates: 
-  - title: 
-    author: 
-    date: 
-    content: 
-    link: 
-    linktext:
 tm-projects: 
   - id: 727
     desc: For more information on the Missing Maps, visit www.missingmaps.org.

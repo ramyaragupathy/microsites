@@ -8,12 +8,5 @@ contact:
 flag: sa.svg
 osmLink: https://openstreetmap.org/relation/307584
 calendar: 
-updates: 
-  - title: 
-    author: 
-    date: 
-    content: 
-    link: 
-    linktext:
 tm-projects: 
 ---

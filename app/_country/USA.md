@@ -8,12 +8,5 @@ contact:
 flag: us.svg
 osmLink: https://openstreetmap.org/relation/148838
 calendar: 
-updates: 
-  - title: 
-    author: 
-    date: 
-    content: 
-    link: 
-    linktext:
 tm-projects: 
 ---

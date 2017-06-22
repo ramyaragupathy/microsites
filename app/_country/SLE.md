@@ -8,13 +8,6 @@ contact:
 flag: sl.svg
 osmLink: https://openstreetmap.org/relation/192777
 calendar: 
-updates: 
-  - title: 
-    author: 
-    date: 
-    content: 
-    link: 
-    linktext:
 tm-projects: 
   - id: 1757
     desc: The border regions of West Africa were badly hit by the recent Ebola epidemic and remain particularly vulnerable. As part of ongoing response efforts, the American Red Cross and its partners are conducting rapid field mapping of all communities within 15 kilometres of the international borders shared between Liberia, Guinea, and Sierra Leone – focusing on water, sanitation, health, and public amenities in each community. The fieldwork is being carried out by volunteers on motorbikes, equipped with a smartphone app (OpenMapKit) and other technical tools. To facilitate and help plan these field efforts, we are asking for assistance tracing roads, communities, and buildings.

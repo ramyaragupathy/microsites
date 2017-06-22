@@ -8,12 +8,5 @@ contact:
 flag: ba.svg
 osmLink: https://openstreetmap.org/relation/2528142
 calendar: 
-updates: 
-  - title: 
-    author: 
-    date: 
-    content: 
-    link: 
-    linktext:
 tm-projects: 
 ---

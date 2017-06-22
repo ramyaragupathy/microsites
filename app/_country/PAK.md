@@ -8,13 +8,6 @@ contact:
 flag: pk.svg
 osmLink: https://openstreetmap.org/relation/307573
 calendar: 
-updates: 
-  - title: 
-    author: 
-    date: 
-    content: 
-    link: 
-    linktext:
 tm-projects: 
   - id: 1207
     desc: As part of the Bill and Melinda Gates Foundation Core Data Layers Project. They seek to better understand the settlement and road pattern of Sukkur, Pakistan.

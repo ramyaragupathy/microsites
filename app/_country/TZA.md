@@ -8,13 +8,6 @@ contact:
 flag: tz.svg
 osmLink: https://openstreetmap.org/relation/195270
 calendar: 
-updates: 
-  - title: 
-    author: 
-    date: 
-    content: 
-    link: 
-    linktext:
 tm-projects: 
   - id: 1066
     desc: 
