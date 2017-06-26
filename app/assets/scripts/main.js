@@ -292,7 +292,7 @@ function generateEvents (calendarId) {
               '<div class="textbox" style="padding-top:8px">',
               '<p>' + '<b>Date:</b> ' + date + '</p>',
               '<p>' + '<b>Time:</b> ' + time + '</p>',
-              '<p>' + '<b>location:</b> ' + location + '</p>',
+              '<p>' + '<b>Location:</b> ' + location + '</p>',
               '<p>' + '<b>About:</b> ' + desc + '</p>',
               '</div>',
               '</div>'
