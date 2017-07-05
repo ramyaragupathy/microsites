@@ -6,7 +6,7 @@ code: MWI
 name: Malawi
 flag: mw.svg
 osmLink: 'https://openstreetmap.org/relation/195290'
-calendar: developmentseed.org_mc692emvp2h1s2f31kenbrh474@group.calendar.google.com
+calendar: drdi7botamsf2609qdc9kh52i8@group.calendar.google.com
 tm-projects:
   - id: 2154
     desc: Map buildings and roads to help efforts to eliminate measles.
@@ -44,8 +44,8 @@ tm-projects:
       and group of houses. MSF is conducting an important study that aims to
       gather critical information about the real and true percentage of people
       affected by HIV. We need to know as precisely as possible, within that
-      given population who has been tested for HIV, and who has started 
-      treatment, are currently under treatment, and are responding well to it. 
+      given population who has been tested for HIV, and who has started
+      treatment, are currently under treatment, and are responding well to it.
       This study will help the MSF and Ministry of Health teams in the field
       better measure the current, joint effort to fight HIV. It will help steer
       the MSF and Ministry of Health decision making process and should lead to
