@@ -1,11 +1,41 @@
 var fs = require('fs');
+var marked = require('marked');
+var rp = require('request-promise');
 var Promise = require('bluebird');
 var tasks = JSON.parse(fs.readFileSync('tasks.geojson'));
 var _ = require('lodash');
+var md = require('node-markdown');
 var turf = require('turf');
 var crg = require('country-reverse-geocoding').country_reverse_geocoding();
 
- // WRITE JSON WITH HOTOSM TASKS GROUPED BY COUNTRY //
+// WRITE JSON WITH HOTOSM TASKS GROUPED BY COUNTRY //
+
+/* parseDesc(desc)
+ *
+ * 1) parse description parkdown, look only for paragraphs
+ * 2) if not null, meaning a description exists:
+ *    a) remove 'what missing maps is' paragraph found in some descriptions.
+ *    b) get rid of undefined items in the list generated during markdown parse
+ *    c) join items as a single string w/each item
+ * 3) when null, return no description
+ */
+function parseDesc (desc) {
+  desc = marked(desc).match(/<p>(.*?)<\/p>/g);
+  if (desc !== null) {
+    desc = desc.map((p) => {
+      if (!(p.match(/The Missing Maps project aims to map/))) {
+        return p.replace(/<\/?p>/g, '').replace(/<\/?code>/g, '');
+      }
+    }).filter((descItem) => {
+      if (descItem !== null) {
+        return descItem;
+      }
+    }).join(' ').replace(/:/g, '.');
+  } else {
+    desc = '';
+  }
+  return desc;
+}
 
 /*
  * 1) generate list of unique tasks + their geometry
@@ -16,7 +46,6 @@ var crg = require('country-reverse-geocoding').country_reverse_geocoding();
  */
 
 var tasksList = _.uniq(tasks.features.map((d) => { return d.properties.task; }));
-
 Promise.map(tasksList, (task) => {
   var taskGeometries = turf.featureCollection(
     tasks.features.filter((feature) => {
@@ -41,23 +70,42 @@ Promise.map(tasksList, (task) => {
   }
 }).then((taskCentroids) => {
   Promise.map(taskCentroids, (centroid) => {
+    let country;
     if (centroid !== undefined) {
       const coordinates = centroid.geometry.geometry.coordinates;
       const taskNum = centroid.properties.task;
-      let country = crg.get_country(coordinates[1], coordinates[0]);
+      country = crg.get_country(coordinates[1], coordinates[0]);
       country = Object.assign({ task: taskNum }, country);
-      return country;
     }
+    return country;
   }).then((countries) => {
-    countries = _.filter(countries, (country) => {
-      if (country !== null || Object.keys(country) !== null) {
+    // remove undefined responses
+    return _.difference(countries, [ undefined ]);
+  }).then((validCountries) => {
+    Promise.map(validCountries, (validCountry) => {
+      const task = validCountry.task;
+      return Promise.all([
+        validCountry, rp('http://tasks.hotosm.org/project/' + task + '.json')
+      ]);
+    }).then((responses) => {
+      let detailedTasks = responses.map((response) => {
+        let desc;
+        if (response[1] !== undefined) {
+          desc = JSON.parse(response[1]).properties.short_description;
+          desc = parseDesc(desc);
+        } else {
+          desc = '';
+        }
+        const country = response[0];
+        country['desc'] = desc;
         return country;
-      }
+      });
+      detailedTasks = _.groupBy(detailedTasks, (detailedTask) => {
+        return detailedTask.code;
+      });
+      fs.writeFileSync('./countryTasks.json', JSON.stringify(detailedTasks));
     });
-    return _.groupBy(countries, (country) => {
-      return country.code;
-    });
-  }).then((groupedCountries) => {
-    fs.writeFileSync('./countryTasks.json', JSON.stringify(groupedCountries));
+  }).catch((error) => {
+    console.log(error);
   });
 });

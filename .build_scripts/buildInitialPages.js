@@ -1,11 +1,15 @@
 'use strict';
 
 var fs = require('fs');
-var fm = require('fm');
+var yamlFront = require('yaml-front-matter');
+var _ = require('lodash');
 var countryCodes = require('i18n-iso-countries');
 var countries = JSON.parse(fs.readFileSync('countries.json'));
 
 /* genCountryPage(countryPageInfo)
+ *
+ * writes page country specific w/ymf
+ *
  *   1) get parameters for generating page from countryPageInfo
  *   2) if tasks are included in countryPageInfo, include the metadat
  *   3) write this out to a file in /_country/
@@ -35,140 +39,64 @@ function genCountryPage (countryPageInfo) {
     '---'
   ];
   fs.writeFileSync(countryPage, countryPageMetaData.join('\n'));
-  return fm(countryPageMetaData);
+  const yfmList = yamlFront.loadFront(countryPageMetaData);
+  return yfmList.__content;
 }
 
-const countriesFM = [];
-countries.forEach((country) => {
-  countriesFM.push(genCountryPage(country));
-});
-console.log(countriesFM);
-
-/* parseDesc(desc)
+/* makeFrontMatterObj(yfmList)
  *
- * 1) parse description parkdown, look only for paragraphs
- * 2) if not null, meaning a description exists:
- *    a) remove 'what missing maps is' paragraph found in some descriptions.
- *    b) get rid of undefined items in the list generated during markdown parse
- *    c) join items as a single string w/each item
- * 3) when null, return no description
+ * returns json v. of front matter
+ *
+ * 1) map values for fm keys by filtering yfmList for where fmKey regex matches
+ * 2) take the list of objects generated and make singe object
+ *
  */
-// function parseDesc (desc) {
-//   desc = md(desc, true, 'p').match(/<p>(.*?)<\/p>/g);
-//   if (desc !== null) {
-//     desc = desc.map((p) => {
-//       if (!(p.match(/The Missing Maps project aims to map/))) {
-//         return p.replace(/<\/?p>/g, '');
-//       }
-//     }).filter((descItem) => {
-//       if (descItem !== null) {
-//         return descItem;
-//       }
-//     })
-//     .join(' ')
-//     .replace(/:/g, '.');
-//   } else {
-//     desc = '';
-//   }
-//   return desc;
-// }
+function makeFrontMatterObj (yfmList) {
+  let fmObjs = [
+    'layout: ',
+    'lang: ',
+    'permalink: ',
+    'code: ',
+    'name: ',
+    'contact: ',
+    'flag: ',
+    'osmLink: ',
+    'calendar: ',
+    'tm-projects: '
+  ].map((fmKey) => {
+    let fmObj = {};
+    let match = yfmList.filter((fmEl) => {
+      return fmEl.match(fmKey);
+    });
+    if (match[0]) {
+      match = match[0].split(fmKey)[1];
+    }
+    fmObj[fmKey.split(':')[0]] = match;
+    return fmObj;
+  });
+  fmObjs = _.reduce(
+    fmObjs, (fmObject, fm) => {
+      return _.assign(fmObject, fm);
+    }, {}
+  );
+  const fmObj = {};
+  fmObj[fmObjs.code] = fmObjs;
+  return fmObj;
+}
 
-// return _.groupBy(countries, (country) => {
-//   return country.code;
-// });
-// }).then((groupedTasks) => {
-//     let validCodes = [];
-//     _.forEach(validCountries, (validCountry) => {
-//       let validCode = _.pick(validCountry, 'code');
-//       validCodes.push(validCode.code);
-//       const newValCountry = {};
-//       const newValCountryKey = validCountry.code;
-//       newValCountry[newValCountryKey] = validCountry.name;
-//       return newValCountryKey;
-//     });
-//     Object.keys(groupedTasks).map((k, v) => {
-//       if (_.includes(validCodes, k)) {
-//         const matchIndex = validCodes.indexOf(k);
-//         const newValCode = {};
-//         const newValCodeKey = k;
-//         newValCode[newValCodeKey] = groupedTasks[k];
-//         validCountries[matchIndex] = newValCode;
-//       }
-//     });
-//     validCountries = _.map(validCountries, (validCountry) => {
-//       let newValCountry = {};
-//       if (Object.keys(validCountry).length > 1) {
-//         const newValCountryKey = validCountry.code;
-//         const newValCountryObj = {};
-//         newValCountryObj['code'] = validCountry.code;
-//         newValCountryObj['name'] = validCountry.name;
-//         newValCountryObj['osmLink'] = validCountry.link;
-//         newValCountry[newValCountryKey] = newValCountryObj;
-//         validCountry = newValCountry;
-//       }
-//
-//       return validCountry;
-//     });
-//     return validCountries;
-//   })
-//   .then((validCountries) => {
-//     validCountries = _.map(validCountries, (validCountry) => {
-//       let validCountryVal = validCountry[Object.keys(validCountry)];
-//       if (Array.isArray(validCountryVal)) {
-//         Promise.map(validCountryVal, (valObj) => {
-//           const task = valObj.task;
-//           return Promise.all([
-//             valObj,
-//             rp('http://tasks.hotosm.org/project/' + task + '.json')
-//           ]);
-//         }).then((responses) => {
-//           const osmLinks = JSON.parse(fs.readFileSync('countries.json'));
-//           responses = responses.map((response) => {
-//             const valObj = response[0];
-//             let osmLink = osmLinks.filter((country) => {
-//               return country.code === valObj.code;
-//             })[0].link;
-//             if (osmLink === undefined) {
-//               osmLink = 'https://openstreetmap.org';
-//             }
-//             valObj['osmLink'] = osmLink;
-//             const taskResponse = response[1];
-//             let desc;
-//             if (response[1]) {
-//               desc = JSON.parse(taskResponse).properties.short_description;
-//               desc = parseDesc(desc);
-//             } else {
-//               desc = '';
-//             }
-//             valObj['desc'] = desc;
-//             return valObj;
-//           });
-//           responses = _.groupBy(responses, (response) => {
-//             return response.code;
-//           });
-//           genCountryPage(responses);
-//         }).catch((error) => {
-//           console.log(error);
-//         });
-//       } else {
-//         validCountryVal = _.groupBy([validCountryVal], (val) => {
-//           return val.code;
-//         });
-//         genCountryPage(validCountryVal);
-//       }
-//     });
-//   });
-// });
+let countriesFM = [];
+countries.forEach((country) => {
+  if (!country.code.match(/USA-/)) {
+    const yfmList = genCountryPage(country).split(',');
+    let yfmObj = makeFrontMatterObj(yfmList);
+    countriesFM.push(yfmObj);
+  }
+});
 
-// let tmProjects = [];
-// if (countryPageInfo[0].task) {
-//   countryPageInfo.forEach((infoObj) => {
-//     const tmProject = [
-//       '  - id: ' + infoObj.task,
-//       '    desc: ' + infoObj.desc
-//     ].join('\n');
-//     tmProjects.push(tmProject);
-//   });
-//   countryPageMetaData.push(tmProjects.join('\n'));
-// }
-// countryPageMetaData.push('---');
+const countriesFMObj = _.reduce(
+  countriesFM, (countriesFMOObj, countriesFM) => {
+    return _.assign(countriesFMOObj, countriesFM);
+  }, {}
+);
+
+fs.writeFileSync('./countryYFM.json', JSON.stringify(countriesFMObj));

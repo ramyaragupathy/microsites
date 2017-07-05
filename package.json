@@ -63,6 +63,7 @@
     "i18n-iso-countries": "^1.11.2",
     "js-yaml": "*",
     "lodash": "*",
+    "marked": "^0.3.6",
     "node-markdown": "*",
     "node-nominatim2": "*",
     "proxy-middleware": "*",
@@ -72,7 +73,8 @@
     "turf": "*",
     "turf-merge": "*",
     "url": "*",
-    "world-atlas": "*"
+    "world-atlas": "*",
+    "yaml-front-matter": "^3.4.0"
   },
   "dependencies": {
     "@turf/dissolve": "*",
