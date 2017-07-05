@@ -22,3 +22,7 @@ app/assets/scripts/countries.json
 app/assets/scripts/client_secret*
 app/assets/scripts/googleAuth.js
 app/assets/scripts/buildCalendars.js
+
+# todolists
+**/.todos.json
+

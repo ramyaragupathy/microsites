@@ -16,7 +16,8 @@
   },
   "homepage": "",
   "scripts": {
-    "build-pages": "node .build_scripts/buildPages.js",
+    "build-pages": "node .build_scripts/buildInitialPages.js",
+    "group-tasks": "node .build_scripts/parseTasks.js",
     "postinstall": "[ -f _config-dev.yml ] || echo 'domain: http://localhost:3000\npath_prefix:' > _config-dev.yml",
     "serve": "gulp serve",
     "build": "gulp",
@@ -49,6 +50,7 @@
     "eslint-plugin-standard": "*",
     "font-awesome": "*",
     "foundation-sites": "*",
+    "front-matter": "^2.1.2",
     "glob": "*",
     "glob-all": "*",
     "gulp": "*",

@@ -134,6 +134,12 @@ gulp.task('build', function (done) {
   runSequence(['jekyll', 'compress:main', 'compress:vendor', 'sass', 'images', 'fonts'], ['copy:assets'], done);
 });
 
+// Tasking manger task
+// takes tasks.json and makes a countryTasks.json, tasks grouped by country
+gulp.task('group-tasks', function()) {
+  return cp.execSync('npm run group-tasks')
+}
+
 // Default task.
 gulp.task('default', function (done) {
   runSequence('build', done);
