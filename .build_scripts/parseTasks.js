@@ -24,9 +24,11 @@ function parseDesc (desc) {
   desc = marked(desc).match(/<p>(.*?)<\/p>/g);
   if (desc !== null) {
     desc = desc.map((p) => {
+      let content;
       if (!(p.match(/The Missing Maps project aims to map/))) {
-        return p.replace(/<\/?p>/g, '').replace(/<\/?code>/g, '');
+        content = p.replace(/<\/?>/g, '');
       }
+      return content;
     }).filter((descItem) => {
       if (descItem !== null) {
         return descItem;
@@ -105,8 +107,16 @@ Promise.map(tasksList, (task) => {
         return detailedTask.code;
       });
       detailedTasks = _.omit(detailedTasks, undefined);
-      console.log(Object.keys(detailedTasks));
-      fs.writeFileSync('./countryTasks.json', JSON.stringify(detailedTasks));
+      // make value for each country an obj with 'tm-project' key matching
+      // fm objects used elsewhere
+      const detailedTasksFin = {};
+      _.forEach(detailedTasks, (v, k) => {
+        const detailedTaskFin = {};
+        const detailedTaskKey = k;
+        detailedTaskFin['tm-projects'] = v;
+        detailedTasksFin[detailedTaskKey] = detailedTaskFin;
+      });
+      fs.writeFileSync('./countryTasks.json', JSON.stringify(detailedTasksFin));
     });
   }).catch((error) => {
     console.log(error);

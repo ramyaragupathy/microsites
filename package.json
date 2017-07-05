@@ -18,6 +18,7 @@
   "scripts": {
     "build-pages": "node .build_scripts/buildInitialPages.js",
     "group-tasks": "node .build_scripts/parseTasks.js",
+    "update-pages": "node .build_scripts/updatePages.js",
     "postinstall": "[ -f _config-dev.yml ] || echo 'domain: http://localhost:3000\npath_prefix:' > _config-dev.yml",
     "serve": "gulp serve",
     "build": "gulp",
@@ -64,6 +65,7 @@
     "js-yaml": "*",
     "lodash": "*",
     "marked": "^0.3.6",
+    "minimist": "^1.2.0",
     "node-markdown": "*",
     "node-nominatim2": "*",
     "proxy-middleware": "*",

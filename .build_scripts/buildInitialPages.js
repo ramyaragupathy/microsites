@@ -42,61 +42,8 @@ function genCountryPage (countryPageInfo) {
   const yfmList = yamlFront.loadFront(countryPageMetaData);
   return yfmList.__content;
 }
-
-/* makeFrontMatterObj(yfmList)
- *
- * returns json v. of front matter
- *
- * 1) map values for fm keys by filtering yfmList for where fmKey regex matches
- * 2) take the list of objects generated and make singe object
- *
- */
-function makeFrontMatterObj (yfmList) {
-  let fmObjs = [
-    'layout: ',
-    'lang: ',
-    'permalink: ',
-    'code: ',
-    'name: ',
-    'contact: ',
-    'flag: ',
-    'osmLink: ',
-    'calendar: ',
-    'tm-projects: '
-  ].map((fmKey) => {
-    let fmObj = {};
-    let match = yfmList.filter((fmEl) => {
-      return fmEl.match(fmKey);
-    });
-    if (match[0]) {
-      match = match[0].split(fmKey)[1];
-    }
-    fmObj[fmKey.split(':')[0]] = match;
-    return fmObj;
-  });
-  fmObjs = _.reduce(
-    fmObjs, (fmObject, fm) => {
-      return _.assign(fmObject, fm);
-    }, {}
-  );
-  const fmObj = {};
-  fmObj[fmObjs.code] = fmObjs;
-  return fmObj;
-}
-
-let countriesFM = [];
 countries.forEach((country) => {
   if (!country.code.match(/USA-/)) {
-    const yfmList = genCountryPage(country).split(',');
-    let yfmObj = makeFrontMatterObj(yfmList);
-    countriesFM.push(yfmObj);
+    genCountryPage(country);
   }
 });
-
-const countriesFMObj = _.reduce(
-  countriesFM, (countriesFMOObj, countriesFM) => {
-    return _.assign(countriesFMOObj, countriesFM);
-  }, {}
-);
-
-fs.writeFileSync('./countryYFM.json', JSON.stringify(countriesFMObj));
