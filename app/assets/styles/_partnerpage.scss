@@ -494,6 +494,19 @@ h1 {
   opacity: 0;
 }
 
+#event-cards {
+  margin: auto;
+  padding: 2em;
+}
+
+
+.card-section{
+  p {
+    margin-bottom: .5em;
+    padding-bottom: 0;
+  }
+}
+
 /*----------------------------------------------*/
 /* TEAMS AND USERS */
 /*----------------------------------------------*/
@@ -885,14 +898,15 @@ img {
     #countriesInput {
         margin: auto;
         margin-right: 3px;
+        #inputText[type="text"],
+        #inputText:placeholder-shown {
+          margin: 1px;
+          padding-bottom:3px;
+        }
         #inputText {
           display:inline-block;
-          width: 230px;
-          text-align: left;
-          height: 22px;
-          margin-bottom: 0.8em;
-          margin-left: -0.4em;
-          display: inline-block;
+          width:231px;
+          height: 25px;
           padding: 0.5em;
           background-color: white;
           border-top-left-radius: 5px;
@@ -902,7 +916,7 @@ img {
           border-top: solid 1px;
           border-color: #c6c7c7;
         }
-        input[type="submit"] {
+        #inputSubmit {
           background-size: contain;
           background-repeat: no-repeat;
           background-position: center center;
@@ -910,10 +924,12 @@ img {
           background-image: url(/assets/graphics/content/imgs/search.svg);
           border-top-right-radius: 5px;
           border-bottom-right-radius: 5px;
-          height:23.5px;
+          height:25px;
           width:30px;
           margin: -10px;
-          padding-bottom: 16.5px;
+          margin-right: 1px;
+          text-align: left;
+          padding-bottom: 6px;
           background-color: #23bcc1;
           border-color: #23bcc1;
           &:active {
@@ -927,15 +943,17 @@ img {
       border-radius: 5px;
       border: solid 1px;
       border-color: #c6c7c7;
-      width: 260px;
+      width: 258px;
       margin: auto;
-      padding: 0.3em;
+      margin-top: 0.8em;
+      padding: 0.5em 0;
       ul {
         height: 80px;
         min-height: auto;
         max-height: auto;
         overflow: hidden;
         overflow-y: scroll;
+        margin: 0.5em;
       }
       li a {
         text-align: left;

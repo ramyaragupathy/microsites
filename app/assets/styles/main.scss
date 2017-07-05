@@ -9,6 +9,12 @@
 @import "./lib/reset";
 @import "./lib/normalize-opentype";
 
+// Foundation
+@import "settings";
+@import "foundation";
+@include foundation-everything;
+@include foundation-grid;
+@import 'font-awesome';
 // Site specific styles
 @import "variables";
 @import "base";

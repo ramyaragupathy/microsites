@@ -6,7 +6,7 @@ layout: default
 
   <script>
     // creates PT object. Includes front matter used to build page
-    var PT = { 
+    var PT = {
       lang: '{{page.lang}}',
       name: '{{page.name}}'
     };
@@ -89,10 +89,8 @@ layout: default
       };
     })
     if(shownCountries.length === 1) {
-      console.log(shownCountries);
       redirectPage()
     }
-    console.log(shownCountries)
   }
   makeCountriesSelection()
   </script>
