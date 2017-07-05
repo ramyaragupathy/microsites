@@ -1,3 +1,4 @@
+'use stict'
 var fs = require('fs');
 var marked = require('marked');
 var rp = require('request-promise');
@@ -103,6 +104,8 @@ Promise.map(tasksList, (task) => {
       detailedTasks = _.groupBy(detailedTasks, (detailedTask) => {
         return detailedTask.code;
       });
+      detailedTasks = _.omit(detailedTasks, undefined);
+      console.log(Object.keys(detailedTasks));
       fs.writeFileSync('./countryTasks.json', JSON.stringify(detailedTasks));
     });
   }).catch((error) => {
