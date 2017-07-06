@@ -9,15 +9,15 @@ flag: za.svg
 osmLink: https://openstreetmap.org/relation/87565
 calendar: 
 tm-projects: 
+   - id: 1118
+     desc: Assist with the mapping of communities in advance of Red Cross projects piloting the use of emerging technology to reduce fire risks. The data will used to assist with decision making and project goals.
    - id: 1098
      desc: 
-   - id: 1185
-     desc: Assist with the mapping of communities in advance of Red Cross projects piloting the use of emerging technology to reduce fire risks. The data will used to assist with decision making and project goals.
    - id: 1182
      desc: Assist with the mapping of communities in advance of Red Cross projects piloting the use of emerging technology to reduce fire risks. The data will used to assist with decision making and project goals.
    - id: 1184
      desc: Assist with the mapping of communities in advance of Red Cross projects piloting the use of emerging technology to reduce fire risks. The data will used to assist with decision making and project goals.
-   - id: 1118
+   - id: 1185
      desc: Assist with the mapping of communities in advance of Red Cross projects piloting the use of emerging technology to reduce fire risks. The data will used to assist with decision making and project goals.
    - id: 2029
      desc: Project is to scan forest &amp; fields only - Should go quickly The southern African Kingdom of Swaziland is leading the way in the global fight against malaria and is on the verge of making history by eliminating malaria from its borders by the end of 2016 according to the Kingdom of Swaziland National Malaria Control Programme. If the country achieves malaria elimination, it will be the first country in southern Africa to achieve zero local cases. Please be a part of this amazing effort at eliminating malaria in Swaziland in 2016 and map in some buildings!

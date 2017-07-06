@@ -130,14 +130,21 @@ gulp.task('build', function (done) {
   runSequence(['jekyll', 'compress:main', 'compress:vendor', 'sass', 'images', 'fonts'], ['copy:assets'], done);
 });
 
-// Tasking manger task
-// takes tasks.json and makes a countryTasks.json, tasks grouped by country
+
+// tm-project update tasks.
+// get-tasks finds our most up to date tasks
+// group-tasks groups tasks by country
+// update-pages updates pages with new tasks
+gulp.task('get-tasks', function () {
+  return cp.execSync('npm run get-tasks');
+});
+
 gulp.task('group-tasks', function () {
   return cp.execSync('npm run group-tasks');
 });
 
 gulp.task('update-pages', function () {
-  return cp.execSync('npm run update-pages ' + process.argv[4]);
+  return cp.execSync('npm run update-pages updates.json');
 });
 
 // Default task.
@@ -206,9 +213,15 @@ gulp.task('prod', function (done) {
   environment = 'production';
   runSequence('clean', 'build', done);
 });
+
+gulp.task('prod', function (done) {
+  environment = 'production';
+  runSequence('clean', 'update-tasks-build', done)
+})
+
 gulp.task('stage', function (done) {
   environment = 'stage';
-  runSequence('clean', 'build', done);
+  runSequence('clean', 'update-tasks-build', done);
 });
 
 // Removes jekyll's _site folder
@@ -218,12 +231,9 @@ gulp.task('clean', function () {
 });
 
 // builds site w/page updates
-gulp.task('update-build', function (done) {
-  runSequence(['jekyll', 'compress:main', 'compress:vendor', 'sass', 'images', 'fonts', 'update-pages'], ['copy:assets'], done);
-});
 
 gulp.task('update-tasks-build', function (done) {
-  runSequence(['jekyll', 'compress:main', 'compress:vendor', 'sass', 'images', 'fonts', 'group-tasks', 'update-pages'], ['copy:assets'], done);
+  runSequence(['jekyll', 'compress:main', 'compress:vendor', 'sass', 'images', 'fonts', 'get-tasks', 'group-tasks', 'update-pages'], ['copy:assets'], done);
 });
 
 /* ------------------------------------------------------------------------------
