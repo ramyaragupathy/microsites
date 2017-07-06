@@ -266,12 +266,14 @@ function generateEvents (calendarId) {
         $('.events-null').css('display', 'block');
         $('.events-panel').css('display', 'none');
       } else {
-        Object.keys(eventData).reverse().map((key, val) => {
+          let linkMatch =  /(\b(https?|ftp|file):\/\/[-A-Z0-9+&@#\/%?=~_|!:,.;]*[-A-Z0-9+&@#\/%=~_|])/ig;
+          console.log(eventData);
+          Object.keys(eventData).reverse().map((key, val) => {
           const eventTime = eventData[key].time[0]
           if (moment(currentDate).isBefore(eventTime)) {
             const title = eventData[key].name;
-            const singupLink = eventData[key].description.match(/(https?:\/\/[^\s]+)/g);
-            const desc = eventData[key].description.replace(/(https?:\/\/[^\s]+)/, '');
+            const singupLink = eventData[key].description.match(linkMatch);
+            const desc = eventData[key].description.replace(linkMatch, '');
             const location = eventData[key].location;
             const date = moment(eventData[key].time[0]).format("MMMM Do");
             const time = eventData[key].time.map((d) => {
@@ -279,7 +281,7 @@ function generateEvents (calendarId) {
               return moment(date).format('h:mma');
             }).join(' - ');
             const eventTopSection = [
-              '<div class="event-top-section clearfix">',
+              '<div class="card-divider event-top-section">',
               '<div class="sub-head">',
               '<img class="event-images" src="/assets/graphics/flags/4x3/' + PT.flag + '" width="24"/>',
               '<h3 class="event-header">' + title + '</h3>',
@@ -288,20 +290,20 @@ function generateEvents (calendarId) {
               '</div>'
             ].join('');
             const eventMainDetails = [
-              '<div class="event-maindetails clearfix">',
               '<div class="textbox" style="padding-top:8px">',
               '<p>' + '<b>Date:</b> ' + date + '</p>',
               '<p>' + '<b>Time:</b> ' + time + '</p>',
               '<p>' + '<b>Location:</b> ' + location + '</p>',
               '<p>' + '<b>About:</b> ' + desc + '</p>',
-              '</div>',
               '</div>'
             ].join('');
             const eventsHTML = [
               '<div class="column">',
-              '<div class="event-sub-container">',
+              '<div class="card">',
               eventTopSection,
+              '<div class="card-section">',
               eventMainDetails,
+              '</div>',
               '</div>',
               '</div>'
             ].join('');
@@ -616,7 +618,6 @@ const mbToken = 'pk.eyJ1IjoiZGV2c2VlZCIsImEiOiJnUi1mbkVvIn0.018aLhX0Mb0tdtaT2QNe
 const mbBasemapUrl = 'https://api.mapbox.com/v4/mapbox.light/{z}/{x}/{y}.png';
 
 if (PT.name !== 'Microsites') {
-  console.log('no-microsites')
   showUpdatesPlaceholder()
   // Populate the primary stats in hero via Missing Maps API
   getPrimaryStats(PT.code);

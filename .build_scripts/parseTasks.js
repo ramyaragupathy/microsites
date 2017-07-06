@@ -1,11 +1,10 @@
 'use stict'
 var fs = require('fs');
-var marked = require('marked');
 var rp = require('request-promise');
 var Promise = require('bluebird');
 var tasks = JSON.parse(fs.readFileSync('tasks.geojson'));
 var _ = require('lodash');
-var md = require('node-markdown');
+var md = require('node-markdown').Markdown;
 var turf = require('turf');
 var crg = require('country-reverse-geocoding').country_reverse_geocoding();
 
@@ -21,24 +20,23 @@ var crg = require('country-reverse-geocoding').country_reverse_geocoding();
  * 3) when null, return no description
  */
 function parseDesc (desc) {
-  desc = marked(desc).match(/<p>(.*?)<\/p>/g);
+  desc = md(desc, true, 'p').match(/<p>(.*?)<\/p>/g);
   if (desc !== null) {
     desc = desc.map((p) => {
-      let content;
       if (!(p.match(/The Missing Maps project aims to map/))) {
-        content = p.replace(/<\/?>/g, '');
+        return p.replace(/<\/?p>/g, '');
       }
-      return content;
     }).filter((descItem) => {
       if (descItem !== null) {
         return descItem;
       }
-    }).join(' ').replace(/:/g, '.');
+    }).join(' ')
+      .replace(/:/g, '.');
   } else {
     desc = '';
   }
   return desc;
-}
+};
 
 /*
  * 1) generate list of unique tasks + their geometry

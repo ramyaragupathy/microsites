@@ -3,6 +3,7 @@
 var fs = require('fs');
 var _ = require('lodash');
 var argv = require('minimist')(process.argv.slice(2));
+var currentFM = JSON.parse(fs.readFileSync('countryYFM.json').toString());
 var currentTasks = JSON.parse(fs.readFileSync(argv._[0]).toString());
 var countriesToUpdate = Object.keys(currentTasks);
 
@@ -29,6 +30,9 @@ function makeFrontMatterObj (yfmList) {
     'tm-projects: '
   ].map((fmKey) => {
     let fmObj = {};
+    if (typeof yfmList === 'string') {
+      yfmList = yfmList.split('\n');
+    }
     let match = yfmList.filter((fmEl) => {
       return fmEl.match(fmKey);
     });
@@ -71,7 +75,7 @@ function updateMarkdown (fmObj) {
       fmListEl.push(k + ': ' + '\n');
       const tmProjects = v.map((tmProject) => {
         const id = '   - id: ' + tmProject[0].toString();
-        const desc = '   - desc: ' + tmProject[1];
+        const desc = '     desc: ' + tmProject[1];
         return [id, desc].join('\n');
       }).join('\n');
       fmListEl.push(tmProjects);
@@ -98,6 +102,7 @@ function updateFrontMatterObj (fmObj, updateObj) {
     let updateObjVal;
     let unionedValues;
     if (sameKey === 'tm-projects') {
+      fmObjVal = fmObj[sameKey];
       updateObjVal = updateObj[sameKey].map((task) => {
         return tasksNormalizer(task);
       });
@@ -106,22 +111,23 @@ function updateFrontMatterObj (fmObj, updateObj) {
     } else {
       updateObjVal = updateObj[sameKey];
       fmObjVal = fmObj[sameKey];
+      unionedValues = _.union(fmObjVal, updateObjVal);
     }
     // add this back to toUpdateCountries
     fmObj[sameKey] = unionedValues;
   });
-  return updateMarkdown(fmObj);
   // write this back.
+  return updateMarkdown(fmObj);
 }
 
 let countriesToUpdateFM = [];
 countriesToUpdate.forEach((country) => {
-  let fmList = fs.readFileSync('app/_country/' + country + '.md').toString();
+  const countryFileName = 'app/_country/' + country + '.md';
+  let fmList = fs.readFileSync(countryFileName).toString();
   fmList = fmList.split('\n');
   let fmObj = makeFrontMatterObj(fmList);
   countriesToUpdateFM.push(fmObj);
 });
-
 const countriesToUpdateFMObj = _.reduce(
   countriesToUpdateFM, (countriesToUpdateFMObj, countriesToUpdateFM) => {
     return _.assign(countriesToUpdateFMObj, countriesToUpdateFM);
@@ -129,7 +135,8 @@ const countriesToUpdateFMObj = _.reduce(
 );
 
 _.forEach(countriesToUpdateFMObj, (countryFMObj, index) => {
-  const countryFMstring = updateFrontMatterObj(countriesToUpdateFMObj[index], currentTasks[index]);
   const countryFileName = 'app/_country/' + countriesToUpdateFMObj[index].code + '.md';
+  console.log(countryFileName);
+  const countryFMstring = updateFrontMatterObj(countryFMObj, currentTasks[index]);
   fs.writeFileSync(countryFileName, countryFMstring);
 });

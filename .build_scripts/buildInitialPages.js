@@ -43,7 +43,7 @@ function genCountryPage (countryPageInfo) {
   return yfmList.__content;
 }
 countries.forEach((country) => {
-  if (!country.code.match(/USA-/)) {
+  if (!(country.code.match(/USA-/))) {
     genCountryPage(country);
   }
 });

@@ -10,7 +10,7 @@ osmLink: https://openstreetmap.org/relation/1520612
 calendar: 
 tm-projects: 
    - id: 1604
-   - desc: 
+     desc: 
    - id: 1603
-   - desc: Map buildings for a resilience project
+     desc: Map buildings for a resilience project
 ---

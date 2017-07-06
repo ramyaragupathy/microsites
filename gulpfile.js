@@ -10,10 +10,6 @@ var browserSync = require('browser-sync');
 var concat = require('gulp-concat');
 var plumber = require('gulp-plumber');
 var babel = require('gulp-babel');
-var argv = require('minimist')(process.argv.slice(2));
-var pageUpdates =  argv._[0];
-
-
 
 /* ------------------------------------------------------------------------------
    -------------------------- Copy tasks ----------------------------------------
@@ -141,7 +137,7 @@ gulp.task('group-tasks', function () {
 });
 
 gulp.task('update-pages', function () {
-  return cp.execSync('npm run group-tasks ' + pageUpdates);
+  return cp.execSync('npm run update-pages ' + process.argv[4]);
 });
 
 // Default task.
@@ -224,6 +220,10 @@ gulp.task('clean', function () {
 // builds site w/page updates
 gulp.task('update-build', function (done) {
   runSequence(['jekyll', 'compress:main', 'compress:vendor', 'sass', 'images', 'fonts', 'update-pages'], ['copy:assets'], done);
+});
+
+gulp.task('update-tasks-build', function (done) {
+  runSequence(['jekyll', 'compress:main', 'compress:vendor', 'sass', 'images', 'fonts', 'group-tasks', 'update-pages'], ['copy:assets'], done);
 });
 
 /* ------------------------------------------------------------------------------

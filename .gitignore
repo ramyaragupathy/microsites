@@ -23,6 +23,10 @@ app/assets/scripts/client_secret*
 app/assets/scripts/googleAuth.js
 app/assets/scripts/buildCalendars.js
 
+# no swap files
+**/*.swo
+**/*.swp
+
 # todolists
 **/.todos.json
 
