@@ -114,7 +114,7 @@ Promise.map(tasksList, (task) => {
         detailedTaskFin['tm-projects'] = v;
         detailedTasksFin[detailedTaskKey] = detailedTaskFin;
       });
-      fs.writeFileSync('./countryTasks.json', JSON.stringify(detailedTasksFin));
+      fs.writeFileSync('./updates.json', JSON.stringify(detailedTasksFin));
     });
   }).catch((error) => {
     console.log(error);
