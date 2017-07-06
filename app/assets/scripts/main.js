@@ -618,7 +618,6 @@ const mbToken = 'pk.eyJ1IjoiZGV2c2VlZCIsImEiOiJnUi1mbkVvIn0.018aLhX0Mb0tdtaT2QNe
 const mbBasemapUrl = 'https://api.mapbox.com/v4/mapbox.light/{z}/{x}/{y}.png';
 
 if (PT.name !== 'Microsites') {
-  console.log('no-microsites')
   showUpdatesPlaceholder()
   // Populate the primary stats in hero via Missing Maps API
   getPrimaryStats(PT.code);

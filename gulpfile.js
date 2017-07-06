@@ -11,7 +11,6 @@ var concat = require('gulp-concat');
 var plumber = require('gulp-plumber');
 var babel = require('gulp-babel');
 
-
 /* ------------------------------------------------------------------------------
    -------------------------- Copy tasks ----------------------------------------
    ----------------------------------------------------------------------------*/
@@ -28,38 +27,36 @@ gulp.task('copy:assets', function (done) {
    --------------------------- Assets tasks -------------------------------------
    ----------------------------------------------------------------------------*/
 
- var sassInput = 'app/assets/styles/*.scss';
- var sassOptions = {
-   includePaths: ['node_modules/foundation-sites/scss','node_modules/font-awesome/scss','.tmp/assets/styles' ],
-   errLogToConsole: true,
-   outputStyle: 'expanded'
- };
- var autoprefixerOptions = {
-   browsers: ['last 2 versions', 'ie >= 9', 'and_chr >= 2.3']
- };
+var sassInput = 'app/assets/styles/*.scss';
+var sassOptions = {
+  includePaths: ['node_modules/foundation-sites/scss','node_modules/font-awesome/scss','.tmp/assets/styles' ],
+  errLogToConsole: true,
+  outputStyle: 'expanded'
+};
+var autoprefixerOptions = {
+  browsers: ['last 2 versions', 'ie >= 9', 'and_chr >= 2.3']
+};
 
- gulp.task('sass', function() {
+gulp.task('sass', function () {
   console.log('building sass');
-   return gulp.src(sassInput)
-     .pipe(plumber())
-     .pipe(sourcemaps.init())
-     .pipe(sass(sassOptions).on('error', sass.logError))
-     .pipe(autoprefixer(autoprefixerOptions))
-      // .pipe(autoprefixer())
-     .pipe(sourcemaps.write('.'))
-     .pipe(browserSync.reload({stream:true}))
-     .pipe(gulp.dest('.tmp/assets/styles'));
+  return gulp.src(sassInput)
+    .pipe(plumber())
+    .pipe(sourcemaps.init())
+    .pipe(sass(sassOptions).on('error', sass.logError))
+    .pipe(autoprefixer(autoprefixerOptions))
+    // .pipe(autoprefixer())
+    .pipe(sourcemaps.write('.'))
+    .pipe(browserSync.reload({ stream: true }))
+    .pipe(gulp.dest('.tmp/assets/styles'));
 });
 
 gulp.task('compress:main', function () {
   // main.min.js
   var task = gulp.src([
     'app/assets/scripts/main.js'
-  ])
-  .pipe(babel({
+  ]).pipe(babel({
     presets: ['es2015']
-  }))
-  .pipe(plumber());
+  })).pipe(plumber());
 
   if (environment === 'development') {
     task = task.pipe(concat('main.min.js'));
@@ -76,8 +73,7 @@ gulp.task('compress:vendor', function () {
   // vendor.min.js
   var task = gulp.src([
     'app/assets/scripts/vendor/*.js'
-  ])
-  .pipe(plumber());
+  ]).pipe(plumber());
   if (environment === 'development') {
     task = task.pipe(concat('vendor.min.js'));
   } else {
@@ -117,9 +113,9 @@ gulp.task('fonts', function () {
 });
 
 // Copies images
-gulp.task('images', function() {
+gulp.task('images', function () {
   return gulp.src('app/assets/graphics/**')
-    .pipe(gulp.dest('.tmp/assets/graphics'))
+    .pipe(gulp.dest('.tmp/assets/graphics'));
 });
 
 // Build the jekyll website.
@@ -134,6 +130,23 @@ gulp.task('build', function (done) {
   runSequence(['jekyll', 'compress:main', 'compress:vendor', 'sass', 'images', 'fonts'], ['copy:assets'], done);
 });
 
+
+// tm-project update tasks.
+// get-tasks finds our most up to date tasks
+// group-tasks groups tasks by country
+// update-pages updates pages with new tasks
+gulp.task('get-tasks', function () {
+  return cp.execSync('npm run get-tasks');
+});
+
+gulp.task('group-tasks', function () {
+  return cp.execSync('npm run group-tasks');
+});
+
+gulp.task('update-pages', function () {
+  return cp.execSync('npm run update-pages updates.json');
+});
+
 // Default task.
 gulp.task('default', function (done) {
   runSequence('build', done);
@@ -143,7 +156,32 @@ gulp.task('serve', ['build'], function () {
   browserSync({
     port: 3000,
     server: {
-      baseDir: ['.tmp','_site']
+      baseDir: ['.tmp', '_site']
+    }
+  });
+
+  gulp.watch(['./app/assets/fonts/**/*', './app/assets/images/**/*'], function () {
+    runSequence('jekyll', 'build', browserReload);
+  });
+
+  gulp.watch('app/assets/styles/**/*.scss', function () {
+    runSequence('sass');
+  });
+
+  gulp.watch(['./app/assets/scripts/**/*.js', '!./app/assets/scripts/vendor/**/*'], function () {
+    runSequence('compress:main', 'compress:vendor', browserReload);
+  });
+
+  gulp.watch(['app/**/*.html', 'app/**/*.md', 'app/**/*.json', 'app/**/*.geojson', '_config*'], function () {
+    runSequence('jekyll', browserReload);
+  });
+});
+
+gulp.task('update-serve', ['update-build'], function () {
+  browserSync({
+    port: 3000,
+    server: {
+      baseDir: ['.tmp', '_site']
     }
   });
 
@@ -175,15 +213,27 @@ gulp.task('prod', function (done) {
   environment = 'production';
   runSequence('clean', 'build', done);
 });
+
+gulp.task('prod', function (done) {
+  environment = 'production';
+  runSequence('clean', 'update-tasks-build', done)
+})
+
 gulp.task('stage', function (done) {
   environment = 'stage';
-  runSequence('clean', 'build', done);
+  runSequence('clean', 'update-tasks-build', done);
 });
 
 // Removes jekyll's _site folder
 gulp.task('clean', function () {
   return gulp.src(['_site', '.tmp'], {read: false})
     .pipe(clean());
+});
+
+// builds site w/page updates
+
+gulp.task('update-tasks-build', function (done) {
+  runSequence(['jekyll', 'compress:main', 'compress:vendor', 'sass', 'images', 'fonts', 'get-tasks', 'group-tasks', 'update-pages'], ['copy:assets'], done);
 });
 
 /* ------------------------------------------------------------------------------

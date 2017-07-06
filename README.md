@@ -4,11 +4,11 @@ This repo contains the code for MissingMaps Microsites. Each page is a unique vi
 
 ## Managing Microsites
 
-The below sections describe how to manage microsites, updates, and event calendars. The first tasks can be done using [Prose.io](http://prose.io/#MissingMaps/Microsites/). 
+The below sections describe how to manage microsites, updates, and event calendars. The first tasks can be done using [Prose.io](http://prose.io/#MissingMaps/Microsites/).
 
 ### Updating a Microsite Page
 
-Each country's microsite page sits within the `app > _country` folder. For more information on these pages' initail build, see the Development section. 
+Each country's microsite page sits within the `app > _country` folder. For more information on these pages' initail build, see the Development section.
 
 
 **Microsite YAML frontmatter**
@@ -34,6 +34,7 @@ tm-projects:
 ```
 
 **tm-project lists**
+
 | Field         | Changes  |
 | ------------- | ------------- |
 | id | The id for the HOT Task. For http://tasks.hotosm.org/project/1805, the id would be **1805**. |
@@ -58,7 +59,7 @@ To generate a new update one of the following set of steps:
 - Manually
 
 1. Make a new file in the `app > _country` folder
-2. Mimic the YAML front matter in `update-example.md` file found in the project root  
+2. Mimic the YAML front matter in `update-example.md` file found in the project root
 3. Write your update content
 4. Save and commit it
 
@@ -132,7 +133,7 @@ Thare the email address attached to the Google account managing the microsite's 
 
 1. Login to Facebook and click the down arrow at the top right of the page. Then in the drop-down that appears click `settings`
 2. Click the `contact` section on the next page followed by selecting `add a new email or mobile number`.
-3. In the popup that appears input the email address managing the public google calendar 
+3. In the popup that appears input the email address managing the public google calendar
 
 After user has completed these steps, a message will be sent to the Google Calendar manager and the manager can approve adding the email to the Facebook account
 
@@ -159,25 +160,50 @@ $ npm install
 ```
 Will also run `bundle install`
 
-### Initial microsites build
+### Building and Updating Microsites
 
-'.build_scripts/buildInitialPages.js' writes microsites to the `app > _country` folder. On each run, the script includes the recent tasks for each country. These tasks are gathered using [osm-data-parse](https://github.com/maxgrossman/osm-data-parse/).
+the `.build_scripts` folder includes three scripts made for updating pages:
 
-To include recent tasks, run osm-data-parse's tasking-mgr-parse/parse.js script and save the geoJSON output as 'tasks.geojson' in the root of the microsites repo.
+| script | purpose | npm script | gulp-tasks |
+| ------ | ------- | ---------- | ---------- |
+| buildInitialPagse.js | build boilerplate country pages | `$ npm run build-pages` | n/a |
+| parseTasks.js | create ./update.json including tasks per country | `$ npm run group-tasks` | `$ gulp group-tasks`, `$ gulp update-tasks-build` |
+| updatePages.js | update pages' yfm with json file of certain specification (detailed below) | `$ npm run update-pages ./update.json` | `$ gulp update-pages`, `$ gulp update-build`, `$ gulp update-serve` |
 
-Once the tasks.geojson is generatedd, run the following command
+Important, parseTasks.js uses `tasks.json`, a list of tasks gathered from a fork of [osm-data-parse](https://github.com/maxgrossman/osm-data-parse/)
+
+A generalized workflow for using these in three scripts in development/deployment is:
+
+1. `$ npm run build-pages` at beginning of development
+2. At some interval, perhaps once a week, generate `tasks.json` with osm-data-parse, then run `parseTasks.js` via `$ gulp update-tasks-build`
+3. push updated pages with new tasks to the deployment environment.
+
+This work-flow can be implemented for other mass page updates. Step 2 would need to be replaced with running some `parseTasks.js` equivalent for the YAML frontmatter of interest. That code would have to output a JSON with structure matching a `countryYFM.json` file.
 
 ```
-$ npm run build-pages
+{
+  "ARG" {
+    "calendar": "calendar.code",
+    "contact": "contact.email"
+  },
+  "ARM" {
+    "calendar": "calendar.code",
+    "contact": "contact.email"
+  }
+  ...
+  // more countries
+}
 
 ```
+
+Note, not all of the countries need to be included in this JSON, just those being updated. Also, for ease a `countries.json` exists w/the iso-codes used throughout the repo.
 
 ### Getting started
 
 ```
 $ gulp serve
 ```
-Compiles the compass files, javascripts, and launches the server making the site available at `http://localhost:3000/`
+Compiles the compass files, javascript files, and launches the server making the site available at `http://localhost:3000/`
 The system will watch files and execute tasks whenever one of them changes.
 The site will automatically refresh since it is bundled with live reload.
 
