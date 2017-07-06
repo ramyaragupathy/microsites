@@ -3,13 +3,12 @@
 var fs = require('fs');
 var _ = require('lodash');
 var argv = require('minimist')(process.argv.slice(2));
-var currentFM = JSON.parse(fs.readFileSync('countryYFM.json').toString());
-var currentTasks = JSON.parse(fs.readFileSync(argv._[0]).toString());
-var countriesToUpdate = Object.keys(currentTasks);
+var currentUpdateObj = JSON.parse(fs.readFileSync(argv._[0]).toString());
+var countriesToUpdate = Object.keys(currentUpdateObj);
 
 /* makeFrontMatterObj(yfmList)
  *
- * returns json v. of front matter
+ * returns json version of front matter
  *
  * 1) map values for fm keys by filtering yfmList for where fmKey regex matches
  * 2) take the list of objects generated and make singe object
@@ -33,13 +32,28 @@ function makeFrontMatterObj (yfmList) {
     if (typeof yfmList === 'string') {
       yfmList = yfmList.split('\n');
     }
-    let match = yfmList.filter((fmEl) => {
-      return fmEl.match(fmKey);
-    });
-    if (match[0]) {
-      match = match[0].split(fmKey)[1];
+    /*
+     * if the fmKey is tm-projects and there tasks are in the fm ( length < 12)
+     * then make fmObj['tm-project'] a list of [id, desc] lists
+     * in all other cases, just return back the values fm after the semicolon
+     */
+    let match;
+    if (fmKey === 'tm-projects: ' && yfmList.length < 12) {
+      const fmElStart = yfmList.indexOf(fmKey);
+      const tasks = yfmList.slice(fmElStart + 1, yfmList.length - 2);
+      match = existingTaskNormalizer(tasks);
+      if (match[0]) {
+        fmObj[fmKey.split(':')[0]] = match;
+      }
+    } else {
+      match = yfmList.filter((fmEl) => {
+        return fmEl.match(fmKey);
+      });
+      if (match[0]) {
+        match = match[0].split(fmKey)[1];
+      }
+      fmObj[fmKey.split(':')[0]] = match;
     }
-    fmObj[fmKey.split(':')[0]] = match;
     return fmObj;
   });
   fmObjs = _.reduce(
@@ -47,9 +61,9 @@ function makeFrontMatterObj (yfmList) {
       return _.assign(fmObject, fm);
     }, {}
   );
-  const fmObj = {};
-  fmObj[fmObjs.code] = fmObjs;
-  return fmObj;
+  const fmObjFin = {};
+  fmObjFin[fmObjs.code] = fmObjs;
+  return fmObjFin;
 }
 
 /* taskNormalizer(task)
@@ -59,13 +73,42 @@ function makeFrontMatterObj (yfmList) {
  *
  */
 
-function tasksNormalizer (task) {
+function updateTasksNormalizer (task) {
   return [
     task.task,
     task.desc
   ];
 }
 
+/*  existingTaskNormalizer(tasks)
+ *
+ * for each [-id:###, -desc:words] sublist in tasks
+ * grab the ### and words and push to tasksLists
+ * then return that
+ *
+ */
+
+function existingTaskNormalizer (tasks) {
+  let tasksList = [];
+  for (var i = 0; i < tasks.length - 1; i += 2) {
+    let taskId;
+    let taskDesc;
+    if (i !== tasks.length - 1) {
+      taskId = tasks[i].split('id: ')[1];
+      taskDesc = tasks[i + 1].split('desc: ')[1];
+      tasksList.push([taskId, taskDesc]);
+    }
+  }
+  return tasksList;
+}
+
+/* updateMarkdown(fmObj)
+ *
+ * 1) Take country page fmobj with updates
+ * 2) Generate a fmListEL, which matches the yam k:v found in the country.md
+ * 3) return fmListUpdated, made up of fmListEls
+ *
+ */
 function updateMarkdown (fmObj) {
   let fmListUpdated = [];
   _.forEach(fmObj, (v, k) => {
@@ -91,32 +134,36 @@ function updateMarkdown (fmObj) {
   return fmListUpdated.join('\n');
 }
 
+/* updateFrontMatterObj(fmObj)
+ *
+ * 1) Take in both country page fmObj and updateObj
+ * 2) update fmObj[samekey]'s value
+ *  - if working with tasks, union existing and new tasks
+ *  - if anything else, just update.
+ * 3) return fmObj passed through updateMarkdown, which just maps fmObj to
+ *    a yaml string that includes updates
+ *
+ */
+
 function updateFrontMatterObj (fmObj, updateObj) {
-  // finding matching keys
   const fmObjKeys = Object.keys(fmObj);
   const updateObjKeys = Object.keys(updateObj);
-  // union the values
   const sameKeys = _.intersection(fmObjKeys, updateObjKeys);
   sameKeys.forEach((sameKey) => {
     let fmObjVal;
     let updateObjVal;
-    let unionedValues;
     if (sameKey === 'tm-projects') {
       fmObjVal = fmObj[sameKey];
       updateObjVal = updateObj[sameKey].map((task) => {
-        return tasksNormalizer(task);
+        return updateTasksNormalizer(task);
       });
-      // some way to parse tm project stuff.
-      unionedValues = _.union(fmObjVal, updateObjVal);
+      const unionedValues = _.union(fmObjVal, updateObjVal);
+      fmObj[sameKey] = unionedValues;
     } else {
       updateObjVal = updateObj[sameKey];
-      fmObjVal = fmObj[sameKey];
-      unionedValues = _.union(fmObjVal, updateObjVal);
+      fmObjVal = updateObjVal;
     }
-    // add this back to toUpdateCountries
-    fmObj[sameKey] = unionedValues;
   });
-  // write this back.
   return updateMarkdown(fmObj);
 }
 
@@ -136,7 +183,6 @@ const countriesToUpdateFMObj = _.reduce(
 
 _.forEach(countriesToUpdateFMObj, (countryFMObj, index) => {
   const countryFileName = 'app/_country/' + countriesToUpdateFMObj[index].code + '.md';
-  console.log(countryFileName);
-  const countryFMstring = updateFrontMatterObj(countryFMObj, currentTasks[index]);
+  const countryFMstring = updateFrontMatterObj(countryFMObj, currentUpdateObj[index]);
   fs.writeFileSync(countryFileName, countryFMstring);
 });
