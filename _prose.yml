@@ -435,12 +435,17 @@ prose:
         field:
           label: Title
           element: "text"
-          placeholder: "Post Title"    
+          placeholder: "Post Title"
       - name: date-published
         field:
           label: Date Published
           element: "text"
           placeholder: "DD/MM/YYYY"
+      - name: hero-image
+        field:
+          label: Hero Image
+          element: "text"
+          paceholder: ""
       - name: link
         field:
           label: External link

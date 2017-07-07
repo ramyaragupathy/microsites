@@ -4,6 +4,7 @@ code: MWI
 title: Vaccines in Malawi
 author: Max Grossman
 date-published: 06/21/2017
+hero-image:
 link: 'https://twitter.com/emilyeros/status/874950344190681088'
 linktext: vaccines
 published: true
