@@ -62,6 +62,7 @@
     "gulp-compass": "*",
     "gulp-concat": "*",
     "gulp-plumber": "*",
+    "gulp-rename": "^1.2.2",
     "gulp-uglify": "*",
     "i18n-iso-countries": "^1.11.2",
     "js-yaml": "*",

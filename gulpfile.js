@@ -10,6 +10,7 @@ var browserSync = require('browser-sync');
 var concat = require('gulp-concat');
 var plumber = require('gulp-plumber');
 var babel = require('gulp-babel');
+var rename = require('gulp-rename');
 
 /* ------------------------------------------------------------------------------
    -------------------------- Copy tasks ----------------------------------------
@@ -61,10 +62,9 @@ gulp.task('compress:main', function () {
   if (environment === 'development') {
     task = task.pipe(concat('main.min.js'));
   } else {
-    task = task.pipe(uglify('main.min.js', {
-      sourceMap: true,
-      mange: false
-    }));
+    task = task
+      .pipe(uglify())
+      .pipe(rename({ suffix: '.min '}));
   }
   return task.pipe(gulp.dest('.tmp/assets/scripts'));
 });
@@ -77,12 +77,10 @@ gulp.task('compress:vendor', function () {
   if (environment === 'development') {
     task = task.pipe(concat('vendor.min.js'));
   } else {
-    task = task.pipe(uglify('vendor.min.js', {
-      sourceMap: true,
-      mange: false
-    }));
+    task = task
+      .pipe(uglify())
+      .pipe(rename({ suffix: '.min' }));
   }
-
   return task.pipe(gulp.dest('.tmp/assets/scripts'));
 });
 
