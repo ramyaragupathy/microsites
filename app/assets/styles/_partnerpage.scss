@@ -815,6 +815,23 @@ h1 {
       padding: 0 4em;
     }
   }
+
+  .hero-section {
+    margin: 0 0 2.5em 0;
+    filter: grayscale(100%);
+    background-size: cover;
+    height: 150px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .hero-section-text {
+    margin-top: 0.7em;
+    h1, p {
+      color: $white
+    }
+  }
 }
 
 .Updates-Container {
@@ -822,14 +839,10 @@ h1 {
   margin-bottom: 4em;
   @include container;
   .Updates-Content {
-    width: 80%;
     margin-right: auto;
     margin-left: auto;
     clear: both;
     text-align: left;
-    @media screen and (min-width: $MaxWidth) {
-      margin-left: 6px;
-    }
     h2 {
       padding-top: 1em;
     }

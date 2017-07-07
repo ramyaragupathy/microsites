@@ -4,10 +4,21 @@
  <div class = "Updates-Container">
  <div class = "Updates-Content">
  <br/>
-   <h1>{{ update.title }}</h1>
-   <p>{{ update.author }}</p>
-   <p>{{ update.date-published }}</p>
-   <br/>
+ {% if update.hero-image != null %}
+ <div class="hero-section" style="background: url('{{update.hero-image}}') 50% no-repeat">
+   <div class="hero-section-text">
+    <h1>{{ update.title }}</h1>
+    <p>{{ update.author}} | {{ update.date-published }}<p>
+   </div>
+ </div>
+ {% else %}
+ <div class="hero-section">
+   <div class="hero-section-text">
+    <h1 style="color:#606161">{{ update.title }}</h1>
+    <p style="color:#606161">{{ update.author}} | {{ update.date-published }}<p>
+  </div>
+ </div>
+ {% endif %}
    <p>{{ update.content | markdownify }}</p>
    <br/>
    {% if update.link %}
