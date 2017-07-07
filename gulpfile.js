@@ -62,7 +62,7 @@ gulp.task('compress', function () {
         });
         fs.renameSync(
           '.tmp/assets/scripts/' + fileToUpdate[0],
-          '.tmp/assets/scripts/' + name + '.min.js'
+          '.tmp/assets/scripts/' + name + '-microsite.min.js'
         );
       });
     });
@@ -199,7 +199,7 @@ gulp.task('prod', function (done) {
 gulp.task('prod', function (done) {
   environment = 'production';
   runSequence('clean', 'update-tasks-build', done)
-})
+});
 
 gulp.task('stage', function (done) {
   environment = 'stage';
