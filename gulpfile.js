@@ -4,14 +4,12 @@ var runSequence = require('run-sequence').use(gulp);
 var autoprefixer = require('gulp-autoprefixer');
 var sass = require('gulp-sass');
 var sourcemaps = require('gulp-sourcemaps');
-var uglify = require('gulp-uglify');
 var clean = require('gulp-clean');
 var browserSync = require('browser-sync');
-var concat = require('gulp-concat');
 var plumber = require('gulp-plumber');
 var babel = require('gulp-babel');
-var rename = require('gulp-rename');
-
+var bundle = require('gulp-bundle-assets');
+var fs = require('fs');
 /* ------------------------------------------------------------------------------
    -------------------------- Copy tasks ----------------------------------------
    ----------------------------------------------------------------------------*/
@@ -51,37 +49,23 @@ gulp.task('sass', function () {
     .pipe(gulp.dest('.tmp/assets/styles'));
 });
 
-gulp.task('compress:main', function () {
-  // main.min.js
-  var task = gulp.src([
-    'app/assets/scripts/main.js'
-  ]).pipe(babel({
-    presets: ['es2015']
-  })).pipe(plumber());
-
-  if (environment === 'development') {
-    task = task.pipe(concat('main.min.js'));
-  } else {
-    task = task
-      .pipe(uglify())
-      .pipe(rename({ suffix: '.min '}));
-  }
-  return task.pipe(gulp.dest('.tmp/assets/scripts'));
-});
-
-gulp.task('compress:vendor', function () {
-  // vendor.min.js
-  var task = gulp.src([
-    'app/assets/scripts/vendor/*.js'
-  ]).pipe(plumber());
-  if (environment === 'development') {
-    task = task.pipe(concat('vendor.min.js'));
-  } else {
-    task = task
-      .pipe(uglify())
-      .pipe(rename({ suffix: '.min' }));
-  }
-  return task.pipe(gulp.dest('.tmp/assets/scripts'));
+gulp.task('compress', function () {
+  process.env.NODE_ENV = environment;
+  gulp.src(['./bundle.config.js'])
+    .pipe(bundle())
+    .pipe(gulp.dest('.tmp/assets/scripts'))
+    .on('end', function () {
+      var dir = fs.readdirSync('.tmp/assets/scripts');
+      ['main', 'vendor'].map((name) => {
+        const fileToUpdate = dir.filter((file) => {
+          return file.match(name);
+        });
+        fs.renameSync(
+          '.tmp/assets/scripts/' + fileToUpdate[0],
+          '.tmp/assets/scripts/' + name + '.min.js'
+        );
+      });
+    });
 });
 
 // Build the jekyll website.
@@ -125,7 +109,7 @@ gulp.task('jekyll:rebuild', ['jekyll'], function () {
 // Main build task
 // Builds the site. Destination --> _site
 gulp.task('build', function (done) {
-  runSequence(['jekyll', 'compress:main', 'compress:vendor', 'sass', 'images', 'fonts'], ['copy:assets'], done);
+  runSequence(['jekyll', 'compress', 'sass', 'images', 'fonts'], ['copy:assets'], done);
 });
 
 
@@ -167,7 +151,7 @@ gulp.task('serve', ['build'], function () {
   });
 
   gulp.watch(['./app/assets/scripts/**/*.js', '!./app/assets/scripts/vendor/**/*'], function () {
-    runSequence('compress:main', 'compress:vendor', browserReload);
+    runSequence('compress', browserReload);
   });
 
   gulp.watch(['app/**/*.html', 'app/**/*.md', 'app/**/*.json', 'app/**/*.geojson', '_config*'], function () {
@@ -192,7 +176,7 @@ gulp.task('update-serve', ['update-build'], function () {
   });
 
   gulp.watch(['./app/assets/scripts/**/*.js', '!./app/assets/scripts/vendor/**/*'], function () {
-    runSequence('compress:main', 'compress:vendor', browserReload);
+    runSequence('compress', browserReload);
   });
 
   gulp.watch(['app/**/*.html', 'app/**/*.md', 'app/**/*.json', 'app/**/*.geojson', '_config*'], function () {
@@ -231,7 +215,7 @@ gulp.task('clean', function () {
 // builds site w/page updates
 
 gulp.task('update-tasks-build', function (done) {
-  runSequence(['jekyll', 'compress:main', 'compress:vendor', 'sass', 'images', 'fonts', 'get-tasks', 'group-tasks', 'update-pages'], ['copy:assets'], done);
+  runSequence(['jekyll', 'compress', 'sass', 'images', 'fonts', 'get-tasks', 'group-tasks', 'update-pages'], ['copy:assets'], done);
 });
 
 /* ------------------------------------------------------------------------------
