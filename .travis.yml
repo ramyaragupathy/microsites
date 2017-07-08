@@ -31,6 +31,6 @@ deploy:
       branch: ${STAGING_BRANCH}
   - provider: script
     skip_cleanup: true
-    script: .build_scripts/deploy.sh
+    script: ".build_scripts/deploy.sh"
     on:
       branch: ${PRODUCTION_BRANCH}
