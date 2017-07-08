@@ -1,0 +1,29 @@
+# Site settings
+title: mm-microsite
+safe:           false
+source:         app
+exclude:
+  - assets/scripts
+  - assets/vendor
+  - assets/styles
+  - README.md
+
+timezone: America/New_York
+highlighter: false
+
+domain:         http://www.missingmaps.org
+
+default_microsite: microsites
+
+collections:
+  country:
+    output: true
+    permalink: /:path/
+    lang: en
+  main:
+    output: true
+    permalink: /:path/
+    lang: en
+  updates:
+    output: true
+    permalink: /:path/

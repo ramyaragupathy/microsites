@@ -1,0 +1,48 @@
+---
+layout: default
+---
+
+{% include header.html %}
+
+<script>
+  // creates PT object. Includes front matter used to build page
+  var PT = {
+    lang: '{{page.lang}}',
+    code: '{{page.code}}',
+    name: '{{page.name}}',
+    flag: '{{page.flag}}',
+    contact: '{{page.contact}}',
+    calendar: '{{page.calendar}}',
+    hotProjects: [
+      {% assign comma = false %}
+      {% for p in page.tm-projects %}
+      {% if comma %}, {% endif %}
+      '{{ p.id }}'{% assign comma = true %}
+      {% endfor %}
+    ]
+  };
+</script>
+
+<h1>{{ page.name }}</h1>
+
+<section id = "Primary" >
+  {% include intro.html %}
+</section>
+
+<section class = "Current-Projects">
+  {% include projects.html %}
+</section>
+
+<section class = "Teams">
+  {% include teams.html %}
+</section>
+
+<section class = "Updates">
+  {% include updates.html %}
+</section>
+
+<section class = "Events">
+  {% include events.html %}
+</section>
+
+{% include footer.html %}

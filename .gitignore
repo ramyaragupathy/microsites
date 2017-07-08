@@ -1,0 +1,32 @@
+# System files
+.project
+.DS_Store
+.sass-cache
+.bundle
+bundle
+
+# Local
+node_modules
+_site
+.tmp
+_config-dev.yml
+npm-debug.log
+app/assets/scripts/config/local.js
+
+#Foundation additions
+.sass-cache
+config
+
+# build scripts
+app/assets/scripts/countries.json
+app/assets/scripts/client_secret*
+app/assets/scripts/googleAuth.js
+app/assets/scripts/buildCalendars.js
+
+# no swap files
+**/*.swo
+**/*.swp
+
+# todolists
+**/.todos.json
+

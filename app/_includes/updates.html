@@ -1,0 +1,38 @@
+<h1 id="updates-h1">Updates</h1>
+{% for update in site.updates %}
+ {% if update.code == page.code %}
+ <div class = "Updates-Container">
+ <div class = "Updates-Content">
+ <br/>
+ {% if update.hero-image != null %}
+ <div class="hero-section" style="background: url('{{update.hero-image}}') 50% no-repeat">
+   <div class="hero-section-text">
+    <h1>{{ update.title }}</h1>
+    <p>{{ update.author}} | {{ update.date-published }}<p>
+   </div>
+ </div>
+ {% else %}
+ <div class="hero-section">
+   <div class="hero-section-text">
+    <h1 style="color:#606161">{{ update.title }}</h1>
+    <p style="color:#606161">{{ update.author}} | {{ update.date-published }}<p>
+  </div>
+ </div>
+ {% endif %}
+   <p>{{ update.content | markdownify }}</p>
+   <br/>
+   {% if update.link %}
+   <a href= "{{ update.link }}" class="btn btn-blue" id="TM-Contribute-Btn-{{ p.code }}">See More</a>
+   {% endif %}
+ </div>
+</div>
+ {% endif %}
+{% endfor %}
+<div class = "Updates-Container">
+    <div class = "updates-null">
+      <br/>
+      <img src = "{{ site.domain }}{{ site.path_prefix }}/assets/graphics/content/process/helper.svg" width = "150"></img>
+      <p>There are no updates at this time for {{ page.name }}. If you'd like to share some news, get in touch.</p>
+      <a href="mailto:{{ page.contact }}" class="btn btn-blue">Contact Microsite Lead</a>
+  </div>
+</div>

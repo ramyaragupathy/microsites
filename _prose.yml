@@ -1,0 +1,454 @@
+# Prose settings
+
+prose:
+  ignore:
+    - /app/_data
+    - /app/_includes
+    - /app/_layouts
+    - /app/assets
+    - /app/humans.txt
+    - /app/index.html
+    - /app/robots.txt
+    - /404.html
+
+    # Block _prose and _config.
+    - /_prose.yml
+    - /_config.yml
+    - /_config-dev.yml
+
+    # Development stuff
+    - /.csscomb.json
+    - /.eslintrc
+    - /.gitattributes
+    - /.gitignore
+    - /.travis-s3sample.yml
+    - /.build-scripts
+    - /Gemfile
+    - /Gemfile.lock
+    - /gulpfile.js
+    - /LISCENSE
+    - /package.json
+    - /README.md
+
+  rooturl: app
+
+  metadata:
+    "app/_country":
+      - name: layout
+        field:
+          element: "hidden"
+          value: "country"
+      - name: "contact"
+        field:
+          label: "Microsite Contact"
+          element: "text"
+          placeholder: 'contact@domain.org'
+      - name: "osmLink"
+        field:
+          label: OSM Link
+          element: "text"
+          placeholder: https://openstreetmap.org/relation/1234
+      - name: "calendar"
+        field:
+          element: "text"
+          placeholder: "enter the calendar id"
+          help: "For help retrieving calendar id, see calendar section the microsites README"
+          label: 'Event Calendar Id'
+    "app/_updates":
+      - name: lang
+        field:
+          element: "hidden"
+          value: "en"
+      - name: code
+        field:
+          element: "select"
+          placeholder: Malawi
+          label: "Country"
+          help: "Select a Country"
+          options:
+            -  name: Afghanistan
+               value: AFG
+            -  name: Angola
+               value: AGO
+            -  name: Albania
+               value: ALB
+            -  name: United Arab Emirates
+               value: ARE
+            -  name: Argentina
+               value: ARG
+            -  name: Armenia
+               value: ARM
+            -  name: Antarctica
+               value: ATA
+            -  name: French Southern and Antarctic Lands
+               value: ATF
+            -  name: Australia
+               value: AUS
+            -  name: Austria
+               value: AUT
+            -  name: Azerbaijan
+               value: AZE
+            -  name: Burundi
+               value: BDI
+            -  name: Belgium
+               value: BEL
+            -  name: Benin
+               value: BEN
+            -  name: Burkina Faso
+               value: BFA
+            -  name: Bangladesh
+               value: BGD
+            -  name: Bulgaria
+               value: BGR
+            -  name: The Bahamas
+               value: BHS
+            -  name: Bosnia and Herzegovina
+               value: BIH
+            -  name: Belarus
+               value: BLR
+            -  name: Belize
+               value: BLZ
+            -  name: Bermuda
+               value: BMU
+            -  name: Bolivia
+               value: BOL
+            -  name: Brazil
+               value: BRA
+            -  name: Brunei
+               value: BRN
+            -  name: Bhutan
+               value: BTN
+            -  name: Botswana
+               value: BWA
+            -  name: Central African Republic
+               value: CAF
+            -  name: Canada
+               value: CAN
+            -  name: Switzerland
+               value: CHE
+            -  name: Chile
+               value: CHL
+            -  name: China
+               value: CHN
+            -  name: Ivory Coast
+               value: CIV
+            -  name: Cameroon
+               value: CMR
+            -  name: Democratic Republic of the Congo
+               value: COD
+            -  name: Republic of the Congo
+               value: COG
+            -  name: Colombia
+               value: COL
+            -  name: Costa Rica
+               value: CRI
+            -  name: Cuba
+               value: CUB
+            -  name: Northern Cyprus
+               value: CYP
+            -  name: Cyprus
+               value: CYP
+            -  name: Czech Republic
+               value: CZE
+            -  name: Germany
+               value: DEU
+            -  name: Djibouti
+               value: DJI
+            -  name: Denmark
+               value: DNK
+            -  name: Dominican Republic
+               value: DOM
+            -  name: Algeria
+               value: DZA
+            -  name: Ecuador
+               value: ECU
+            -  name: Egypt
+               value: EGY
+            -  name: Eritrea
+               value: ERI
+            -  name: Spain
+               value: ESP
+            -  name: Estonia
+               value: EST
+            -  name: Ethiopia
+               value: ETH
+            -  name: Finland
+               value: FIN
+            -  name: Fiji
+               value: FJI
+            -  name: Falkland Islands
+               value: FLK
+            -  name: France
+               value: FRA
+            -  name: Gabon
+               value: GAB
+            -  name: United Kingdom
+               value: GBR
+            -  name: Georgia
+               value: GEO
+            -  name: Ghana
+               value: GHA
+            -  name: Guinea
+               value: GIN
+            -  name: Gambia
+               value: GMB
+            -  name: Guinea Bissau
+               value: GNB
+            -  name: Equatorial Guinea
+               value: GNQ
+            -  name: Greece
+               value: GRC
+            -  name: Greenland
+               value: GRL
+            -  name: Guatemala
+               value: GTM
+            -  name: French Guiana
+               value: GUF
+            -  name: Guyana
+               value: GUY
+            -  name: Honduras
+               value: HND
+            -  name: Croatia
+               value: HRV
+            -  name: Haiti
+               value: HTI
+            -  name: Hungary
+               value: HUN
+            -  name: Indonesia
+               value: IDN
+            -  name: India
+               value: IND
+            -  name: Ireland
+               value: IRL
+            -  name: Iran
+               value: IRN
+            -  name: Iraq
+               value: IRQ
+            -  name: Iceland
+               value: ISL
+            -  name: Israel
+               value: ISR
+            -  name: Italy
+               value: ITA
+            -  name: Jamaica
+               value: JAM
+            -  name: Jordan
+               value: JOR
+            -  name: Japan
+               value: JPN
+            -  name: Kazakhstan
+               value: KAZ
+            -  name: Kenya
+               value: KEN
+            -  name: Kyrgyzstan
+               value: KGZ
+            -  name: Cambodia
+               value: KHM
+            -  name: South Korea
+               value: KOR
+            -  name: Kosovo
+               value: KOS
+            -  name: Kuwait
+               value: KWT
+            -  name: Laos
+               value: LAO
+            -  name: Lebanon
+               value: LBN
+            -  name: Liberia
+               value: LBR
+            -  name: Libya
+               value: LBY
+            -  name: Sri Lanka
+               value: LKA
+            -  name: Lesotho
+               value: LSO
+            -  name: Lithuania
+               value: LTU
+            -  name: Luxembourg
+               value: LUX
+            -  name: Latvia
+               value: LVA
+            -  name: Morocco
+               value: MAR
+            -  name: Moldova
+               value: MDA
+            -  name: Madagascar
+               value: MDG
+            -  name: Mexico
+               value: MEX
+            -  name: Macedonia
+               value: MKD
+            -  name: Mali
+               value: MLI
+            -  name: Myanmar
+               value: MMR
+            -  name: Montenegro
+               value: MNE
+            -  name: Mongolia
+               value: MNG
+            -  name: Mozambique
+               value: MOZ
+            -  name: Mauritania
+               value: MRT
+            -  name: Malawi
+               value: MWI
+            -  name: Singapore
+               value: SGP
+            -  name: Malaysia
+               value: MYS
+            -  name: Namibia
+               value: NAM
+            -  name: New Caledonia
+               value: NCL
+            -  name: Niger
+               value: NER
+            -  name: Nigeria
+               value: NGA
+            -  name: Nicaragua
+               value: NIC
+            -  name: Netherlands
+               value: NLD
+            -  name: Norway
+               value: NOR
+            -  name: Nepal
+               value: NPL
+            -  name: New Zealand
+               value: NZL
+            -  name: Oman
+               value: OMN
+            -  name: Pakistan
+               value: PAK
+            -  name: Panama
+               value: PAN
+            -  name: Peru
+               value: PER
+            -  name: Philippines
+               value: PHL
+            -  name: Papua New Guinea
+               value: PNG
+            -  name: Poland
+               value: POL
+            -  name: Puerto Rico
+               value: PRI
+            -  name: North Korea
+               value: PRK
+            -  name: Portugal
+               value: PRT
+            -  name: Paraguay
+               value: PRY
+            -  name: Qatar
+               value: QAT
+            -  name: Romania
+               value: ROU
+            -  name: Russia
+               value: RUS
+            -  name: Rwanda
+               value: RWA
+            -  name: Western Sahara
+               value: ESH
+            -  name: Saudi Arabia
+               value: SAU
+            -  name: Sudan
+               value: SDN
+            -  name: South Sudan
+               value: SDS
+            -  name: Senegal
+               value: SEN
+            -  name: Solomon Islands
+               value: SLB
+            -  name: Sierra Leone
+               value: SLE
+            -  name: El Salvador
+               value: SLV
+            -  name: Somaliland
+               value: SOM
+            -  name: Somalia
+               value: SOM
+            -  name: Republic of Serbia
+               value: SRB
+            -  name: Suriname
+               value: SUR
+            -  name: Slovakia
+               value: SVK
+            -  name: Slovenia
+               value: SVN
+            -  name: Sweden
+               value: SWE
+            -  name: Swaziland
+               value: SWZ
+            -  name: Syria
+               value: SYR
+            -  name: Chad
+               value: TCD
+            -  name: Togo
+               value: TGO
+            -  name: Thailand
+               value: THA
+            -  name: Tajikistan
+               value: TJK
+            -  name: Turkmenistan
+               value: TKM
+            -  name: East Timor
+               value: TLS
+            -  name: Trinidad and Tobago
+               value: TTO
+            -  name: Tunisia
+               value: TUN
+            -  name: Turkey
+               value: TUR
+            -  name: Taiwan
+               value: TWN
+            -  name: United Republic of Tanzania
+               value: TZA
+            -  name: Uganda
+               value: UGA
+            -  name: Ukraine
+               value: UKR
+            -  name: Uruguay
+               value: URY
+            -  name: United States of America
+               value: USA
+            -  name: Uzbekistan
+               value: UZB
+            -  name: Venezuela
+               value: VEN
+            -  name: Vietnam
+               value: VNM
+            -  name: Vanuatu
+               value: VUT
+            -  name: West Bank
+               value: PSE
+            -  name: Yemen
+               value: YEM
+            -  name: South Africa
+               value: ZAF
+            -  name: Zambia
+               value: ZMB
+            -  name: Zimbabwe
+               value: ZWE
+      - name: author
+        field:
+          label: Author
+          element: "text"
+          placeholder: 'Awesome Mapper'
+      - name: title
+        field:
+          label: Title
+          element: "text"
+          placeholder: "Post Title"
+      - name: date-published
+        field:
+          label: Date Published
+          element: "text"
+          placeholder: "DD/MM/YYYY"
+      - name: hero-image
+        field:
+          label: Hero Image
+          element: "text"
+          paceholder: ""
+      - name: link
+        field:
+          label: External link
+          element: "text"
+          placeholder: 'external.link.org'
+          help: 'If you do not have an external link, leave this blank'
