@@ -13,7 +13,7 @@ before_install:
   - sudo chmod +x ./.build_scripts/build.sh
   - sudo chmod +x ./.build_scripts/deploy.sh
 install:
-  - sudo . $HOME/.nvm/nvm.sh
+  - sudo $HOME/.nvm/nvm.sh
   - sudo nvm install $TRAVIS_NODE_VERSION
   - sudo nvm use $TRAVIS_NODE_VERSION
   - sudo npm install
