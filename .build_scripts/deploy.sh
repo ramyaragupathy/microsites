@@ -4,6 +4,7 @@ set -e # halt script on error
 # If this is the deploy branch, push it up to gh-pages
 echo "Get ready, we're pushing to gh-pages!"
 cd _site
+rm -rf .git/
 
 SSH_REPO="git@github.com:${TRAVIS_REPO_SLUG}.git"
 SHA=`git rev-parse --verify HEAD`
