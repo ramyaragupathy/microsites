@@ -14,12 +14,12 @@ before_install:
   - sudo chmod +x ./.build_scripts/deploy.sh
 install:
   - sudo $HOME/.nvm/nvm.sh
-  - sudo nvm install $TRAVIS_NODE_VERSION
-  - sudo nvm use $TRAVIS_NODE_VERSION
-  - sudo npm install
+  - nvm install $TRAVIS_NODE_VERSION
+  - nvm use $TRAVIS_NODE_VERSION
+  - npm install
 script:
-  - sudo npm test
-  - sudo ./.build_scripts/build.sh
+  - npm test
+  - ./.build_scripts/build.sh
 deploy:
   - provider: s3
     access_key_id: ${ACCESS_KEY_ID}
@@ -31,6 +31,6 @@ deploy:
       branch: ${STAGING_BRANCH}
   - provider: script
     skip_cleanup: true
-    script: "sudo .build_scripts/deploy.sh"
+    script: ".build_scripts/deploy.sh"
     on:
       branch: "${PRODUCTION_BRANCH}"
