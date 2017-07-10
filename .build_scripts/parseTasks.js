@@ -23,9 +23,15 @@ function parseDesc (desc) {
   desc = md(desc, true, 'p').match(/<p>(.*?)<\/p>/g);
   if (desc !== null) {
     desc = desc.map((p) => {
+      let content = p;
       if (!(p.match(/The Missing Maps project aims to map/))) {
-        return p.replace(/<\/?p>/g, '');
+        content = p.replace(/<\/?p>/g, '');
       }
+      if (content.match(/[\*]/g)) {
+        content = content.replace(/[\*]/g, '');
+        console.log('wow')
+      }
+      return content
     }).filter((descItem) => {
       if (descItem !== null) {
         return descItem;

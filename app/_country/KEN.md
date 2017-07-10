@@ -14,7 +14,7 @@ tm-projects:
    - id: 1234
      desc: The Machakos branch of the Kenya Red Cross tracks road traffic incidents. As part of improving the reporting and making the data more accessible they plan to move the tracking process online. The map for the area needs to be filled in so that they can accurately place reported incidents.
    - id: 1980
-     desc: Please only map as part of the Multiconsult mapping event
+     desc: Please only map as part of the Multiconsult mapping event <p>The Missing Maps project aims to map the most vulnerable places in the world (affected by humanitarian crises. disease epidemics, conflict, natural disasters, poverty, environmental crises). Building on HOT's disaster preparedness projects, the Missing Maps tasks facilitate pre-emptive mapping of priority countries to better facilitate disaster response, medical activities and resource allocation when crises occur.</p>
    - id: 2483
      desc: Les habitants de Ngao connaissent continuellement des problèmes d'accès à l'eau potable tant pour les humanis que pour les animaux, pendant les saisons sèches mais aussi (en raison des inondations) pendant la saison des pluies. Ce projet de cartographie aidera l'équipe Eau et Habitat du CICR à travailler à l'extension du pipeline existant et à la construction d'abreuvoirs à des positions stratégiques. 
    - id: 2480

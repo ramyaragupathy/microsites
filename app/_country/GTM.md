@@ -10,7 +10,7 @@ osmLink: https://openstreetmap.org/relation/1521463
 calendar: 
 tm-projects: 
    - id: 2395
-     desc: PADF is working in the municipality of Mixco, Guatemala, to train, equip, and organize neighborhood-based disaster preparation and response initiatives, as well as implement small-scale disaster resilient infrastructure improvement projects based on community-driven vulnerability risk and needs assessments. This mapping initiative will create open-geospatial data to support this effort. 
+     desc: PADF is working in the municipality of Mixco, Guatemala, to train, equip, and organize neighborhood-based disaster preparation and response initiatives, as well as implement small-scale disaster resilient infrastructure improvement projects based on community-driven vulnerability risk and needs assessments. This mapping initiative will create open-geospatial data to support this effort.  <p>The Missing Maps project aims to map the most vulnerable places in the world (affected by humanitarian crises. disease epidemics, conflict, natural disasters, poverty, environmental crises). Building on HOT's disaster preparedness projects, the Missing Maps tasks facilitate pre-emptive mapping of priority countries to better facilitate disaster response, medical activities and resource allocation when crises occur.</p>
    - id: 2410
      desc: This project is to trace buildings, and missing major roads, in this region of Guatemala. This project may require using and adjusting multiple imagery sources. Your mapping contribution will help prevent the suffering and loss of life the disease malaria causes.
    - id: 2405
