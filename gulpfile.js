@@ -198,7 +198,7 @@ gulp.task('prod', function (done) {
 
 gulp.task('prod', function (done) {
   environment = 'production';
-  runSequence('clean', 'update-tasks-build', done)
+  runSequence('clean', 'build', done)
 });
 
 gulp.task('stage', function (done) {
