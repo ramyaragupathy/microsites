@@ -11,7 +11,7 @@ env:
   - PRODUCTION_BRANCH=master
 before_install:
   - sudo chmod +x ./.build_scripts/build.sh
-  - suod chmod +x ./.build_scripts/deploy.sh
+  - sudo chmod +x ./.build_scripts/deploy.sh
 install:
   - sudo . $HOME/.nvm/nvm.sh
   - sudo nvm install $TRAVIS_NODE_VERSION
