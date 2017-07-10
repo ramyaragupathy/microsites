@@ -1,4 +1,4 @@
-sudo: false
+sudo: required
 
 language: ruby
 rvm:
@@ -10,16 +10,16 @@ env:
   - STAGING_BRANCH=dev
   - PRODUCTION_BRANCH=master
 before_install:
-  - chmod +x ./.build_scripts/build.sh
-  - chmod +x ./.build_scripts/deploy.sh
+  - sudo chmod +x ./.build_scripts/build.sh
+  - suod chmod +x ./.build_scripts/deploy.sh
 install:
-  - . $HOME/.nvm/nvm.sh
-  - nvm install $TRAVIS_NODE_VERSION
-  - nvm use $TRAVIS_NODE_VERSION
-  - npm install
+  - sudo . $HOME/.nvm/nvm.sh
+  - sudo nvm install $TRAVIS_NODE_VERSION
+  - sudo nvm use $TRAVIS_NODE_VERSION
+  - sudo npm install
 script:
-  - npm test
-  - ./.build_scripts/build.sh
+  - sudo npm test
+  - sudo ./.build_scripts/build.sh
 deploy:
   - provider: s3
     access_key_id: ${ACCESS_KEY_ID}
@@ -31,6 +31,6 @@ deploy:
       branch: ${STAGING_BRANCH}
   - provider: script
     skip_cleanup: true
-    script: ".build_scripts/deploy.sh"
+    script: "sudo .build_scripts/deploy.sh"
     on:
       branch: "${PRODUCTION_BRANCH}"
