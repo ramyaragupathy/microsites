@@ -7,7 +7,7 @@ bundle
 
 # Local
 node_modules
-#_site
+_site
 .tmp
 _config-dev.yml
 npm-debug.log

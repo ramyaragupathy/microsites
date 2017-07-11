@@ -1,5 +1,3 @@
-# Site settings
-title: mm-microsite
 safe:           false
 source:         app
 exclude:
@@ -12,15 +10,12 @@ timezone: America/New_York
 highlighter: false
 
 domain:         http://www.missingmaps.org
+path_prefix:    /microsites
 
-default_microsite: microsites
+default_microsite: all
 
 collections:
   country:
-    output: true
-    permalink: /:path/
-    lang: en
-  main:
     output: true
     permalink: /:path/
     lang: en
