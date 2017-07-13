@@ -76,7 +76,7 @@ function makeFrontMatterObj (yfmList) {
 function updateTasksNormalizer (task) {
   return [
     task.task,
-    task.desc
+    task.desc.replace(/<p>/gm,'').replace(/<\/p>/gm, '')
   ];
 }
 

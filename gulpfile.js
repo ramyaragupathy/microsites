@@ -198,7 +198,7 @@ gulp.task('prod', function (done) {
 
 gulp.task('prod', function (done) {
   environment = 'production';
-  runSequence('clean', 'update-tasks-build', done)
+  runSequence('clean', 'build', done)
 });
 
 gulp.task('stage', function (done) {
@@ -215,7 +215,7 @@ gulp.task('clean', function () {
 // builds site w/page updates
 
 gulp.task('update-tasks-build', function (done) {
-  runSequence(['jekyll', 'compress', 'sass', 'images', 'fonts', 'get-tasks', 'group-tasks', 'update-pages'], ['copy:assets'], done);
+  runSequence(['get-tasks', 'group-tasks', 'update-pages', 'jekyll', 'compress', 'sass', 'images', 'fonts'], ['copy:assets'], done);
 });
 
 /* ------------------------------------------------------------------------------

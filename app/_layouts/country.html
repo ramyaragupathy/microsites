@@ -14,13 +14,12 @@ layout: default
     contact: '{{page.contact}}',
     calendar: '{{page.calendar}}',
     hotProjects: [
-      {% assign comma = false %}
       {% for p in page.tm-projects %}
-      {% if comma %}, {% endif %}
-      '{{ p.id }}'{% assign comma = true %}
+      '{{ p.id }}',
       {% endfor %}
     ]
   };
+  console.log(PT.hotProjects)
 </script>
 
 <h1>{{ page.name }}</h1>
