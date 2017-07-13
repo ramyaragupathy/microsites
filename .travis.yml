@@ -10,21 +10,16 @@ env:
   - STAGING_BRANCH=dev
   - PRODUCTION_BRANCH=master
 before_install:
-  - free
   - chmod +x ./.build_scripts/build.sh
   - chmod +x ./.build_scripts/deploy.sh
 install:
-  - free
   - $HOME/.nvm/nvm.sh
   - nvm install $TRAVIS_NODE_VERSION
   - nvm use $TRAVIS_NODE_VERSION
   - npm install
-  - free
 script:
   - npm test
-  - free
   - ./.build_scripts/build.sh
-  - free
 deploy:
   - provider: s3
     access_key_id: ${ACCESS_KEY_ID}
