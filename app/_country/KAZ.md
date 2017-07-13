@@ -1,7 +1,7 @@
 ---
 layout: country
 lang: en
-permalink: /microsites/Kazakhstan/
+permalink: /Kazakhstan/
 code: KAZ
 name: Kazakhstan
 contact: 

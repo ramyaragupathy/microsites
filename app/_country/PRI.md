@@ -1,7 +1,7 @@
 ---
 layout: country
 lang: en
-permalink: /microsites/Puerto Rico/
+permalink: /Puerto Rico/
 code: PRI
 name: Puerto Rico
 contact: 

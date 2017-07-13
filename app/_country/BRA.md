@@ -1,7 +1,7 @@
 ---
 layout: country
 lang: en
-permalink: /microsites/Brazil/
+permalink: /Brazil/
 code: BRA
 name: Brazil
 contact: 

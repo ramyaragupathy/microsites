@@ -1,7 +1,7 @@
 ---
 layout: country
 lang: en
-permalink: /microsites/Belarus/
+permalink: /Belarus/
 code: BLR
 name: Belarus
 contact: 

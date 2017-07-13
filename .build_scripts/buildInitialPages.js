@@ -28,7 +28,7 @@ function genCountryPage (countryPageInfo) {
     '---',
     'layout: country',
     'lang: en',
-    'permalink: /microsites/' + countryName + '/',
+    'permalink: /' + countryName + '/',
     'code: ' + countryCode.toUpperCase(),
     'name: ' + countryName,
     'contact: ',
@@ -47,3 +47,12 @@ countries.forEach((country) => {
     genCountryPage(country);
   }
 });
+const allPageMetaData = [
+  '---',
+  'layout: all',
+  'lang: en',
+  'permalink: /all/',
+  '---'
+]
+const allPage = './app/_country/all.md'
+fs.writeFileSync(allPage, allPageMetaData.join('\n'))

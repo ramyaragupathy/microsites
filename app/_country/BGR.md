@@ -1,7 +1,7 @@
 ---
 layout: country
 lang: en
-permalink: /microsites/Bulgaria/
+permalink: /Bulgaria/
 code: BGR
 name: Bulgaria
 contact: 

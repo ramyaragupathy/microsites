@@ -10,7 +10,7 @@ timezone: America/New_York
 highlighter: false
 
 domain:         http://www.missingmaps.org
-path_prefix:    /
+path_prefix:    /microsites
 
 default_microsite: all
 

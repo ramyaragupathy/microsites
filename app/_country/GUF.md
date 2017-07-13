@@ -1,7 +1,7 @@
 ---
 layout: country
 lang: en
-permalink: /microsites/French Guiana/
+permalink: /French Guiana/
 code: GUF
 name: French Guiana
 contact: 

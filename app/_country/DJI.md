@@ -1,7 +1,7 @@
 ---
 layout: country
 lang: en
-permalink: /microsites/Djibouti/
+permalink: /Djibouti/
 code: DJI
 name: Djibouti
 contact: 

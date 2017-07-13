@@ -1,7 +1,7 @@
 ---
 layout: country
 lang: en
-permalink: /microsites/Australia/
+permalink: /Australia/
 code: AUS
 name: Australia
 contact: 

@@ -1,7 +1,7 @@
 ---
 layout: country
 lang: en
-permalink: /microsites/Russia/
+permalink: /Russia/
 code: RUS
 name: Russia
 contact: 

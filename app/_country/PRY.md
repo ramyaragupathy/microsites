@@ -1,7 +1,7 @@
 ---
 layout: country
 lang: en
-permalink: /microsites/Paraguay/
+permalink: /Paraguay/
 code: PRY
 name: Paraguay
 contact: 

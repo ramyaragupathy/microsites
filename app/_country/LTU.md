@@ -1,7 +1,7 @@
 ---
 layout: country
 lang: en
-permalink: /microsites/Lithuania/
+permalink: /Lithuania/
 code: LTU
 name: Lithuania
 contact: 

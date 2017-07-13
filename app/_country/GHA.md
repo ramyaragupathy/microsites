@@ -1,7 +1,7 @@
 ---
 layout: country
 lang: en
-permalink: /microsites/Ghana/
+permalink: /Ghana/
 code: GHA
 name: Ghana
 contact: 

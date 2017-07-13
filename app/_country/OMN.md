@@ -1,7 +1,7 @@
 ---
 layout: country
 lang: en
-permalink: /microsites/Oman/
+permalink: /Oman/
 code: OMN
 name: Oman
 contact: 

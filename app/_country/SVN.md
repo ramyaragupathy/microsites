@@ -1,7 +1,7 @@
 ---
 layout: country
 lang: en
-permalink: /microsites/Slovenia/
+permalink: /Slovenia/
 code: SVN
 name: Slovenia
 contact: 

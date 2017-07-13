@@ -1,7 +1,7 @@
 ---
 layout: country
 lang: en
-permalink: /microsites/Albania/
+permalink: /Albania/
 code: ALB
 name: Albania
 contact: 

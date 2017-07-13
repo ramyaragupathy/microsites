@@ -1,7 +1,7 @@
 ---
 layout: country
 lang: en
-permalink: /microsites/Tunisia/
+permalink: /Tunisia/
 code: TUN
 name: Tunisia
 contact: 

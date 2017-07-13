@@ -1,7 +1,7 @@
 ---
 layout: country
 lang: en
-permalink: /microsites/French Southern and Antarctic Lands/
+permalink: /French Southern and Antarctic Lands/
 code: ATF
 name: French Southern and Antarctic Lands
 contact: 

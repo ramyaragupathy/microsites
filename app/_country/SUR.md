@@ -1,7 +1,7 @@
 ---
 layout: country
 lang: en
-permalink: /microsites/Suriname/
+permalink: /Suriname/
 code: SUR
 name: Suriname
 contact: 

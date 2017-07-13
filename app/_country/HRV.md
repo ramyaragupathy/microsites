@@ -1,7 +1,7 @@
 ---
 layout: country
 lang: en
-permalink: /microsites/Croatia/
+permalink: /Croatia/
 code: HRV
 name: Croatia
 contact: 

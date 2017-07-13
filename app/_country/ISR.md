@@ -1,7 +1,7 @@
 ---
 layout: country
 lang: en
-permalink: /microsites/Israel/
+permalink: /Israel/
 code: ISR
 name: Israel
 contact: 

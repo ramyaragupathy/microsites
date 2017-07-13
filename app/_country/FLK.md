@@ -1,7 +1,7 @@
 ---
 layout: country
 lang: en
-permalink: /microsites/Falkland Islands/
+permalink: /Falkland Islands/
 code: FLK
 name: Falkland Islands
 contact: 

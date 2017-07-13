@@ -1,7 +1,7 @@
 ---
 layout: country
 lang: en
-permalink: /microsites/Gabon/
+permalink: /Gabon/
 code: GAB
 name: Gabon
 contact: 

@@ -1,7 +1,7 @@
 ---
 layout: country
 lang: en
-permalink: /microsites/Mauritania/
+permalink: /Mauritania/
 code: MRT
 name: Mauritania
 contact: 

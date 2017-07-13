@@ -1,7 +1,7 @@
 ---
 layout: country
 lang: en
-permalink: /microsites/Saudi Arabia/
+permalink: /Saudi Arabia/
 code: SAU
 name: Saudi Arabia
 contact: 

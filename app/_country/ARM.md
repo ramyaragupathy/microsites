@@ -1,7 +1,7 @@
 ---
 layout: country
 lang: en
-permalink: /microsites/Armenia/
+permalink: /Armenia/
 code: ARM
 name: Armenia
 contact: 

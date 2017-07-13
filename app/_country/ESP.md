@@ -1,7 +1,7 @@
 ---
 layout: country
 lang: en
-permalink: /microsites/Spain/
+permalink: /Spain/
 code: ESP
 name: Spain
 contact: 

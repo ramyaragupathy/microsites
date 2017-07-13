@@ -1,7 +1,7 @@
 ---
 layout: country
 lang: en
-permalink: /microsites/Brunei/
+permalink: /Brunei/
 code: BRN
 name: Brunei
 contact: 

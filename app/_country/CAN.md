@@ -1,7 +1,7 @@
 ---
 layout: country
 lang: en
-permalink: /microsites/Canada/
+permalink: /Canada/
 code: CAN
 name: Canada
 contact: 

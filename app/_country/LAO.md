@@ -1,7 +1,7 @@
 ---
 layout: country
 lang: en
-permalink: /microsites/Laos/
+permalink: /Laos/
 code: LAO
 name: Laos
 contact: 

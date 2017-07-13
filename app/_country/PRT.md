@@ -1,7 +1,7 @@
 ---
 layout: country
 lang: en
-permalink: /microsites/Portugal/
+permalink: /Portugal/
 code: PRT
 name: Portugal
 contact: 

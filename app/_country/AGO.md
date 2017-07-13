@@ -1,7 +1,7 @@
 ---
 layout: country
 lang: en
-permalink: /microsites/Angola/
+permalink: /Angola/
 code: AGO
 name: Angola
 contact: 

@@ -1,7 +1,7 @@
 ---
 layout: country
 lang: en
-permalink: /microsites/Republic of Serbia/
+permalink: /Republic of Serbia/
 code: SRB
 name: Republic of Serbia
 contact: 

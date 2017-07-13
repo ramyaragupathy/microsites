@@ -1,7 +1,7 @@
 ---
 layout: country
 lang: en
-permalink: /microsites/Czech Republic/
+permalink: /Czech Republic/
 code: CZE
 name: Czech Republic
 contact: 

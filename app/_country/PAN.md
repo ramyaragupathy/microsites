@@ -1,7 +1,7 @@
 ---
 layout: country
 lang: en
-permalink: /microsites/Panama/
+permalink: /Panama/
 code: PAN
 name: Panama
 contact: 

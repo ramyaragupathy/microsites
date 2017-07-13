@@ -1,7 +1,7 @@
 ---
 layout: country
 lang: en
-permalink: /microsites/Niger/
+permalink: /Niger/
 code: NER
 name: Niger
 contact: 

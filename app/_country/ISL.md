@@ -1,7 +1,7 @@
 ---
 layout: country
 lang: en
-permalink: /microsites/Iceland/
+permalink: /Iceland/
 code: ISL
 name: Iceland
 contact: 

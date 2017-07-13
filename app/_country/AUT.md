@@ -1,7 +1,7 @@
 ---
 layout: country
 lang: en
-permalink: /microsites/Austria/
+permalink: /Austria/
 code: AUT
 name: Austria
 contact: 

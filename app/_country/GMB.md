@@ -1,7 +1,7 @@
 ---
 layout: country
 lang: en
-permalink: /microsites/Gambia/
+permalink: /Gambia/
 code: GMB
 name: Gambia
 contact: 

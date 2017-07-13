@@ -1,7 +1,7 @@
 ---
 layout: country
 lang: en
-permalink: /microsites/Bhutan/
+permalink: /Bhutan/
 code: BTN
 name: Bhutan
 contact: 

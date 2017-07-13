@@ -1,7 +1,7 @@
 ---
 layout: country
 lang: en
-permalink: /microsites/Italy/
+permalink: /Italy/
 code: ITA
 name: Italy
 contact: 

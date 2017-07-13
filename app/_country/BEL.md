@@ -1,7 +1,7 @@
 ---
 layout: country
 lang: en
-permalink: /microsites/Belgium/
+permalink: /Belgium/
 code: BEL
 name: Belgium
 contact: 

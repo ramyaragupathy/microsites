@@ -1,7 +1,7 @@
 ---
 layout: country
 lang: en
-permalink: /microsites/Afghanistan/
+permalink: /Afghanistan/
 code: AFG
 name: Afghanistan
 contact: 

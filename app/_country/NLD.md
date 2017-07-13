@@ -1,7 +1,7 @@
 ---
 layout: country
 lang: en
-permalink: /microsites/Netherlands/
+permalink: /Netherlands/
 code: NLD
 name: Netherlands
 contact: 

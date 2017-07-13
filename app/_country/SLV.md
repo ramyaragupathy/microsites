@@ -1,7 +1,7 @@
 ---
 layout: country
 lang: en
-permalink: /microsites/El Salvador/
+permalink: /El Salvador/
 code: SLV
 name: El Salvador
 contact: 
@@ -9,8 +9,4 @@ flag: sv.svg
 osmLink: https://openstreetmap.org/relation/1520612
 calendar: 
 tm-projects: 
-   - id: 1603
-     desc: Map buildings for a resilience project
-   - id: 1604
-     desc: 
 ---

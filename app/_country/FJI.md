@@ -1,7 +1,7 @@
 ---
 layout: country
 lang: en
-permalink: /microsites/Fiji/
+permalink: /Fiji/
 code: FJI
 name: Fiji
 contact: 

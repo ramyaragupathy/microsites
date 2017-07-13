@@ -1,7 +1,7 @@
 ---
 layout: country
 lang: en
-permalink: /microsites/Cambodia/
+permalink: /Cambodia/
 code: KHM
 name: Cambodia
 contact: 

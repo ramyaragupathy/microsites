@@ -1,7 +1,7 @@
 ---
 layout: country
 lang: en
-permalink: /microsites/Argentina/
+permalink: /Argentina/
 code: ARG
 name: Argentina
 contact: 

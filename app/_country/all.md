@@ -1,6 +1,5 @@
 ---
 layout: all
 lang: en
-name: Microsites
-permalink: microsites/all/
+permalink: /all/
 ---

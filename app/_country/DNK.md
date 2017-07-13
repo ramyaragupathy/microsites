@@ -1,7 +1,7 @@
 ---
 layout: country
 lang: en
-permalink: /microsites/Denmark/
+permalink: /Denmark/
 code: DNK
 name: Denmark
 contact: 

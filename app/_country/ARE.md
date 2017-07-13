@@ -1,7 +1,7 @@
 ---
 layout: country
 lang: en
-permalink: /microsites/United Arab Emirates/
+permalink: /United Arab Emirates/
 code: ARE
 name: United Arab Emirates
 contact: 

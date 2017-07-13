@@ -1,7 +1,7 @@
 ---
 layout: country
 lang: en
-permalink: /microsites/Equatorial Guinea/
+permalink: /Equatorial Guinea/
 code: GNQ
 name: Equatorial Guinea
 contact: 

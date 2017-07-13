@@ -1,7 +1,7 @@
 ---
 layout: country
 lang: en
-permalink: /microsites/India/
+permalink: /India/
 code: IND
 name: India
 contact: 

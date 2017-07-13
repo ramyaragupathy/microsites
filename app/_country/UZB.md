@@ -1,7 +1,7 @@
 ---
 layout: country
 lang: en
-permalink: /microsites/Uzbekistan/
+permalink: /Uzbekistan/
 code: UZB
 name: Uzbekistan
 contact: 

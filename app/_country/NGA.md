@@ -1,22 +1,12 @@
 ---
 layout: country
 lang: en
-permalink: /microsites/Nigeria/
+permalink: /Nigeria/
 code: NGA
 name: Nigeria
-contact: 
+contact:
 flag: ng.svg
 osmLink: https://openstreetmap.org/relation/192787
-calendar: 
-tm-projects: 
-   - id: 1881
-     desc: MSF teams working in northern Nigeria respond to a variety of different health needs. These include emergency response to disease outbreaks across the area. Accurate maps of the area will assist emergency teams with epidemiological analysis, disease surveillance and logistical planning. <p>The Missing Maps project aims to map the most vulnerable places in the world (affected by humanitarian crises. disease epidemics, conflict, natural disasters, poverty, environmental crises). Building on HOT's disaster preparedness projects, the Missing Maps tasks facilitate pre-emptive mapping of priority countries to better facilitate disaster response, medical activities and resource allocation when crises occur.</p>
-   - id: 1880
-     desc: MSF teams working in northern Nigeria respond to a variety of different health needs. These include emergency response to disease outbreaks across the area. Accurate maps of the area will assist emergency teams with epidemiological analysis, disease surveillance and logistical planning. <p>The Missing Maps project aims to map the most vulnerable places in the world (affected by humanitarian crises. disease epidemics, conflict, natural disasters, poverty, environmental crises). Building on HOT's disaster preparedness projects, the Missing Maps tasks facilitate pre-emptive mapping of priority countries to better facilitate disaster response, medical activities and resource allocation when crises occur.</p>
-   - id: 1396
-     desc: MSF teams working in northern Nigeria respond to a variety of different health needs. These include emergency response to disease outbreaks across the area. Accurate maps of the area will assist emergency teams with epidemiological analysis, disease surveillance and logistical planning. <p>The Missing Maps project aims to map the most vulnerable places in the world (affected by humanitarian crises. disease epidemics, conflict, natural disasters, poverty, environmental crises). Building on HOT's disaster preparedness projects, the Missing Maps tasks facilitate pre-emptive mapping of priority countries to better facilitate disaster response, medical activities and resource allocation when crises occur.</p>
-   - id: 1970
-     desc: MSF teams working in northern Nigeria respond to a variety of different health needs. These include emergency response to disease outbreaks across the area. Accurate maps of the area will assist emergency teams with epidemiological analysis, disease surveillance and logistical planning. <p>The Missing Maps project aims to map the most vulnerable places in the world (affected by humanitarian crises. disease epidemics, conflict, natural disasters, poverty, environmental crises). Building on HOT's disaster preparedness projects, the Missing Maps tasks facilitate pre-emptive mapping of priority countries to better facilitate disaster response, medical activities and resource allocation when crises occur.</p>
-   - id: 2488
-     desc: MSF has started a nutritional programme in the southern part of Maiduguri, Borno state, Nigeria). More than one million internally displaced persons (IDPs) have been identified in Maiduguri alone, doubling the host population. Where MSF is providing care alone, there are approximately 227 000 IDPs. They are difficult to identify and reach. MSF targets the dense areas (more buildings = more population) as people there are more vulnerable to malnutrition and transmittable diseases. As MSFis new to the area, a more detailed map would allow surveillance teams to advance faster in order to facilitate food distribution. <p>The Missing Maps project aims to map the most vulnerable places in the world (affected by humanitarian crises. disease epidemics, conflict, natural disasters, poverty, environmental crises). Building on HOT's disaster preparedness projects, the Missing Maps tasks facilitate pre-emptive mapping of priority countries to better facilitate disaster response, medical activities and resource allocation when crises occur.</p>
+calendar:
+tm-projects:
 ---

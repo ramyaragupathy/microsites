@@ -1,7 +1,7 @@
 ---
 layout: country
 lang: en
-permalink: /microsites/Egypt/
+permalink: /Egypt/
 code: EGY
 name: Egypt
 contact: 

@@ -1,7 +1,7 @@
 ---
 layout: country
 lang: en
-permalink: /microsites/Western Sahara/
+permalink: /Western Sahara/
 code: ESH
 name: Western Sahara
 contact: 

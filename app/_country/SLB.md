@@ -1,7 +1,7 @@
 ---
 layout: country
 lang: en
-permalink: /microsites/Solomon Islands/
+permalink: /Solomon Islands/
 code: SLB
 name: Solomon Islands
 contact: 

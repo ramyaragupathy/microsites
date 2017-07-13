@@ -1,7 +1,7 @@
 ---
 layout: country
 lang: en
-permalink: /microsites/Norway/
+permalink: /Norway/
 code: NOR
 name: Norway
 contact: 

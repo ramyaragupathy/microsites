@@ -1,7 +1,7 @@
 ---
 layout: country
 lang: en
-permalink: /microsites/Kuwait/
+permalink: /Kuwait/
 code: KWT
 name: Kuwait
 contact: 

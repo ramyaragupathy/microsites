@@ -1,7 +1,7 @@
 ---
 layout: country
 lang: en
-permalink: /microsites/Iran/
+permalink: /Iran/
 code: IRN
 name: Iran
 contact: 

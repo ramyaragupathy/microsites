@@ -1,7 +1,7 @@
 ---
 layout: country
 lang: en
-permalink: /microsites/Yemen/
+permalink: /Yemen/
 code: YEM
 name: Yemen
 contact: 

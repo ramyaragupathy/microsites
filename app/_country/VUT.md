@@ -1,7 +1,7 @@
 ---
 layout: country
 lang: en
-permalink: /microsites/Vanuatu/
+permalink: /Vanuatu/
 code: VUT
 name: Vanuatu
 contact: 

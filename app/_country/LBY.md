@@ -1,7 +1,7 @@
 ---
 layout: country
 lang: en
-permalink: /microsites/Libya/
+permalink: /Libya/
 code: LBY
 name: Libya
 contact: 

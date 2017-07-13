@@ -1,7 +1,7 @@
 ---
 layout: country
 lang: en
-permalink: /microsites/Trinidad and Tobago/
+permalink: /Trinidad and Tobago/
 code: TTO
 name: Trinidad and Tobago
 contact: 

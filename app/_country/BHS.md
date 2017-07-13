@@ -1,7 +1,7 @@
 ---
 layout: country
 lang: en
-permalink: /microsites/The Bahamas/
+permalink: /The Bahamas/
 code: BHS
 name: The Bahamas
 contact: 

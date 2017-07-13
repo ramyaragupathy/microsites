@@ -1,7 +1,7 @@
 ---
 layout: country
 lang: en
-permalink: /microsites/Sweden/
+permalink: /Sweden/
 code: SWE
 name: Sweden
 contact: 

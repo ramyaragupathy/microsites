@@ -1,7 +1,7 @@
 ---
 layout: country
 lang: en
-permalink: /microsites/Singapore/
+permalink: /Singapore/
 code: SGP
 name: Singapore
 contact: 

@@ -1,7 +1,7 @@
 ---
 layout: country
 lang: en
-permalink: /microsites/France/
+permalink: /France/
 code: FRA
 name: France
 contact: 

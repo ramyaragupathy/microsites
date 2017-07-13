@@ -1,7 +1,7 @@
 ---
 layout: country
 lang: en
-permalink: /microsites/Thailand/
+permalink: /Thailand/
 code: THA
 name: Thailand
 contact: 

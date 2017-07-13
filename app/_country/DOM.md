@@ -1,7 +1,7 @@
 ---
 layout: country
 lang: en
-permalink: /microsites/Dominican Republic/
+permalink: /Dominican Republic/
 code: DOM
 name: Dominican Republic
 contact: 

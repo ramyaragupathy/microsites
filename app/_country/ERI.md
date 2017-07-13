@@ -1,7 +1,7 @@
 ---
 layout: country
 lang: en
-permalink: /microsites/Eritrea/
+permalink: /Eritrea/
 code: ERI
 name: Eritrea
 contact: 

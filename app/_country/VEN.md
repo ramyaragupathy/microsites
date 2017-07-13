@@ -1,7 +1,7 @@
 ---
 layout: country
 lang: en
-permalink: /microsites/Venezuela/
+permalink: /Venezuela/
 code: VEN
 name: Venezuela
 contact: 

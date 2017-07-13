@@ -1,7 +1,7 @@
 ---
 layout: country
 lang: en
-permalink: /microsites/United Kingdom/
+permalink: /United Kingdom/
 code: GBR
 name: United Kingdom
 contact: 

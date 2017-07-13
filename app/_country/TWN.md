@@ -1,7 +1,7 @@
 ---
 layout: country
 lang: en
-permalink: /microsites/Taiwan/
+permalink: /Taiwan/
 code: TWN
 name: Taiwan
 contact: 

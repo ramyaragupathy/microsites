@@ -1,7 +1,7 @@
 ---
 layout: country
 lang: en
-permalink: /microsites/Germany/
+permalink: /Germany/
 code: DEU
 name: Germany
 contact: 

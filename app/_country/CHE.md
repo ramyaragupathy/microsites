@@ -1,7 +1,7 @@
 ---
 layout: country
 lang: en
-permalink: /microsites/Switzerland/
+permalink: /Switzerland/
 code: CHE
 name: Switzerland
 contact: 

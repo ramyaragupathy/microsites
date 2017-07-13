@@ -1,7 +1,7 @@
 ---
 layout: country
 lang: en
-permalink: /microsites/Chile/
+permalink: /Chile/
 code: CHL
 name: Chile
 contact: 

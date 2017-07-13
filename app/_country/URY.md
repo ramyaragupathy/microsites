@@ -1,7 +1,7 @@
 ---
 layout: country
 lang: en
-permalink: /microsites/Uruguay/
+permalink: /Uruguay/
 code: URY
 name: Uruguay
 contact: 

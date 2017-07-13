@@ -1,7 +1,7 @@
 ---
 layout: country
 lang: en
-permalink: /microsites/Qatar/
+permalink: /Qatar/
 code: QAT
 name: Qatar
 contact: 

@@ -1,7 +1,7 @@
 ---
 layout: country
 lang: en
-permalink: /microsites/Turkmenistan/
+permalink: /Turkmenistan/
 code: TKM
 name: Turkmenistan
 contact: 

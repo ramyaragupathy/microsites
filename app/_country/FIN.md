@@ -1,7 +1,7 @@
 ---
 layout: country
 lang: en
-permalink: /microsites/Finland/
+permalink: /Finland/
 code: FIN
 name: Finland
 contact: 

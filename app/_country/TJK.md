@@ -1,7 +1,7 @@
 ---
 layout: country
 lang: en
-permalink: /microsites/Tajikistan/
+permalink: /Tajikistan/
 code: TJK
 name: Tajikistan
 contact: 

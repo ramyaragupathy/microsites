@@ -1,7 +1,7 @@
 ---
 layout: country
 lang: en
-permalink: /microsites/Poland/
+permalink: /Poland/
 code: POL
 name: Poland
 contact: 

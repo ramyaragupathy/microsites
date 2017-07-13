@@ -1,7 +1,7 @@
 ---
 layout: country
 lang: en
-permalink: /microsites/Ukraine/
+permalink: /Ukraine/
 code: UKR
 name: Ukraine
 contact: 

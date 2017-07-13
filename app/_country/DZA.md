@@ -1,7 +1,7 @@
 ---
 layout: country
 lang: en
-permalink: /microsites/Algeria/
+permalink: /Algeria/
 code: DZA
 name: Algeria
 contact: 

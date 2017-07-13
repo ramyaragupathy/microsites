@@ -1,7 +1,7 @@
 ---
 layout: country
 lang: en
-permalink: /microsites/Kyrgyzstan/
+permalink: /Kyrgyzstan/
 code: KGZ
 name: Kyrgyzstan
 contact: 

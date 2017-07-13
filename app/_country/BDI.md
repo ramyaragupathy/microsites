@@ -1,7 +1,7 @@
 ---
 layout: country
 lang: en
-permalink: /microsites/Burundi/
+permalink: /Burundi/
 code: BDI
 name: Burundi
 contact: 

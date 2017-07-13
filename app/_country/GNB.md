@@ -1,7 +1,7 @@
 ---
 layout: country
 lang: en
-permalink: /microsites/Guinea Bissau/
+permalink: /Guinea Bissau/
 code: GNB
 name: Guinea Bissau
 contact: 

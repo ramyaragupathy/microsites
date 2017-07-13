@@ -1,7 +1,7 @@
 ---
 layout: country
 lang: en
-permalink: /microsites/Senegal/
+permalink: /Senegal/
 code: SEN
 name: Senegal
 contact: 

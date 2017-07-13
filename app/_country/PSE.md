@@ -1,7 +1,7 @@
 ---
 layout: country
 lang: en
-permalink: /microsites/West Bank/
+permalink: /West Bank/
 code: PSE
 name: West Bank
 contact: 

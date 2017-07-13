@@ -1,7 +1,7 @@
 ---
 layout: country
 lang: en
-permalink: /microsites/Sri Lanka/
+permalink: /Sri Lanka/
 code: LKA
 name: Sri Lanka
 contact: 
