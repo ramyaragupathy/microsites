@@ -11,8 +11,8 @@ module.exports = {
     main: {
       scripts: './app/assets/scripts/main.js',
       options: {
-        useMin: ['staging', 'production'],
-        uglify: ['staging', 'production'],
+        useMin: ['staging', 'production', 'development'],
+        uglify: ['staging', 'production', 'development'],
         transforms: {
           scripts: transformPipe
         }
@@ -21,8 +21,8 @@ module.exports = {
     vendor: {
       scripts: './app/assets/scripts/vendor/*.js',
       options: {
-        useMin: ['staging', 'production'],
-        uglify: ['staging', 'production']
+        useMin: ['staging', 'production','development'],
+        uglify: ['staging', 'production','development']
       }
     }
   }

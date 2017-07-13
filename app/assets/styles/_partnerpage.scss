@@ -848,6 +848,13 @@ h1 {
     }
   }
 }
+
+.Updates-Content {
+  @media screen and (max-width: $MaxWidth) {
+    width: 80%;
+  }
+}
+
 .updates-null {
   display: none;
   margin-bottom: 1.5em;
