@@ -4,7 +4,7 @@
  -------------------------------------------------------*/
 
 function getPrimaryStats (countryId) {
-  const url = `http://osmstats.redcross.org/countries/${countryId}`;
+  const url = `https://osmstats.redcross.org/countries/${countryId}`;
   $.getJSON(url, function (countryData) {
     if (countryData.all_edits !== null) {
       // round value for select stats, then add them to page
@@ -259,7 +259,7 @@ function eventsFunctionality () {
 function generateEvents (calendarId) {
   if (calendarId.match(/google/)) {
     $('#events-spinner').css('display','block');
-    const url = 'http://osmstats.redcross.org/calendar/' + calendarId + "/events";
+    const url = 'https://osmstats.redcross.org/calendar/' + calendarId + "/events";
     const currentDate = new Date()
     $.getJSON(url, (eventData) => {
       if (eventData.length === 0) {
@@ -377,7 +377,7 @@ function generateUserUrl (userName) {
 
 function getUserActivityStats (countryId) {
 
-  const url = `http://osmstats.redcross.org/countries/${countryId}/users`
+  const url = `https://osmstats.redcross.org/countries/${countryId}/users`
   $.getJSON(url, function (userData) {
     if (userData.length !== 0) {
       const totalSum = Object.keys(userData).map(function (user) {
@@ -428,7 +428,7 @@ function generateHashtagUrl (hashtag) {
 // populate 'teams' graphs, which show activity per hashtag
 function getGroupActivityStats (countryId) {
 
-  const url = `http://osmstats.redcross.org/countries/${countryId}/hashtags`
+  const url = `https://osmstats.redcross.org/countries/${countryId}/hashtags`
   $.getJSON(url, function (hashtagData) {
       /*
         For each hashtag, generate obj with link to hashtag's mm-leaderboards
