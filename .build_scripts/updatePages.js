@@ -20,13 +20,16 @@ function makeFrontMatterObj (yfmList) {
     'layout: ',
     'lang: ',
     'permalink: ',
-    'code: ',
+    'iso3: ',
+    'iso2: ',
     'name: ',
+    'admin: ',
     'contact: ',
     'flag: ',
     'osmLink: ',
     'calendar: ',
-    'tm-projects: '
+    'tm-projects: ',
+    'bbox: ',
   ].map((fmKey) => {
     let fmObj = {};
     if (typeof yfmList === 'string') {

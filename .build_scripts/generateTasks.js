@@ -2,17 +2,16 @@ var fs = require('fs');
 var path = require('path');
 var flow = require('flow');
 var request = require('request');
-var turf = require('turf');
 var moment = require("moment");
 
-
-var timestamp = moment().format('YYYYMMDD-HHmmss');
 var missingmaps = [];
-// var projectList = [];
-var tasksFc = { type: 'FeatureCollection', features: [] };
 
 var throttleProjects = function(cb){
+<<<<<<< HEAD
   var targetCount = 4000;
+=======
+  var targetCount = 5000;
+>>>>>>> tm3-update
   var counter = 0;
   for (var i=0;i<targetCount;i++) {
      (function(ind) {
@@ -30,14 +29,20 @@ var throttleProjects = function(cb){
 var fetchProjectData = function(projectNumber, cb) {
   request({
     method: 'GET',
+<<<<<<< HEAD
     uri: "http://tasks.hotosm.org/api/v1/project/${projectNumber}/summary"
+=======
+    uri: "https://tasks.hotosm.org/api/v1/project/" + projectNumber + "/summary"
+>>>>>>> tm3-update
   }, function (error, response, body) {
     if (!error && response.statusCode == 200) {
       var jsonResponse = JSON.parse(body);
-      if(jsonResponse.properties){
+
+      if(jsonResponse){
         /// capitalization or presence/lack of a space in Missing Maps shouldn't matter
         var nameCheck = jsonResponse.name.replace(/\s+/g, '').toLowerCase().indexOf("missingmaps");
         if(nameCheck !== -1){
+<<<<<<< HEAD
           // projectList.push(projectNumber); // # # # compile list of project numbers to next fetch detailed task data
           var projectObj = {
             "task_number": projectNumber,
@@ -50,6 +55,10 @@ var fetchProjectData = function(projectNumber, cb) {
             "validated": jsonResponse.percentValidated
           }
           missingmaps.push(projectObj);
+=======
+
+          missingmaps.push(jsonResponse);
+>>>>>>> tm3-update
           console.log("missingmaps :  " + projectNumber);
         } else { console.log("other task  :  " + projectNumber); }
       }
@@ -62,6 +71,7 @@ var fetchProjectData = function(projectNumber, cb) {
   });
 }
 
+<<<<<<< HEAD
 var throttleTasks = function(cb){
   var targetCount = 0;
   var counter = 0;
@@ -117,12 +127,15 @@ var parseTasks = flow.define(
   }
 );
 
+=======
+>>>>>>> tm3-update
 var parseProjects = flow.define(
   function(){
     throttleProjects(this);
   },
   function(){
-    parseTasks();
+    var filePath = path.join('./', "tasks.geojson");
+    fs.writeFile(filePath, JSON.stringify(missingmaps));
   }
 );
 
