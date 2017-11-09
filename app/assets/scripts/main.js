@@ -36,9 +36,31 @@ function getProjects (projects) {
   $('.flex-next').prependTo('.HOT-Nav-Projects');
   $('.flex-control-nav').prependTo('.HOT-Nav-Projects');
   $('.flex-prev').prependTo('.HOT-Nav-Projects');
+<<<<<<< HEAD
 
   if (projects.length === 1) {
     $('.flex-next').css('display', 'none');
+=======
+  if (projects.length > 0) {
+    if (projects.length === 1) {
+      $('.flex-next').css('display', 'none');
+    }
+    projects.forEach(function (project, i) {
+      const url = `https://tasks.hotosm.org/api/v1/project/${project}`;
+      $.getJSON(url, function (projectData.tasks) {
+        if (projectData.tasks.geometry) {
+          makeProject(projectData, i + 2);
+        }
+      })
+      .fail(function (err) {
+        console.warn(`WARNING >> Project #${project.id} could not be accessed at ${url}.\n` +
+                       'The server returned the following message object:', err);
+        makePlaceholderProject(project, i + 2);
+      });
+    });
+  } else {
+    makeNoTasksPlaceholder();
+>>>>>>> 119f933867e49cb09415e185dbc9905c707c1cec
   }
 
   projects.forEach(function (project, i) {
@@ -56,7 +78,11 @@ function getProjects (projects) {
 
 // Update cards with necessary project details
 function makeProject (project, projectOrder) {
+<<<<<<< HEAD
   const projDone = Math.round(project.percentMapped);
+=======
+  const projDone = Math.round(project.percentMapped + project.percentValidated);
+>>>>>>> 119f933867e49cb09415e185dbc9905c707c1cec
 
   // Updates Progress Bar
   $(`ul li:nth-child(${projectOrder}) .HOT-Progress`).addClass('projWidth' + projectOrder);
@@ -64,7 +90,11 @@ function makeProject (project, projectOrder) {
 
   // Adds Project variables to the cards
   $(`ul li:nth-child(${projectOrder}) .HOT-Title p`).html(`<b>${project.projectId} - ${project.name}</b>`);
+<<<<<<< HEAD
   $(`ul li:nth-child(${projectOrder}) .title`).html(`${project.name} (#${project.projectId})`);
+=======
+  $(`ul li:nth-child(${projectOrder}) .title`).html(project.name);
+>>>>>>> 119f933867e49cb09415e185dbc9905c707c1cec
   $(`ul li:nth-child(${projectOrder}) .HOT-Progress`).html(`<p>${projDone}%</p>`);
   $(`ul li:nth-child(${projectOrder}) .HOT-Progress`).attr('title', `${projDone}% complete`);
   $(`ul li:nth-child(${projectOrder}) .HOT-Details .completeness`).html(`<strong>${projDone}%</strong> complete`);
