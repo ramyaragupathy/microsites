@@ -19,6 +19,9 @@ function genCountryPage (countryPageInfo) {
   // console.log(countryPageInfo);
 
   const countryPage = './app/_country/' + countryPageInfo.iso3 + '.md';
+
+// TODO add a check for _country folder existance
+
   let countryPageMetaData = [
     '---',
     'layout: country',
@@ -32,8 +35,8 @@ function genCountryPage (countryPageInfo) {
     'flag: ' + countryPageInfo.iso2.toLowerCase() + '.svg',
     'osmLink: ' + countryPageInfo.osm_link,
     'calendar: ',
-    'tm-projects: ',
     'bbox: ' + countryPageInfo.bbox,
+    'tm-projects: ',
     '---'
   ];
   fs.writeFileSync(countryPage, countryPageMetaData.join('\n'));
