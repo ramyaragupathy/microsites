@@ -119,10 +119,6 @@ gulp.task('get-tasks', function () {
   return cp.execSync('npm run get-tasks');
 });
 
-gulp.task('group-tasks', function () {
-  return cp.execSync('npm run group-tasks');
-});
-
 gulp.task('update-pages', function () {
   return cp.execSync('npm run update-pages updates.json');
 });
@@ -213,7 +209,7 @@ gulp.task('clean', function () {
 // builds site w/page updates
 
 gulp.task('update-tasks-build', function (done) {
-  runSequence(['get-tasks', 'group-tasks', 'update-pages', 'jekyll', 'compress', 'sass', 'images', 'fonts'], ['copy:assets'], done);
+  runSequence(['get-tasks'], ['update-pages'], ['jekyll', 'compress', 'sass', 'images', 'fonts'], ['copy:assets'], done);
 });
 
 /* ------------------------------------------------------------------------------
