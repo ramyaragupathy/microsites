@@ -3,15 +3,39 @@ var path = require('path');
 var flow = require('flow');
 var request = require('request');
 var moment = require("moment");
+var crg = require('country-reverse-geocoding').country_reverse_geocoding();
+var md = require('node-markdown').Markdown;
+var _ = require('lodash');
 
 var missingmaps = [];
 
+function parseDesc (desc) {
+  desc = md(desc, true, 'p').match(/<p>(.*?)<\/p>/g);
+  if (desc !== null) {
+    desc = desc.map((p) => {
+      let content = p;
+      if (!(p.match(/The Missing Maps project aims to map/))) {
+        content = p.replace(/<\/?p>/g, '');
+      }
+      if (content.match(/[\*]/g)) {
+        content = content.replace(/[\*]/g, '');
+        console.log('wow')
+      }
+      return content
+    }).filter((descItem) => {
+      if (descItem !== null) {
+        return descItem;
+      }
+    }).join(' ')
+      .replace(/:/g, '.');
+  } else {
+    desc = '';
+  }
+  return desc;
+};
+
 var throttleProjects = function(cb){
-<<<<<<< HEAD
-  var targetCount = 4000;
-=======
-  var targetCount = 5000;
->>>>>>> tm3-update
+  var targetCount = 2000;
   var counter = 0;
   for (var i=0;i<targetCount;i++) {
      (function(ind) {
@@ -21,7 +45,7 @@ var throttleProjects = function(cb){
              counter ++;
              if(counter === targetCount){ cb(); }
            })
-         }, 500 + (100 * ind));
+         }, 1 + (10 * ind));
      })(i);
   }
 }
@@ -29,11 +53,7 @@ var throttleProjects = function(cb){
 var fetchProjectData = function(projectNumber, cb) {
   request({
     method: 'GET',
-<<<<<<< HEAD
-    uri: "http://tasks.hotosm.org/api/v1/project/${projectNumber}/summary"
-=======
     uri: "https://tasks.hotosm.org/api/v1/project/" + projectNumber + "/summary"
->>>>>>> tm3-update
   }, function (error, response, body) {
     if (!error && response.statusCode == 200) {
       var jsonResponse = JSON.parse(body);
@@ -41,24 +61,15 @@ var fetchProjectData = function(projectNumber, cb) {
       if(jsonResponse){
         /// capitalization or presence/lack of a space in Missing Maps shouldn't matter
         var nameCheck = jsonResponse.name.replace(/\s+/g, '').toLowerCase().indexOf("missingmaps");
-        if(nameCheck !== -1){
-<<<<<<< HEAD
-          // projectList.push(projectNumber); // # # # compile list of project numbers to next fetch detailed task data
-          var projectObj = {
-            "task_number": projectNumber,
-            "created" : jsonResponse.created.slice(0,10),
-            "name": jsonResponse.name.replace(/"/g,""),
-            // "changeset_comment":jsonResponse.properties["changeset_comment"],
-            // "author": jsonResponse.properties["author"],
-            "status":jsonResponse.status,
-            "done": jsonResponse.percentMapped,
-            "validated": jsonResponse.percentValidated
+        if(nameCheck !== -1 && jsonResponse.status == 'PUBLISHED'){
+
+          var country = crg.get_country(jsonResponse.aoiCentroid.coordinates[1], jsonResponse.aoiCentroid.coordinates[0]);
+          if (!!country) {
+            jsonResponse.country = country.code;
           }
-          missingmaps.push(projectObj);
-=======
+          jsonResponse.shortDescription = parseDesc(jsonResponse.shortDescription);
 
           missingmaps.push(jsonResponse);
->>>>>>> tm3-update
           console.log("missingmaps :  " + projectNumber);
         } else { console.log("other task  :  " + projectNumber); }
       }
@@ -71,71 +82,42 @@ var fetchProjectData = function(projectNumber, cb) {
   });
 }
 
-<<<<<<< HEAD
-var throttleTasks = function(cb){
-  var targetCount = 0;
-  var counter = 0;
-  targetCount = missingmaps.length;
-  for (var i=0;i<targetCount;i++) {
-     (function(ind) {
-         setTimeout(function(){
-           // # # # throttle process to limit the speed of calls to download files from the server
-           fetchTaskData(ind, function(){
-             counter ++;
-             if(counter === targetCount){ cb(); }
-           });
-         }, 500 + (100 * ind));
-     })(i);
-  }
+function makeTasks(cb) {
+  var filePath = path.join('./', "tasks.json");
+  fs.writeFile(filePath, JSON.stringify(missingmaps));
+  cb();
 }
 
-var fetchTaskData = function(prjIndex, cb) {
-  var thisPrj = missingmaps[prjIndex];
-  // console.log("http://tasks.hotosm.org/project/" + thisPrj["task_number"] + "/tasks.json")
-  request({
-    method: 'GET',
-    uri: 'http://tasks.hotosm.org/api/v1/project/' + thisPrj["task_number"]
-  }, function (error, response, body) {
-    if (!error && response.statusCode == 200) {
-      var tasks = JSON.parse(body);
-      for(var i=0; i<tasks.features.length; i++){
-        var tile = jsonResponse.features[i];
-        var thisState = tile.properties.state;
-        // 2 is done and 3 is validated
-        // https://github.com/hotosm/osm-tasking-manager2/wiki/API#list-of-tasks-with-state-and-lock-status
-        var tileProp = {
-            "task": thisPrj["task_number"],
-            "created": thisPrj["created"],
-            "state": thisState
-        };
-        tasksFc.features.push(turf.feature(tile.geometry, tileProp));
-        }
+function groupTasks(cb) {
+  console.log("updates.json");
+  detailedTasks = _.groupBy(missingmaps, (mmtask) => {
 
-      }
-      console.log("processed tasks for #" + thisPrj["task_number"]);
-      cb();
+    return mmtask.country;
   });
+  detailedTasks = _.omit(detailedTasks, undefined);
+  // make value for each country an obj with 'tm-project' key matching
+  // fm objects used elsewhere
+  const detailedTasksFin = {};
+  _.forEach(detailedTasks, (v, k) => {
+    const detailedTaskFin = {};
+    const detailedTaskKey = k;
+    detailedTaskFin['tm-projects'] = v;
+    detailedTasksFin[detailedTaskKey] = detailedTaskFin;
+  });
+  fs.writeFile('./updates.json', JSON.stringify(detailedTasksFin));
+
+  cb();
 }
 
-var parseTasks = flow.define(
-  function(){
-    throttleTasks(this);
-  },
-  function(){
-    var filePath = path.join('./', "tasks.geojson");
-    fs.writeFile(filePath, JSON.stringify(tasksFc));
-  }
-);
-
-=======
->>>>>>> tm3-update
 var parseProjects = flow.define(
   function(){
     throttleProjects(this);
   },
   function(){
-    var filePath = path.join('./', "tasks.geojson");
-    fs.writeFile(filePath, JSON.stringify(missingmaps));
+    makeTasks(this);
+  },
+  function(){
+    groupTasks(this);
   }
 );
 

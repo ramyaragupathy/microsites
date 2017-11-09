@@ -18,7 +18,6 @@
   "scripts": {
     "build-pages": "node .build_scripts/buildInitialPages.js",
     "get-tasks": "node .build_scripts/generateTasks.js",
-    "group-tasks": "node .build_scripts/parseTasks.js",
     "update-pages": "node .build_scripts/updatePages.js",
     "postinstall": "[ -f _config-dev.yml ] || echo 'domain: http://localhost:3000\npath_prefix:' > _config-dev.yml",
     "serve": "gulp serve",

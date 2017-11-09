@@ -30,3 +30,6 @@ app/assets/scripts/buildCalendars.js
 # todolists
 **/.todos.json
 
+#task files
+tasks.json
+updates.json
