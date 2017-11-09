@@ -1,12 +1,15 @@
 ---
 layout: country
 lang: en
-permalink: /Australia/
-code: AUS
+permalink: /australia/
+iso3: AUS
+iso2: AU
 name: Australia
+admin: Australia
 contact: 
 flag: au.svg
 osmLink: https://openstreetmap.org/relation/80500
 calendar: 
 tm-projects: 
+bbox: 113.3389530782625,-43.63459726336208,153.56946902894416,-10.668185723516714
 ---

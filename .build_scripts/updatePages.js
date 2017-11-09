@@ -6,12 +6,14 @@ var argv = require('minimist')(process.argv.slice(2));
 var currentUpdateObj = JSON.parse(fs.readFileSync(argv._[0]).toString());
 var countriesToUpdate = Object.keys(currentUpdateObj);
 
+// console.log(countriesToUpdate);
+
 /* makeFrontMatterObj(yfmList)
  *
  * returns json version of front matter
  *
  * 1) map values for fm keys by filtering yfmList for where fmKey regex matches
- * 2) take the list of objects generated and make singe object
+ * 2) take the list of objects generated and make a single object
  *
  */
 
@@ -20,13 +22,16 @@ function makeFrontMatterObj (yfmList) {
     'layout: ',
     'lang: ',
     'permalink: ',
-    'code: ',
+    'iso3: ',
+    'iso2: ',
     'name: ',
+    'admin: ',
     'contact: ',
     'flag: ',
     'osmLink: ',
     'calendar: ',
-    'tm-projects: '
+    'tm-projects: ',
+    'bbox: ',
   ].map((fmKey) => {
     let fmObj = {};
     if (typeof yfmList === 'string') {
@@ -56,13 +61,16 @@ function makeFrontMatterObj (yfmList) {
     }
     return fmObj;
   });
+  // console.log(fmObjs)
+  // fmObjs = _.omit(fmObjs, undefined);
   fmObjs = _.reduce(
     fmObjs, (fmObject, fm) => {
       return _.assign(fmObject, fm);
     }, {}
   );
   const fmObjFin = {};
-  fmObjFin[fmObjs.code] = fmObjs;
+  fmObjFin[fmObjs.iso3] = fmObjs;
+  // console.log(fmObjFin);
   return fmObjFin;
 }
 
@@ -74,9 +82,10 @@ function makeFrontMatterObj (yfmList) {
  */
 
 function updateTasksNormalizer (task) {
+  // console.log(task)
   return [
-    task.task,
-    task.desc.replace(/<p>/gm,'').replace(/<\/p>/gm, '')
+    task.projectId,
+    task.shortDescription.replace(/<p>/gm,'').replace(/<\/p>/gm, '')
   ];
 }
 
@@ -174,6 +183,7 @@ countriesToUpdate.forEach((country) => {
   fmList = fmList.split('\n');
   let fmObj = makeFrontMatterObj(fmList);
   countriesToUpdateFM.push(fmObj);
+  // console.log(fmObj);
 });
 const countriesToUpdateFMObj = _.reduce(
   countriesToUpdateFM, (countriesToUpdateFMObj, countriesToUpdateFM) => {
@@ -182,7 +192,7 @@ const countriesToUpdateFMObj = _.reduce(
 );
 
 _.forEach(countriesToUpdateFMObj, (countryFMObj, index) => {
-  const countryFileName = 'app/_country/' + countriesToUpdateFMObj[index].code + '.md';
+  const countryFileName = 'app/_country/' + countriesToUpdateFMObj[index].iso3 + '.md';
   const countryFMstring = updateFrontMatterObj(countryFMObj, currentUpdateObj[index]);
   fs.writeFileSync(countryFileName, countryFMstring);
 });

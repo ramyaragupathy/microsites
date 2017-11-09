@@ -1,12 +1,15 @@
 ---
 layout: country
 lang: en
-permalink: /Tajikistan/
-code: TJK
+permalink: /tajikistan/
+iso3: TJK
+iso2: TJ
 name: Tajikistan
+admin: Tajikistan
 contact: 
 flag: tj.svg
 osmLink: https://openstreetmap.org/relation/214626
 calendar: 
 tm-projects: 
+bbox: 67.44221967964131,36.73817129164692,74.98000247589542,40.960213324541414
 ---

@@ -45,9 +45,9 @@ function getProjects (projects) {
       $('.flex-next').css('display', 'none');
     }
     projects.forEach(function (project, i) {
-      const url = `http://tasks.hotosm.org/project/${project}.json`;
-      $.getJSON(url, function (projectData) {
-        if (projectData.geometry) {
+      const url = `https://tasks.hotosm.org/api/v1/project/${project}`;
+      $.getJSON(url, function (projectData.tasks) {
+        if (projectData.tasks.geometry) {
           makeProject(projectData, i + 2);
         }
       })
@@ -64,20 +64,22 @@ function getProjects (projects) {
 
 // Update cards with necessary project details
 function makeProject (project, projectOrder) {
-  const props = project.properties;
-  const projDone = Math.round(props.done + props.validated);
+  const projDone = Math.round(project.percentMapped + project.percentValidated);
+
   // Updates Progress Bar
-  $(`#Project-${project.id} .HOT-Progress`).addClass('projWidth' + projectOrder)
+  $(`ul li:nth-child(${projectOrder}) .HOT-Progress`).addClass('projWidth' + projectOrder);
+  $('.HOT-Progress').append(`<style>.projWidth${projectOrder}:before{ width: ${projDone}%;}</style>`);
 
   // Adds Project variables to the cards
-  $(`#Project-${project.id} .HOT-Title p`).html(`<b>${project.id} - ${props.name}</b>`);
-  $(`#Project-${project.id} .HOT-Progress`).html(`<p>${projDone}%</p>`);
-  $(`#Project-${project.id} .HOT-Map`).attr('id', `Map-${project.id}`);
-  $(`#Project-${project.id} .HOT-Progress`).append(`<style>.projWidth${projectOrder}:before{ width: ${projDone}%;}</style>`);
-
+  $(`ul li:nth-child(${projectOrder}) .HOT-Title p`).html(`<b>${project.projectId} - ${project.name}</b>`);
+  $(`ul li:nth-child(${projectOrder}) .title`).html(project.name);
+  $(`ul li:nth-child(${projectOrder}) .HOT-Progress`).html(`<p>${projDone}%</p>`);
+  $(`ul li:nth-child(${projectOrder}) .HOT-Progress`).attr('title', `${projDone}% complete`);
+  $(`ul li:nth-child(${projectOrder}) .HOT-Details .completeness`).html(`<strong>${projDone}%</strong> complete`);
+  $(`ul li:nth-child(${projectOrder}) .HOT-Map`).attr('id', 'Map-' + project.projectId);
 
   // Drop a map into the HOT-Map div
-  addMap(project.id);
+  addMap(project.projectId);
 }
 
 // Adds placeholder/ warning formatting to project carousel entry in the event
@@ -99,7 +101,7 @@ function makePlaceholderProject (projectId, projectOrder) {
  page variable settings.`;
 
   // Add explanatory error text
-  const errorHtml = `Uh oh, it looks like <a href="http://tasks.hotosm.org/project/${projectId}"
+  const errorHtml = `Uh oh, it looks like <a href="https://tasks.hotosm.org/api/v1/project/${projectId}"
  target="_blank">Project #${projectId}</a> has been removed from the HOT Tasking Manager.
  <a href="https://github.com/MissingMaps/partners/issues/new?title=${ghIssueTitle}&body=${ghIssueBody}" target="_blank">Click here</a> to report an issue or
  <a href="http://tasks.hotosm.org/" target="_blank">here</a>
@@ -123,7 +125,7 @@ function makeNoTasksPlaceholder() {
     '<div class = "HOT-Title" id = "HOT-Title-NONE">',
     '<h2><b>There currently are no tasks for this country.</b></h2>',
     '</div>',
-    '<p><b></b></p><a href="http://tasks.hotosm.org/" class="btn btn-blue" id="TM-Contribute-Btn">FIND OTHER TASKS</a></p>',
+    '<p><b></b></p><a href="https://tasks.hotosm.org/" class="btn btn-blue" id="TM-Contribute-Btn">FIND OTHER TASKS</a></p>',
     '</div>',
     '</div>',
     '</li>'
@@ -163,7 +165,7 @@ function onEachFeature (feature, layer) {
 
 function addMap (projectId) {
   // Connect HOT-OSM endpoint for tasking squares data
-  const endpoint = `http://tasks.hotosm.org/project/${projectId}/tasks.json`;
+  const endpoint = `https://tasks.hotosm.org/api/v1/project/${projectId}`;
   $.getJSON(endpoint, function (taskData) {
     // Remove loading spinners before placing map
     $('#Map-' + projectId).empty();
@@ -181,7 +183,7 @@ function addMap (projectId) {
     map.attributionControl.setPrefix('');
 
     // Add feature layer
-    const featureLayer = L.geoJson(taskData, {
+    const featureLayer = L.geoJson(taskData.tasks, {
       onEachFeature: onEachFeature
     }).addTo(map);
 

@@ -1,20 +1,15 @@
 ---
 layout: country
 lang: en
-permalink: /Colombia/
-code: COL
+permalink: /colombia/
+iso3: COL
+iso2: CO
 name: Colombia
+admin: Colombia
 contact: 
 flag: co.svg
 osmLink: https://openstreetmap.org/relation/120027
 calendar: 
 tm-projects: 
-   - id: 1409
-     desc: The American Red Cross has been running the Resilience In The Americas Program (RITA) with the Colombian Red Cross (ERC) to build resilient communities. The Red Cross GIS team will traveling to La Guajira to train local staff and volunteers how to capture GIS data using the OpenStreetMap platform. There is currently very little data for the area and there is a strong need for a more detailed basemap data (buildings, roads, land features, rivers) to assist with program operations and decision making. Through the MapGive project, the Humanitarian Information Unit (HIU) of the U.S. Department of State is providing the OpenStreetMap community access to updated satellite imagery services to help assist with humanitarian mapping. Needs validation - Field work starting week of Feb. 8th
-   - id: 1444
-     desc: The American Red Cross has been running the Resilience In The Americas Program (RITA) with the Colombian Red Cross (ERC) to build resilient communities. The Red Cross GIS team will traveling to La Guajira to train local staff and volunteers how to capture GIS data using the OpenStreetMap platform. There is currently very little data for the area and there is a strong need for a more detailed basemap data (buildings, roads, land features, rivers) to assist with program operations and decision making.
-   - id: 1408
-     desc: The American Red Cross has been running the Resilience In The Americas Program (RITA) with the Colombian Red Cross (ERC) to build resilient communities. The Red Cross GIS team will traveling to La Guajira to train local staff and volunteers how to capture GIS data using the OpenStreetMap platform. There is currently very little data for the area and there is a strong need for a more detailed basemap data (buildings, roads, land features, rivers) to assist with program operations and decision making. Through the MapGive project, the Humanitarian Information Unit (HIU) of the U.S. Department of State is providing the OpenStreetMap community access to updated satellite imagery services to help assist with humanitarian mapping.
-   - id: 1418
-     desc: The American Red Cross has been running the Resilience In The Americas Program (RITA) with the Colombian Red Cross (ERC) to build resilient communities. The Red Cross GIS team will traveling to La Guajira to train local staff and volunteers how to capture GIS data using the OpenStreetMap platform. There is currently very little data for the area and there is a strong need for a more detailed basemap data (buildings, roads, land features, rivers) to assist with program operations and decision making. Through the MapGive project, the Humanitarian Information Unit (HIU) of the U.S. Department of State is providing the OpenStreetMap community access to updated satellite imagery services to help assist with humanitarian mapping. The Missing Maps project aims to map the most vulnerable places in the world (affected by humanitarian crises. disease epidemics, conflict, natural disasters, poverty, environmental crises). Building on HOT's disaster preparedness projects, the Missing Maps tasks facilitate pre-emptive mapping of priority countries to better facilitate disaster response, medical activities and resource allocation when crises occur.
+bbox: -78.99093522817104,-4.298186944194327,-66.87632585312258,12.437303168177309
 ---

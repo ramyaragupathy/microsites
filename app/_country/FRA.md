@@ -1,12 +1,15 @@
 ---
 layout: country
 lang: en
-permalink: /France/
-code: FRA
+permalink: /france/
+iso3: FRA
+iso2: FR
 name: France
+admin: France
 contact: 
 flag: fr.svg
-osmLink: https://openstreetmap.org/relation/2202162
+osmLink: null
 calendar: 
 tm-projects: 
+bbox: -54.52475419779972,2.053389187015981,9.56001631026919,51.148506171261886
 ---

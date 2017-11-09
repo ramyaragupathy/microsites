@@ -1,1572 +1,2290 @@
 [
   {
-    "id": 1,
-    "name": "Alaska",
-    "code": "USA-AK",
-    "created_at": "2017-06-12T22:07:27.033Z"
-  },
-  {
-    "id": 2,
-    "name": "Alabama",
-    "code": "USA-AL",
-    "created_at": "2017-06-12T22:07:27.033Z"
-  },
-  {
-    "id": 3,
-    "name": "Arkansas",
-    "code": "USA-AR",
-    "created_at": "2017-06-12T22:07:27.033Z"
-  },
-  {
-    "id": 4,
-    "name": "Arizona",
-    "code": "USA-AZ",
-    "created_at": "2017-06-12T22:07:27.033Z"
-  },
-  {
-    "id": 5,
-    "name": "California",
-    "code": "USA-CA",
-    "created_at": "2017-06-12T22:07:27.033Z"
-  },
-  {
-    "id": 6,
-    "name": "Colorado",
-    "code": "USA-CO",
-    "created_at": "2017-06-12T22:07:27.033Z"
-  },
-  {
-    "id": 7,
-    "name": "Connecticut",
-    "code": "USA-CT",
-    "created_at": "2017-06-12T22:07:27.033Z"
-  },
-  {
-    "id": 8,
-    "name": "District of Columbia",
-    "code": "USA-DC",
-    "created_at": "2017-06-12T22:07:27.033Z"
-  },
-  {
-    "id": 9,
-    "name": "Delaware",
-    "code": "USA-DE",
-    "created_at": "2017-06-12T22:07:27.033Z"
-  },
-  {
-    "id": 10,
-    "name": "Florida",
-    "code": "USA-FL",
-    "created_at": "2017-06-12T22:07:27.033Z"
-  },
-  {
-    "id": 11,
-    "name": "Georgia",
-    "code": "USA-GA",
-    "created_at": "2017-06-12T22:07:27.033Z"
-  },
-  {
-    "id": 12,
-    "name": "Hawaii",
-    "code": "USA-HI",
-    "created_at": "2017-06-12T22:07:27.033Z"
-  },
-  {
-    "id": 13,
-    "name": "Iowa",
-    "code": "USA-IA",
-    "created_at": "2017-06-12T22:07:27.033Z"
-  },
-  {
-    "id": 14,
-    "name": "Idaho",
-    "code": "USA-ID",
-    "created_at": "2017-06-12T22:07:27.033Z"
-  },
-  {
-    "id": 15,
-    "name": "Illinois",
-    "code": "USA-IL",
-    "created_at": "2017-06-12T22:07:27.033Z"
-  },
-  {
-    "id": 16,
-    "name": "Indiana",
-    "code": "USA-IN",
-    "created_at": "2017-06-12T22:07:27.033Z"
-  },
-  {
-    "id": 17,
-    "name": "Kansas",
-    "code": "USA-KS",
-    "created_at": "2017-06-12T22:07:27.033Z"
-  },
-  {
-    "id": 18,
-    "name": "Kentucky",
-    "code": "USA-KY",
-    "created_at": "2017-06-12T22:07:27.033Z"
-  },
-  {
-    "id": 19,
-    "name": "Louisiana",
-    "code": "USA-LA",
-    "created_at": "2017-06-12T22:07:27.033Z"
-  },
-  {
-    "id": 20,
-    "name": "Massachusetts",
-    "code": "USA-MA",
-    "created_at": "2017-06-12T22:07:27.033Z"
-  },
-  {
-    "id": 21,
-    "name": "Maryland",
-    "code": "USA-MD",
-    "created_at": "2017-06-12T22:07:27.033Z"
-  },
-  {
-    "id": 22,
-    "name": "Maine",
-    "code": "USA-ME",
-    "created_at": "2017-06-12T22:07:27.033Z"
-  },
-  {
-    "id": 23,
-    "name": "Michigan",
-    "code": "USA-MI",
-    "created_at": "2017-06-12T22:07:27.033Z"
-  },
-  {
-    "id": 24,
-    "name": "Minnesota",
-    "code": "USA-MN",
-    "created_at": "2017-06-12T22:07:27.033Z"
-  },
-  {
-    "id": 25,
-    "name": "Missouri",
-    "code": "USA-MO",
-    "created_at": "2017-06-12T22:07:27.033Z"
-  },
-  {
-    "id": 26,
-    "name": "Mississippi",
-    "code": "USA-MS",
-    "created_at": "2017-06-12T22:07:27.033Z"
-  },
-  {
-    "id": 27,
-    "name": "Montana",
-    "code": "USA-MT",
-    "created_at": "2017-06-12T22:07:27.033Z"
-  },
-  {
-    "id": 28,
-    "name": "North Carolina",
-    "code": "USA-NC",
-    "created_at": "2017-06-12T22:07:27.033Z"
-  },
-  {
-    "id": 29,
-    "name": "North Dakota",
-    "code": "USA-ND",
-    "created_at": "2017-06-12T22:07:27.033Z"
-  },
-  {
-    "id": 30,
-    "name": "Nebraska",
-    "code": "USA-NE",
-    "created_at": "2017-06-12T22:07:27.033Z"
-  },
-  {
-    "id": 31,
-    "name": "New Hampshire",
-    "code": "USA-NH",
-    "created_at": "2017-06-12T22:07:27.033Z"
-  },
-  {
-    "id": 32,
-    "name": "New Jersey",
-    "code": "USA-NJ",
-    "created_at": "2017-06-12T22:07:27.033Z"
-  },
-  {
-    "id": 33,
-    "name": "New Mexico",
-    "code": "USA-NM",
-    "created_at": "2017-06-12T22:07:27.033Z"
-  },
-  {
-    "id": 34,
-    "name": "Nevada",
-    "code": "USA-NV",
-    "created_at": "2017-06-12T22:07:27.033Z"
-  },
-  {
-    "id": 35,
-    "name": "New York",
-    "code": "USA-NY",
-    "created_at": "2017-06-12T22:07:27.033Z"
-  },
-  {
-    "id": 36,
-    "name": "Ohio",
-    "code": "USA-OH",
-    "created_at": "2017-06-12T22:07:27.033Z"
-  },
-  {
-    "id": 37,
-    "name": "Oklahoma",
-    "code": "USA-OK",
-    "created_at": "2017-06-12T22:07:27.033Z"
-  },
-  {
-    "id": 38,
-    "name": "Oregon",
-    "code": "USA-OR",
-    "created_at": "2017-06-12T22:07:27.033Z"
-  },
-  {
-    "id": 39,
-    "name": "Pennsylvania",
-    "code": "USA-PA",
-    "created_at": "2017-06-12T22:07:27.033Z"
-  },
-  {
-    "id": 40,
-    "name": "Puerto Rico",
-    "code": "USA-PR",
-    "created_at": "2017-06-12T22:07:27.033Z"
-  },
-  {
-    "id": 41,
-    "name": "Rhode Island",
-    "code": "USA-RI",
-    "created_at": "2017-06-12T22:07:27.033Z"
-  },
-  {
-    "id": 42,
-    "name": "South Carolina",
-    "code": "USA-SC",
-    "created_at": "2017-06-12T22:07:27.033Z"
-  },
-  {
-    "id": 43,
-    "name": "South Dakota",
-    "code": "USA-SD",
-    "created_at": "2017-06-12T22:07:27.033Z"
-  },
-  {
-    "id": 44,
-    "name": "Tennessee",
-    "code": "USA-TN",
-    "created_at": "2017-06-12T22:07:27.033Z"
-  },
-  {
-    "id": 45,
-    "name": "Texas",
-    "code": "USA-TX",
-    "created_at": "2017-06-12T22:07:27.033Z"
-  },
-  {
-    "id": 46,
-    "name": "Utah",
-    "code": "USA-UT",
-    "created_at": "2017-06-12T22:07:27.033Z"
-  },
-  {
-    "id": 47,
-    "name": "Virginia",
-    "code": "USA-VA",
-    "created_at": "2017-06-12T22:07:27.033Z"
-  },
-  {
-    "id": 48,
-    "name": "Vermont",
-    "code": "USA-VT",
-    "created_at": "2017-06-12T22:07:27.033Z"
-  },
-  {
-    "id": 49,
-    "name": "Washington",
-    "code": "USA-WA",
-    "created_at": "2017-06-12T22:07:27.033Z"
-  },
-  {
-    "id": 50,
-    "name": "Wisconsin",
-    "code": "USA-WI",
-    "created_at": "2017-06-12T22:07:27.033Z"
-  },
-  {
-    "id": 51,
-    "name": "West Virginia",
-    "code": "USA-WV",
-    "created_at": "2017-06-12T22:07:27.033Z"
-  },
-  {
-    "id": 52,
-    "name": "Wyoming",
-    "code": "USA-WY",
-    "created_at": "2017-06-12T22:07:27.033Z"
-  },
-  {
-    "id": 53,
+    "iso2": "AF",
+    "iso3": "AFG",
+    "admin": "Afghanistan",
     "name": "Afghanistan",
-    "code": "AFG",
-    "created_at": "2017-06-12T22:07:27.033Z",
-    "link": "https://openstreetmap.org/relation/303427"
+    "osm_link": "https://openstreetmap.org/relation/303427",
+    "bbox": [
+      60.52842980331158,
+      29.31857249604431,
+      75.15802778514092,
+      38.486281643216415
+    ]
   },
   {
-    "id": 54,
+    "iso2": "AO",
+    "iso3": "AGO",
+    "admin": "Angola",
     "name": "Angola",
-    "code": "AGO",
-    "created_at": "2017-06-12T22:07:27.033Z",
-    "link": "https://openstreetmap.org/relation/195267"
+    "osm_link": "https://openstreetmap.org/relation/195267",
+    "bbox": [
+      11.64009606288164,
+      -17.930636488519696,
+      24.079905226342845,
+      -4.438023369976136
+    ]
   },
   {
-    "id": 55,
+    "iso2": "AL",
+    "iso3": "ALB",
+    "admin": "Albania",
     "name": "Albania",
-    "code": "ALB",
-    "created_at": "2017-06-12T22:07:27.033Z",
-    "link": "https://openstreetmap.org/relation/53292"
+    "osm_link": "https://openstreetmap.org/relation/53292",
+    "bbox": [
+      19.304486118250793,
+      39.62499766698397,
+      21.0200403174764,
+      42.68824738216557
+    ]
   },
   {
-    "id": 56,
+    "iso2": "AE",
+    "iso3": "ARE",
+    "admin": "United Arab Emirates",
     "name": "United Arab Emirates",
-    "code": "ARE",
-    "created_at": "2017-06-12T22:07:27.033Z",
-    "link": "https://openstreetmap.org/relation/307763"
+    "osm_link": "https://openstreetmap.org/relation/307763",
+    "bbox": [
+      51.57951867046327,
+      22.496947536707136,
+      56.396847365144005,
+      26.05546417897398
+    ]
   },
   {
-    "id": 57,
+    "iso2": "AR",
+    "iso3": "ARG",
+    "admin": "Argentina",
     "name": "Argentina",
-    "code": "ARG",
-    "created_at": "2017-06-12T22:07:27.033Z",
-    "link": "https://openstreetmap.org/relation/286393"
+    "osm_link": "https://openstreetmap.org/relation/286393",
+    "bbox": [
+      -73.4154357571201,
+      -55.25,
+      -53.628348965048744,
+      -21.83231047942072
+    ]
   },
   {
-    "id": 58,
+    "iso2": "AM",
+    "iso3": "ARM",
+    "admin": "Armenia",
     "name": "Armenia",
-    "code": "ARM",
-    "created_at": "2017-06-12T22:07:27.033Z",
-    "link": "https://openstreetmap.org/relation/364066"
+    "osm_link": "https://openstreetmap.org/relation/364066",
+    "bbox": [
+      43.58274580259273,
+      38.74120148371222,
+      46.50571984231797,
+      41.248128567055595
+    ]
   },
   {
-    "id": 59,
+    "iso2": "AQ",
+    "iso3": "ATA",
+    "admin": "Antarctica",
     "name": "Antarctica",
-    "code": "ATA",
-    "created_at": "2017-06-12T22:07:27.033Z",
-    "link": "https://openstreetmap.org/relation/2186646"
+    "osm_link": "https://openstreetmap.org/relation/2186646",
+    "bbox": [
+      -180,
+      -90,
+      180,
+      -63.27066048950466
+    ]
   },
   {
-    "id": 60,
-    "name": "French Southern and Antarctic Lands",
-    "code": "ATF",
-    "created_at": "2017-06-12T22:07:27.033Z",
-    "link": "https://openstreetmap.org/relation/2186658"
+    "iso2": "TF",
+    "iso3": "ATF",
+    "admin": "French Southern and Antarctic Lands",
+    "name": "Fr. S. Antarctic Lands",
+    "osm_link": "https://openstreetmap.org/relation/2186658",
+    "bbox": [
+      68.72,
+      -49.775,
+      70.56,
+      -48.625
+    ]
   },
   {
-    "id": 61,
+    "iso2": "AU",
+    "iso3": "AUS",
+    "admin": "Australia",
     "name": "Australia",
-    "code": "AUS",
-    "created_at": "2017-06-12T22:07:27.033Z",
-    "link": "https://openstreetmap.org/relation/80500"
+    "osm_link": "https://openstreetmap.org/relation/80500",
+    "bbox": [
+      113.3389530782625,
+      -43.63459726336208,
+      153.56946902894416,
+      -10.668185723516714
+    ]
   },
   {
-    "id": 62,
+    "iso2": "AT",
+    "iso3": "AUT",
+    "admin": "Austria",
     "name": "Austria",
-    "code": "AUT",
-    "created_at": "2017-06-12T22:07:27.033Z",
-    "link": "https://openstreetmap.org/relation/16239"
+    "osm_link": "https://openstreetmap.org/relation/16239",
+    "bbox": [
+      9.479969516649021,
+      46.43181732846955,
+      16.979666782304037,
+      49.03907420510758
+    ]
   },
   {
-    "id": 63,
+    "iso2": "AZ",
+    "iso3": "AZE",
+    "admin": "Azerbaijan",
     "name": "Azerbaijan",
-    "code": "AZE",
-    "created_at": "2017-06-12T22:07:27.033Z",
-    "link": "https://openstreetmap.org/relation/364110"
+    "osm_link": "https://openstreetmap.org/relation/364110",
+    "bbox": [
+      44.79398969908195,
+      38.27037750910097,
+      50.392821079312654,
+      41.860675157227305
+    ]
   },
   {
-    "id": 64,
+    "iso2": "BI",
+    "iso3": "BDI",
+    "admin": "Burundi",
     "name": "Burundi",
-    "code": "BDI",
-    "created_at": "2017-06-12T22:07:27.033Z",
-    "link": "https://openstreetmap.org/relation/195269"
+    "osm_link": "https://openstreetmap.org/relation/195269",
+    "bbox": [
+      29.024926385216787,
+      -4.499983412294092,
+      30.75224,
+      -2.348486830254238
+    ]
   },
   {
-    "id": 65,
+    "iso2": "BE",
+    "iso3": "BEL",
+    "admin": "Belgium",
     "name": "Belgium",
-    "code": "BEL",
-    "created_at": "2017-06-12T22:07:27.033Z",
-    "link": "https://openstreetmap.org/relation/52411"
+    "osm_link": "https://openstreetmap.org/relation/52411",
+    "bbox": [
+      2.513573032246114,
+      49.529483547557504,
+      6.15665815595878,
+      51.47502370869813
+    ]
   },
   {
-    "id": 66,
+    "iso2": "BJ",
+    "iso3": "BEN",
+    "admin": "Benin",
     "name": "Benin",
-    "code": "BEN",
-    "created_at": "2017-06-12T22:07:27.033Z",
-    "link": "https://openstreetmap.org/relation/192784"
+    "osm_link": "https://openstreetmap.org/relation/192784",
+    "bbox": [
+      0.772335646171484,
+      6.142157701029731,
+      3.797112257511714,
+      12.23563589115821
+    ]
   },
   {
-    "id": 67,
+    "iso2": "BF",
+    "iso3": "BFA",
+    "admin": "Burkina Faso",
     "name": "Burkina Faso",
-    "code": "BFA",
-    "created_at": "2017-06-12T22:07:27.033Z",
-    "link": "https://openstreetmap.org/relation/192783"
+    "osm_link": "https://openstreetmap.org/relation/192783",
+    "bbox": [
+      -5.470564947929006,
+      9.610834865757141,
+      2.177107781593776,
+      15.116157741755728
+    ]
   },
   {
-    "id": 68,
+    "iso2": "BD",
+    "iso3": "BGD",
+    "admin": "Bangladesh",
     "name": "Bangladesh",
-    "code": "BGD",
-    "created_at": "2017-06-12T22:07:27.033Z",
-    "link": "https://openstreetmap.org/relation/184640"
+    "osm_link": "https://openstreetmap.org/relation/184640",
+    "bbox": [
+      88.08442223506242,
+      20.670883287025347,
+      92.67272098182556,
+      26.446525580342723
+    ]
   },
   {
-    "id": 69,
+    "iso2": "BG",
+    "iso3": "BGR",
+    "admin": "Bulgaria",
     "name": "Bulgaria",
-    "code": "BGR",
-    "created_at": "2017-06-12T22:07:27.033Z",
-    "link": "https://openstreetmap.org/relation/186382"
+    "osm_link": "https://openstreetmap.org/relation/186382",
+    "bbox": [
+      22.380525750424592,
+      41.23448598893053,
+      28.558081495891997,
+      44.23492300066128
+    ]
   },
   {
-    "id": 70,
-    "name": "The Bahamas",
-    "code": "BHS",
-    "created_at": "2017-06-12T22:07:27.033Z",
-    "link": "https://openstreetmap.org/relation/547469"
+    "iso2": "BS",
+    "iso3": "BHS",
+    "admin": "The Bahamas",
+    "name": "Bahamas",
+    "osm_link": "https://openstreetmap.org/relation/547469",
+    "bbox": [
+      -78.98,
+      23.71,
+      -77,
+      27.04
+    ]
   },
   {
-    "id": 71,
-    "name": "Bosnia and Herzegovina",
-    "code": "BIH",
-    "created_at": "2017-06-12T22:07:27.033Z",
-    "link": "https://openstreetmap.org/relation/2528142"
+    "iso2": "BA",
+    "iso3": "BIH",
+    "admin": "Bosnia and Herzegovina",
+    "name": "Bosnia and Herz.",
+    "osm_link": "https://openstreetmap.org/relation/2528142",
+    "bbox": [
+      15.750026075918981,
+      42.65,
+      19.59976,
+      45.23377676043094
+    ]
   },
   {
-    "id": 72,
+    "iso2": "BY",
+    "iso3": "BLR",
+    "admin": "Belarus",
     "name": "Belarus",
-    "code": "BLR",
-    "created_at": "2017-06-12T22:07:27.033Z",
-    "link": "https://openstreetmap.org/relation/59065"
+    "osm_link": "https://openstreetmap.org/relation/59065",
+    "bbox": [
+      23.199493849386187,
+      51.31950348571566,
+      32.69364301934604,
+      56.169129950578814
+    ]
   },
   {
-    "id": 73,
+    "iso2": "BZ",
+    "iso3": "BLZ",
+    "admin": "Belize",
     "name": "Belize",
-    "code": "BLZ",
-    "created_at": "2017-06-12T22:07:27.033Z",
-    "link": "https://openstreetmap.org/relation/287827"
+    "osm_link": "https://openstreetmap.org/relation/287827",
+    "bbox": [
+      -89.22912167026928,
+      15.886937567605171,
+      -88.10681291375438,
+      18.4999822046599
+    ]
   },
   {
-    "id": 74,
-    "name": "Bermuda",
-    "code": "BMU",
-    "created_at": "2017-06-12T22:07:27.033Z",
-    "link": "https://openstreetmap.org/relation/1993208"
-  },
-  {
-    "id": 75,
+    "iso2": "BO",
+    "iso3": "BOL",
+    "admin": "Bolivia",
     "name": "Bolivia",
-    "code": "BOL",
-    "created_at": "2017-06-12T22:07:27.033Z",
-    "link": "https://openstreetmap.org/relation/252645"
+    "osm_link": "https://openstreetmap.org/relation/252645",
+    "bbox": [
+      -69.59042375352405,
+      -22.872918796482168,
+      -57.49837114117099,
+      -9.761987806846392
+    ]
   },
   {
-    "id": 76,
+    "iso2": "BR",
+    "iso3": "BRA",
+    "admin": "Brazil",
     "name": "Brazil",
-    "code": "BRA",
-    "created_at": "2017-06-12T22:07:27.033Z",
-    "link": "https://openstreetmap.org/relation/59470"
+    "osm_link": "https://openstreetmap.org/relation/59470",
+    "bbox": [
+      -73.98723548042966,
+      -33.768377780900764,
+      -34.729993455533034,
+      5.244486395687602
+    ]
   },
   {
-    "id": 77,
+    "iso2": "BN",
+    "iso3": "BRN",
+    "admin": "Brunei",
     "name": "Brunei",
-    "code": "BRN",
-    "created_at": "2017-06-12T22:07:27.033Z",
-    "link": "https://openstreetmap.org/relation/2103120"
+    "osm_link": "https://openstreetmap.org/relation/2103120",
+    "bbox": [
+      114.20401655482837,
+      4.007636826997754,
+      115.45071048386981,
+      5.44772980389159
+    ]
   },
   {
-    "id": 78,
+    "iso2": "BT",
+    "iso3": "BTN",
+    "admin": "Bhutan",
     "name": "Bhutan",
-    "code": "BTN",
-    "created_at": "2017-06-12T22:07:27.033Z",
-    "link": "https://openstreetmap.org/relation/184629"
+    "osm_link": "https://openstreetmap.org/relation/184629",
+    "bbox": [
+      88.81424848832054,
+      26.719402981059957,
+      92.10371178585974,
+      28.296438503527217
+    ]
   },
   {
-    "id": 79,
+    "iso2": "BW",
+    "iso3": "BWA",
+    "admin": "Botswana",
     "name": "Botswana",
-    "code": "BWA",
-    "created_at": "2017-06-12T22:07:27.033Z",
-    "link": "https://openstreetmap.org/relation/1889339"
+    "osm_link": "https://openstreetmap.org/relation/1889339",
+    "bbox": [
+      19.89545779794068,
+      -26.828542982695915,
+      29.43218834810904,
+      -17.661815687737374
+    ]
   },
   {
-    "id": 80,
-    "name": "Central African Republic",
-    "code": "CAF",
-    "created_at": "2017-06-12T22:07:27.033Z",
-    "link": "https://openstreetmap.org/relation/192790"
+    "iso2": "CF",
+    "iso3": "CAF",
+    "admin": "Central African Republic",
+    "name": "Central African Rep.",
+    "osm_link": "https://openstreetmap.org/relation/192790",
+    "bbox": [
+      14.459407179429348,
+      2.267639675298085,
+      27.37422610851749,
+      11.142395127807546
+    ]
   },
   {
-    "id": 81,
+    "iso2": "CA",
+    "iso3": "CAN",
+    "admin": "Canada",
     "name": "Canada",
-    "code": "CAN",
-    "created_at": "2017-06-12T22:07:27.033Z",
-    "link": "https://openstreetmap.org/relation/1428125"
+    "osm_link": "https://openstreetmap.org/relation/1428125",
+    "bbox": [
+      -140.99778,
+      41.675105088867355,
+      -52.64809872090416,
+      83.23324
+    ]
   },
   {
-    "id": 82,
+    "iso2": "CH",
+    "iso3": "CHE",
+    "admin": "Switzerland",
     "name": "Switzerland",
-    "code": "CHE",
-    "created_at": "2017-06-12T22:07:27.033Z",
-    "link": "https://openstreetmap.org/relation/51701"
+    "osm_link": "https://openstreetmap.org/relation/51701",
+    "bbox": [
+      6.02260949059351,
+      45.776947740250776,
+      10.44270145024663,
+      47.83082754169129
+    ]
   },
   {
-    "id": 83,
+    "iso2": "CL",
+    "iso3": "CHL",
+    "admin": "Chile",
     "name": "Chile",
-    "code": "CHL",
-    "created_at": "2017-06-12T22:07:27.033Z",
-    "link": "https://openstreetmap.org/relation/167454"
+    "osm_link": "https://openstreetmap.org/relation/167454",
+    "bbox": [
+      -75.64439531116543,
+      -55.61183,
+      -66.95992,
+      -17.58001189541936
+    ]
   },
   {
-    "id": 84,
+    "iso2": "CN",
+    "iso3": "CHN",
+    "admin": "China",
     "name": "China",
-    "code": "CHN",
-    "created_at": "2017-06-12T22:07:27.033Z",
-    "link": "https://openstreetmap.org/relation/270056"
+    "osm_link": "https://openstreetmap.org/relation/270056",
+    "bbox": [
+      73.6753792662548,
+      18.197700913968646,
+      135.02631147678667,
+      53.4588
+    ]
   },
   {
-    "id": 85,
-    "name": "Ivory Coast",
-    "code": "CIV",
-    "created_at": "2017-06-12T22:07:27.033Z",
-    "link": "https://openstreetmap.org/relation/192779"
+    "iso2": "CI",
+    "iso3": "CIV",
+    "admin": "Ivory Coast",
+    "name": "Côte d'Ivoire",
+    "osm_link": "https://openstreetmap.org/relation/192779",
+    "bbox": [
+      -8.60288021486862,
+      4.338288479017308,
+      -2.562189500326241,
+      10.524060777219134
+    ]
   },
   {
-    "id": 86,
+    "iso2": "CM",
+    "iso3": "CMR",
+    "admin": "Cameroon",
     "name": "Cameroon",
-    "code": "CMR",
-    "created_at": "2017-06-12T22:07:27.033Z",
-    "link": "https://openstreetmap.org/relation/192830"
+    "osm_link": "https://openstreetmap.org/relation/192830",
+    "bbox": [
+      8.48881554529089,
+      1.727672634280296,
+      16.012852410555354,
+      12.85939626713733
+    ]
   },
   {
-    "id": 87,
-    "name": "Democratic Republic of the Congo",
-    "code": "COD",
-    "created_at": "2017-06-12T22:07:27.033Z",
-    "link": "https://openstreetmap.org/relation/192795"
+    "iso2": "CD",
+    "iso3": "COD",
+    "admin": "Democratic Republic of the Congo",
+    "name": "Dem. Rep. Congo",
+    "osm_link": "https://openstreetmap.org/relation/192795",
+    "bbox": [
+      12.182336866920252,
+      -13.257226657771831,
+      31.174149204235817,
+      5.256087754737123
+    ]
   },
   {
-    "id": 88,
-    "name": "Republic of the Congo",
-    "code": "COG",
-    "created_at": "2017-06-12T22:07:27.033Z",
-    "link": "https://openstreetmap.org/relation/192794"
+    "iso2": "CG",
+    "iso3": "COG",
+    "admin": "Republic of the Congo",
+    "name": "Congo",
+    "osm_link": "https://openstreetmap.org/relation/192794",
+    "bbox": [
+      11.093772820691925,
+      -5.037986748884791,
+      18.45306521980993,
+      3.728196519379452
+    ]
   },
   {
-    "id": 89,
+    "iso2": "CO",
+    "iso3": "COL",
+    "admin": "Colombia",
     "name": "Colombia",
-    "code": "COL",
-    "created_at": "2017-06-12T22:07:27.033Z",
-    "link": "https://openstreetmap.org/relation/120027"
+    "osm_link": "https://openstreetmap.org/relation/120027",
+    "bbox": [
+      -78.99093522817104,
+      -4.298186944194327,
+      -66.87632585312258,
+      12.437303168177309
+    ]
   },
   {
-    "id": 90,
+    "iso2": "CR",
+    "iso3": "CRI",
+    "admin": "Costa Rica",
     "name": "Costa Rica",
-    "code": "CRI",
-    "created_at": "2017-06-12T22:07:27.033Z",
-    "link": "https://openstreetmap.org/relation/287667"
+    "osm_link": "https://openstreetmap.org/relation/287667",
+    "bbox": [
+      -85.94172543002176,
+      8.225027980985985,
+      -82.54619625520348,
+      11.217119248901597
+    ]
   },
   {
-    "id": 91,
+    "iso2": "CU",
+    "iso3": "CUB",
+    "admin": "Cuba",
     "name": "Cuba",
-    "code": "CUB",
-    "created_at": "2017-06-12T22:07:27.033Z",
-    "link": "https://openstreetmap.org/relation/307833"
+    "osm_link": "https://openstreetmap.org/relation/307833",
+    "bbox": [
+      -84.97491105827311,
+      19.855480861891877,
+      -74.17802486845126,
+      23.188610744717707
+    ]
   },
   {
-    "id": 92,
-    "name": "Northern Cyprus",
-    "code": "CYP",
-    "created_at": "2017-06-12T22:07:27.033Z",
-    "link": "https://openstreetmap.org/relation/307787"
-  },
-  {
-    "id": 93,
+    "iso2": "CY",
+    "iso3": "CYP",
+    "admin": "Cyprus",
     "name": "Cyprus",
-    "code": "CYP",
-    "created_at": "2017-06-12T22:07:27.033Z",
-    "link": "https://openstreetmap.org/relation/307787"
+    "osm_link": "https://openstreetmap.org/relation/307787",
+    "bbox": [
+      32.25666710788596,
+      34.57186941175544,
+      34.00488081232004,
+      35.17312470147138
+    ]
   },
   {
-    "id": 94,
-    "name": "Czech Republic",
-    "code": "CZE",
-    "created_at": "2017-06-12T22:07:27.033Z",
-    "link": "https://openstreetmap.org/relation/51684"
+    "iso2": "CZ",
+    "iso3": "CZE",
+    "admin": "Czechia",
+    "name": "Czechia",
+    "osm_link": "https://openstreetmap.org/relation/51684",
+    "bbox": [
+      12.240111118222558,
+      48.55530528420721,
+      18.853144158613617,
+      51.117267767941414
+    ]
   },
   {
-    "id": 95,
+    "iso2": "DE",
+    "iso3": "DEU",
+    "admin": "Germany",
     "name": "Germany",
-    "code": "DEU",
-    "created_at": "2017-06-12T22:07:27.033Z",
-    "link": "https://openstreetmap.org/relation/51477"
+    "osm_link": "https://openstreetmap.org/relation/51477",
+    "bbox": [
+      5.988658074577813,
+      47.30248769793916,
+      15.01699588385867,
+      54.98310415304809
+    ]
   },
   {
-    "id": 96,
+    "iso2": "DJ",
+    "iso3": "DJI",
+    "admin": "Djibouti",
     "name": "Djibouti",
-    "code": "DJI",
-    "created_at": "2017-06-12T22:07:27.033Z",
-    "link": "https://openstreetmap.org/relation/192801"
+    "osm_link": "https://openstreetmap.org/relation/192801",
+    "bbox": [
+      41.66176000000013,
+      10.92687856693442,
+      43.31785241066467,
+      12.699638576707116
+    ]
   },
   {
-    "id": 97,
+    "iso2": "DK",
+    "iso3": "DNK",
+    "admin": "Denmark",
     "name": "Denmark",
-    "code": "DNK",
-    "created_at": "2017-06-12T22:07:27.033Z",
-    "link": "https://openstreetmap.org/relation/50046"
+    "osm_link": "https://openstreetmap.org/relation/50046",
+    "bbox": [
+      8.08997684086222,
+      54.80001455343796,
+      12.690006137755603,
+      57.73001658795488
+    ]
   },
   {
-    "id": 98,
-    "name": "Dominican Republic",
-    "code": "DOM",
-    "created_at": "2017-06-12T22:07:27.033Z",
-    "link": "https://openstreetmap.org/relation/307828"
+    "iso2": "DO",
+    "iso3": "DOM",
+    "admin": "Dominican Republic",
+    "name": "Dominican Rep.",
+    "osm_link": "https://openstreetmap.org/relation/307828",
+    "bbox": [
+      -71.94511206733556,
+      17.5985643579766,
+      -68.31794328476897,
+      19.8849105900821
+    ]
   },
   {
-    "id": 99,
+    "iso2": "DZ",
+    "iso3": "DZA",
+    "admin": "Algeria",
     "name": "Algeria",
-    "code": "DZA",
-    "created_at": "2017-06-12T22:07:27.033Z",
-    "link": "https://openstreetmap.org/relation/192756"
+    "osm_link": "https://openstreetmap.org/relation/192756",
+    "bbox": [
+      -8.684399786809053,
+      19.057364203360038,
+      11.999505649471613,
+      37.11838064223437
+    ]
   },
   {
-    "id": 100,
+    "iso2": "EC",
+    "iso3": "ECU",
+    "admin": "Ecuador",
     "name": "Ecuador",
-    "code": "ECU",
-    "created_at": "2017-06-12T22:07:27.033Z",
-    "link": "https://openstreetmap.org/relation/108089"
+    "osm_link": "https://openstreetmap.org/relation/108089",
+    "bbox": [
+      -80.96776546906436,
+      -4.959128513207389,
+      -75.23372270374195,
+      1.380923773601822
+    ]
   },
   {
-    "id": 101,
+    "iso2": "EG",
+    "iso3": "EGY",
+    "admin": "Egypt",
     "name": "Egypt",
-    "code": "EGY",
-    "created_at": "2017-06-12T22:07:27.033Z",
-    "link": "https://openstreetmap.org/relation/1473947"
+    "osm_link": "https://openstreetmap.org/relation/1473947",
+    "bbox": [
+      24.70007,
+      22,
+      36.86623,
+      31.58568
+    ]
   },
   {
-    "id": 102,
+    "iso2": "ER",
+    "iso3": "ERI",
+    "admin": "Eritrea",
     "name": "Eritrea",
-    "code": "ERI",
-    "created_at": "2017-06-12T22:07:27.033Z",
-    "link": "https://openstreetmap.org/relation/296961"
+    "osm_link": "https://openstreetmap.org/relation/296961",
+    "bbox": [
+      36.32322,
+      12.455415757695675,
+      43.08122602720016,
+      17.998307399970315
+    ]
   },
   {
-    "id": 103,
+    "iso2": "ES",
+    "iso3": "ESP",
+    "admin": "Spain",
     "name": "Spain",
-    "code": "ESP",
-    "created_at": "2017-06-12T22:07:27.033Z",
-    "link": "https://openstreetmap.org/relation/1311341"
+    "osm_link": "https://openstreetmap.org/relation/1311341",
+    "bbox": [
+      -9.392883673530648,
+      35.946850083961465,
+      3.039484083680549,
+      43.74833771420099
+    ]
   },
   {
-    "id": 104,
+    "iso2": "EE",
+    "iso3": "EST",
+    "admin": "Estonia",
     "name": "Estonia",
-    "code": "EST",
-    "created_at": "2017-06-12T22:07:27.033Z",
-    "link": "https://openstreetmap.org/relation/79510"
+    "osm_link": "https://openstreetmap.org/relation/79510",
+    "bbox": [
+      23.339795363058645,
+      57.47452830670383,
+      28.13169925305175,
+      59.61109039981133
+    ]
   },
   {
-    "id": 105,
+    "iso2": "ET",
+    "iso3": "ETH",
+    "admin": "Ethiopia",
     "name": "Ethiopia",
-    "code": "ETH",
-    "created_at": "2017-06-12T22:07:27.033Z",
-    "link": "https://openstreetmap.org/relation/192800"
+    "osm_link": "https://openstreetmap.org/relation/192800",
+    "bbox": [
+      32.95418,
+      3.42206,
+      47.78942,
+      14.959430000000168
+    ]
   },
   {
-    "id": 106,
+    "iso2": "FI",
+    "iso3": "FIN",
+    "admin": "Finland",
     "name": "Finland",
-    "code": "FIN",
-    "created_at": "2017-06-12T22:07:27.033Z",
-    "link": "https://openstreetmap.org/relation/54224"
+    "osm_link": "https://openstreetmap.org/relation/54224",
+    "bbox": [
+      20.645592889089528,
+      59.846373196036225,
+      31.516092156711125,
+      70.16419302029624
+    ]
   },
   {
-    "id": 107,
+    "iso2": "FJ",
+    "iso3": "FJI",
+    "admin": "Fiji",
     "name": "Fiji",
-    "code": "FJI",
-    "created_at": "2017-06-12T22:07:27.033Z",
-    "link": "https://openstreetmap.org/relation/571747"
+    "osm_link": "https://openstreetmap.org/relation/571747",
+    "bbox": [
+      -180,
+      -18.28799,
+      180,
+      -16.020882256741217
+    ]
   },
   {
-    "id": 108,
-    "name": "Falkland Islands",
-    "code": "FLK",
-    "created_at": "2017-06-12T22:07:27.033Z",
-    "link": "https://openstreetmap.org/relation/2185374"
+    "iso2": "FK",
+    "iso3": "FLK",
+    "admin": "Falkland Islands",
+    "name": "Falkland Is.",
+    "osm_link": "https://openstreetmap.org/relation/2185374",
+    "bbox": [
+      -61.2,
+      -52.3,
+      -57.75,
+      -51.1
+    ]
   },
   {
-    "id": 109,
+    "iso2": "FR",
+    "iso3": "FRA",
+    "admin": "France",
     "name": "France",
-    "code": "FRA",
-    "created_at": "2017-06-12T22:07:27.033Z",
-    "link": "https://openstreetmap.org/relation/2202162"
+    "osm_link": null,
+    "bbox": [
+      -54.52475419779972,
+      2.053389187015981,
+      9.56001631026919,
+      51.148506171261886
+    ]
   },
   {
-    "id": 110,
+    "iso2": "GA",
+    "iso3": "GAB",
+    "admin": "Gabon",
     "name": "Gabon",
-    "code": "GAB",
-    "created_at": "2017-06-12T22:07:27.033Z",
-    "link": "https://openstreetmap.org/relation/192793"
+    "osm_link": "https://openstreetmap.org/relation/192793",
+    "bbox": [
+      8.79799563969317,
+      -3.978826592630547,
+      14.425455763413595,
+      2.326757513839993
+    ]
   },
   {
-    "id": 111,
+    "iso2": "GB",
+    "iso3": "GBR",
+    "admin": "United Kingdom",
     "name": "United Kingdom",
-    "code": "GBR",
-    "created_at": "2017-06-12T22:07:27.033Z",
-    "link": "https://openstreetmap.org/relation/62149"
+    "osm_link": "https://openstreetmap.org/relation/62149",
+    "bbox": [
+      -7.572167934591064,
+      49.95999990498112,
+      1.681530795914682,
+      58.63500010846636
+    ]
   },
   {
-    "id": 112,
+    "iso2": "GE",
+    "iso3": "GEO",
+    "admin": "Georgia",
     "name": "Georgia",
-    "code": "GEO",
-    "created_at": "2017-06-12T22:07:27.033Z",
-    "link": "https://openstreetmap.org/relation/28699"
+    "osm_link": "https://openstreetmap.org/relation/28699",
+    "bbox": [
+      39.955008579270924,
+      41.06444468847414,
+      46.63790815612058,
+      43.553104153002316
+    ]
   },
   {
-    "id": 113,
+    "iso2": "GH",
+    "iso3": "GHA",
+    "admin": "Ghana",
     "name": "Ghana",
-    "code": "GHA",
-    "created_at": "2017-06-12T22:07:27.033Z",
-    "link": "https://openstreetmap.org/relation/192781"
+    "osm_link": "https://openstreetmap.org/relation/192781",
+    "bbox": [
+      -3.244370083011262,
+      4.710462144383371,
+      1.060121697604927,
+      11.098340969278722
+    ]
   },
   {
-    "id": 114,
+    "iso2": "GN",
+    "iso3": "GIN",
+    "admin": "Guinea",
     "name": "Guinea",
-    "code": "GIN",
-    "created_at": "2017-06-12T22:07:27.033Z",
-    "link": "https://openstreetmap.org/relation/192778"
+    "osm_link": "https://openstreetmap.org/relation/192778",
+    "bbox": [
+      -15.130311245168173,
+      7.309037380396376,
+      -7.832100389019188,
+      12.586182969610194
+    ]
   },
   {
-    "id": 115,
+    "iso2": "GM",
+    "iso3": "GMB",
+    "admin": "Gambia",
     "name": "Gambia",
-    "code": "GMB",
-    "created_at": "2017-06-12T22:07:27.033Z",
-    "link": "https://openstreetmap.org/relation/192774"
+    "osm_link": "https://openstreetmap.org/relation/192774",
+    "bbox": [
+      -16.841524624081273,
+      13.130284125211332,
+      -13.844963344772408,
+      13.876491807505985
+    ]
   },
   {
-    "id": 116,
-    "name": "Guinea Bissau",
-    "code": "GNB",
-    "created_at": "2017-06-12T22:07:27.033Z",
-    "link": "https://openstreetmap.org/relation/192776"
+    "iso2": "GW",
+    "iso3": "GNB",
+    "admin": "Guinea-Bissau",
+    "name": "Guinea-Bissau",
+    "osm_link": "https://openstreetmap.org/relation/192776",
+    "bbox": [
+      -16.677451951554573,
+      11.040411688679526,
+      -13.700476040084325,
+      12.628170070847347
+    ]
   },
   {
-    "id": 117,
-    "name": "Equatorial Guinea",
-    "code": "GNQ",
-    "created_at": "2017-06-12T22:07:27.033Z",
-    "link": "https://openstreetmap.org/relation/192791"
+    "iso2": "GQ",
+    "iso3": "GNQ",
+    "admin": "Equatorial Guinea",
+    "name": "Eq. Guinea",
+    "osm_link": "https://openstreetmap.org/relation/192791",
+    "bbox": [
+      9.305613234096256,
+      1.010119533691494,
+      11.285078973036462,
+      2.283866075037736
+    ]
   },
   {
-    "id": 118,
+    "iso2": "GR",
+    "iso3": "GRC",
+    "admin": "Greece",
     "name": "Greece",
-    "code": "GRC",
-    "created_at": "2017-06-12T22:07:27.033Z",
-    "link": "https://openstreetmap.org/relation/192307"
+    "osm_link": "https://openstreetmap.org/relation/192307",
+    "bbox": [
+      20.15001590341052,
+      34.91998769788964,
+      26.60419559093623,
+      41.82690460872459
+    ]
   },
   {
-    "id": 119,
+    "iso2": "GL",
+    "iso3": "GRL",
+    "admin": "Greenland",
     "name": "Greenland",
-    "code": "GRL",
-    "created_at": "2017-06-12T22:07:27.033Z",
-    "link": "https://openstreetmap.org/relation/2184073"
+    "osm_link": "https://openstreetmap.org/relation/2184073",
+    "bbox": [
+      -73.297,
+      60.03676,
+      -12.20855,
+      83.64513
+    ]
   },
   {
-    "id": 120,
+    "iso2": "GT",
+    "iso3": "GTM",
+    "admin": "Guatemala",
     "name": "Guatemala",
-    "code": "GTM",
-    "created_at": "2017-06-12T22:07:27.033Z",
-    "link": "https://openstreetmap.org/relation/1521463"
+    "osm_link": "https://openstreetmap.org/relation/1521463",
+    "bbox": [
+      -92.2292486234063,
+      13.735337632700734,
+      -88.22502275262202,
+      17.819326076727478
+    ]
   },
   {
-    "id": 121,
-    "name": "French Guiana",
-    "code": "GUF",
-    "created_at": "2017-06-12T22:07:27.033Z",
-    "link": "https://openstreetmap.org/relation/1260551"
-  },
-  {
-    "id": 122,
+    "iso2": "GY",
+    "iso3": "GUY",
+    "admin": "Guyana",
     "name": "Guyana",
-    "code": "GUY",
-    "created_at": "2017-06-12T22:07:27.033Z",
-    "link": "https://openstreetmap.org/relation/287083"
+    "osm_link": "https://openstreetmap.org/relation/287083",
+    "bbox": [
+      -61.410302903881956,
+      1.268088283692521,
+      -56.539385748914555,
+      8.367034816924047
+    ]
   },
   {
-    "id": 123,
+    "iso2": "HN",
+    "iso3": "HND",
+    "admin": "Honduras",
     "name": "Honduras",
-    "code": "HND",
-    "created_at": "2017-06-12T22:07:27.033Z",
-    "link": "https://openstreetmap.org/relation/287670"
+    "osm_link": "https://openstreetmap.org/relation/287670",
+    "bbox": [
+      -89.35332597528281,
+      12.984685777229004,
+      -83.14721900097413,
+      16.00540578863439
+    ]
   },
   {
-    "id": 124,
+    "iso2": "HR",
+    "iso3": "HRV",
+    "admin": "Croatia",
     "name": "Croatia",
-    "code": "HRV",
-    "created_at": "2017-06-12T22:07:27.033Z",
-    "link": "https://openstreetmap.org/relation/214885"
+    "osm_link": "https://openstreetmap.org/relation/214885",
+    "bbox": [
+      13.656975538801191,
+      42.47999136002932,
+      19.39047570158459,
+      46.50375092221983
+    ]
   },
   {
-    "id": 125,
+    "iso2": "HT",
+    "iso3": "HTI",
+    "admin": "Haiti",
     "name": "Haiti",
-    "code": "HTI",
-    "created_at": "2017-06-12T22:07:27.033Z",
-    "link": "https://openstreetmap.org/relation/307829"
+    "osm_link": "https://openstreetmap.org/relation/307829",
+    "bbox": [
+      -74.45803361682478,
+      18.030992743395004,
+      -71.62487321642283,
+      19.915683905511912
+    ]
   },
   {
-    "id": 126,
+    "iso2": "HU",
+    "iso3": "HUN",
+    "admin": "Hungary",
     "name": "Hungary",
-    "code": "HUN",
-    "created_at": "2017-06-12T22:07:27.033Z",
-    "link": "https://openstreetmap.org/relation/21335"
+    "osm_link": "https://openstreetmap.org/relation/21335",
+    "bbox": [
+      16.202298211337364,
+      45.75948110613615,
+      22.710531447040495,
+      48.623854071642384
+    ]
   },
   {
-    "id": 127,
+    "iso2": "ID",
+    "iso3": "IDN",
+    "admin": "Indonesia",
     "name": "Indonesia",
-    "code": "IDN",
-    "created_at": "2017-06-12T22:07:27.033Z",
-    "link": "https://openstreetmap.org/relation/304751"
+    "osm_link": "https://openstreetmap.org/relation/304751",
+    "bbox": [
+      95.29302615761733,
+      -10.359987481327934,
+      141.0338517600139,
+      5.479820868344845
+    ]
   },
   {
-    "id": 128,
+    "iso2": "IN",
+    "iso3": "IND",
+    "admin": "India",
     "name": "India",
-    "code": "IND",
-    "created_at": "2017-06-12T22:07:27.033Z",
-    "link": "https://openstreetmap.org/relation/304716"
+    "osm_link": "https://openstreetmap.org/relation/304716",
+    "bbox": [
+      68.1766451353734,
+      7.965534776232332,
+      97.40256147663614,
+      35.494009507787766
+    ]
   },
   {
-    "id": 129,
+    "iso2": "IE",
+    "iso3": "IRL",
+    "admin": "Ireland",
     "name": "Ireland",
-    "code": "IRL",
-    "created_at": "2017-06-12T22:07:27.033Z",
-    "link": "https://openstreetmap.org/relation/62273"
+    "osm_link": "https://openstreetmap.org/relation/62273",
+    "bbox": [
+      -9.977085740590269,
+      51.669301255899356,
+      -6.032985398777611,
+      55.13162221945487
+    ]
   },
   {
-    "id": 130,
+    "iso2": "IR",
+    "iso3": "IRN",
+    "admin": "Iran",
     "name": "Iran",
-    "code": "IRN",
-    "created_at": "2017-06-12T22:07:27.033Z",
-    "link": "https://openstreetmap.org/relation/304938"
+    "osm_link": "https://openstreetmap.org/relation/304938",
+    "bbox": [
+      44.10922529478234,
+      25.0782370061185,
+      63.31663170761959,
+      39.71300263117706
+    ]
   },
   {
-    "id": 131,
+    "iso2": "IQ",
+    "iso3": "IRQ",
+    "admin": "Iraq",
     "name": "Iraq",
-    "code": "IRQ",
-    "created_at": "2017-06-12T22:07:27.033Z",
-    "link": "https://openstreetmap.org/relation/304934"
+    "osm_link": "https://openstreetmap.org/relation/304934",
+    "bbox": [
+      38.792340529136084,
+      29.09902517345229,
+      48.567971225789755,
+      37.385263576805755
+    ]
   },
   {
-    "id": 132,
+    "iso2": "IS",
+    "iso3": "ISL",
+    "admin": "Iceland",
     "name": "Iceland",
-    "code": "ISL",
-    "created_at": "2017-06-12T22:07:27.033Z",
-    "link": "https://openstreetmap.org/relation/299133"
+    "osm_link": "https://openstreetmap.org/relation/299133",
+    "bbox": [
+      -24.326184047939336,
+      63.49638296167582,
+      -13.60973222497981,
+      66.52679230413587
+    ]
   },
   {
-    "id": 133,
+    "iso2": "IL",
+    "iso3": "ISR",
+    "admin": "Israel",
     "name": "Israel",
-    "code": "ISR",
-    "created_at": "2017-06-12T22:07:27.033Z",
-    "link": "https://openstreetmap.org/relation/1473946"
+    "osm_link": "https://openstreetmap.org/relation/1473946",
+    "bbox": [
+      34.26543338393569,
+      29.501326198844524,
+      35.836396925608625,
+      33.2774264592763
+    ]
   },
   {
-    "id": 134,
+    "iso2": "IT",
+    "iso3": "ITA",
+    "admin": "Italy",
     "name": "Italy",
-    "code": "ITA",
-    "created_at": "2017-06-12T22:07:27.033Z",
-    "link": "https://openstreetmap.org/relation/365331"
+    "osm_link": "https://openstreetmap.org/relation/365331",
+    "bbox": [
+      6.749955275101655,
+      36.619987290995425,
+      18.48024702319546,
+      47.115393174826465
+    ]
   },
   {
-    "id": 135,
+    "iso2": "JM",
+    "iso3": "JAM",
+    "admin": "Jamaica",
     "name": "Jamaica",
-    "code": "JAM",
-    "created_at": "2017-06-12T22:07:27.033Z",
-    "link": "https://openstreetmap.org/relation/555017"
+    "osm_link": "https://openstreetmap.org/relation/555017",
+    "bbox": [
+      -78.33771928578561,
+      17.70111623785982,
+      -76.19965857614164,
+      18.524218451404778
+    ]
   },
   {
-    "id": 136,
+    "iso2": "JO",
+    "iso3": "JOR",
+    "admin": "Jordan",
     "name": "Jordan",
-    "code": "JOR",
-    "created_at": "2017-06-12T22:07:27.033Z",
-    "link": "https://openstreetmap.org/relation/184818"
+    "osm_link": "https://openstreetmap.org/relation/184818",
+    "bbox": [
+      34.92260257339143,
+      29.197494615184453,
+      39.19546837744497,
+      33.378686428352225
+    ]
   },
   {
-    "id": 137,
+    "iso2": "JP",
+    "iso3": "JPN",
+    "admin": "Japan",
     "name": "Japan",
-    "code": "JPN",
-    "created_at": "2017-06-12T22:07:27.033Z",
-    "link": "https://openstreetmap.org/relation/382313"
+    "osm_link": "https://openstreetmap.org/relation/382313",
+    "bbox": [
+      129.40846316947253,
+      31.02957916922827,
+      145.54313724180278,
+      45.5514834661613
+    ]
   },
   {
-    "id": 138,
+    "iso2": "KZ",
+    "iso3": "KAZ",
+    "admin": "Kazakhstan",
     "name": "Kazakhstan",
-    "code": "KAZ",
-    "created_at": "2017-06-12T22:07:27.033Z",
-    "link": "https://openstreetmap.org/relation/214665"
+    "osm_link": "https://openstreetmap.org/relation/214665",
+    "bbox": [
+      46.46644575377627,
+      40.6623245305949,
+      87.35997033076265,
+      55.38525014914353
+    ]
   },
   {
-    "id": 139,
+    "iso2": "KE",
+    "iso3": "KEN",
+    "admin": "Kenya",
     "name": "Kenya",
-    "code": "KEN",
-    "created_at": "2017-06-12T22:07:27.033Z",
-    "link": "https://openstreetmap.org/relation/192798"
+    "osm_link": "https://openstreetmap.org/relation/192798",
+    "bbox": [
+      33.893568969666944,
+      -4.67677,
+      41.85508309264397,
+      5.506
+    ]
   },
   {
-    "id": 140,
+    "iso2": "KG",
+    "iso3": "KGZ",
+    "admin": "Kyrgyzstan",
     "name": "Kyrgyzstan",
-    "code": "KGZ",
-    "created_at": "2017-06-12T22:07:27.033Z",
-    "link": "https://openstreetmap.org/relation/178009"
+    "osm_link": "https://openstreetmap.org/relation/178009",
+    "bbox": [
+      69.46488691597753,
+      39.27946320246437,
+      80.2599902688853,
+      43.29833934180337
+    ]
   },
   {
-    "id": 141,
+    "iso2": "KH",
+    "iso3": "KHM",
+    "admin": "Cambodia",
     "name": "Cambodia",
-    "code": "KHM",
-    "created_at": "2017-06-12T22:07:27.033Z",
-    "link": "https://openstreetmap.org/relation/49898"
+    "osm_link": "https://openstreetmap.org/relation/49898",
+    "bbox": [
+      102.34809939983302,
+      10.48654368737523,
+      107.61454796756243,
+      14.570583807834282
+    ]
   },
   {
-    "id": 142,
+    "iso2": "KR",
+    "iso3": "KOR",
+    "admin": "South Korea",
     "name": "South Korea",
-    "code": "KOR",
-    "created_at": "2017-06-12T22:07:27.033Z",
-    "link": "https://openstreetmap.org/relation/307756"
+    "osm_link": "https://openstreetmap.org/relation/307756",
+    "bbox": [
+      126.11739790253229,
+      34.39004588473648,
+      129.4683044780665,
+      38.61224294692785
+    ]
   },
   {
-    "id": 143,
+    "iso2": "XK",
+    "iso3": "XXK",
+    "admin": "Kosovo",
     "name": "Kosovo",
-    "code": "KOS",
-    "created_at": "2017-06-12T22:07:27.033Z"
+    "osm_link": null,
+    "bbox": [
+      20.0707,
+      41.84711,
+      21.77505,
+      43.27205
+    ]
   },
   {
-    "id": 144,
+    "iso2": "KW",
+    "iso3": "KWT",
+    "admin": "Kuwait",
     "name": "Kuwait",
-    "code": "KWT",
-    "created_at": "2017-06-12T22:07:27.033Z",
-    "link": "https://openstreetmap.org/relation/305099"
+    "osm_link": "https://openstreetmap.org/relation/305099",
+    "bbox": [
+      46.568713413281756,
+      28.526062730416143,
+      48.416094191283946,
+      30.059069932570722
+    ]
   },
   {
-    "id": 145,
+    "iso2": "LA",
+    "iso3": "LAO",
+    "admin": "Laos",
     "name": "Laos",
-    "code": "LAO",
-    "created_at": "2017-06-12T22:07:27.033Z",
-    "link": "https://openstreetmap.org/relation/49903"
+    "osm_link": "https://openstreetmap.org/relation/49903",
+    "bbox": [
+      100.11598758341785,
+      13.881091009979956,
+      107.5645251811039,
+      22.464753119389304
+    ]
   },
   {
-    "id": 146,
+    "iso2": "LB",
+    "iso3": "LBN",
+    "admin": "Lebanon",
     "name": "Lebanon",
-    "code": "LBN",
-    "created_at": "2017-06-12T22:07:27.033Z",
-    "link": "https://openstreetmap.org/relation/184843"
+    "osm_link": "https://openstreetmap.org/relation/184843",
+    "bbox": [
+      35.126052687324545,
+      33.08904002535628,
+      36.61175011571589,
+      34.644914048800004
+    ]
   },
   {
-    "id": 147,
+    "iso2": "LR",
+    "iso3": "LBR",
+    "admin": "Liberia",
     "name": "Liberia",
-    "code": "LBR",
-    "created_at": "2017-06-12T22:07:27.033Z",
-    "link": "https://openstreetmap.org/relation/192780"
+    "osm_link": "https://openstreetmap.org/relation/192780",
+    "bbox": [
+      -11.438779466182055,
+      4.355755113131963,
+      -7.539715135111763,
+      8.541055202666925
+    ]
   },
   {
-    "id": 148,
+    "iso2": "LY",
+    "iso3": "LBY",
+    "admin": "Libya",
     "name": "Libya",
-    "code": "LBY",
-    "created_at": "2017-06-12T22:07:27.033Z",
-    "link": "https://openstreetmap.org/relation/192758"
+    "osm_link": "https://openstreetmap.org/relation/192758",
+    "bbox": [
+      9.319410841518163,
+      19.580470000000105,
+      25.16482,
+      33.13699575452314
+    ]
   },
   {
-    "id": 149,
+    "iso2": "LK",
+    "iso3": "LKA",
+    "admin": "Sri Lanka",
     "name": "Sri Lanka",
-    "code": "LKA",
-    "created_at": "2017-06-12T22:07:27.033Z",
-    "link": "https://openstreetmap.org/relation/536807"
+    "osm_link": "https://openstreetmap.org/relation/536807",
+    "bbox": [
+      79.69516686393513,
+      5.968369859232155,
+      81.7879590188914,
+      9.824077663609557
+    ]
   },
   {
-    "id": 150,
+    "iso2": "LS",
+    "iso3": "LSO",
+    "admin": "Lesotho",
     "name": "Lesotho",
-    "code": "LSO",
-    "created_at": "2017-06-12T22:07:27.033Z",
-    "link": "https://openstreetmap.org/relation/2093234"
+    "osm_link": "https://openstreetmap.org/relation/2093234",
+    "bbox": [
+      26.999261915807637,
+      -30.645105889612225,
+      29.32516645683259,
+      -28.64750172293757
+    ]
   },
   {
-    "id": 151,
+    "iso2": "LT",
+    "iso3": "LTU",
+    "admin": "Lithuania",
     "name": "Lithuania",
-    "code": "LTU",
-    "created_at": "2017-06-12T22:07:27.033Z",
-    "link": "https://openstreetmap.org/relation/72596"
+    "osm_link": "https://openstreetmap.org/relation/72596",
+    "bbox": [
+      21.055800408622417,
+      53.905702216194754,
+      26.58827924979039,
+      56.37252838807963
+    ]
   },
   {
-    "id": 152,
+    "iso2": "LU",
+    "iso3": "LUX",
+    "admin": "Luxembourg",
     "name": "Luxembourg",
-    "code": "LUX",
-    "created_at": "2017-06-12T22:07:27.033Z",
-    "link": "https://openstreetmap.org/relation/2171347"
+    "osm_link": "https://openstreetmap.org/relation/2171347",
+    "bbox": [
+      5.674051954784829,
+      49.44266714130703,
+      6.242751092156993,
+      50.128051662794235
+    ]
   },
   {
-    "id": 153,
+    "iso2": "LV",
+    "iso3": "LVA",
+    "admin": "Latvia",
     "name": "Latvia",
-    "code": "LVA",
-    "created_at": "2017-06-12T22:07:27.033Z",
-    "link": "https://openstreetmap.org/relation/72594"
+    "osm_link": "https://openstreetmap.org/relation/72594",
+    "bbox": [
+      21.055800408622417,
+      55.615106919977634,
+      28.176709425577997,
+      57.97015696881519
+    ]
   },
   {
-    "id": 154,
+    "iso2": "MA",
+    "iso3": "MAR",
+    "admin": "Morocco",
     "name": "Morocco",
-    "code": "MAR",
-    "created_at": "2017-06-12T22:07:27.033Z",
-    "link": "https://openstreetmap.org/relation/3630439"
+    "osm_link": "https://openstreetmap.org/relation/3630439",
+    "bbox": [
+      -17.020428432675743,
+      21.420734157796577,
+      -1.124551153966308,
+      35.75998810479402
+    ]
   },
   {
-    "id": 155,
+    "iso2": "MD",
+    "iso3": "MDA",
+    "admin": "Moldova",
     "name": "Moldova",
-    "code": "MDA",
-    "created_at": "2017-06-12T22:07:27.033Z",
-    "link": "https://openstreetmap.org/relation/58974"
+    "osm_link": "https://openstreetmap.org/relation/58974",
+    "bbox": [
+      26.619336785597795,
+      45.48828318946829,
+      30.024658644335375,
+      48.467119452501116
+    ]
   },
   {
-    "id": 156,
+    "iso2": "MG",
+    "iso3": "MDG",
+    "admin": "Madagascar",
     "name": "Madagascar",
-    "code": "MDG",
-    "created_at": "2017-06-12T22:07:27.033Z",
-    "link": "https://openstreetmap.org/relation/447325"
+    "osm_link": "https://openstreetmap.org/relation/447325",
+    "bbox": [
+      43.254187046081,
+      -25.60143442149309,
+      50.47653689962553,
+      -12.04055673589197
+    ]
   },
   {
-    "id": 157,
+    "iso2": "MX",
+    "iso3": "MEX",
+    "admin": "Mexico",
     "name": "Mexico",
-    "code": "MEX",
-    "created_at": "2017-06-12T22:07:27.033Z",
-    "link": "https://openstreetmap.org/relation/114686"
+    "osm_link": "https://openstreetmap.org/relation/114686",
+    "bbox": [
+      -117.12775999999987,
+      14.538828640190928,
+      -86.81198238803296,
+      32.72082999999989
+    ]
   },
   {
-    "id": 158,
+    "iso2": "MK",
+    "iso3": "MKD",
+    "admin": "Macedonia",
     "name": "Macedonia",
-    "code": "MKD",
-    "created_at": "2017-06-12T22:07:27.033Z",
-    "link": "https://openstreetmap.org/relation/53293"
+    "osm_link": "https://openstreetmap.org/relation/53293",
+    "bbox": [
+      20.463175083099202,
+      40.84272695572588,
+      22.952377150166452,
+      42.32025950781509
+    ]
   },
   {
-    "id": 159,
+    "iso2": "ML",
+    "iso3": "MLI",
+    "admin": "Mali",
     "name": "Mali",
-    "code": "MLI",
-    "created_at": "2017-06-12T22:07:27.033Z",
-    "link": "https://openstreetmap.org/relation/192785"
+    "osm_link": "https://openstreetmap.org/relation/192785",
+    "bbox": [
+      -12.170750291380301,
+      10.096360785355444,
+      4.270209995143802,
+      24.974574082941
+    ]
   },
   {
-    "id": 160,
+    "iso2": "MM",
+    "iso3": "MMR",
+    "admin": "Myanmar",
     "name": "Myanmar",
-    "code": "MMR",
-    "created_at": "2017-06-12T22:07:27.033Z",
-    "link": "https://openstreetmap.org/relation/50371"
+    "osm_link": "https://openstreetmap.org/relation/50371",
+    "bbox": [
+      92.30323449093868,
+      9.932959906448545,
+      101.18000532430753,
+      28.335945136014345
+    ]
   },
   {
-    "id": 161,
+    "iso2": "ME",
+    "iso3": "MNE",
+    "admin": "Montenegro",
     "name": "Montenegro",
-    "code": "MNE",
-    "created_at": "2017-06-12T22:07:27.033Z",
-    "link": "https://openstreetmap.org/relation/53296"
+    "osm_link": "https://openstreetmap.org/relation/53296",
+    "bbox": [
+      18.45001688302086,
+      41.877550679783496,
+      20.3398,
+      43.52384
+    ]
   },
   {
-    "id": 162,
+    "iso2": "MN",
+    "iso3": "MNG",
+    "admin": "Mongolia",
     "name": "Mongolia",
-    "code": "MNG",
-    "created_at": "2017-06-12T22:07:27.033Z",
-    "link": "https://openstreetmap.org/relation/161033"
+    "osm_link": "https://openstreetmap.org/relation/161033",
+    "bbox": [
+      87.75126427607671,
+      41.59740957291635,
+      119.7728239278975,
+      52.04736603454669
+    ]
   },
   {
-    "id": 163,
+    "iso2": "MZ",
+    "iso3": "MOZ",
+    "admin": "Mozambique",
     "name": "Mozambique",
-    "code": "MOZ",
-    "created_at": "2017-06-12T22:07:27.033Z",
-    "link": "https://openstreetmap.org/relation/195273"
+    "osm_link": "https://openstreetmap.org/relation/195273",
+    "bbox": [
+      30.17948123548183,
+      -26.742191664336197,
+      40.775475294768995,
+      -10.317096042525698
+    ]
   },
   {
-    "id": 164,
+    "iso2": "MR",
+    "iso3": "MRT",
+    "admin": "Mauritania",
     "name": "Mauritania",
-    "code": "MRT",
-    "created_at": "2017-06-12T22:07:27.033Z",
-    "link": "https://openstreetmap.org/relation/192763"
+    "osm_link": "https://openstreetmap.org/relation/192763",
+    "bbox": [
+      -17.06342322434257,
+      14.616834214735505,
+      -4.923337368174231,
+      27.395744126896005
+    ]
   },
   {
-    "id": 165,
+    "iso2": "MW",
+    "iso3": "MWI",
+    "admin": "Malawi",
     "name": "Malawi",
-    "code": "MWI",
-    "created_at": "2017-06-12T22:07:27.033Z",
-    "link": "https://openstreetmap.org/relation/195290"
+    "osm_link": "https://openstreetmap.org/relation/195290",
+    "bbox": [
+      32.68816531752313,
+      -16.801299737213093,
+      35.77190473810836,
+      -9.23059905358906
+    ]
   },
   {
-    "id": 166,
-    "name": "Singapore",
-    "code": "SGP",
-    "created_at": "2017-06-12T22:07:27.033Z",
-    "link": "https://openstreetmap.org/relation/536780"
-  },
-  {
-    "id": 167,
+    "iso2": "MY",
+    "iso3": "MYS",
+    "admin": "Malaysia",
     "name": "Malaysia",
-    "code": "MYS",
-    "created_at": "2017-06-12T22:07:27.033Z",
-    "link": "https://openstreetmap.org/relation/2108121"
+    "osm_link": "https://openstreetmap.org/relation/2108121",
+    "bbox": [
+      100.08575687052709,
+      0.773131415201007,
+      119.18190392463995,
+      6.928052883324582
+    ]
   },
   {
-    "id": 168,
+    "iso2": "NA",
+    "iso3": "NAM",
+    "admin": "Namibia",
     "name": "Namibia",
-    "code": "NAM",
-    "created_at": "2017-06-12T22:07:27.033Z",
-    "link": "https://openstreetmap.org/relation/195266"
+    "osm_link": "https://openstreetmap.org/relation/195266",
+    "bbox": [
+      11.734198846085093,
+      -29.04546192801728,
+      25.08444339366457,
+      -16.94134286872407
+    ]
   },
   {
-    "id": 169,
+    "iso2": "NC",
+    "iso3": "NCL",
+    "admin": "New Caledonia",
     "name": "New Caledonia",
-    "code": "NCL",
-    "created_at": "2017-06-12T22:07:27.033Z",
-    "link": "https://openstreetmap.org/relation/3407643"
+    "osm_link": "https://openstreetmap.org/relation/3407643",
+    "bbox": [
+      164.029605747736,
+      -22.39997608814695,
+      167.1200114280869,
+      -20.105645847252354
+    ]
   },
   {
-    "id": 170,
+    "iso2": "NE",
+    "iso3": "NER",
+    "admin": "Niger",
     "name": "Niger",
-    "code": "NER",
-    "created_at": "2017-06-12T22:07:27.033Z",
-    "link": "https://openstreetmap.org/relation/192786"
+    "osm_link": "https://openstreetmap.org/relation/192786",
+    "bbox": [
+      0.295646396495101,
+      11.660167141155968,
+      15.903246697664315,
+      23.47166840259645
+    ]
   },
   {
-    "id": 171,
+    "iso2": "NG",
+    "iso3": "NGA",
+    "admin": "Nigeria",
     "name": "Nigeria",
-    "code": "NGA",
-    "created_at": "2017-06-12T22:07:27.033Z",
-    "link": "https://openstreetmap.org/relation/192787"
+    "osm_link": "https://openstreetmap.org/relation/192787",
+    "bbox": [
+      2.691701694356254,
+      4.240594183769517,
+      14.577177768622533,
+      13.865923977102227
+    ]
   },
   {
-    "id": 172,
+    "iso2": "NI",
+    "iso3": "NIC",
+    "admin": "Nicaragua",
     "name": "Nicaragua",
-    "code": "NIC",
-    "created_at": "2017-06-12T22:07:27.033Z",
-    "link": "https://openstreetmap.org/relation/287666"
+    "osm_link": "https://openstreetmap.org/relation/287666",
+    "bbox": [
+      -87.66849341505471,
+      10.726839097532446,
+      -83.14721900097413,
+      15.016267198135537
+    ]
   },
   {
-    "id": 173,
+    "iso2": "NL",
+    "iso3": "NLD",
+    "admin": "Netherlands",
     "name": "Netherlands",
-    "code": "NLD",
-    "created_at": "2017-06-12T22:07:27.033Z",
-    "link": "https://openstreetmap.org/relation/2323309"
+    "osm_link": "https://openstreetmap.org/relation/2323309",
+    "bbox": [
+      3.314971144228537,
+      50.80372101501058,
+      7.092053256873896,
+      53.510403347378144
+    ]
   },
   {
-    "id": 174,
+    "iso2": "NO",
+    "iso3": "NOR",
+    "admin": "Norway",
     "name": "Norway",
-    "code": "NOR",
-    "created_at": "2017-06-12T22:07:27.033Z",
-    "link": "https://openstreetmap.org/relation/2978650"
+    "osm_link": null,
+    "bbox": [
+      4.992078077828978,
+      58.078884182357314,
+      31.293418409965426,
+      80.65714427359345
+    ]
   },
   {
-    "id": 175,
+    "iso2": "NP",
+    "iso3": "NPL",
+    "admin": "Nepal",
     "name": "Nepal",
-    "code": "NPL",
-    "created_at": "2017-06-12T22:07:27.033Z",
-    "link": "https://openstreetmap.org/relation/184633"
+    "osm_link": "https://openstreetmap.org/relation/184633",
+    "bbox": [
+      80.08842451367627,
+      26.397898057556077,
+      88.17480431514092,
+      30.42271698660863
+    ]
   },
   {
-    "id": 176,
+    "iso2": "NZ",
+    "iso3": "NZL",
+    "admin": "New Zealand",
     "name": "New Zealand",
-    "code": "NZL",
-    "created_at": "2017-06-12T22:07:27.033Z",
-    "link": "https://openstreetmap.org/relation/556706"
+    "osm_link": "https://openstreetmap.org/relation/556706",
+    "bbox": [
+      166.50914432196467,
+      -46.64123544696784,
+      178.51709354076277,
+      -34.45066171645033
+    ]
   },
   {
-    "id": 177,
+    "iso2": "OM",
+    "iso3": "OMN",
+    "admin": "Oman",
     "name": "Oman",
-    "code": "OMN",
-    "created_at": "2017-06-12T22:07:27.033Z",
-    "link": "https://openstreetmap.org/relation/305138"
+    "osm_link": "https://openstreetmap.org/relation/305138",
+    "bbox": [
+      52.00000980002224,
+      16.651051133688924,
+      59.808060337162914,
+      26.39593435312898
+    ]
   },
   {
-    "id": 178,
+    "iso2": "PK",
+    "iso3": "PAK",
+    "admin": "Pakistan",
     "name": "Pakistan",
-    "code": "PAK",
-    "created_at": "2017-06-12T22:07:27.033Z",
-    "link": "https://openstreetmap.org/relation/307573"
+    "osm_link": "https://openstreetmap.org/relation/307573",
+    "bbox": [
+      60.87424848820879,
+      23.69196503345671,
+      77.83745079947457,
+      37.13303091078912
+    ]
   },
   {
-    "id": 179,
+    "iso2": "PA",
+    "iso3": "PAN",
+    "admin": "Panama",
     "name": "Panama",
-    "code": "PAN",
-    "created_at": "2017-06-12T22:07:27.033Z",
-    "link": "https://openstreetmap.org/relation/287668"
+    "osm_link": "https://openstreetmap.org/relation/287668",
+    "bbox": [
+      -82.96578304719736,
+      7.220541490096537,
+      -77.24256649444008,
+      9.611610012241528
+    ]
   },
   {
-    "id": 180,
+    "iso2": "PE",
+    "iso3": "PER",
+    "admin": "Peru",
     "name": "Peru",
-    "code": "PER",
-    "created_at": "2017-06-12T22:07:27.033Z",
-    "link": "https://openstreetmap.org/relation/288247"
+    "osm_link": "https://openstreetmap.org/relation/288247",
+    "bbox": [
+      -81.41094255239946,
+      -18.34797535570887,
+      -68.66507971868963,
+      -0.05720549886486
+    ]
   },
   {
-    "id": 181,
+    "iso2": "PH",
+    "iso3": "PHL",
+    "admin": "Philippines",
     "name": "Philippines",
-    "code": "PHL",
-    "created_at": "2017-06-12T22:07:27.033Z",
-    "link": "https://openstreetmap.org/relation/443174"
+    "osm_link": "https://openstreetmap.org/relation/443174",
+    "bbox": [
+      117.17427453010075,
+      5.581003322772318,
+      126.53742394420058,
+      18.505227362537482
+    ]
   },
   {
-    "id": 182,
+    "iso2": "PG",
+    "iso3": "PNG",
+    "admin": "Papua New Guinea",
     "name": "Papua New Guinea",
-    "code": "PNG",
-    "created_at": "2017-06-12T22:07:27.033Z",
-    "link": "https://openstreetmap.org/relation/307866"
+    "osm_link": "https://openstreetmap.org/relation/307866",
+    "bbox": [
+      141.00021040259188,
+      -10.652476088099917,
+      156.01996544822484,
+      -2.500002129734
+    ]
   },
   {
-    "id": 183,
+    "iso2": "PL",
+    "iso3": "POL",
+    "admin": "Poland",
     "name": "Poland",
-    "code": "POL",
-    "created_at": "2017-06-12T22:07:27.033Z",
-    "link": "https://openstreetmap.org/relation/49715"
+    "osm_link": "https://openstreetmap.org/relation/49715",
+    "bbox": [
+      14.074521111719434,
+      49.02739533140962,
+      24.029985792748903,
+      54.85153595643291
+    ]
   },
   {
-    "id": 184,
+    "iso2": "PR",
+    "iso3": "PRI",
+    "admin": "Puerto Rico",
     "name": "Puerto Rico",
-    "code": "PRI",
-    "created_at": "2017-06-12T22:07:27.033Z",
-    "link": "https://openstreetmap.org/relation/4422604"
+    "osm_link": "https://openstreetmap.org/relation/4422604",
+    "bbox": [
+      -67.24242753769435,
+      17.946553453030077,
+      -65.59100379094295,
+      18.52060110114435
+    ]
   },
   {
-    "id": 185,
+    "iso2": "KP",
+    "iso3": "PRK",
+    "admin": "North Korea",
     "name": "North Korea",
-    "code": "PRK",
-    "created_at": "2017-06-12T22:07:27.033Z",
-    "link": "https://openstreetmap.org/relation/192734"
+    "osm_link": "https://openstreetmap.org/relation/192734",
+    "bbox": [
+      124.26562462778531,
+      37.669070542952724,
+      130.78000735893113,
+      42.98538686784383
+    ]
   },
   {
-    "id": 186,
+    "iso2": "PT",
+    "iso3": "PRT",
+    "admin": "Portugal",
     "name": "Portugal",
-    "code": "PRT",
-    "created_at": "2017-06-12T22:07:27.033Z",
-    "link": "https://openstreetmap.org/relation/295480"
+    "osm_link": "https://openstreetmap.org/relation/295480",
+    "bbox": [
+      -9.526570603869715,
+      36.83826854099627,
+      -6.389087693700915,
+      42.28046865495034
+    ]
   },
   {
-    "id": 187,
+    "iso2": "PY",
+    "iso3": "PRY",
+    "admin": "Paraguay",
     "name": "Paraguay",
-    "code": "PRY",
-    "created_at": "2017-06-12T22:07:27.033Z",
-    "link": "https://openstreetmap.org/relation/287077"
+    "osm_link": "https://openstreetmap.org/relation/287077",
+    "bbox": [
+      -62.685057135657885,
+      -27.548499037386293,
+      -54.29295956075452,
+      -19.342746677327426
+    ]
   },
   {
-    "id": 188,
+    "iso2": "PS",
+    "iso3": "PSE",
+    "admin": "Palestine",
+    "name": "Palestine",
+    "osm_link": "https://openstreetmap.org/relation/1703814",
+    "bbox": [
+      34.92740848159457,
+      31.353435370401414,
+      35.54566531753454,
+      32.53251068778894
+    ]
+  },
+  {
+    "iso2": "QA",
+    "iso3": "QAT",
+    "admin": "Qatar",
     "name": "Qatar",
-    "code": "QAT",
-    "created_at": "2017-06-12T22:07:27.033Z",
-    "link": "https://openstreetmap.org/relation/305095"
+    "osm_link": "https://openstreetmap.org/relation/305095",
+    "bbox": [
+      50.74391076030369,
+      24.556330878186724,
+      51.60670047384881,
+      26.11458201751587
+    ]
   },
   {
-    "id": 189,
+    "iso2": "RO",
+    "iso3": "ROU",
+    "admin": "Romania",
     "name": "Romania",
-    "code": "ROU",
-    "created_at": "2017-06-12T22:07:27.033Z",
-    "link": "https://openstreetmap.org/relation/90689"
+    "osm_link": "https://openstreetmap.org/relation/90689",
+    "bbox": [
+      20.220192498462836,
+      43.68844472917472,
+      29.62654340995877,
+      48.22088125263035
+    ]
   },
   {
-    "id": 190,
+    "iso2": "RU",
+    "iso3": "RUS",
+    "admin": "Russia",
     "name": "Russia",
-    "code": "RUS",
-    "created_at": "2017-06-12T22:07:27.033Z",
-    "link": "https://openstreetmap.org/relation/60189"
+    "osm_link": "https://openstreetmap.org/relation/60189",
+    "bbox": [
+      -180,
+      41.15141612402138,
+      180,
+      81.2504
+    ]
   },
   {
-    "id": 191,
+    "iso2": "RW",
+    "iso3": "RWA",
+    "admin": "Rwanda",
     "name": "Rwanda",
-    "code": "RWA",
-    "created_at": "2017-06-12T22:07:27.033Z",
-    "link": "https://openstreetmap.org/relation/171496"
+    "osm_link": "https://openstreetmap.org/relation/171496",
+    "bbox": [
+      29.024926385216787,
+      -2.917857761246097,
+      30.816134881317712,
+      -1.134659112150416
+    ]
   },
   {
-    "id": 192,
-    "name": "Western Sahara",
-    "code": "ESH",
-    "created_at": "2017-06-12T22:07:27.033Z",
-    "link": "https://openstreetmap.org/relation/2559126"
+    "iso2": "EH",
+    "iso3": "ESH",
+    "admin": "Western Sahara",
+    "name": "W. Sahara",
+    "osm_link": "https://openstreetmap.org/relation/2559126",
+    "bbox": [
+      -17.06342322434257,
+      20.999752102130827,
+      -8.665124477564191,
+      27.656425889592356
+    ]
   },
   {
-    "id": 193,
+    "iso2": "SA",
+    "iso3": "SAU",
+    "admin": "Saudi Arabia",
     "name": "Saudi Arabia",
-    "code": "SAU",
-    "created_at": "2017-06-12T22:07:27.033Z",
-    "link": "https://openstreetmap.org/relation/307584"
+    "osm_link": "https://openstreetmap.org/relation/307584",
+    "bbox": [
+      34.63233605320798,
+      16.347891343648683,
+      55.666659376859826,
+      32.16100881604267
+    ]
   },
   {
-    "id": 194,
+    "iso2": "SD",
+    "iso3": "SDN",
+    "admin": "Sudan",
     "name": "Sudan",
-    "code": "SDN",
-    "created_at": "2017-06-12T22:07:27.033Z",
-    "link": "https://openstreetmap.org/relation/192789"
+    "osm_link": "https://openstreetmap.org/relation/192789",
+    "bbox": [
+      21.93681,
+      8.229187933785468,
+      38.410089959473225,
+      22
+    ]
   },
   {
-    "id": 195,
-    "name": "South Sudan",
-    "code": "SDS",
-    "created_at": "2017-06-12T22:07:27.033Z"
+    "iso2": "SS",
+    "iso3": "SSD",
+    "admin": "South Sudan",
+    "name": "S. Sudan",
+    "osm_link": "https://openstreetmap.org/relation/1656678",
+    "bbox": [
+      23.886979580860668,
+      3.509171604222463,
+      35.29800711823298,
+      12.248007757149992
+    ]
   },
   {
-    "id": 196,
+    "iso2": "SN",
+    "iso3": "SEN",
+    "admin": "Senegal",
     "name": "Senegal",
-    "code": "SEN",
-    "created_at": "2017-06-12T22:07:27.033Z",
-    "link": "https://openstreetmap.org/relation/192775"
+    "osm_link": "https://openstreetmap.org/relation/192775",
+    "bbox": [
+      -17.62504269049066,
+      12.332089952031057,
+      -11.467899135778524,
+      16.59826365810281
+    ]
   },
   {
-    "id": 197,
-    "name": "Solomon Islands",
-    "code": "SLB",
-    "created_at": "2017-06-12T22:07:27.033Z",
-    "link": "https://openstreetmap.org/relation/1857436"
+    "iso2": "SB",
+    "iso3": "SLB",
+    "admin": "Solomon Islands",
+    "name": "Solomon Is.",
+    "osm_link": "https://openstreetmap.org/relation/1857436",
+    "bbox": [
+      156.49135786359128,
+      -10.826367282762092,
+      162.39864586817222,
+      -6.599338474151466
+    ]
   },
   {
-    "id": 198,
+    "iso2": "SL",
+    "iso3": "SLE",
+    "admin": "Sierra Leone",
     "name": "Sierra Leone",
-    "code": "SLE",
-    "created_at": "2017-06-12T22:07:27.033Z",
-    "link": "https://openstreetmap.org/relation/192777"
+    "osm_link": "https://openstreetmap.org/relation/192777",
+    "bbox": [
+      -13.246550258832515,
+      6.785916856305747,
+      -10.23009355309128,
+      10.046983954300558
+    ]
   },
   {
-    "id": 199,
+    "iso2": "SV",
+    "iso3": "SLV",
+    "admin": "El Salvador",
     "name": "El Salvador",
-    "code": "SLV",
-    "created_at": "2017-06-12T22:07:27.033Z",
-    "link": "https://openstreetmap.org/relation/1520612"
+    "osm_link": "https://openstreetmap.org/relation/1520612",
+    "bbox": [
+      -90.09555457229098,
+      13.149016831917137,
+      -87.7235029772294,
+      14.424132798719086
+    ]
   },
   {
-    "id": 200,
+    "iso2": "-99",
+    "iso3": "-99",
+    "admin": "Somaliland",
     "name": "Somaliland",
-    "code": "SOM",
-    "created_at": "2017-06-12T22:07:27.033Z",
-    "link": "https://openstreetmap.org/relation/192799"
+    "osm_link": null,
+    "bbox": [
+      42.55876,
+      7.99688,
+      48.94820641459347,
+      11.462039699748857
+    ]
   },
   {
-    "id": 201,
+    "iso2": "SO",
+    "iso3": "SOM",
+    "admin": "Somalia",
     "name": "Somalia",
-    "code": "SOM",
-    "created_at": "2017-06-12T22:07:27.033Z",
-    "link": "https://openstreetmap.org/relation/192799"
+    "osm_link": "https://openstreetmap.org/relation/192799",
+    "bbox": [
+      40.98105,
+      -1.68325,
+      51.13387,
+      12.02464
+    ]
   },
   {
-    "id": 202,
-    "name": "Republic of Serbia",
-    "code": "SRB",
-    "created_at": "2017-06-12T22:07:27.033Z",
-    "link": "https://openstreetmap.org/relation/1741311"
+    "iso2": "RS",
+    "iso3": "SRB",
+    "admin": "Republic of Serbia",
+    "name": "Serbia",
+    "osm_link": "https://openstreetmap.org/relation/1741311",
+    "bbox": [
+      18.829824792873946,
+      42.24522439706186,
+      22.986018507588483,
+      46.17172984474454
+    ]
   },
   {
-    "id": 203,
+    "iso2": "SR",
+    "iso3": "SUR",
+    "admin": "Suriname",
     "name": "Suriname",
-    "code": "SUR",
-    "created_at": "2017-06-12T22:07:27.033Z",
-    "link": "https://openstreetmap.org/relation/287082"
+    "osm_link": "https://openstreetmap.org/relation/287082",
+    "bbox": [
+      -58.04469438336068,
+      1.817667141116601,
+      -53.9580446030709,
+      6.025291449401664
+    ]
   },
   {
-    "id": 204,
+    "iso2": "SK",
+    "iso3": "SVK",
+    "admin": "Slovakia",
     "name": "Slovakia",
-    "code": "SVK",
-    "created_at": "2017-06-12T22:07:27.033Z",
-    "link": "https://openstreetmap.org/relation/14296"
+    "osm_link": "https://openstreetmap.org/relation/14296",
+    "bbox": [
+      16.879982944413,
+      47.75842886005037,
+      22.558137648211755,
+      49.571574001659194
+    ]
   },
   {
-    "id": 205,
+    "iso2": "SI",
+    "iso3": "SVN",
+    "admin": "Slovenia",
     "name": "Slovenia",
-    "code": "SVN",
-    "created_at": "2017-06-12T22:07:27.033Z",
-    "link": "https://openstreetmap.org/relation/218657"
+    "osm_link": "https://openstreetmap.org/relation/218657",
+    "bbox": [
+      13.698109978905478,
+      45.45231639259323,
+      16.564808383864857,
+      46.85238597267696
+    ]
   },
   {
-    "id": 206,
+    "iso2": "SE",
+    "iso3": "SWE",
+    "admin": "Sweden",
     "name": "Sweden",
-    "code": "SWE",
-    "created_at": "2017-06-12T22:07:27.033Z",
-    "link": "https://openstreetmap.org/relation/52822"
+    "osm_link": "https://openstreetmap.org/relation/52822",
+    "bbox": [
+      11.027368605196868,
+      55.36173737245058,
+      23.903378533633802,
+      69.10624726020087
+    ]
   },
   {
-    "id": 207,
+    "iso2": "SZ",
+    "iso3": "SWZ",
+    "admin": "Swaziland",
     "name": "Swaziland",
-    "code": "SWZ",
-    "created_at": "2017-06-12T22:07:27.033Z",
-    "link": "https://openstreetmap.org/relation/88210"
+    "osm_link": "https://openstreetmap.org/relation/88210",
+    "bbox": [
+      30.67660851412964,
+      -27.285879408478998,
+      32.07166548028107,
+      -25.66019052500895
+    ]
   },
   {
-    "id": 208,
+    "iso2": "SY",
+    "iso3": "SYR",
+    "admin": "Syria",
     "name": "Syria",
-    "code": "SYR",
-    "created_at": "2017-06-12T22:07:27.033Z",
-    "link": "https://openstreetmap.org/relation/184840"
+    "osm_link": "https://openstreetmap.org/relation/184840",
+    "bbox": [
+      35.70079796727475,
+      32.312937526980775,
+      42.34959109881177,
+      37.2298725449041
+    ]
   },
   {
-    "id": 209,
+    "iso2": "TD",
+    "iso3": "TCD",
+    "admin": "Chad",
     "name": "Chad",
-    "code": "TCD",
-    "created_at": "2017-06-12T22:07:27.033Z",
-    "link": "https://openstreetmap.org/relation/2361304"
+    "osm_link": "https://openstreetmap.org/relation/2361304",
+    "bbox": [
+      13.540393507550789,
+      7.421924546737969,
+      23.886890000000108,
+      23.40972
+    ]
   },
   {
-    "id": 210,
+    "iso2": "TG",
+    "iso3": "TGO",
+    "admin": "Togo",
     "name": "Togo",
-    "code": "TGO",
-    "created_at": "2017-06-12T22:07:27.033Z",
-    "link": "https://openstreetmap.org/relation/192782"
+    "osm_link": "https://openstreetmap.org/relation/192782",
+    "bbox": [
+      -0.049784715159944,
+      5.928837388528876,
+      1.865240512712319,
+      11.018681748900804
+    ]
   },
   {
-    "id": 211,
+    "iso2": "TH",
+    "iso3": "THA",
+    "admin": "Thailand",
     "name": "Thailand",
-    "code": "THA",
-    "created_at": "2017-06-12T22:07:27.033Z",
-    "link": "https://openstreetmap.org/relation/2067731"
+    "osm_link": "https://openstreetmap.org/relation/2067731",
+    "bbox": [
+      97.37589643757354,
+      5.691384182147715,
+      105.58903852745016,
+      20.417849636308187
+    ]
   },
   {
-    "id": 212,
+    "iso2": "TJ",
+    "iso3": "TJK",
+    "admin": "Tajikistan",
     "name": "Tajikistan",
-    "code": "TJK",
-    "created_at": "2017-06-12T22:07:27.033Z",
-    "link": "https://openstreetmap.org/relation/214626"
+    "osm_link": "https://openstreetmap.org/relation/214626",
+    "bbox": [
+      67.44221967964131,
+      36.73817129164692,
+      74.98000247589542,
+      40.960213324541414
+    ]
   },
   {
-    "id": 213,
+    "iso2": "TM",
+    "iso3": "TKM",
+    "admin": "Turkmenistan",
     "name": "Turkmenistan",
-    "code": "TKM",
-    "created_at": "2017-06-12T22:07:27.033Z",
-    "link": "https://openstreetmap.org/relation/223026"
+    "osm_link": "https://openstreetmap.org/relation/223026",
+    "bbox": [
+      52.50245975119615,
+      35.270663967422294,
+      66.54615034370022,
+      42.75155101172305
+    ]
   },
   {
-    "id": 214,
-    "name": "East Timor",
-    "code": "TLS",
-    "created_at": "2017-06-12T22:07:27.033Z",
-    "link": "https://openstreetmap.org/relation/305142"
+    "iso2": "TL",
+    "iso3": "TLS",
+    "admin": "East Timor",
+    "name": "Timor-Leste",
+    "osm_link": "https://openstreetmap.org/relation/305142",
+    "bbox": [
+      124.96868248911623,
+      -9.393173109579294,
+      127.33592817597463,
+      -8.273344821814398
+    ]
   },
   {
-    "id": 215,
+    "iso2": "TT",
+    "iso3": "TTO",
+    "admin": "Trinidad and Tobago",
     "name": "Trinidad and Tobago",
-    "code": "TTO",
-    "created_at": "2017-06-12T22:07:27.033Z",
-    "link": "https://openstreetmap.org/relation/555717"
+    "osm_link": "https://openstreetmap.org/relation/555717",
+    "bbox": [
+      -61.95,
+      10,
+      -60.895,
+      10.89
+    ]
   },
   {
-    "id": 216,
+    "iso2": "TN",
+    "iso3": "TUN",
+    "admin": "Tunisia",
     "name": "Tunisia",
-    "code": "TUN",
-    "created_at": "2017-06-12T22:07:27.033Z",
-    "link": "https://openstreetmap.org/relation/192757"
+    "osm_link": "https://openstreetmap.org/relation/192757",
+    "bbox": [
+      7.524481642292244,
+      30.307556057246188,
+      11.488787469131012,
+      37.349994411766545
+    ]
   },
   {
-    "id": 217,
+    "iso2": "TR",
+    "iso3": "TUR",
+    "admin": "Turkey",
     "name": "Turkey",
-    "code": "TUR",
-    "created_at": "2017-06-12T22:07:27.033Z",
-    "link": "https://openstreetmap.org/relation/174737"
+    "osm_link": "https://openstreetmap.org/relation/174737",
+    "bbox": [
+      26.0433512712726,
+      35.8215347356537,
+      44.79398969908195,
+      42.14148489030134
+    ]
   },
   {
-    "id": 218,
+    "iso2": "TW",
+    "iso3": "TWN",
+    "admin": "Taiwan",
     "name": "Taiwan",
-    "code": "TWN",
-    "created_at": "2017-06-12T22:07:27.033Z",
-    "link": "https://openstreetmap.org/relation/449220"
+    "osm_link": "https://openstreetmap.org/relation/449220",
+    "bbox": [
+      120.1061885926124,
+      21.970571397382113,
+      121.95124393116146,
+      25.295458889257386
+    ]
   },
   {
-    "id": 219,
-    "name": "United Republic of Tanzania",
-    "code": "TZA",
-    "created_at": "2017-06-12T22:07:27.033Z",
-    "link": "https://openstreetmap.org/relation/195270"
+    "iso2": "TZ",
+    "iso3": "TZA",
+    "admin": "United Republic of Tanzania",
+    "name": "Tanzania",
+    "osm_link": "https://openstreetmap.org/relation/195270",
+    "bbox": [
+      29.339997592900346,
+      -11.720938002166735,
+      40.31659,
+      -0.95
+    ]
   },
   {
-    "id": 220,
+    "iso2": "UG",
+    "iso3": "UGA",
+    "admin": "Uganda",
     "name": "Uganda",
-    "code": "UGA",
-    "created_at": "2017-06-12T22:07:27.033Z",
-    "link": "https://openstreetmap.org/relation/192796"
+    "osm_link": "https://openstreetmap.org/relation/192796",
+    "bbox": [
+      29.579466180140884,
+      -1.443322442229785,
+      35.03599,
+      4.249884947362048
+    ]
   },
   {
-    "id": 221,
+    "iso2": "UA",
+    "iso3": "UKR",
+    "admin": "Ukraine",
     "name": "Ukraine",
-    "code": "UKR",
-    "created_at": "2017-06-12T22:07:27.033Z",
-    "link": "https://openstreetmap.org/relation/60199"
+    "osm_link": "https://openstreetmap.org/relation/60199",
+    "bbox": [
+      22.085608351334855,
+      45.293308010431126,
+      40.080789015469406,
+      52.3350745713318
+    ]
   },
   {
-    "id": 222,
+    "iso2": "UY",
+    "iso3": "URY",
+    "admin": "Uruguay",
     "name": "Uruguay",
-    "code": "URY",
-    "created_at": "2017-06-12T22:07:27.033Z",
-    "link": "https://openstreetmap.org/relation/287072"
+    "osm_link": "https://openstreetmap.org/relation/287072",
+    "bbox": [
+      -58.42707414410439,
+      -34.952646579733624,
+      -53.209588995971544,
+      -30.109686374636127
+    ]
   },
   {
-    "id": 223,
+    "iso2": "US",
+    "iso3": "USA",
+    "admin": "United States of America",
     "name": "United States of America",
-    "code": "USA",
-    "created_at": "2017-06-12T22:07:27.033Z",
-    "link": "https://openstreetmap.org/relation/148838"
+    "osm_link": "https://openstreetmap.org/relation/148838",
+    "bbox": [
+      -171.79111060289125,
+      18.91619,
+      -66.96466,
+      71.35776357694178
+    ]
   },
   {
-    "id": 224,
+    "iso2": "UZ",
+    "iso3": "UZB",
+    "admin": "Uzbekistan",
     "name": "Uzbekistan",
-    "code": "UZB",
-    "created_at": "2017-06-12T22:07:27.033Z",
-    "link": "https://openstreetmap.org/relation/196240"
+    "osm_link": "https://openstreetmap.org/relation/196240",
+    "bbox": [
+      55.928917270741096,
+      37.144994004864685,
+      73.05541710804917,
+      45.586804307632974
+    ]
   },
   {
-    "id": 225,
+    "iso2": "VE",
+    "iso3": "VEN",
+    "admin": "Venezuela",
     "name": "Venezuela",
-    "code": "VEN",
-    "created_at": "2017-06-12T22:07:27.033Z",
-    "link": "https://openstreetmap.org/relation/272644"
+    "osm_link": "https://openstreetmap.org/relation/272644",
+    "bbox": [
+      -73.30495154488005,
+      0.724452215982012,
+      -59.758284878159195,
+      12.162307033736099
+    ]
   },
   {
-    "id": 226,
+    "iso2": "VN",
+    "iso3": "VNM",
+    "admin": "Vietnam",
     "name": "Vietnam",
-    "code": "VNM",
-    "created_at": "2017-06-12T22:07:27.033Z",
-    "link": "https://openstreetmap.org/relation/49915"
+    "osm_link": "https://openstreetmap.org/relation/49915",
+    "bbox": [
+      102.17043582561358,
+      8.599759629750494,
+      109.33526981001722,
+      23.352063300056898
+    ]
   },
   {
-    "id": 227,
+    "iso2": "VU",
+    "iso3": "VUT",
+    "admin": "Vanuatu",
     "name": "Vanuatu",
-    "code": "VUT",
-    "created_at": "2017-06-12T22:07:27.033Z",
-    "link": "https://openstreetmap.org/relation/2177246"
+    "osm_link": "https://openstreetmap.org/relation/2177246",
+    "bbox": [
+      166.62913699774649,
+      -16.597849623279956,
+      167.84487674384505,
+      -14.626497084209575
+    ]
   },
   {
-    "id": 228,
-    "name": "West Bank",
-    "code": "PSE",
-    "created_at": "2017-06-12T22:07:27.033Z",
-    "link": "https://openstreetmap.org/relation/1703814"
-  },
-  {
-    "id": 229,
+    "iso2": "YE",
+    "iso3": "YEM",
+    "admin": "Yemen",
     "name": "Yemen",
-    "code": "YEM",
-    "created_at": "2017-06-12T22:07:27.033Z",
-    "link": "https://openstreetmap.org/relation/305092"
+    "osm_link": "https://openstreetmap.org/relation/305092",
+    "bbox": [
+      42.60487267433362,
+      12.585950425664876,
+      53.10857262554751,
+      19.0000033635161
+    ]
   },
   {
-    "id": 230,
+    "iso2": "ZA",
+    "iso3": "ZAF",
+    "admin": "South Africa",
     "name": "South Africa",
-    "code": "ZAF",
-    "created_at": "2017-06-12T22:07:27.033Z",
-    "link": "https://openstreetmap.org/relation/87565"
+    "osm_link": "https://openstreetmap.org/relation/87565",
+    "bbox": [
+      16.344976840895242,
+      -34.81916635512371,
+      32.830120477028885,
+      -22.091312758067588
+    ]
   },
   {
-    "id": 231,
+    "iso2": "ZM",
+    "iso3": "ZMB",
+    "admin": "Zambia",
     "name": "Zambia",
-    "code": "ZMB",
-    "created_at": "2017-06-12T22:07:27.033Z",
-    "link": "https://openstreetmap.org/relation/195271"
+    "osm_link": "https://openstreetmap.org/relation/195271",
+    "bbox": [
+      21.887842644953874,
+      -17.961228936436484,
+      33.48568769708359,
+      -8.238256524288218
+    ]
   },
   {
-    "id": 232,
+    "iso2": "ZW",
+    "iso3": "ZWE",
+    "admin": "Zimbabwe",
     "name": "Zimbabwe",
-    "code": "ZWE",
-    "created_at": "2017-06-12T22:07:27.033Z",
-    "link": "https://openstreetmap.org/relation/195272"
+    "osm_link": "https://openstreetmap.org/relation/195272",
+    "bbox": [
+      25.264225701608012,
+      -22.271611830333935,
+      32.84986087416439,
+      -15.507786960515213
+    ]
   }
 ]

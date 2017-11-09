@@ -1,16 +1,15 @@
 ---
 layout: country
 lang: en
-permalink: /Guyana/
-code: GUY
+permalink: /guyana/
+iso3: GUY
+iso2: GY
 name: Guyana
+admin: Guyana
 contact: 
 flag: gy.svg
 osmLink: https://openstreetmap.org/relation/287083
 calendar: 
 tm-projects: 
-   - id: 1589
-     desc: Every year in the Americas more and more people are living in conditions of vulnerability to natural hazards and climate change. To help reduce disaster risk and enhance community resilience in the region, the American Red Cross is working with Red Cross partners in the Bahamas, Belize, Colombia, Costa Rica, Ecuador, El Salvador, Guyana, Honduras, Jamaica, Nicaragua, Panama and Peru to address local hazards and vulnerabilities in dozens of disaster-prone communities.  The Missing Maps project aims to map the most vulnerable places in the world (affected by humanitarian crises. disease epidemics, conflict, natural disasters, poverty, environmental crises). Building on HOT's disaster preparedness projects, the Missing Maps tasks facilitate pre-emptive mapping of priority countries to better facilitate disaster response, medical activities and resource allocation when crises occur.
-   - id: 1605
-     desc: 
+bbox: -61.410302903881956,1.268088283692521,-56.539385748914555,8.367034816924047
 ---

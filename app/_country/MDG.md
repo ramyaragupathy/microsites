@@ -1,24 +1,15 @@
 ---
 layout: country
 lang: en
-permalink: /Madagascar/
-code: MDG
+permalink: /madagascar/
+iso3: MDG
+iso2: MG
 name: Madagascar
+admin: Madagascar
 contact: 
 flag: mg.svg
 osmLink: https://openstreetmap.org/relation/447325
 calendar: 
 tm-projects: 
-   - id: 2316
-     desc: On top of high cyclonic risk (including flooding risk, mudslide, infrastructure damaging), Madagascar is also one of the most vulnerable country regarding the global warming (behind Haiti and Bangladesh). 
-   - id: 2334
-     desc: On top of high cyclonic risk (including flooding risk, mudslide, infrastructure damaging), Madagascar is also one of the most vulnerable country regarding the global warming (behind Haiti and Bangladesh). 
-   - id: 2317
-     desc: On top of high cyclonic risk (including flooding risk, mudslide, infrastructure damaging), Madagascar is also one of the most vulnerable country regarding the global warming (behind Haiti and Bangladesh). 
-   - id: 2318
-     desc: On top of high cyclonic risk (including flooding risk, mudslide, infrastructure damaging), Madagascar is also one of the most vulnerable country regarding the global warming (behind Haiti and Bangladesh). 
-   - id: 2315
-     desc: On top of high cyclonic risk (including flooding risk, mudslide, infrastructure damaging), Madagascar is also one of the most vulnerable country regarding the global warming (behind Haiti and Bangladesh). 
-   - id: 2327
-     desc: On top of high cyclonic risk (including flooding risk, mudslide, infrastructure damaging), Madagascar is also one of the most vulnerable country regarding the global warming (behind Haiti and Bangladesh). 
+bbox: 43.254187046081,-25.60143442149309,50.47653689962553,-12.04055673589197
 ---
