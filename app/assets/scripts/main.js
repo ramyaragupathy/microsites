@@ -23,10 +23,6 @@ function getPrimaryStats (countryId) {
   });
 }
 
-/* -------------------------------------------------------
- --------------- Add HOT Project Carousel ----------------
- -------------------------------------------------------*/
-
 // Fetch Project data from Tasking Manager API
 function getProjects (projects) {
   // Add Flexslider to Projects Section
@@ -35,36 +31,32 @@ function getProjects (projects) {
     directionNav: true,
     slideshowSpeed: 6000000,
     prevText: '',
-    nextText: '<i class="fa fa-caret-right" aria-hidden="true"></i>'
+    nextText: ''
   });
   $('.flex-next').prependTo('.HOT-Nav-Projects');
   $('.flex-control-nav').prependTo('.HOT-Nav-Projects');
   $('.flex-prev').prependTo('.HOT-Nav-Projects');
-  if (projects.length > 0) {
-    if (projects.length === 1) {
-      $('.flex-next').css('display', 'none');
-    }
-    projects.forEach(function (project, i) {
-      const url = `https://tasks.hotosm.org/api/v1/project/${project}`;
-      $.getJSON(url, function (projectData.tasks) {
-        if (projectData.tasks.geometry) {
-          makeProject(projectData, i + 2);
-        }
-      })
-      .fail(function (err) {
-        console.warn(`WARNING >> Project #${project.id} could not be accessed at ${url}.\n` +
-                       'The server returned the following message object:', err);
-        makePlaceholderProject(project, i + 2);
-      });
-    });
-  } else {
-    makeNoTasksPlaceholder();
+
+  if (projects.length === 1) {
+    $('.flex-next').css('display', 'none');
   }
+
+  projects.forEach(function (project, i) {
+    const url = `https://tasks.hotosm.org/api/v1/project/${project}/summary`;
+    $.getJSON(url, function (projectData) {
+      makeProject(projectData, i + 2);
+    })
+    .fail(function (err) {
+      console.warn(`WARNING >> Project #${project} could not be accessed at ${url}.\n` +
+                   'The server returned the following message object:', err);
+      makePlaceholderProject(project, i + 2);
+    });
+  });
 }
 
 // Update cards with necessary project details
 function makeProject (project, projectOrder) {
-  const projDone = Math.round(project.percentMapped + project.percentValidated);
+  const projDone = Math.round(project.percentMapped);
 
   // Updates Progress Bar
   $(`ul li:nth-child(${projectOrder}) .HOT-Progress`).addClass('projWidth' + projectOrder);
@@ -72,7 +64,7 @@ function makeProject (project, projectOrder) {
 
   // Adds Project variables to the cards
   $(`ul li:nth-child(${projectOrder}) .HOT-Title p`).html(`<b>${project.projectId} - ${project.name}</b>`);
-  $(`ul li:nth-child(${projectOrder}) .title`).html(project.name);
+  $(`ul li:nth-child(${projectOrder}) .title`).html(`${project.name} (#${project.projectId})`);
   $(`ul li:nth-child(${projectOrder}) .HOT-Progress`).html(`<p>${projDone}%</p>`);
   $(`ul li:nth-child(${projectOrder}) .HOT-Progress`).attr('title', `${projDone}% complete`);
   $(`ul li:nth-child(${projectOrder}) .HOT-Details .completeness`).html(`<strong>${projDone}%</strong> complete`);
