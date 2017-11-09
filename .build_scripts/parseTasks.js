@@ -92,7 +92,7 @@ Promise.map(tasksList, (task) => {
     Promise.map(validCountries, (validCountry) => {
       const task = validCountry.task;
       return Promise.all([
-        validCountry, rp('http://tasks.hotosm.org/project/' + task + '.json')
+        validCountry, rp('http://tasks.hotosm.org/api/v1/project/' + task + '.json')
       ]);
     }).then((responses) => {
       let detailedTasks = responses.map((response) => {
