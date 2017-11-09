@@ -65,6 +65,10 @@ var fetchProjectData = function(projectNumber, cb) {
 
           var country = crg.get_country(jsonResponse.aoiCentroid.coordinates[1], jsonResponse.aoiCentroid.coordinates[0]);
           if (!!country) {
+            //bug in the crg code used returns the wrong iso code for south sudan
+            if (country.code == 'SDS') {
+              country.code = 'SSD';
+            }
             jsonResponse.country = country.code;
           }
           jsonResponse.shortDescription = parseDesc(jsonResponse.shortDescription);
