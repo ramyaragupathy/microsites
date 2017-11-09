@@ -21,7 +21,7 @@ script:
   - npm test
   - ./.build_scripts/build.sh
   - npm run get-tasks
-  - npm run update-pages ./updates.json
+  # - npm run update-pages ./updates.json
 deploy:
   - provider: s3
     access_key_id: ${ACCESS_KEY_ID}
