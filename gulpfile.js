@@ -36,16 +36,14 @@ var autoprefixerOptions = {
   browsers: ['last 2 versions', 'ie >= 9', 'and_chr >= 2.3']
 };
 
-gulp.task('sass', function () {
-  console.log('building sass');
+gulp.task('sass', function() {
   return gulp.src(sassInput)
     .pipe(plumber())
     .pipe(sourcemaps.init())
     .pipe(sass(sassOptions).on('error', sass.logError))
     .pipe(autoprefixer(autoprefixerOptions))
-    // .pipe(autoprefixer())
     .pipe(sourcemaps.write('.'))
-    .pipe(browserSync.reload({ stream: true }))
+    .pipe(browserSync.reload({stream:true}))
     .pipe(gulp.dest('.tmp/assets/styles'));
 });
 
@@ -121,10 +119,6 @@ gulp.task('get-tasks', function () {
   return cp.execSync('npm run get-tasks');
 });
 
-gulp.task('group-tasks', function () {
-  return cp.execSync('npm run group-tasks');
-});
-
 gulp.task('update-pages', function () {
   return cp.execSync('npm run update-pages updates.json');
 });
@@ -191,10 +185,10 @@ gulp.task('no-reload', function (done) {
 });
 
 var environment = 'development';
-gulp.task('prod', function (done) {
-  environment = 'production';
-  runSequence('clean', 'build', done);
-});
+// gulp.task('prod', function (done) {
+//   environment = 'production';
+//   runSequence('clean', 'build', done);
+// });
 
 gulp.task('prod', function (done) {
   environment = 'production';
@@ -215,7 +209,7 @@ gulp.task('clean', function () {
 // builds site w/page updates
 
 gulp.task('update-tasks-build', function (done) {
-  runSequence(['get-tasks', 'group-tasks', 'update-pages', 'jekyll', 'compress', 'sass', 'images', 'fonts'], ['copy:assets'], done);
+  runSequence(['get-tasks'], ['update-pages'], ['jekyll', 'compress', 'sass', 'images', 'fonts'], ['copy:assets'], done);
 });
 
 /* ------------------------------------------------------------------------------
