@@ -1,14 +1,14 @@
 {
   "name": "missingmaps",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "",
   "repository": {
     "type": "git",
     "url": ""
   },
   "author": {
-    "name": "Development Seed",
-    "url": "https://developmentseed.org"
+    "name": "American Red Cross",
+    "url": "https://redcross.org"
   },
   "license": "BSD-3-Clause",
   "bugs": {
@@ -88,6 +88,7 @@
   "dependencies": {
     "@turf/dissolve": "*",
     "@turf/helpers": "*",
+    "babel-core": "^6.26.0",
     "global": "^4.3.2",
     "googleapis": "*",
     "gulp-autoprefixer": "*",
