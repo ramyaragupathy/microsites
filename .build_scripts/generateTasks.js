@@ -12,7 +12,7 @@ var missingmaps = [];
 var tasksFc = { type: 'FeatureCollection', features: [] };
 
 var throttleProjects = function(cb){
-  var targetCount = 2500;
+  var targetCount = 4000;
   var counter = 0;
   for (var i=0;i<targetCount;i++) {
      (function(ind) {
@@ -30,24 +30,24 @@ var throttleProjects = function(cb){
 var fetchProjectData = function(projectNumber, cb) {
   request({
     method: 'GET',
-    uri: "http://tasks.hotosm.org/project/" + projectNumber + ".json"
+    uri: "http://tasks.hotosm.org/api/v1/project/${projectNumber}/summary"
   }, function (error, response, body) {
     if (!error && response.statusCode == 200) {
       var jsonResponse = JSON.parse(body);
       if(jsonResponse.properties){
         /// capitalization or presence/lack of a space in Missing Maps shouldn't matter
-        var nameCheck = jsonResponse.properties.name.replace(/\s+/g, '').toLowerCase().indexOf("missingmaps");
+        var nameCheck = jsonResponse.name.replace(/\s+/g, '').toLowerCase().indexOf("missingmaps");
         if(nameCheck !== -1){
           // projectList.push(projectNumber); // # # # compile list of project numbers to next fetch detailed task data
           var projectObj = {
             "task_number": projectNumber,
-            "created" : jsonResponse.properties["created"].slice(0,10),
-            "name": jsonResponse.properties["name"].replace(/"/g,""),
-            "changeset_comment":jsonResponse.properties["changeset_comment"],
-            "author": jsonResponse.properties["author"],
-            "status":jsonResponse.properties["status"],
-            "done": jsonResponse.properties["done"],
-            "validated": jsonResponse.properties["validated"]
+            "created" : jsonResponse.created.slice(0,10),
+            "name": jsonResponse.name.replace(/"/g,""),
+            // "changeset_comment":jsonResponse.properties["changeset_comment"],
+            // "author": jsonResponse.properties["author"],
+            "status":jsonResponse.status,
+            "done": jsonResponse.percentMapped,
+            "validated": jsonResponse.percentValidated
           }
           missingmaps.push(projectObj);
           console.log("missingmaps :  " + projectNumber);
@@ -81,14 +81,14 @@ var throttleTasks = function(cb){
 
 var fetchTaskData = function(prjIndex, cb) {
   var thisPrj = missingmaps[prjIndex];
-  console.log("http://tasks.hotosm.org/project/" + thisPrj["task_number"] + "/tasks.json")
+  // console.log("http://tasks.hotosm.org/project/" + thisPrj["task_number"] + "/tasks.json")
   request({
     method: 'GET',
-    uri: "http://tasks.hotosm.org/project/" + thisPrj["task_number"] + "/tasks.json"
+    uri: 'http://tasks.hotosm.org/api/v1/project/' + thisPrj["task_number"]
   }, function (error, response, body) {
     if (!error && response.statusCode == 200) {
-      var jsonResponse = JSON.parse(body);
-      for(var i=0; i<jsonResponse.features.length; i++){
+      var tasks = JSON.parse(body);
+      for(var i=0; i<tasks.features.length; i++){
         var tile = jsonResponse.features[i];
         var thisState = tile.properties.state;
         // 2 is done and 3 is validated
