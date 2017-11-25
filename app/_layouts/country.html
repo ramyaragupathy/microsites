@@ -8,11 +8,15 @@ layout: default
   // creates PT object. Includes front matter used to build page
   var PT = {
     lang: '{{page.lang}}',
-    code: '{{page.code}}',
+    iso3: '{{page.iso3}}',
+    iso2: '{{page.iso2}}',
     name: '{{page.name}}',
+    admin: '{{page.admin}}',
     flag: '{{page.flag}}',
     contact: '{{page.contact}}',
     calendar: '{{page.calendar}}',
+    osmLink: '{{page.osmLink}}',
+    bbox: '{{page.osmLink}}',
     hotProjects: [
       {% for p in page.tm-projects %}
       '{{ p.id }}',
@@ -36,9 +40,9 @@ layout: default
   {% include teams.html %}
 </section>
 
-<section class = "Updates">
+<!-- <section class = "Updates">
   {% include updates.html %}
-</section>
+</section> -->
 
 <section class = "Events">
   {% include events.html %}
