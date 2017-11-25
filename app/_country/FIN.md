@@ -10,6 +10,6 @@ contact:
 flag: fi.svg
 osmLink: https://openstreetmap.org/relation/54224
 calendar: 
-tm-projects: 
 bbox: 20.645592889089528,59.846373196036225,31.516092156711125,70.16419302029624
+tm-projects: 
 ---

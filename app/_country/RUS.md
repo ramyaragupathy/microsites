@@ -10,6 +10,6 @@ contact:
 flag: ru.svg
 osmLink: https://openstreetmap.org/relation/60189
 calendar: 
-tm-projects: 
 bbox: -180,41.15141612402138,180,81.2504
+tm-projects: 
 ---

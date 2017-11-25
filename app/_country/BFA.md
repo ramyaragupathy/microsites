@@ -11,5 +11,7 @@ flag: bf.svg
 osmLink: https://openstreetmap.org/relation/192783
 calendar: 
 tm-projects: 
+   - id: 2333
+     desc: Priority. Low The commune of Ouahigouya in Burkina Faso, close to the Malian border, is regular affected by sanitary crises (diarrheic diseases, intestinal bacteria, etc.) resulting from impure drinking water. Mapping this area will help decision making process within association Chambéry-Ouahigouya to answer this basic need.
 bbox: -5.470564947929006,9.610834865757141,2.177107781593776,15.116157741755728
 ---

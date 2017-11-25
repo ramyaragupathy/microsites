@@ -10,6 +10,6 @@ contact:
 flag: xk.svg
 osmLink: null
 calendar: 
-tm-projects: 
 bbox: 20.0707,41.84711,21.77505,43.27205
+tm-projects: 
 ---

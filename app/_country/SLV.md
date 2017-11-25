@@ -11,5 +11,7 @@ flag: sv.svg
 osmLink: https://openstreetmap.org/relation/1520612
 calendar: 
 tm-projects: 
+   - id: 1603
+     desc: Map buildings for a resilience project
 bbox: -90.09555457229098,13.149016831917137,-87.7235029772294,14.424132798719086
 ---

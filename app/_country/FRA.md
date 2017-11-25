@@ -10,6 +10,6 @@ contact:
 flag: fr.svg
 osmLink: null
 calendar: 
-tm-projects: 
 bbox: -54.52475419779972,2.053389187015981,9.56001631026919,51.148506171261886
+tm-projects: 
 ---
