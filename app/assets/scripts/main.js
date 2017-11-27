@@ -5,7 +5,7 @@
 -------------------------------------------------------*/
 
 function getPrimaryStats (countryId) {
-  const url = `https://osmstats.redcross.org/countries/${countryId}`;
+  const url = `https://osm-stats-api.azurewebsites.net/countries/${countryId}`;
   $.getJSON(url, function (countryData) {
     if (countryData.all_edits !== null) {
       // round value for select stats, then add them to page
@@ -240,7 +240,7 @@ function addMap (projectId) {
   function generateEvents (calendarId) {
     if (calendarId.match(/google/)) {
       $('#events-spinner').css('display','block');
-      const url = 'https://osmstats.redcross.org/calendar/' + calendarId + "/events";
+      const url = 'https://osm-stats-api.azurewebsites.net/calendar/' + calendarId + "/events";
       const currentDate = new Date();
       $.getJSON(url, (eventData) => {
         if (eventData.length === 0) {
@@ -358,7 +358,7 @@ function addMap (projectId) {
 
   function getUserActivityStats (countryId) {
 
-    const url = `https://osmstats.redcross.org/countries/${countryId}/users`;
+    const url = `https://osm-stats-api.azurewebsites.net/countries/${countryId}/users`;
     $.getJSON(url, function (userData) {
       if (userData.length !== 0) {
         const totalSum = Object.keys(userData).map(function (user) {
@@ -409,7 +409,7 @@ function addMap (projectId) {
   // populate 'teams' graphs, which show activity per hashtag
   function getGroupActivityStats (countryId) {
 
-    const url = `https://osmstats.redcross.org/countries/${countryId}/hashtags`;
+    const url = `https://osm-stats-api.azurewebsites.net/countries/${countryId}/hashtags`;
     $.getJSON(url, function (hashtagData) {
       /*
       For each hashtag, generate obj with link to hashtag's mm-leaderboards
