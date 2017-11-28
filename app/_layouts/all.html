@@ -26,7 +26,7 @@ layout: default
    -------------------------------------------------------*/
   function makeCountriesSelection () {
     $('#countries-list').css('display', 'none');
-    const url = 'https://osmstats.redcross.org/countries'
+    const url = 'https://osm-stats-api.azurewebsites.net/countries'
     $.getJSON(url, function(countriesList) {
       let countries = [];
       countriesList = countriesList.map((countryObj) => {

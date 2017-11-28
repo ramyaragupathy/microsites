@@ -10,6 +10,6 @@ contact:
 flag: de.svg
 osmLink: https://openstreetmap.org/relation/51477
 calendar: 
-tm-projects: 
 bbox: 5.988658074577813,47.30248769793916,15.01699588385867,54.98310415304809
+tm-projects: 
 ---

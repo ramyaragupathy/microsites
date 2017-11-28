@@ -1,9 +1,11 @@
+/* jshint esversion: 6 */
+
 /* -------------------------------------------------------
 ------------------- Add Primary Stats -------------------
 -------------------------------------------------------*/
 
 function getPrimaryStats (countryId) {
-  const url = `https://osmstats.redcross.org/countries/${countryId}`;
+  const url = `https://osm-stats-api.azurewebsites.net/countries/${countryId}`;
   $.getJSON(url, function (countryData) {
     if (countryData.all_edits !== null) {
       // round value for select stats, then add them to page
@@ -50,8 +52,8 @@ function getProjects (projects) {
       makeProject(projectData, i + 2);
     })
     .fail(function (err) {
-      console.warn(`WARNING >> Project #${project} could not be accessed at ${url}.\n` +
-                   'The server returned the following message object:', err);
+      // console.log(`WARNING >> Project #${project} could not be accessed at ${url}.\n` +
+      //              `The server returned the following message object:`, err);
       makePlaceholderProject(project, i + 2);
     });
   });
@@ -142,41 +144,41 @@ function onEachFeature (feature, layer) {
 }
 
 function addMap (projectId) {
-  // Connect HOT-OSM endpoint for tasking squares data
-  const endpoint = `https://tasks.hotosm.org/api/v1/project/${projectId}`;
-  $.getJSON(endpoint, function (taskData) {
-    // Remove loading spinners before placing map
-    $('#Map-' + projectId).empty();
+    // Connect HOT-OSM endpoint for tasking squares data
+    const endpoint = `https://tasks.hotosm.org/api/v1/project/${projectId}`;
+    $.getJSON(endpoint, function (taskData) {
+      // Remove loading spinners before placing map
+      $('#Map-' + projectId).empty();
 
-    // Initialize map
-    const map = L.map('Map-' + projectId,
+      // Initialize map
+      const map = L.map('Map-' + projectId,
       {zoomControl: false}).setView([38.889931, -77.009003], 13);
 
-    // Add tile layer
-    L.tileLayer(mbBasemapUrl + '?access_token=' + mbToken, {
-      attribution: '<a href="http://mapbox.com">Mapbox</a>'
-    }).addTo(map);
+      // Add tile layer
+      L.tileLayer(mbBasemapUrl + '?access_token=' + mbToken, {
+        attribution: '<a href="http://mapbox.com">Mapbox</a>'
+      }).addTo(map);
 
-    // Remove 'Leaflet' attribution
-    map.attributionControl.setPrefix('');
+      // Remove 'Leaflet' attribution
+      map.attributionControl.setPrefix('');
 
-    // Add feature layer
-    const featureLayer = L.geoJson(taskData.tasks, {
-      onEachFeature: onEachFeature
-    }).addTo(map);
+      // Add feature layer
+      const featureLayer = L.geoJson(taskData.tasks, {
+        onEachFeature: onEachFeature
+      }).addTo(map);
 
-    // Fit to feature layer bounds
-    map.fitBounds(featureLayer.getBounds());
+      // Fit to feature layer bounds
+      map.fitBounds(featureLayer.getBounds());
 
-    // Disable drag and zoom handlers
-    map.dragging.disable();
-    map.touchZoom.disable();
-    map.doubleClickZoom.disable();
-    map.scrollWheelZoom.disable();
-    map.keyboard.disable();
-    if (map.tap) map.tap.disable();
-  });
-}
+      // Disable drag and zoom handlers
+      map.dragging.disable();
+      map.touchZoom.disable();
+      map.doubleClickZoom.disable();
+      map.scrollWheelZoom.disable();
+      map.keyboard.disable();
+      if (map.tap) map.tap.disable();
+    });
+  }
 
   /* -------------------------------------------------------
   ----------- Add Functionality to Events List  -----------
@@ -238,17 +240,17 @@ function addMap (projectId) {
   function generateEvents (calendarId) {
     if (calendarId.match(/google/)) {
       $('#events-spinner').css('display','block');
-      const url = 'https://osmstats.redcross.org/calendar/' + calendarId + "/events";
-      const currentDate = new Date()
+      const url = 'https://osm-stats-api.azurewebsites.net/calendar/' + calendarId + "/events";
+      const currentDate = new Date();
       $.getJSON(url, (eventData) => {
         if (eventData.length === 0) {
           $('.events-null').css('display', 'block');
           $('.events-panel').css('display', 'none');
         } else {
           let linkMatch =  /(\b(https?|ftp|file):\/\/[-A-Z0-9+&@#\/%?=~_|!:,.;]*[-A-Z0-9+&@#\/%=~_|])/ig;
-          console.log(eventData);
+          // console.log(eventData);
           Object.keys(eventData).reverse().map((key, val) => {
-            const eventTime = eventData[key].time[0]
+            const eventTime = eventData[key].time[0];
             if (moment(currentDate).isBefore(eventTime)) {
               const title = eventData[key].name;
               const singupLink = eventData[key].description.match(linkMatch);
@@ -296,7 +298,7 @@ function addMap (projectId) {
       $('.events-null').css('display', 'block');
       $('.events-panel').css('display', 'none');
     }
-    eventsFunctionality()
+    eventsFunctionality();
   }
 
   /* -------------------------------------------------------
@@ -356,7 +358,7 @@ function addMap (projectId) {
 
   function getUserActivityStats (countryId) {
 
-    const url = `https://osmstats.redcross.org/countries/${countryId}/users`
+    const url = `https://osm-stats-api.azurewebsites.net/countries/${countryId}/users`;
     $.getJSON(url, function (userData) {
       if (userData.length !== 0) {
         const totalSum = Object.keys(userData).map(function (user) {
@@ -407,7 +409,7 @@ function addMap (projectId) {
   // populate 'teams' graphs, which show activity per hashtag
   function getGroupActivityStats (countryId) {
 
-    const url = `https://osmstats.redcross.org/countries/${countryId}/hashtags`
+    const url = `https://osm-stats-api.azurewebsites.net/countries/${countryId}/hashtags`;
     $.getJSON(url, function (hashtagData) {
       /*
       For each hashtag, generate obj with link to hashtag's mm-leaderboards
@@ -580,12 +582,160 @@ function addMap (projectId) {
     };
   }
 
-
   function showUpdatesPlaceholder() {
     if ($(".Updates-Content").length === 0) {
-      $(".updates-null").css('display', 'block')
-      $("#updates-h1").css('text-align', 'center')
+      $(".updates-null").css('display', 'block');
+      $("#updates-h1").css('text-align', 'center');
     }
+  }
+
+  /* -------------------------------------------------------
+  --------------------- OSMCha ---------------------
+  -------------------------------------------------------*/
+
+
+  // function setUserPic(userId) {
+  //   // var component = this;
+  //   $.get('http://api.openstreetmap.org/api/0.6/user/' + userId, function (data) {
+  //     var localGenericUrl = 'http://www.missingmaps.org/users/assets/graphics/osm-user-blank.jpg';
+  //     var url = '';
+  //     var urls = [];
+  //     // Check for img href in user profile
+  //     var xml = $.parseXML(data),
+  //     $xml = $( xml ),
+  //     $img = $xml.find('img');
+  //     $imgsrc = $img.find()
+  //     var urlBegin = xmlString.split('<img href="')[1];
+  //     // If no img href, set state to the local generic image
+  //     // (user's profile pic is generic)
+  //     if (!urlBegin) {
+  //       url = localGenericUrl;
+  //       return url;
+  //     } else {
+  //       url = urlBegin.substring(0, urlBegin.indexOf('"/>'));
+  //       urls = url.split('&amp;d=');
+  //       if (urls.length < 2) {
+  //         // If one img href, use the 'large' version to set
+  //         // state (it is the user's custom OSM profile pic)
+  //         url = url.replace('/original/', '/large/');
+  //         return url;
+  //       } else {
+  //         // If >one img href, pic is from Gravatar, so check if
+  //         // user has custom or generic pic and set state to local
+  //         // generic or 128px version of their pic accordingly.
+  //         url = urls[0].replace('?s=256', '?s=128');
+  //         return url;
+  //       }
+  //     }
+  //
+  //     $(`#mapper-${userId}`).attr("src", url);
+  //   });
+  // }
+
+  // function addeditsMap (edits) {
+  //    const blah = edits;
+  //     // Remove loading spinners before placing map
+  //     // $(`#Map-Box-${blah.id}`).empty();
+  //
+  //     // Initialize map
+  //     console.log(`#Map-Box-${blah.id}`);
+  //     const map = L.map(`#Map-Box-${blah.id}`,
+  //     {zoomControl: false}).setView([38.889931, -77.009003], 13);
+  //
+  //     // Add tile layer
+  //     L.tileLayer(mbBasemapUrl + '?access_token=' + mbToken, {
+  //       attribution: '<a href="http://mapbox.com">Mapbox</a>'
+  //     }).addTo(map);
+  //
+  //     // Remove 'Leaflet' attribution
+  //     map.attributionControl.setPrefix('');
+  //
+  //     // Add feature layer
+  //     const featureLayer = L.geoJson(blah.geom, {
+  //       onEachFeature: onEachFeature
+  //     }).addTo(map);
+  //
+  //     // Fit to feature layer bounds
+  //     map.fitBounds(featureLayer.getBounds());
+  //
+  //     // Disable drag and zoom handlers
+  //     map.dragging.disable();
+  //     map.touchZoom.disable();
+  //     map.doubleClickZoom.disable();
+  //     map.scrollWheelZoom.disable();
+  //     map.keyboard.disable();
+  //     if (map.tap) map.tap.disable();
+  //   }
+
+  function makeValidation(userList){
+
+    const users = _.uniqBy(userList.features, 'properties.uid');
+    const mappercount = users.length;
+
+    $('#Mapper-Count').html(mappercount);
+
+    users.forEach(function (features) {
+      const output =
+
+    `<div class="column">
+        <div class="card">
+                 <div class="center" style="">
+                    <img class="user-circle mapper-${features.properties.uid}" style="width:50px;margin-top:5px;" src="http://www.missingmaps.org/users/assets/graphics/osm-user-blank.jpg" />
+                    <h6><a href="http://www.missingmaps.org/users/#/${features.properties.user}">${features.properties.user}</a></h4>
+                  </div>
+                  <!--<div id="Map-Box-${features.id}" class="column small-2">
+                  </div>-->
+            <div class="">
+                <h6>Last Edit: ${features.properties.date.slice(0,10)}</h6>
+                <h6>Edits: <span class="badge success edits">${features.properties.create}</span><span class="badge warning edits">${features.properties.modify}</span><span class="badge alert edits">${features.properties.delete}</span></h6>
+
+                <!--<div class="map-box">
+
+                </div>-->
+                <br>
+                <a class="btn btn-blue" href="https://osmcha.mapbox.com/changesets/${features.id}">Review Edit<a>
+                <a class="btn btn-blue" href="http://www.openstreetmap.org/message/new/${features.properties.user}">Say Hello<a>
+            </div>
+        </div>
+    </div>`;
+
+      $('#Validation-Data').append(output);
+      // setUserPic(`${features.properties.uid}`);
+      // addeditsMap(features);
+
+    });
+  }
+
+  function getDate(){
+    let today = new Date();
+    let dd = today.getDate()-7; //get new mappers from the past week
+    let mm = today.getMonth()+1; //January is 0!
+    let yyyy = today.getFullYear();
+
+    if(dd<10) {
+      dd = '0'+dd;
+    }
+
+    if(mm<10) {
+      mm = '0'+mm;
+    }
+
+    return today = yyyy + '-' + mm + '-' + dd;
+
+  }
+
+  function getValidation (bbox) {
+
+    const bbx = bbox.split(',');
+    let valDate = getDate();
+    let url = `https://osmcha.mapbox.com/api/v1/changesets/?page=1&page_size=15&order_by=-date&reasons=40&date__gte=${valDate}&in_bbox=${bbx[0]},${bbx[1]},${bbx[2]},${bbx[3]}`;
+
+    $.getJSON(url, function (data) {
+      makeValidation(data);
+    })
+    .fail(function (err) {
+      console.warn('No New Mappers', err);
+    });
   }
 
   /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -597,7 +747,7 @@ function addMap (projectId) {
   const mbBasemapUrl = 'https://api.mapbox.com/v4/mapbox.light/{z}/{x}/{y}.png';
 
   if (PT.name !== 'Microsites') {
-    showUpdatesPlaceholder()
+    showUpdatesPlaceholder();
     // Populate the primary stats in hero via Missing Maps API
     getPrimaryStats(PT.iso3);
     // Populate initial groups graph via Missing Maps API
@@ -606,6 +756,8 @@ function addMap (projectId) {
     getProjects(PT.hotProjects);
     // Populate events section with upcoming events
     generateEvents(PT.calendar);
+    // Populate OSMCha section with feed
+    getValidation(PT.bbox);
     // setupGraphs
     setupGraphs();
   }

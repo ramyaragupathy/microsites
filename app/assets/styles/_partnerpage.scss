@@ -1009,3 +1009,30 @@ img {
   color: $lightgrey;
   background-color: $darkestgrey;
 }
+
+
+/*----------------------------------------------*/
+/* Validation Section*/
+/*----------------------------------------------*/
+#Validation-Data {
+  max-height: 500px;
+  overflow-y : auto;
+}
+
+#Mapper-Count {
+  color: $mmgreen;
+}
+
+.edits {
+  margin-right: 5px;
+}
+
+.user-circle {
+    border-radius: 50%;
+}
+
+.badge {
+  minwidth: 2.3em;
+  font-size: 0.8rem;
+  border-radius: 0%;
+}

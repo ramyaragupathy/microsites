@@ -10,6 +10,6 @@ contact:
 flag: cu.svg
 osmLink: https://openstreetmap.org/relation/307833
 calendar: 
-tm-projects: 
 bbox: -84.97491105827311,19.855480861891877,-74.17802486845126,23.188610744717707
+tm-projects: 
 ---

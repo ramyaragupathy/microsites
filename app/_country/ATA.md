@@ -10,6 +10,6 @@ contact:
 flag: aq.svg
 osmLink: https://openstreetmap.org/relation/2186646
 calendar: 
-tm-projects: 
 bbox: -180,-90,180,-63.27066048950466
+tm-projects: 
 ---

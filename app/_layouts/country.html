@@ -16,7 +16,7 @@ layout: default
     contact: '{{page.contact}}',
     calendar: '{{page.calendar}}',
     osmLink: '{{page.osmLink}}',
-    bbox: '{{page.osmLink}}',
+    bbox: '{{page.bbox}}',
     hotProjects: [
       {% for p in page.tm-projects %}
       '{{ p.id }}',
@@ -38,6 +38,10 @@ layout: default
 
 <section class = "Teams">
   {% include teams.html %}
+</section>
+
+<section class = "Validation">
+  {% include validation.html %}
 </section>
 
 <!-- <section class = "Updates">
