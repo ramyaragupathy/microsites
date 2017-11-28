@@ -6,7 +6,7 @@ rvm:
 
 env:
   global:
-  - TRAVIS_NODE_VERSION="v7.1.0"
+  - TRAVIS_NODE_VERSION="v8"
   - STAGING_BRANCH=dev
   - PRODUCTION_BRANCH=master
 before_install:
