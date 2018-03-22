@@ -36,7 +36,7 @@ function parseDesc (desc) {
 
 var throttleProjects = function(cb){
   var targetCount = 5000;
-  var counter = 0;
+  var counter = 700;
   for (var i=0;i<targetCount;i++) {
      (function(ind) {
          setTimeout(function(){
@@ -60,8 +60,9 @@ var fetchProjectData = function(projectNumber, cb) {
 
       if(jsonResponse){
         /// capitalization or presence/lack of a space in Missing Maps shouldn't matter
-        var nameCheck = jsonResponse.name.replace(/\s+/g, '').toLowerCase().indexOf("missingmaps");
-        if(nameCheck !== -1 && jsonResponse.status == 'PUBLISHED'){
+        var nameCheck = jsonResponse.name.replace(/\s+/g, '').toLowerCase().indexOf("");
+        // if(nameCheck !== -1 && jsonResponse.status == 'PUBLISHED'){
+        if(jsonResponse.status == 'PUBLISHED'){
 
           var country = crg.get_country(jsonResponse.aoiCentroid.coordinates[1], jsonResponse.aoiCentroid.coordinates[0]);
           if (!!country) {

@@ -11,6 +11,10 @@ flag: lr.svg
 osmLink: https://openstreetmap.org/relation/192780
 calendar: 
 tm-projects: 
+   - id: 652
+     desc: Import of United Nations Mission in Liberia place nodes for all Liberia
+   - id: 1357
+     desc: Engineers without Borders Denmark is working with locals on the ground to track and mitigate damage and economic losses from illegal logging. This project maps buildings and roads to assist in that work.
    - id: 1405
      desc: Cleaning up the Liberia OSM data before field mapping
    - id: 2762
