@@ -5,7 +5,7 @@
 -------------------------------------------------------*/
 
 function getPrimaryStats (countryId) {
-  const url = `https://osm-stats-api.azurewebsites.net/countries/${countryId}`;
+  const url = `https://osm-stats-production-api.azurewebsites.net/countries/${countryId}`
   $.getJSON(url, function (countryData) {
     if (countryData.all_edits !== null) {
       // round value for select stats, then add them to page
