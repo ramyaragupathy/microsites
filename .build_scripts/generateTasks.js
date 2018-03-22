@@ -36,7 +36,7 @@ function parseDesc (desc) {
 
 var throttleProjects = function(cb){
   var targetCount = 5000;
-  var counter = 0;
+  var counter = 700;
   for (var i=0;i<targetCount;i++) {
      (function(ind) {
          setTimeout(function(){
