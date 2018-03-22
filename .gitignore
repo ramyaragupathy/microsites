@@ -9,7 +9,6 @@ bundle
 node_modules
 _site
 .tmp
-_config-dev.yml
 npm-debug.log
 app/assets/scripts/config/local.js
 
