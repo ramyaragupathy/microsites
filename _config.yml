@@ -11,7 +11,7 @@ highlighter: false
 
 domain: http://www.missingmaps.org
 # if doing local dev, comment out path_prefix
-#path_prefix: /microsites
+path_prefix: /microsites
 
 default_microsite: all
 
