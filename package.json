@@ -46,6 +46,7 @@
     "eslint": "^4.12.0",
     "eslint-config-semistandard": "*",
     "eslint-config-standard": "*",
+    "eslint-plugin-import": "^2.9.0",
     "eslint-plugin-promise": "^3.6.0",
     "eslint-plugin-react": "^7.5.1",
     "eslint-plugin-standard": "*",
@@ -67,7 +68,6 @@
     "i18n-iso-countries": "^3.2.2",
     "js-yaml": "^3.10.0",
     "lazypipe": "^1.0.1",
-    "lodash": "*",
     "marked": "^0.3.6",
     "minimist": "^1.2.0",
     "moment": "^2.19.2",
@@ -94,7 +94,7 @@
     "gulp-autoprefixer": "*",
     "gulp-sass": "*",
     "gulp-sourcemaps": "^2.6.1",
-    "lodash": "*",
+    "lodash": "^4.17.5",
     "lodash.omitby": "^4.6.0",
     "natives": "*"
   }
