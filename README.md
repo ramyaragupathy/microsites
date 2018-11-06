@@ -8,7 +8,7 @@ The below sections describe how to manage microsites, updates, and event calenda
 
 ### Updating a Microsite Page
 
-Each country's microsite page sits within the `app > _country` folder. For more information on these pages' initail build, see the Development section.
+Each country's microsite page sits within the `app > _country` folder. For more information on these pages' initial build, see the Development section.
 
 
 **Microsite YAML frontmatter**
@@ -18,7 +18,7 @@ Each country's microsite page sits within the `app > _country` folder. For more 
 | permalink      | With the permalink, a page's full link reads `missingmaps.org/microsites/permalink` |
 | name      | The country name is displayed on the microsite under the country flag. |
 | code      | The country code is used to call osm-stats-api. This builds the activity and stats section in a microsite header |
-| contact   | email address for microsite manager. This is used so if someone wants to add info to micosite updates section, they have somemone to contact to do so |
+| contact   | email address for microsite manager. This is used so if someone wants to add info to microsite updates section, they have somemone to contact to do so |
 | flag      | Link to country flag |
 | osmLink   | link to country boundary in OSM |
 | calendar | id for a public google calendar holding country related events. See the Integrating Google Calendar section for how to generate this id |
@@ -70,13 +70,13 @@ To generate a new update one of the following set of steps:
 | code       | country code. In prose, this is specified via a 'country' drop down |
 | title      | update title |
 | date-published | date update is published |
-| link       | external link relevant to post. leave blank if an external link does not exist |
+| link       | external link relevant to post. Leave blank if an external link does not exist |
 
 ### Integrate Google Calendar
 
-A Microsite's events section is populated with events held within a public google calendar. Below are instructions for managing these events through Google Calendar.
+A Microsite's events section is populated with events held within a public Google Calendar. Below are instructions for managing these events through Google Calendar.
 
-If you want use an existing google calendar for a microsite's events, ignore steps 1-3 in the **Create a new Calendar** section below and instead do the following.
+If you want use an existing Google Calendar for a microsite's events, ignore steps 1-3 in the **Create a new Calendar** section below and instead do the following.
 
 1. Open up Google Calendar and navigate directly to the calendar of interest's settings by clicking the right arrow that appears when hovering over the calendar, then select the `Calendar settings` option in the menu that appears.
 2. On the following page select the `Share this Calendar` tab.
@@ -93,7 +93,7 @@ If you want use an existing google calendar for a microsite's events, ignore ste
 
 #### Retrieve a Calendar ID
 
-Once a new public calendar is generated, or an existing calendar is made public follow these steps
+Once a new public calendar is generated, or an existing calendar is made public, follow these steps
 
 1. Navigate to the `Calendar Settings` (see step 1 in the instructions above **Create a new calendar**)
 2. On the `calendar settings` page, find the `Calendar ID` in the `Calendar Address` section.
@@ -133,7 +133,7 @@ Thare the email address attached to the Google account managing the microsite's 
 
 1. Login to Facebook and click the down arrow at the top right of the page. Then in the drop-down that appears click `settings`
 2. Click the `contact` section on the next page followed by selecting `add a new email or mobile number`.
-3. In the popup that appears input the email address managing the public google calendar
+3. In the popup that appears input the email address managing the public Google Calendar
 
 After user has completed these steps, a message will be sent to the Google Calendar manager and the manager can approve adding the email to the Facebook account
 
@@ -152,7 +152,10 @@ To set up the development environment for this website, you'll need to install t
 
 - [Node and npm](http://nodejs.org/)
 - Ruby and [Bundler](http://bundler.io/), preferably through something like [rvm](https://rvm.io/)
-- Gulp ( $ npm install -g gulp )
+- Gulp
+```
+$ npm install -g gulp
+```
 
 After these basic requirements are met, run the following commands in the website's folder:
 ```
@@ -162,7 +165,7 @@ Will also run `bundle install`
 
 ### Building and Updating Microsites
 
-the `.build_scripts` folder includes three scripts made for updating pages:
+The `.build_scripts` folder includes three scripts made for updating pages:
 
 | script | purpose | npm script | gulp-tasks |
 | ------ | ------- | ---------- | ---------- |
