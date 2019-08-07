@@ -169,7 +169,7 @@ The `.build_scripts` folder includes three scripts made for updating pages:
 
 | script | purpose | npm script | gulp-tasks |
 | ------ | ------- | ---------- | ---------- |
-| buildInitialPagse.js | build boilerplate country pages | `$ npm run build-pages` | n/a |
+| buildInitialPages.js | build boilerplate country pages | `$ npm run build-pages` | n/a |
 | parseTasks.js | create ./update.json including tasks per country | `$ npm run group-tasks` | `$ gulp group-tasks`, `$ gulp update-tasks-build` |
 | updatePages.js | update pages' yfm with json file of certain specification (detailed below) | `$ npm run update-pages ./update.json` | `$ gulp update-pages`, `$ gulp update-build`, `$ gulp update-serve` |
 
