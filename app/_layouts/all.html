@@ -2,95 +2,95 @@
 layout: default
 ---
 
-  {% include header.html %}
+{% include header.html %}
 
-  <script>
-    // creates PT object. Includes front matter used to build page
-    var PT = {
-      lang: '{{page.lang}}',
-      name: '{{page.name}}'
-    };
-  </script>
+<script>
+  // creates PT object. Includes front matter used to build page
+  var PT = {
+    lang: "{{page.lang}}",
+    name: "{{page.name}}"
+  };
+</script>
 
+<h1>{{ page.name }}</h1>
 
-  <h1>{{ page.name }}</h1>
+<section class="Countries clearfix">
+  {% include countries.html %}
+</section>
 
-  <section class = "Countries clearfix" >
-    {% include countries.html %}
-  </section>
-
-  {% include footer.html %}
-  <script>
+{% include footer.html %}
+<script>
   /* -------------------------------------------------------
    --------------------- Add Country List ------------------
    -------------------------------------------------------*/
-  function makeCountriesSelection () {
-    $('#countries-list').css('display', 'none');
-    const url = 'https://osm-stats-production-api.azurewebsites.net/countries'
+  function makeCountriesSelection() {
+    $("#countries-list").css("display", "none");
+    const url = "https://osm-stats-prod-api.azurewebsites.net/countries";
     $.getJSON(url, function(countriesList) {
       let countries = [];
-      countriesList = countriesList.map((countryObj) => {
+      countriesList = countriesList.map(countryObj => {
         const country = countryObj.name;
         countries.push(country);
       });
       countries = countries.sort();
-      countries = countries.map((country) => {
+      countries = countries.map(country => {
         return [
-          '<li>',
-          '<div>',
-          '<a href=' + '"../' + country.toLowerCase() + '/">',
-          '<div>',
+          "<li>",
+          "<div>",
+          "<a href=" + '"../' + country.toLowerCase() + '/">',
+          "<div>",
           country,
-          '</div>',
-          '</a>',
-          '</li>'
-        ].join('');
-      })
-      countries = countries.join('')
-      countries = [
-        '<ul id="countries-ul">',
-        countries,
-        '</ul>'
-      ].join('');
-      $('#countries-list').append(countries)
+          "</div>",
+          "</a>",
+          "</li>"
+        ].join("");
+      });
+      countries = countries.join("");
+      countries = ['<ul id="countries-ul">', countries, "</ul>"].join("");
+      $("#countries-list").append(countries);
     });
   }
-  function countriesFilter (element) {
+  function countriesFilter(element) {
     let redirectPage = function() {
-      let redirectLink = $(shownCountries[0])[0].childNodes[0].childNodes[0].href
-      $("#inputSubmit").on('click', function (e) {
+      let redirectLink = $(shownCountries[0])[0].childNodes[0].childNodes[0]
+        .href;
+      $("#inputSubmit").on("click", function(e) {
         e.preventDefault();
         window.location = redirectLink;
-      })
+      });
       // enter sends us to country page
       if (window.event.keyCode == 13) {
         window.location = redirectLink;
       }
-    }
-    $ ('#countries-list').css('display', 'block');
-    let value = $(element).val().toLowerCase();
+    };
+    $("#countries-list").css("display", "block");
+    let value = $(element)
+      .val()
+      .toLowerCase();
     if (value.length === 0) {
-      $('#countries-list').css('display', 'none');
+      $("#countries-list").css("display", "none");
     }
-    $('#countries-ul  > li').each((li) => {
-      const country = $('#countries-ul  > li')[li]
-      const countryText = $(country).text().toLowerCase();
+    $("#countries-ul  > li").each(li => {
+      const country = $("#countries-ul  > li")[li];
+      const countryText = $(country)
+        .text()
+        .toLowerCase();
       if (countryText.match(value)) {
-        $(country).show()
+        $(country).show();
       } else {
-        $(country).hide()
+        $(country).hide();
       }
     });
-    let shownCountries = $('#countries-ul  > li').filter((li) => {
-      const country = $('#countries-ul  > li')[li];
-      if (country.style.display !== 'none') {
-        const countryText = $('#countries-ul  > li a')[li]
-        return $(countryText)
-      };
-    })
-    if(shownCountries.length === 1) {
-      redirectPage()
+    let shownCountries = $("#countries-ul  > li").filter(li => {
+      const country = $("#countries-ul  > li")[li];
+      if (country.style.display !== "none") {
+        const countryText = $("#countries-ul  > li a")[li];
+        return $(countryText);
+      }
+    });
+    if (shownCountries.length === 1) {
+      redirectPage();
     }
   }
-  makeCountriesSelection()
-  </script>
+  makeCountriesSelection();
+</script>
